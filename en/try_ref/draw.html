@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Draw)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Draw) -</div>
+<hr class="line_s">
+
+<a name="COLOR" id="COLOR">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">COLOR
+	</td><td class="trycnp">"COLOR",R,G,B
+	</td></tr></table><div class="trydetail">
+		各命令で使用する色を設定する命令です。<br>
+		"MESSAGE"、"EXMESSAGE"、"FLASH"でこの設定が使用されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"COLOR",int1,int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>R (赤 0~255)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>G (緑 0~255)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>B (青 0~255)
+	</td></tr></table></div><br>
+
+<a name="DELEXMESSAGE" id="DELEXMESSAGE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DELEXMESSAGE
+	</td><td class="trycnp">"DELEXMESSAGE",ID,option
+	</td></tr></table><div class="trydetail">
+		"EXMESSAGE"で作成したメッセージを削除する命令です。<br>
+		間違ったIDを指定するとなんらかの問題が発生する場合があるので注意してください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DELEXMESSAGE",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>削除するメッセージのID
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>削除オプション
+	<div class="tryparam"><div class="tryvalue">0</div>即座に消去</div>
+	<div class="tryparam"><div class="tryvalue">1</div>フェードアウト</div>
+	</td></tr></table></div><br>
+
+<a name="EXMESSAGE" id="EXMESSAGE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">EXMESSAGE
+	</td><td class="trycnp">"EXMESSAGE","message",align,basepos,pos_x,pos_y,time,option
+	</td></tr></table><div class="trydetail">
+		画面上にメッセージ作成し表示する命令です。<br>
+		文字色は"COLOR"、フォントは"FONT"で設定します。<br>
+		<br>
+		この命令が成功した場合、変数(_stat)にメッセージのIDが返ります。<br>
+		この命令が失敗した場合、変数(_stat)に -1 が返ります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"EXMESSAGE","str1",int2,int3,int4,int5,int6,int7
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>メッセージ
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>文字揃えフラグ
+	<div class="tryparam"><div class="tryvalue">0</div>左揃え</div>
+	<div class="tryparam"><div class="tryvalue">&1</div>中央揃え(X)</div>
+	<div class="tryparam"><div class="tryvalue">&2</div>右揃え</div>
+	<div class="tryparam"><div class="tryvalue">&4</div>中央揃え(Y)</div>
+	<div class="tryparam"><div class="tryvalue">&8</div>下揃え</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>基準となる位置
+	<div class="posboxdiv"><table class="posboxtable" cellpadding=3>
+	<tr class="posboxtr"><td align="left" valign="top">0</td><td align="center" valign="top">1</td><td align="right" valign="top">2</td></tr>
+	<tr class="posboxtr"><td align="left" valign="middle">3</td><td align="center" valign="middle">4</td><td align="right" valign="middle">5</td></tr>
+	<tr class="posboxtr"><td align="left" valign="bottom">6</td><td align="center" valign="bottom">7</td><td align="right" valign="bottom">8</td></tr>
+	</table></div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>位置補正 X (ドット)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>位置補正 Y (ドット)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>表示時間 (フレーム単位)
+	<div class="tryparam"><div class="tryvalue">&gt;0</div>指定フレーム値の間表示</div>
+	<div class="tryparam"><div class="tryvalue">-1</div>永久に表示</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int7</td><td>表示オプション
+	<div class="tryparam"><div class="tryvalue">0</div>標準</div>
+	<div class="tryparam"><div class="tryvalue">&amp;1</div>点滅</div>
+	<div class="tryparam"><div class="tryvalue">&amp;2</div>袋文字</div>
+	<div class="tryparam"><div class="tryvalue">&amp;4</div>一文字ずつ表示</div>
+	<div class="tryparam"><div class="tryvalue">&amp;8</div>フェードインさせる</div>
+	</td></tr></table></div><br>
+
+<a name="FONT" id="FONT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">FONT
+	</td><td class="trycnp">"FONT","fontname",size,style
+	</td></tr></table><div class="trydetail">
+		"EXMESSAGE"で使用するフォントを設定する命令です。<br>
+		フォント名には"MS ゴシック"や"MS 明朝"といったフォントの名称を指定します。<br>
+		全ての環境で全てのフォントが揃っているとは限りませんので汎用性の高いフォントの使用を推奨します。<br>
+		フォント名を省略した場合はユーザーがコンフィグで設定しているフォントが指定されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"FONT","str1",int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>フォント名 [UserFont]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>サイズ  [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>スタイル  [ignore]
+	<div class="tryparam"><div class="tryvalue">0</div>標準</div>
+	<div class="tryparam"><div class="tryvalue">&amp;1</div>ボールド</div>
+	<div class="tryparam"><div class="tryvalue">&amp;2</div>イタリック</div>
+	</td></tr></table></div><br>
+
+<a name="MESSAGE" id="MESSAGE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">MESSAGE
+	</td><td class="trycnp">"MESSAGE","message",R,G,B,option
+	</td></tr></table><div class="trydetail">
+		左上のシステムメッセージにメッセージを表示する命令です。<br>
+		色の指定を省略した場合は"COLOR"で指定されている色が使用されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"MESSAGE","str1",int2,int3,int4,int5
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>メッセージ
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>R 赤 (0~255) [R("COLOR")]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>G 緑 (0~255) [G("COLOR")]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>B 青 (0~255) [B("COLOR")]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>表示オプション
+	<div class="tryparam"><div class="tryvalue">0</div>標準</div>
+	<div class="tryparam"><div class="tryvalue">1</div>点滅</div>
+	</td></tr></table></div><br>
+
+<a name="INTERFACE" id="INTERFACE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">INTERFACE
+	</td><td class="trycnp">"INTERFACE",int1
+	</td></tr></table><div class="trydetail">
+		プレイヤーのインターフェースの表示を変更する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"INTERFACE",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>表示フラグ
+	<div class="tryparam"><div class="tryvalue">-1</div>フェード無しで非表示にする</div>
+	<div class="tryparam"><div class="tryvalue">0</div>フェードアウトで非表示にする</div>
+	<div class="tryparam"><div class="tryvalue">1</div>フェードインで表示する</div>
+	</td></tr></table></div><br>
+
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Timer)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Timer) -</div>
+<hr class="line_s">
+
+<a name="START" id="START">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">START
+	</td><td class="trycnp">"START"
+	</td></tr></table><div class="trydetail">
+		タイマーのカウントを開始する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"START"
+	</td></tr></table></div><br>
+
+
+<a name="STOP" id="STOP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">STOP
+	</td><td class="trycnp">"STOP"
+	</td></tr></table><div class="trydetail">
+		タイマーのカウントを停止する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"STOP"
+	</td></tr></table></div><br>
+
+<a name="TIMER" id="TIMER">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TIMER
+	</td><td class="trycnp">"TIMER",timervalue
+	</td></tr></table><div class="trydetail">
+		タイマーを設定する命令です。<br>
+		-1を指定するとタイマーを無効化します。<br>
+		タイマーの値は変数(_time)で取得できます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TIMER",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>設定値
+	<div class="tryparam"><div class="tryvalue">1~</div>指定した時間(秒)をタイマーに設定する</div>
+	<div class="tryparam"><div class="tryvalue">-1</div>タイマーを無効化する</div>
+	</td></tr></table></div><br>
+
+<a name="TIMERADD" id="TIMERADD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TIMERADD
+	</td><td class="trycnp">"TIMERADD",value
+	</td></tr></table><div class="trydetail">
+		タイマーの時間に指定された時間を加算する命令です。<br>
+		マイナスの値を指定すれば減算できます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TIMERADD",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>加算する時間 (秒)
+	</td></tr></table></div><br>
+
+<a name="TIMEREND" id="TIMEREND">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TIMEREND
+	</td><td class="trycnp">"TIMEREND",management,"labelname",scriptID
+	</td></tr></table><div class="trydetail">
+		タイマーのカウント終了時の処理を設定する命令です。<br>
+		この命令を実行しなかった場合はゲームオーバー処理になります。<br>
+		<br>
+		goto/gosubの場合、どのスクリプトIDでジャンプするかを指定できます。<br>
+		スクリプトIDを省略もしくは 0 を指定するとメインスクリプトが対象になります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TIMEREND",int1,"label2",int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>処理方法
+	<div class="tryparam"><div class="tryvalue">0</div>ゲームオーバー</div>
+	<div class="tryparam"><div class="tryvalue">1</div>クリア</div>
+	<div class="tryparam"><div class="tryvalue">2</div>指定したラベルへジャンプする (goto)</div>
+	<div class="tryparam"><div class="tryvalue">3</div>指定したラベルへサブルーチンジャンプする (gosub)</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"label2"</td><td>ジャンプ先ラベル名
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>スクリプトID
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Try Basic</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">
+<div class="categorytitle">- FRAXY Try script -</div>
+<br>
+スクリプトの記述方法<br>
+<br>
+<hr class="line_s">
+<br>
+<table class="messagetable"><tr align="left"><td>
+	ここではスクリプトの記述方法を説明します。<br>
+</td></tr></table>
+
+<table class="messagetable"><tr align="left"><td>
+	&gt;&gt; <a href="#RULE">スクリプト記述のルール</a><br>
+	&gt;&gt; <a href="#COMMENT">コメント</a><br>
+	&gt;&gt; <a href="#VARIABLE">変数</a><br>
+	&gt;&gt; <a href="#VAROPERATION">変数操作</a><br>
+	&gt;&gt; <a href="#MATHFUNC">関数</a><br>
+	&gt;&gt; <a href="#OPERATOR">演算子</a><br>
+	&gt;&gt; <a href="#LABEL">ラベル</a><br>
+	&gt;&gt; <a href="#PREPROCESSOR">プリプロセッサ命令</a><br>
+	&gt;&gt; <a href="#FUNCTION">命令文とパラメータ</a><br>
+	&gt;&gt; <a href="#FILE">ファイルの読み込み（検索優先順位）</a><br>
+	&gt;&gt; <a href="#PROCESS">処理の流れ</a><br>
+	&gt;&gt; <a href="#MAINSUB">メインスクリプトとサブスクリプト</a><br>
+</td></tr></table>
+<br>
+<table class="messagetable"><tr align="left"><td>
+	<div class="trytextbox">
+		<a name="RULE" id="RULE"></a>
+		<div class="trytexthead">
+			スクリプト記述のルール
+		</div>
+		<div class="trytextbody">
+			このスクリプトはマルチステートメント（一行に複数の内容を記述する事）に対応していません。<br>
+			よって一行に一つだけ内容を記述することになります。<br>
+			この内容とは命令文や変数操作、ラベルになります。<br>
+			<br>
+			命令文の前やパラメータの間などには半角スペースやタブを挿入することができます。<br>
+			区切りごとに段を形成すればスクリプトが見やすくなります。<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="COMMENT" id="COMMENT"></a>
+		<div class="trytexthead">
+			コメント
+		</div>
+		<div class="trytextbody">
+			行の最初に / や ; をつけるとコメント行になります。<br>
+			また、命令文などの後に // や ; をつけると以降行末までがコメントになります。<br>
+			<br>
+			"WAIT",10           ; ウェイトをかける<br>
+			test+100               // testに100加算<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="VARIABLE" id="VARIABLE"></a>
+		<div class="trytexthead">
+			変数
+		</div>
+		<div class="trytextbody">
+			変数は値を保持したり計算するための入れ物です。<br>
+			基本的に初期化は必要なく、変数に代入する時に変数の型やサイズが自動的に変更されます。<br>
+			変数は以下の型があり、それぞれ保有できる値が違います。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="100">int型</td><td width="80">整数値</td><td>-2147486948 ~ 2147483647</td></tr>
+				<tr align="left"><td>double型</td><td>実数値</td><td>小数点含め約17桁まで</td></tr>
+				<tr align="left"><td>str型</td><td>文字列</td><td>65535文字まで</td></tr>
+			</table>
+			<br>
+			変数名は32文字までで以下の文字が使用できます。<br>
+			ただし一文字目に数字は使用できず、大文字と小文字は区別されません。<br>
+			また、関数と同じ名前の変数は使用できません。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="160">a~z A~Z 0~9</td><td>半角英数字</td></tr>
+				<tr align="left"><td width="160">_</td><td>アンダーバー</td></tr>
+			</table>
+			<br>
+			以下の変数は予め定義されています。<br>
+			通常は各値の参照に使用してください。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="160">_null</td><td>用途無し</td></tr>
+				<tr align="left"><td width="160">_stat</td><td>システムが返す値</td></tr>
+				<tr align="left"><td width="160">_cnt</td><td>現在のループカウンタ、 0 からカウントされます</td></tr>
+				<tr align="left"><td width="160">_time</td><td>タイマーの値</td></tr>
+				<tr align="left"><td width="160">_winx</td><td>現在のウインドウの横幅</td></tr>
+				<tr align="left"><td width="160">_winy</td><td>現在のウインドウの縦幅</td></tr>
+
+				<tr align="left"><td width="160">_px</td><td>プレイヤーの絶対座標 X</td></tr>
+				<tr align="left"><td width="160">_py</td><td>プレイヤーの絶対座標 Y</td></tr>
+				<tr align="left"><td width="160">_pscore</td><td>現在のスコア</td></tr>
+				<tr align="left"><td width="160">_pleft</td><td>プレイヤー残機</td></tr>
+				<tr align="left"><td width="160">_penergy</td><td>プレイヤーのエネルギー</td></tr>
+				<tr align="left"><td width="160">_penergymax</td><td>プレイヤーのエネルギー最大値</td></tr>
+				<tr align="left"><td width="160">_pstock</td><td>プレイヤーのエネルギーストック</td></tr>
+				<tr align="left"><td width="160">_pstockmax</td><td>プレイヤーのエネルギーストック最大値</td></tr>
+
+				<tr align="left"><td width="160">_killcore</td><td>キルカウント(Core)の値</td></tr>
+				<tr align="left"><td width="160">_killparts</td><td>キルカウント(Parts)の値</td></tr>
+
+				<tr align="left"><td width="160">_global1</td><td>グローバル変数1</td></tr>
+				<tr align="left"><td width="160">_global2</td><td>グローバル変数2</td></tr>
+				<tr align="left"><td width="160">_global3</td><td>グローバル変数3</td></tr>
+				<tr align="left"><td width="160">_global4</td><td>グローバル変数4</td></tr>
+				<tr align="left"><td width="160">_global5</td><td>グローバル変数5</td></tr>
+				<tr align="left"><td width="160">_global6</td><td>グローバル変数6</td></tr>
+				<tr align="left"><td width="160">_global7</td><td>グローバル変数7</td></tr>
+				<tr align="left"><td width="160">_global8</td><td>グローバル変数8</td></tr>
+			</table>
+			<br>
+			グローバル変数は全体で共有される特殊な変数です。<br>
+			スクリプト内での制御だけでなく、敵のイベントからも制御することができます。<br>
+			この変数をうまく使えば敵データだけでは実現できなかった事ができるようになります。<br>
+			（敵が敵を呼び出す、攻撃パターンを敵ファイルごとに分割する等）<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="VAROPERATION" id="VAROPERATION"></a>
+		<div class="trytexthead">
+			変数操作
+		</div>
+		<div class="trytextbody">
+			変数操作は基本的に以下のような形で記述します。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="80">対象変数</td><td width="80">演算子</td><td>数値や数式</td></tr>
+				<tr align="left"><td width="80">test</td><td width="80">=</td><td>1</td></tr>
+				<tr align="left"><td width="80">test</td><td width="80">=</td><td>(abc+100)*5</td></tr>
+			</table>
+			<br>
+			変数操作の演算子は数式の演算子と動作が異なります。<br>
+			以下が変数操作で使用できる演算子とその動作になります。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="60">演算子</td><td width="160">意味</td><td width="160">例</td><td></td></tr>
+				<tr align="left"><td width="60">=</td><td width="160">代入</td><td width="160">test = 1</td><td>// testに1を代入する</td></tr>
+				<tr align="left"><td width="60">==</td><td width="160">代入</td><td width="160">test == 3</td><td>// testに3を代入する</td></tr>
+				<tr align="left"><td width="60">+</td><td width="160">加算</td><td width="160">test + 5</td><td>// testに5を加算する</td></tr>
+				<tr align="left"><td width="60">-</td><td width="160">減算</td><td width="160">test - 5</td><td>// testから5を減算する</td></tr>
+				<tr align="left"><td width="60">+=</td><td width="160">加算</td><td width="160">test += 5</td><td>// testに5を加算する</td></tr>
+				<tr align="left"><td width="60">-=</td><td width="160">減算</td><td width="160">test -= (3+2)</td><td>// testから(3+2)を減算する</td></tr>
+			</table>
+			<br>
+			以下は変数操作で利用できる特殊な記述方法や演算子とその動作です。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="60">+</td><td width="160">インクリメント</td><td width="160">test +</td><td>// testを1増やす // test+1</td></tr>
+				<tr align="left"><td width="60">++</td><td width="160">インクリメント</td><td width="160">test ++</td><td>// testを1増やす</td></tr>
+				<tr align="left"><td width="60">-</td><td width="160">デクリメント</td><td width="160">test -</td><td>// testを1減らす // test-1</td></tr>
+				<tr align="left"><td width="60">--</td><td width="160">デクリメント</td><td width="160">test --</td><td>// testを1減らす</td></tr>
+				<tr align="left"><td width="60">=</td><td width="160">リセット</td><td width="160">test =</td><td>// testを0にする // test=0</td></tr>
+				<tr align="left"><td width="60">==</td><td width="160">リセット</td><td width="160">test ==</td><td>// testを0にする</td></tr>
+			</table>
+			<br>
+			加算(test+1)とインクリメント(test+,test++)は実行結果は同じですが<br>
+			インクリメントは数式を無視するので少しだけ高速に処理されます。<br>
+			test+1と記述した場合はインクリメント、test+(1)と記述した場合は加算に変換されます。<br>
+			これらはデクリメント、リセットでも同様です。<br>
+		</div>
+	</div>
+
+	<br><br>
+	<div class="trytextbox">
+		<a name="MATHFUNC" id="MATHFUNC"></a>
+		<div class="trytexthead">
+			関数
+		</div>
+		<div class="trytextbody">
+			変数操作やパラメータなどの数式にはいくつかの関数が使用できます。<br>
+			以下が使用できる関数とその動作になります。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="80">関数名</td><td width="200">意味</td><td width="200">例</td><td>備考</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>sin</td><td>sin値を返す</td><td>test = sin(40)</td><td>入力値(int) : 0~4095<br>出力値(int) : -4096~4096</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>cos</td><td>cos値を返す</td><td>test = cos(40)</td><td>入力値(int) : 0~4095<br>出力値(int) : -4096~4096</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>limit</td><td>一定範囲内の整数を返す</td><td>test = limit(abc,-10,20)</td><td>limit(対象値,最低値,最大値)<br>返される値の型は入力と同じになります。</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>abs</td><td>絶対値を返す</td><td>test = abs(abc)</td><td>返される値の型は入力と同じになります。</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>sqrt</td><td>平方根を返す</td><td>test = sqrt(abc)</td><td>返される値は実数値(double)になります。</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>rand</td><td>乱数を生成する</td><td>test = rand(50)</td><td>0~(n-1)の乱数を生成します。<br>値は整数値(int)になります。</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>int</td><td>整数値に変換</td><td>test = int("50")</td><td></td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>double</td><td>実数値に変換</td><td>test = double(10)</td><td></td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>str</td><td>文字列に変換</td><td>test = str(50)</td><td></td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>strf</td><td>数値文字列の変換</td><td>test = strf("%f",20)</td><td>strf("変換書式文字列",変換する値)<br>変換書式文字列はC言語のsprintfとほぼ同じですが指定できる値は一つだけになります。<br>書式に問題があるとエラーが発生するので注意してください。</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>getpath</td><td>ファイルパス文字列の変換</td><td>test = getpath("file",8)</td><td>getpath("変換する文字列",変換タイプ)</td></tr>
+				<tr align="left"><td></td><td></td><td></td><td>変換タイプ<br>&amp;1 : 拡張子を除くファイル名<br>&amp;2 : 拡張子のみ(.???)<br>&amp;8 : ディレクトリ情報を取り除く<br>&amp;16 : 文字列を小文字に変換する<br>&amp;32 : ディレクトリ情報のみ</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>strlen</td><td>文字列の長さ(byte)を返す</td><td>test = strlen(123)<br>test = strlen("abcde")</td><td>入力の型が整数や実数の場合は桁数を返します。<br>返される値は整数値(int)になります。<br>半角文字は1byte、全角文字は2byteで数えられます。</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>peek</td><td>1byte読み出す</td><td>test = peek(12345,0)<br>test = peek("abcde",1)</td><td>peek(対象,読み出す位置)<br>入力の型は何でも構いません。<br>返される値は整数値(int)になります。</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>chr</td><td>文字コードを変換</td><td>test = chr(65) // A<br>test = chr(66) // B<br>test = chr(97) // a</td><td>chr(文字コード)<br>文字コードは 0~255 を指定してください。<br>返される値は文字列(str)になります。</td></tr>
+				<tr><td colspan="4"><hr class="line_s"></td></tr>
+				<tr align="left"><td>getinfo</td><td>情報を取得する</td><td>test = getinfo(2,0)<br>test = getinfo(3,0)</td><td>getinfo(タイプ,パラメータ)<br>タイプとパラメータは"GETINFO"と同じです。<br>詳細は<a target="view" href="fraxy_try_ref_getinfo.html"> getinfoの値 </a>を参照してください。</td></tr>
+
+			</table>
+		</div>
+	</div>
+
+	<br><br>
+	<div class="trytextbox">
+		<a name="OPERATOR" id="OPERATOR"></a>
+		<div class="trytexthead">
+			演算子
+		</div>
+		<div class="trytextbody">
+			このスクリプトの数式では以下の演算子が使用できます。<br>
+			=,==,!,&gt;,&lt;,&gt;=,&lt;= は真=1、偽=0になります。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="100">=</td><td>同じ</td></tr>
+				<tr align="left"><td width="100">==</td><td>同じ</td></tr>
+				<tr align="left"><td width="100">!</td><td>同じでない</td></tr>
+				<tr align="left"><td width="100">&gt;</td><td>超</td></tr>
+				<tr align="left"><td width="100">&lt;</td><td>未満</td></tr>
+				<tr align="left"><td width="100">&gt;=</td><td>以上</td></tr>
+				<tr align="left"><td width="100">&lt;=</td><td>以下</td></tr>
+				<tr align="left"><td width="100">+</td><td>足し算</td></tr>
+				<tr align="left"><td width="100">-</td><td>引き算</td></tr>
+				<tr align="left"><td width="100">*</td><td>掛け算</td></tr>
+				<tr align="left"><td width="100">/</td><td>割り算</td></tr>
+				<tr align="left"><td width="100">%</td><td>割り算の余り</td></tr>
+				<tr align="left"><td width="100">&amp;</td><td>論理演算(and)</td></tr>
+				<tr align="left"><td width="100">|</td><td>論理演算(or)</td></tr>
+				<tr align="left"><td width="100">^</td><td>論理演算(xor)</td></tr>
+				<tr align="left"><td width="100">&lt;&lt;</td><td>左方向ビットシフト</td></tr>
+				<tr align="left"><td width="100">&gt;&gt;</td><td>右方向ビットシフト</td></tr>
+			</table>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="LABEL" id="LABEL"></a>
+		<div class="trytexthead">
+			ラベル
+		</div>
+		<div class="trytextbody">
+			ラベルは"GOTO"や"GOSUB"でジャンプするための目印です。<br>
+			ラベルを記述する場合は必ず一文字目に * を付けてください。
+			最大文字数は * を含めて63文字までになります。<br>
+			また、ラベル指定は""で囲む必要がありますがラベル自体には付けてはいけません。<br>
+			<br>
+			"GOSUB", "*TEST_LABEL"<br>
+			"END"<br>
+			*TEST_LABEL<br>
+			// 飛び先の処理<br>
+			"RETURN"<br>
+			<br>
+			ラベル指定はノーマルラベルとマルチラベルの2種類があります。<br>
+			飛び先が一つの場合はノーマルラベル、複数の場合はマルチラベルになります。<br>
+			<br>
+			例えば、次の場合は飛び先が *TEST_LABEL だけなのでノーマルラベルです。<br>
+			"GOSUB", "*TEST_LABEL"<br>
+			<br>
+			次の場合は飛び先が複数考えられるためマルチラベルになります。<br>
+			"GOSUB", "*TEST_LABEL"+abc<br>
+			この場合、変数abcの値が0~2の範囲を取るならば<br>
+			*TEST_LABEL0<br>
+			*TEST_LABEL1<br>
+			*TEST_LABEL2<br>
+			のいずれかに飛ぶことになります。<br>
+			もし飛び先のラベルが存在しない場合はジャンプが行われません。<br>
+			例外として"TIMEREND"でマルチラベルが見つからない場合はエラーを返しトライの処理を停止します。<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="PREPROCESSOR" id="PREPROCESSOR"></a>
+		<div class="trytexthead">
+			プリプロセッサ命令
+		</div>
+		<div class="trytextbody">
+			プリプロセッサ命令はスクリプトの変換前に実行される特殊な命令です。<br>
+			通常の命令と違い命令内容を表す文字列を""で囲まず、先頭に#をつけます。<br>
+			<br>
+			#include "str1"<br>
+			<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="FUNCTION" id="FUNCTION"></a>
+		<div class="trytexthead">
+			命令文とパラメータ
+		</div>
+		<div class="trytextbody">
+			命令文は命令内容を表す最初の文字を以下のように""で囲って記述します。<br>
+			<br>
+			"FRAXY_TRY","str1",int2<br>
+			"PLAYERFLAG",int1,int2,int3<br>
+			<br>
+			命令を表す最初の文字列は大文字でも小文字でも構いません。<br>
+			例えば "PLAYERFLAG" は "playerflag" や "PlayerFlag" と記述しても認識されます。<br>
+			ただし例外として "FRAXY_TRY" だけは全て大文字で記述してください。<br>
+			<br>
+			最初の文字列以降の内容はパラメータの指定になります。<br>
+			パラメータはいくつかの型があり、型によって記述方法が異なります。<br>
+			パラメータには以下の型があります。<br>
+			<br>
+			int 整数値<br>
+				<div class="menuc3">
+					整数や変数、数式を指定します。<br>
+					パラメータ内で演算ができます。<br>
+					例1: "WAIT", 10+5<br>
+					例2: "WAIT", a*3+2<br>
+					<br>
+					パラメータの内容説明に &amp;1 や &amp;2 のように &amp; が記述されている場合、<br>
+					それらの値を足して指定することで複数のフラグを指定できます。<br>
+					例えば &amp;1 と &amp;2 の両方を指定する場合は 3 を指定します。<br>
+				</div>
+			<br>
+			str 文字列<br>
+				<div class="menuc3">
+					文字列を指定します。<br>
+					文字列部分は""で囲って記述します。<br>
+					パラメータ内で文字列を結合する事ができます。<br>
+					例1: "MESSAGE","残り時間は"+_time+"です。",255,255,255,0<br>
+					例2: "MESSAGE","AとBの合計は"+(a+b)+"です。",255,255,255,0<br>
+					<br>
+					このスクリプトにはエスケープシーケンスがありません。<br>
+					よって文字列には"を除く文字をそのまま記述できます。<br>
+					文字列で"を使用したい場合は chr(34) を使用してください。<br>
+					例: "MESSAGE","これは"+chr(34)+"コア"+chr(34)+"です。"<br>
+				</div>
+			<br>
+			var 変数<br>
+				<div class="menuc3">
+					変数を指定します。<br>
+				</div>
+			<br>
+			label ラベル<br>
+				<div class="menuc3">
+					ラベル名を指定します。<br>
+					ラベル名は先頭に * を付けて""で囲んでください。<br>
+					例1: "GOSUB","*test"<br>
+					例2: "GOSUB","*test"+"test"<br>
+					例3: "GOSUB","*test"+abc<br>
+					<br>
+					例2や3のようにラベル文字列を結合する場合、そのラベル指定はマルチラベル指定になります。<br>
+					マルチラベルに関してはラベルの項目を参照してください。<br>
+				</div>
+			<br>
+			<br>
+			パラメータを省略した場合は基本的に以下の値が自動で代入されます。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="60">int</td><td>0</td></tr>
+				<tr align="left"><td width="60">str</td><td>""</td></tr>
+				<tr align="left"><td width="60">var</td><td>_stat</td></tr>
+				<tr align="left"><td width="60">label</td><td>""</td></tr>
+			</table>
+			<br>
+			例外として一部のパラメータは省略すると定義値が自動で代入されます。<br>
+			定義値がある場合はパラメータの説明欄に[-1]や[SizeX/2]、[ignore]のように記述されています。<br>
+			[ignore]と記述されているパラメータを省略するとそのパラメータを適用せず無視します。<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="FILE" id="FILE"></a>
+		<div class="trytexthead">
+			ファイルの読み込み（検索優先順位）
+		</div>
+		<div class="trytextbody">
+			ファイルを読み込む場合、<br>
+			その*.ftdがあるフォルダ、対応するデフォルトフォルダの順番に検索します。<br>
+			見つからなかった場合は読み込まれません。<br>
+			<br>
+			指定するファイル名は相対パスでフォルダ情報を加えることもできます。<br>
+			例えば<br>
+			fraxy/try/sample/test.ftd<br>
+			から<br>
+			fraxy/try/sample/data/enemy.fed<br>
+			を読み込む場合は<br>
+			"data/enemy.fed"<br>
+			と指定します。<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="PROCESS" id="PROCESS"></a>
+		<div class="trytexthead">
+			処理の流れ
+		</div>
+		<div class="trytextbody">
+			上から一行ずつ順番に実行します。<br>
+			基本的にトライの処理は連続して実行しますが、<span class="tryinfoattribute">Break属性</span>を持つ命令を実行するとトライの処理を停止してゲームの処理に戻ります。<br>
+			以下の命令は<span class="tryinfoattribute">Break属性</span>を持っています。<br>
+			<br>
+			"END"<br>
+			"LIMIT"<br>
+			"WAIT"<br>
+			"BGMSTOP"<br>
+			"SESTOP"<br>
+			"CHOICES"<br>
+			"GAMEOVER"<br>
+			<br>
+			フリーズや無限ループ対策として1フレームに連続して実行できる回数が1024回に制限されています。<br>
+			ゲームの処理に戻らずトライの処理を実行し続けるのは動作が遅くなるため推奨しません。<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<a name="MAINSUB" id="MAINSUB"></a>
+		<div class="trytexthead">
+			メインスクリプトとサブスクリプト
+		</div>
+		<div class="trytextbody">
+			このスクリプトはメインスクリプトとサブスクリプトに分類されます。<br>
+			"FRAXY_TRY"によって開始されたスクリプトはメインスクリプト、<br>
+			"ADDSUBSCRIPT"によって開始されたスクリプトはサブスクリプトになります。<br>
+			スクリプト仕様などは基本的に大きな違いはありません。<br>
+			<br>
+			メインスクリプトはID=0として定義され、"DELSUBSCRIPT"で削除することができません。<br>
+			サブスクリプトはIDが自動的に割り振られます。<br>
+			登録できるサブスクリプトの最大数は15個までなのでIDは1～15になります。<br>
+			登録を削除して空いたIDは再利用されますがソートは行われません。<br>
+			例えばID0,1,2,3を使用していて1を削除、ID0,2,3となった状態で"ADDSUBSCRIPT"を実行するとID1に追加されます。<br>
+			処理の実行はID順に行われるため登録する順番に注意してください。<br>
+			<br>
+			"LIMIT"と"WAIT"による停止はメインスクリプトとサブスクリプトでそれぞれ個別に管理しています。<br>
+			メインスクリプトが停止中でもサブスクリプトは実行されるため独自のシステムを組み込みたい場合に有効です。<br>
+			<br>
+			基本的に上記以外の要素はメインスクリプトと全てのサブスクリプトで共有します。<br>
+			例えば、サブスクリプトで"CHOICES"を使用するとメインスクリプトも停止することになります。<br>
+			変数やオブジェクトも共有するため、"CREATEOBJECT"などを使用するサブスクリプトを重複登録する場合は注意してください。<br>
+			<br>
+			サブスクリプトはラベルが開始点になるため、以下のような構造のスクリプトが作れます。<br>
+			<br>
+			// サブスクリプトをループさせ1フレーム毎に処理を実行する<br>
+			"ADDSUBSCRIPT","*sub1",sub1_id<br>
+			...<br>
+			*sub1<br>
+			// ここに処理を書く<br>
+			"WAIT",0<br>
+			"GOTO","*sub1"<br>
+			<br>
+			// 処理を1回だけ実行し登録を削除する<br>
+			"ADDSUBSCRIPT","*sub1",sub1_id<br>
+			...<br>
+			*sub1<br>
+			// ここに処理を書く<br>
+			"DELSUBSCRIPT",-1<br>
+		</div>
+	</div>
+	<br><br>
+</td></tr></table>
+<hr class="line_s">
+</div>
+<div class="blank"></div>
+</body>
+</html>

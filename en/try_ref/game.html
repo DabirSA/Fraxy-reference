@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Game)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Game) -</div>
+<hr class="line_s">
+
+<a name="AREAFIXED" id="AREAFIXED">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">AREAFIXED
+	</td><td class="trycnp">"AREAFIXED",flag
+	</td></tr></table><div class="trydetail">
+		エリア固定モードを設定する命令です。<br>
+		エリアを固定すると視点がプレイヤーに合わせて移動しなくなり中央に固定されます。<br>
+		また、"AREALIMIT"で制限範囲が設定されていない場合は自動的に画面サイズに合わせて設定されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"AREAFIXED",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>制限範囲設定
+	<div class="tryparam"><div class="tryvalue">0</div>解除</div>
+	<div class="tryparam"><div class="tryvalue">1</div>有効化</div>
+	</td></tr></table></div><br>
+
+<a name="AREALIMIT" id="AREALIMIT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">AREALIMIT
+	</td><td class="trycnp">"AREALIMIT",restrictshape,option,param1,param2,BasePosX,BasePosY
+	</td></tr></table><div class="trydetail">
+		プレイヤーの移動可能範囲を制限する命令です。<br>
+		制限範囲パラメータは形状によって内容が変わります。<br>
+		<br>
+		プレイヤーが範囲外にいる場合、範囲内に引き寄せられます。<br>
+		引き寄せられている間は移動キーが効かなくなります。<br>
+		<br>
+		基点は省略するとそれまでの値を維持します。<br>
+		<br>
+		四角形の場合、範囲は半分の値を指定します。<br>
+		つまり100を指定した場合、-100~100の範囲になります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"AREALIMIT",int1,int2,int3,int4,int5,int6
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>制限範囲設定
+	<div class="tryparam"><div class="tryvalue">0</div>制限を解除</div>
+	<div class="tryparam"><div class="tryvalue">1</div>円形</div>
+	<div class="tryparam"><div class="tryvalue">2</div>四角形</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>制限範囲オプション
+	<div class="tryparam"><div class="tryvalue">&1</div>境界を描画する</div>
+	<div class="tryparam"><div class="tryvalue">&2</div>移動不可能な場所を暗くする（四角形のみ）</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>制限範囲パラメータ1
+	<div class="tryparam"><div class="tryvalue">円形</div>半径サイズ</div>
+	<div class="tryparam"><div class="tryvalue">四角形</div>横幅</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>制限範囲パラメータ2
+	<div class="tryparam"><div class="tryvalue">四角形</div>縦幅</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>基点座標 X [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>基点座標 Y [ignore]
+	</td></tr></table></div><br>
+
+<a name="RANK" id="RANK">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">RANK
+	</td><td class="trycnp">"RANK",rank
+	</td></tr></table><div class="trydetail">
+		敵の基本ランクを設定する命令です。<br>
+		-1 を指定するとフリープレイの基本ランクを使用します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"RANK",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>基本ランク
+	<div class="tryparam"><div class="tryvalue">-1</div>フリープレイの基本ランク</div>
+	<div class="tryparam"><div class="tryvalue">1~100</div>指定ランク</div>
+	</td></tr></table></div><br>
+
+<a name="RANKRATE" id="RANKRATE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">RANKRATE
+	</td><td class="trycnp">"RANKRATE",rate
+	</td></tr></table><div class="trydetail">
+		敵破壊時のランク上昇率を設定する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"RANKRATE",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>上昇率 (0~1000%)
+	</td></tr></table></div><br>
+
+<a name="SCORERATE" id="SCORERATE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SCORERATE
+	</td><td class="trycnp">"SCORERATE",scorerate
+	</td></tr></table><div class="trydetail">
+		敵パーツ破壊時のスコア倍率を設定する命令です。<br>
+		"SCORESYSTEM"のint2に2を指定するとこの倍率が適用されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SCORERATE",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>スコア倍率 (0~256倍)
+	</td></tr></table></div><br>
+
+<a name="SCORESYSTEM" id="SCORESYSTEM">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SCORESYSTEM
+	</td><td class="trycnp">"SCORESYSTEM",drawtype,scoringtype
+	</td></tr></table><div class="trydetail">
+		敵パーツ破壊時の表示やスコアリングシステムに関する設定を変更する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SCORESYSTEM",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>倍率表示の設定 [ignore]
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	<div class="tryparam"><div class="tryvalue">0</div>表示しない</div>
+	<div class="tryparam"><div class="tryvalue">1</div>倍率を表示する</div>
+	<div class="tryparam"><div class="tryvalue">2</div>獲得スコアを表示する</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>スコアリングシステムの設定 [ignore]
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	<div class="tryparam"><div class="tryvalue">0</div>倍率を無効化</div>
+	<div class="tryparam"><div class="tryvalue">1</div>連鎖破壊による倍率</div>
+	<div class="tryparam"><div class="tryvalue">2</div>"SCORERATE"で設定した倍率</div>
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

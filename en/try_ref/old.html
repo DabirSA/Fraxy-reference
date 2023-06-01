@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Old)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Old) -</div>
+<hr class="line_s">
+<table class="messagetable"><tr align="left"><td>
+	<div class="menuc1">
+		この命令群は過去に作成されたトライ等の互換性のために残されています。<br>
+		通常は使用する必要ありません。<br>
+	</div>
+</td></tr></table>
+<hr class="line_s">
+
+
+<a name="MOV" id="MOV">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">MOV
+	</td><td class="trycnp">"MOV",variable,value
+	</td></tr></table><div class="trydetail">
+		変数に値を代入する命令です。<br>
+		現在のバージョンでは以下のように記述できます。<br>
+		<br>
+		var1 = int2
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"MOV",var1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>対象変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>代入する値
+	</td></tr></table></div><br>
+
+<a name="ADD" id="ADD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">ADD
+	</td><td class="trycnp">"ADD",variable,addvalue
+	</td></tr></table><div class="trydetail">
+		変数に値を加算する命令です。<br>
+		現在のバージョンでは以下のように記述できます。<br>
+		<br>
+		var1 + int2<br>
+		var1 += int2<br>
+		var1 = var1 + int2
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"ADD",var1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>対象変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>加算する値
+	</td></tr></table></div><br>
+
+<a name="SUB" id="SUB">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SUB
+	</td><td class="trycnp">"SUB",variable,subvalue
+	</td></tr></table><div class="trydetail">
+		変数に値を減算する命令です。<br>
+		現在のバージョンでは以下のように記述できます。<br>
+		<br>
+		var1 - int2<br>
+		var1 -= int2<br>
+		var1 = var1 - int2
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SUB",var1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>対象変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>減算する値
+	</td></tr></table></div><br>
+
+<a name="MUL" id="MUL">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">MUL
+	</td><td class="trycnp">"MUL",variable,mulvalue
+	</td></tr></table><div class="trydetail">
+		変数に値を掛ける命令です。<br>
+		現在のバージョンでは以下のように記述できます。<br>
+		<br>
+		var1 = var1 * int2
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"MUL",var1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>対象変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>掛ける値
+	</td></tr></table></div><br>
+
+<a name="DIV" id="DIV">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DIV
+	</td><td class="trycnp">"DIV",variable,divvalue
+	</td></tr></table><div class="trydetail">
+		変数を値で割る命令です。<br>
+		現在のバージョンでは以下のように記述できます。<br>
+		<br>
+		var1 = var1 / int2
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DIV",var1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>対象変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>割る値
+	</td></tr></table></div><br>
+
+<a name="MOD" id="MOD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">MOD
+	</td><td class="trycnp">"MOD",variable,modvalue
+	</td></tr></table><div class="trydetail">
+		変数を値で割った余りを代入する命令です。<br>
+		現在のバージョンでは以下のように記述できます。<br>
+		<br>
+		var1 = var1 % int2
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"MOD",var1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>対象変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>割る値
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

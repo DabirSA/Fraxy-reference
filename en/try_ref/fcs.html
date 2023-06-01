@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try FCS</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">
+<div class="categorytitle">- FRAXY Try script -</div>
+<br>
+カスタムスプライト<br>
+<br>
+</div>
+<hr class="line_s">
+<br>
+<div class="style_center">
+<table class="messagetable"><tr align="left"><td>
+ここではカスタムスプライトについて説明します。<br>
+</td></tr></table>
+
+<br>
+<table class="messagetable"><tr align="left"><td>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			カスタムスプライト(FCS)とは
+		</div>
+		<div class="trytextbody">
+			システム定義とは別に任意の画像ファイルをスプライトとして使用できるようにする機能です。<br>
+			<br>
+			この機能で追加されるスプライトは1000番以降に登録されます。<br>
+			<br>
+			敵エディタにFCS定義ファイルをドラッグアンドドロップすれば敵エディタでも使用可能になります。<br>
+			ただし、フリープレイではこの機能は使用できないと思ってください。<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			FCSの記述方法
+		</div>
+		<div class="trytextbody">
+			行単位で記述してください。<br>
+			行頭が ; や // で始まる行はコメントとして無視されます。<br>
+			トライスクリプトと違い、引数で演算子は使用できません。<br>
+			<br>
+			まずは "Buffer" でバッファを作成し画像を読み込みます。<br>
+			<br>
+			<div class="menuc3">
+				"Buffer", bufferID, "image", "alphaimage"<br>
+				<br>
+				bufferID は 0~n の整数値を指定してください。<br>
+				"image" と "alphaimage" はぞれぞれ画像ファイル名を指定してください。<br>
+				どちらも省略できません。<br>
+			</div>
+			<br>
+			次に "Select" でスプライトを登録するためにバッファを選択状態にします。<br>
+			<br>
+			<div class="menuc3">
+				"Select", bufferID<br>
+				<br>
+				bufferIDには作成済みのバッファIDを指定してください。<br>
+			</div>
+			<br>
+			次に "Index" でスプライトを登録する始点インデックスを設定します。<br>
+			<br>
+			<div class="menuc3">
+				"Index", spriteindex<br>
+				<br>
+				spriteindex は 0~n の整数値を指定してください。<br>
+				インデックス 0 はスプライトIDの 1000 になり、以降登録ごとに1ずつ自動加算されます。<br>
+				インデックス 10 にすれば 1010 から登録されます。<br>
+			</div>
+			<br>
+			始点インデックスを設定したら、スプライトの位置やサイズを入力していきます。<br>
+			先頭要素がコマンド文字列でない場合、このスプライト設定として処理されます。<br>
+			<br>
+			<div class="menuc3">
+				PosX, PosY, SizeX, SizeY, (CenterX), (CenterY)<br>
+				<br>
+				全要素共に整数値、ドット単位で指定してください。<br>
+				PosX,Y はスプライト画像の左上の座標を指定します。<br>
+				SizeX,Y はそのスプライトのサイズを指定します。<br>
+				CenterX,Y はそのスプライトの中心点を指定します。<br>
+				中心点を省略するとSize/2の値に設定されます。<br>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			FCS記述例
+		</div>
+		<div class="trytextbody">
+			画像ファイル名 sample.bmp sample_a.bmp<br>
+			画像サイズ 128x32 で32x32の画像が4つ横並びならば次のように記述します。<br>
+			<br>
+			"Buffer", 0, "sample.bmp", "sample_a.bmp"<br>
+			"Select", 0<br>
+			"Index", 0<br>
+			0,0,32,32<br>
+			32,0,32,32<br>
+			64,0,32,32<br>
+			96,0,32,32<br>
+			<br>
+			これでスプライトID1000～1003にスプライトが登録されます。<br>
+		</div>
+	</div>
+	<br><br>
+</td></tr></table>
+
+</div>
+<hr class="line_s">
+<div class="blank"></div>
+</body>
+</html>

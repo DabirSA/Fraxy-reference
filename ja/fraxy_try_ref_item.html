@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Try function (Item)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Item) -</div>
+<hr class="line_s">
+
+<a name="ITEM" id="ITEM">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">ITEM
+	</td><td class="trycnp">"ITEM",itemtype,angle,distance
+	</td></tr></table><div class="trydetail">
+		アイテムを生成する命令です。<br>
+		生成位置はプレイヤーの位置を基準に方向と距離で指定します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"ITEM",int1,int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>アイテムの種類
+	<div class="tryparam"><div class="tryvalue">-4</div>最上級アイテム</div>
+	<div class="tryparam"><div class="tryvalue">-3</div>上級アイテム</div>
+	<div class="tryparam"><div class="tryvalue">-2</div>中級アイテム</div>
+	<div class="tryparam"><div class="tryvalue">-1</div>最下級アイテム</div>
+	<div class="tryparam"><div class="tryvalue">0</div>通常のアイテム</div>
+	<div class="tryparam"><div class="tryvalue">1</div>"ITEMCONSTRUCT"で設定したアイテム</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>生成方向 (0~4095)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>生成距離 (0~)
+	</td></tr></table></div><br>
+
+<a name="ITEM2" id="ITEM2">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">ITEM2
+	</td><td class="trycnp">"ITEM2",itemtype,x,y
+	</td></tr></table><div class="trydetail">
+		アイテムを生成する命令です。<br>
+		生成位置は"POS"で設定されている位置を基準に相対座標(X,Y)で指定します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"ITEM2",int1,int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>アイテムの種類
+	<div class="tryparam"><div class="tryvalue">-4</div>最上級アイテム</div>
+	<div class="tryparam"><div class="tryvalue">-3</div>上級アイテム</div>
+	<div class="tryparam"><div class="tryvalue">-2</div>中級アイテム</div>
+	<div class="tryparam"><div class="tryvalue">-1</div>最下級アイテム</div>
+	<div class="tryparam"><div class="tryvalue">0</div>通常のアイテム</div>
+	<div class="tryparam"><div class="tryvalue">1</div>"ITEMCONSTRUCT"で設定したアイテム</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>生成位置 X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>生成位置 Y
+	</td></tr></table></div><br>
+
+<a name="ITEMCONSTRUCT" id="ITEMCONSTRUCT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">ITEMCONSTRUCT
+	</td><td class="trycnp">"ITEMCONSTRUCT",itemnumber,itemID...
+	</td></tr></table><div class="trydetail">
+		生成するアイテムの構成を変更する命令です。<br>
+		アイテム数に設定した数だけint2~8にアイテムIDを設定してください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"ITEMCONSTRUCT",int1,int2...
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>アイテム数 (1~7)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2~8</td><td>アイテムID (1~14)
+	<div class="tryparam"><div class="tryvalue">1</div>最大エネルギーアップ</div>
+	<div class="tryparam"><div class="tryvalue">2</div>回復力アップ</div>
+	<div class="tryparam"><div class="tryvalue">3</div>装備パワーアップ</div>
+	<div class="tryparam"><div class="tryvalue">4</div>オーバーソール</div>
+	<div class="tryparam"><div class="tryvalue">5</div>フルチャージ</div>
+	<div class="tryparam"><div class="tryvalue">6</div>耐久力アップ（最大エネルギーと回復力）</div>
+	<div class="tryparam"><div class="tryvalue">7</div>バレット系装備パワーアップ</div>
+	<div class="tryparam"><div class="tryvalue">8</div>ブラスター系装備パワーアップ</div>
+	<div class="tryparam"><div class="tryvalue">9</div>サポート系装備パワーアップ</div>
+	<div class="tryparam"><div class="tryvalue">10</div>全装備パワーアップ</div>
+	<div class="tryparam"><div class="tryvalue">11</div>全装備パワーダウン</div>
+	<div class="tryparam"><div class="tryvalue">12</div>残機アップ</div>
+	<div class="tryparam"><div class="tryvalue">13</div>！</div>
+	<div class="tryparam"><div class="tryvalue">14</div>！？</div>
+	</td></tr></table></div><br>
+
+<a name="ITEMSCROLL" id="ITEMSCROLL">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">ITEMSCROLL
+	</td><td class="trycnp">"ITEMSCROLL",scrollspeed,scrollspeedfade,scrollangle,scrollanglefade
+	</td></tr></table><div class="trydetail">
+		アイテムをスクロールさせる命令です。<br>
+		各パラメータは省略すると値を変更しません。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"ITEMSCROLL",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>スクロール速度 [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>スクロール速度のフェード値 (1~) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>スクロール方向 (0~4095) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>スクロール方向のフェード値 (1~) [ignore]
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

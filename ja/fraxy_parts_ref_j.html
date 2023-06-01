@@ -1,0 +1,1547 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Parts list [J]</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">
+<div class="categorytitle">- FRAXY Parts list [J] -</div>
+<br>
+[J] Joint<br>
+<br>
+関節系は主に行動機能のあるパーツです。<br>
+</div>
+<hr class="line_s">
+
+<table width="95%" border=0><tr><td class="style_left">
+
+回転関節系 - 
+<a href="#P014_TURN_15-30_JOINT_S">回転関節小15-30度</a>,
+<a href="#P093_TURN_JOINT_15">回転関節（015度）</a>,
+<a href="#P094_TURN_JOINT_30">回転関節（030度）</a>,
+<a href="#P095_TURN_JOINT_45">回転関節（045度）</a>,
+<a href="#P096_TURN_JOINT_60">回転関節（060度）</a>,
+<a href="#P097_TURN_JOINT_90">回転関節（090度）</a>,
+<a href="#P098_TURN_JOINT_120">回転関節（120度）</a>,
+<a href="#P099_TURN_JOINT_150">回転関節（150度）</a>,
+<a href="#P100_TURN_JOINT_180">回転関節（180度）</a>,
+<a href="#P002_AIM_PLAYER_JOINT_S">自機狙い関節小</a>,
+<a href="#P007_AIM_PLAYER_JOINT_M">自機狙い関節中</a>,
+<a href="#P048_AIM_PLAYER_JOINT_L">自機狙い関節大</a>,
+
+<br>
+回転パネル系 - 
+<a href="#P077_SMALL_ROLLING_PANEL">回転盤小</a>,
+<a href="#P078_SMALL_ROLLING_PANEL_2">回転盤小2</a>,
+<a href="#P015_ROLLING_PANEL">回転盤中</a>,
+<a href="#P076_ROLLING_PANEL_2">回転盤中2</a>,
+<a href="#P182_SPECIFY_ROLLING_PANEL">指定角度回転パネル</a>,
+
+<br>
+特殊パネル系 - 
+<a href="#P059_AIM_PLAYER_PANEL">自機狙いパネル</a>,
+<a href="#P142_AIM_PLAYER_PANEL_15">自機狙いパネル（015度）</a>,
+<a href="#P143_AIM_PLAYER_PANEL_30">自機狙いパネル（030度）</a>,
+<a href="#P144_AIM_PLAYER_PANEL_45">自機狙いパネル（045度）</a>,
+<a href="#P145_AIM_PLAYER_PANEL_60">自機狙いパネル（060度）</a>,
+<a href="#P146_AIM_PLAYER_PANEL_90">自機狙いパネル（090度）</a>,
+<a href="#P147_AIM_PLAYER_PANEL_120">自機狙いパネル（120度）</a>,
+<a href="#P148_AIM_PLAYER_PANEL_150">自機狙いパネル（150度）</a>,
+<a href="#P149_AIM_PLAYER_PANEL_180">自機狙いパネル（180度）</a>,
+<a href="#P061_AIM_INIT_DIRECTION_PANEL">初期方向狙いパネル</a>,
+<a href="#P151_AIM_FIXED_DIRECTION_PANEL">固定方向狙いパネル</a>,
+<a href="#P189_AIM_PLAYER_ANGLE_PANEL">自機方向合わせパネル</a>,
+<a href="#P190_AIM_PAIR_PARTS_PANEL">ペアパーツ狙いパネル</a>,
+<a href="#P192_AIM_PLAYER_MOVE_ANGLE_PANEL">自機移動方向パネル</a>,
+
+<br>
+移動関節系 - 
+<a href="#P083_MOVE_JOINT_S_HSPD">移動関節小（速）</a>,
+<a href="#P084_MOVE_JOINT_S_MSPD">移動関節小（中速）</a>,
+<a href="#P085_MOVE_JOINT_S_LSPD">移動関節小（遅）</a>,
+
+<br>
+その他 - 
+<a href="#P060_SUICIDE_DEVICE">自爆装置</a>,
+<a href="#P045_DETACH_JOINT">分離用関節</a>,
+
+</td></tr></table><br>
+<hr class="line_s">
+<div class="style_center">
+
+<a name="P014_TURN_15-30_JOINT_S" id="P014_TURN_15-30_JOINT_S">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(014) 回転関節小15-30度
+</td></tr><tr><td class="partsimage" rowspan="6">
+<img src="img/014.gif" alt="*">
+</td><td class="partsinfo">
+15度～30度の方向転換を行うパーツです。<br>
+パターン[1] 15度 -> -15度 -> 30度 -> -30度 -> 15度... の順番でループ<br>
+パターン[6] 30度 -> 0度 -> 30度... の順番でループ<br>
+パターン[9] -30度 -> 0度 -> -30度... の順番でループ<br>
+パターン[12] 常に 30度 を目標に方向転換<br>
+パターン[14] 常に -30度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+170) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3925) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+341) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3755) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:1000 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+341) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:1000 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:1000 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3755) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:1000 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (合計:2000 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+341) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (合計:2000 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3755) (回転速度:8~12) (実行:599~500 フレーム)</span><br>
+</td></tr></table><br>
+
+
+<a name="P093_TURN_JOINT_15" id="P093_TURN_JOINT_15">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(093) 回転関節（015度）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/093.gif" alt="*">
+</td><td class="partsinfo">
+15度の方向転換を行うパーツです。<br>
+パターン[1] 15度 -> 0度 -> -15度 -> 0度 -> 15度... の順番でループ<br>
+パターン[6] 15度 -> 0度 -> 15度... の順番でループ<br>
+パターン[9] -15度 -> 0度 -> -15度... の順番でループ<br>
+パターン[12] 常に 15度 を目標に方向転換<br>
+パターン[13] 常に -15度 を目標に方向転換<br>
+パターン[14] 常に 0度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+170) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3926) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+170) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3926) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+170) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3926) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16)</span><br>
+</td></tr></table><br>
+
+<a name="P094_TURN_JOINT_30" id="P094_TURN_JOINT_30">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(094) 回転関節（030度）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/094.gif" alt="*">
+</td><td class="partsinfo">
+30度の方向転換を行うパーツです。<br>
+パターン[1] 30度 -> 0度 -> -30度 -> 0度 -> 30度... の順番でループ<br>
+パターン[6] 30度 -> 0度 -> 30度... の順番でループ<br>
+パターン[9] -30度 -> 0度 -> -30度... の順番でループ<br>
+パターン[12] 常に 30度 を目標に方向転換<br>
+パターン[13] 常に -30度 を目標に方向転換<br>
+パターン[14] 常に 0度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+341) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3755) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+341) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3755) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+341) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3755) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16)</span><br>
+</td></tr></table><br>
+
+<a name="P095_TURN_JOINT_45" id="P095_TURN_JOINT_45">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(095) 回転関節（045度）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/095.gif" alt="*">
+</td><td class="partsinfo">
+45度の方向転換を行うパーツです。<br>
+パターン[1] 45度 -> 0度 -> -45度 -> 0度 -> 45度... の順番でループ<br>
+パターン[6] 45度 -> 0度 -> 45度... の順番でループ<br>
+パターン[9] -45度 -> 0度 -> -45度... の順番でループ<br>
+パターン[12] 常に 45度 を目標に方向転換<br>
+パターン[13] 常に -45度 を目標に方向転換<br>
+パターン[14] 常に 0度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+512) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3584) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+512) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3584) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+512) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3584) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16)</span><br>
+</td></tr></table><br>
+
+<a name="P096_TURN_JOINT_60" id="P096_TURN_JOINT_60">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(096) 回転関節（060度）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/096.gif" alt="*">
+</td><td class="partsinfo">
+60度の方向転換を行うパーツです。<br>
+パターン[1] 60度 -> 0度 -> -60度 -> 0度 -> 60度... の順番でループ<br>
+パターン[6] 60度 -> 0度 -> 60度... の順番でループ<br>
+パターン[9] -60度 -> 0度 -> -60度... の順番でループ<br>
+パターン[12] 常に 60度 を目標に方向転換<br>
+パターン[13] 常に -60度 を目標に方向転換<br>
+パターン[14] 常に 0度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+682) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3414) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+682) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3414) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+682) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3414) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16)</span><br>
+</td></tr></table><br>
+
+<a name="P097_TURN_JOINT_90" id="P097_TURN_JOINT_90">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(097) 回転関節（090度）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/094.gif" alt="*">
+</td><td class="partsinfo">
+90度の方向転換を行うパーツです。<br>
+パターン[1] 90度 -> 0度 -> -90度 -> 0度 -> 90度... の順番でループ<br>
+パターン[6] 90度 -> 0度 -> 90度... の順番でループ<br>
+パターン[9] -90度 -> 0度 -> -90度... の順番でループ<br>
+パターン[12] 常に 90度 を目標に方向転換<br>
+パターン[13] 常に -90度 を目標に方向転換<br>
+パターン[14] 常に 0度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1024) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3072) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1024) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3072) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1024) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+3072) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16)</span><br>
+</td></tr></table><br>
+
+<a name="P098_TURN_JOINT_120" id="P098_TURN_JOINT_120">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(098) 回転関節（120度）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/094.gif" alt="*">
+</td><td class="partsinfo">
+120度の方向転換を行うパーツです。<br>
+パターン[1] 120度 -> 0度 -> -120度 -> 0度 -> 120度... の順番でループ<br>
+パターン[6] 120度 -> 0度 -> 120度... の順番でループ<br>
+パターン[9] -120度 -> 0度 -> -120度... の順番でループ<br>
+パターン[12] 常に 120度 を目標に方向転換<br>
+パターン[13] 常に -120度 を目標に方向転換<br>
+パターン[14] 常に 0度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1365) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2731) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1365) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2731) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1365) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2731) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16)</span><br>
+</td></tr></table><br>
+
+<a name="P094_TURN_JOINT_150" id="P094_TURN_JOINT_150">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(099) 回転関節（150度）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/094.gif" alt="*">
+</td><td class="partsinfo">
+150度の方向転換を行うパーツです。<br>
+パターン[1] 150度 -> 0度 -> -150度 -> 0度 -> 150度... の順番でループ<br>
+パターン[6] 150度 -> 0度 -> 150度... の順番でループ<br>
+パターン[9] -150度 -> 0度 -> -150度... の順番でループ<br>
+パターン[12] 常に 150度 を目標に方向転換<br>
+パターン[13] 常に -150度 を目標に方向転換<br>
+パターン[14] 常に 0度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1706) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2390) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1706) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2390) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+1706) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2390) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16)</span><br>
+</td></tr></table><br>
+
+<a name="P100_TURN_JOINT_180" id="P100_TURN_JOINT_180">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(100) 回転関節（180度）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/094.gif" alt="*">
+</td><td class="partsinfo">
+180度の方向転換を行うパーツです。<br>
+パターン[1] 180度 -> 0度 -> -180度 -> 0度 -> 180度... の順番でループ<br>
+パターン[6] 180度 -> 0度 -> 180度... の順番でループ<br>
+パターン[9] -180度 -> 0度 -> -180度... の順番でループ<br>
+パターン[12] 常に 180度 を目標に方向転換<br>
+パターン[13] 常に -180度 を目標に方向転換<br>
+パターン[14] 常に 0度 を目標に方向転換<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2047) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[3]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2049) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[4]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2047) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[7]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2049) (回転速度:16) (実行:500 フレーム)</span><br>
+<span class="partspattern">行動パターン[10]</span> (合計:500 フレーム)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16) (実行:500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2047) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向+2049) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">方向転換 (自分の初期方向) (回転速度:16)</span><br>
+</td></tr></table><br>
+
+
+
+<a name="P002_AIM_PLAYER_JOINT_S" id="P002_AIM_PLAYER_JOINT_S">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(002) 自機狙い関節小
+</td></tr><tr><td class="partsimage" rowspan="6">
+<img src="img/002.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換を行う小型のパーツです。<br>
+最大で-45度～45度まで方向転換します。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:150~100 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16) (実行:150~100 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P007_AIM_PLAYER_JOINT_M" id="P007_AIM_PLAYER_JOINT_M">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(007) 自機狙い関節中
+</td></tr><tr><td class="partsimage" rowspan="6">
+<img src="img/007.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換を行うパーツです。<br>
+最大で-45度～45度まで方向転換します。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:150~100 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16) (実行:150~100 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P048_AIM_PLAYER_JOINT_L" id="P048_AIM_PLAYER_JOINT_L">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(048) 自機狙い関節大
+</td></tr><tr><td class="partsimage" rowspan="6">
+<img src="img/048.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換を行うパーツです。<br>
+最大で-45度～45度まで方向転換します。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:150~100 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16) (実行:150~100 フレーム)</span><br>
+</td></tr></table><br>
+
+
+<a name="P077_SMALL_ROLLING_PANEL" id="P077_SMALL_ROLLING_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(077) 回転盤小
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/077.gif" alt="*">
+</td><td class="partsinfo">
+回転する小さいパーツです。<br>
+同種のパターンは回転速度が変わります。<br>
+パターン[1] 反時計回り -> 時計回り -> 反時計回り... の順番でループ<br>
+パターン[4] 反時計回り -> 時計回り -> 反時計回り... の順番でループ<br>
+パターン[7] 常に反時計回り<br>
+パターン[8] 常に時計回り<br>
+パターン[9] 常に反時計回り<br>
+パターン[10] 常に時計回り<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-24~-48) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:24~48) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[4]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-48~-72) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[5]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:48~72) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-24~-48)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:24~48)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-48~-72)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[10]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:48~72)</span><br>
+</td></tr></table><br>
+
+<a name="P078_SMALL_ROLLING_PANEL_2" id="P078_SMALL_ROLLING_PANEL_2">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(078) 回転盤小2
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/078.gif" alt="*">
+</td><td class="partsinfo">
+回転する小さいパーツです。<br>
+回転盤小よりも回転速度が遅く設定されています。<br>
+同種のパターンは回転速度が変わります。<br>
+パターン[1] 反時計回り -> 時計回り -> 反時計回り... の順番でループ<br>
+パターン[4] 反時計回り -> 時計回り -> 反時計回り... の順番でループ<br>
+パターン[7] 常に反時計回り<br>
+パターン[8] 常に時計回り<br>
+パターン[9] 常に反時計回り<br>
+パターン[10] 常に時計回り<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-8~-16) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:8~16) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[4]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-16~-24) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[5]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:16~24) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-8~-16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-16~-24)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[10]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:16~24)</span><br>
+</td></tr></table><br>
+
+<a name="P015_ROLLING_PANEL" id="P015_ROLLING_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(015) 回転盤中
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/015.gif" alt="*">
+</td><td class="partsinfo">
+回転するパーツです。<br>
+同種のパターンは回転速度が変わります。<br>
+パターン[1] 反時計回り -> 時計回り -> 反時計回り... の順番でループ<br>
+パターン[4] 反時計回り -> 時計回り -> 反時計回り... の順番でループ<br>
+パターン[7] 常に反時計回り<br>
+パターン[8] 常に時計回り<br>
+パターン[9] 常に反時計回り<br>
+パターン[10] 常に時計回り<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-24~-48) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:24~48) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[4]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-48~-72) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[5]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:48~72) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-24~-48)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:24~48)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-48~-72)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[10]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:48~72)</span><br>
+</td></tr></table><br>
+
+<a name="P076_ROLLING_PANEL_2" id="P076_ROLLING_PANEL_2">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(076) 回転盤中2
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/076.gif" alt="*">
+</td><td class="partsinfo">
+回転するパーツです。<br>
+回転盤中よりも回転速度が遅く設定されています。<br>
+同種のパターンは回転速度が変わります。<br>
+パターン[1] 反時計回り -> 時計回り -> 反時計回り... の順番でループ<br>
+パターン[4] 反時計回り -> 時計回り -> 反時計回り... の順番でループ<br>
+パターン[7] 常に反時計回り<br>
+パターン[8] 常に時計回り<br>
+パターン[9] 常に反時計回り<br>
+パターン[10] 常に時計回り<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-8~-16) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:8~16) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[4]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-16~-24) (実行:599~500 フレーム)</span><br>
+<span class="partspattern">行動パターン[5]</span> (合計:599~500 フレーム)<br>
+<span class="partsaction">回転 (回転速度:16~24) (実行:599~500 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-8~-16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-16~-24)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[10]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:16~24)</span><br>
+</td></tr></table><br>
+
+
+<a name="P182_SPECIFY_ROLLING_PANEL" id="P182_SPECIFY_ROLLING_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(182) 指定角度回転パネル
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/182.gif" alt="*">
+</td><td class="partsinfo">
+アクションがスタートした瞬間の角度を基準として指定された角度だけ回転するパネルです。<br>
+パターンA([1]～[4])は精密に停止します。<br>
+パターンB([5]～[8])は回転の反動がによって振り子のように停止します。<br>
+<br>
+回転量や回転速度などの細かい設定はイベントの固有パラメータで行います。<br>
+<br>
+固有パラメータ1: フラグ (flag: 0~)<br>
+固有パラメータ2: 回転速度 (turn speed: -4096~4096)<br>
+固有パラメータ3: 回転速度フェードタイプ (turn speed fade type: -1~11)<br>
+固有パラメータ4: 回転角度 (turn angle: ~0~)<br>
+<br>
+固有パラメータ1は以下の値を設定します。<br>
+&amp;1 : 回転速度の変更を適用 (change turn speed(ex2))<br>
+&amp;2 : 回転速度フェードタイプの変更を適用 (change fade type(ex3))<br>
+&amp;4 : 回転角度の変更を適用 (change turn angle(ex4))<br>
+&4096 : 回転速度をフレーム値と見なす (The turn speed is regarded as the frame value)<br>
+<br>
+固有パラメータ1に&amp;4096を指定すると回転速度を回転に必要なフレーム値と見なします。<br>
+例えば回転速度16と回転角度1024だったならば、16フレームで1024(90度)回転することになります。<br>
+また、この場合は回転速度フェードタイプが値の変化に影響を与え、パターンBの振り子が無効化されます。<br>
+<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (常時)<br>
+<span class="partsaction">指定角度回転 (回転量:512) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[2]</span> (常時)<br>
+<span class="partsaction">指定角度回転 (回転量:1024) (回転速度:64)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (常時)<br>
+<span class="partsaction">指定角度回転 (回転量:-512) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[4]</span> (常時)<br>
+<span class="partsaction">指定角度回転 (回転量:-1024) (回転速度:64)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (常時)<br>
+<span class="partsaction">指定角度回転 (回転量:512) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (常時)<br>
+<span class="partsaction">指定角度回転 (回転量:1024) (回転速度:64)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">指定角度回転 (回転量:-512) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (常時)<br>
+<span class="partsaction">指定角度回転 (回転量:-1024) (回転速度:64)</span><br>
+</td></tr></table><br>
+
+
+<a name="P059_AIM_PLAYER_PANEL" id="P059_AIM_PLAYER_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(059) 自機狙いパネル
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/059.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P142_AIM_PLAYER_PANEL_15" id="P142_AIM_PLAYER_PANEL_15">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(142) 自機狙いパネル（015度）
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/142.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+このパーツは回転角度が15度までに制限されています。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P143_AIM_PLAYER_PANEL_30" id="P143_AIM_PLAYER_PANEL_30">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(143) 自機狙いパネル（030度）
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/143.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+このパーツは回転角度が30度までに制限されています。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P144_AIM_PLAYER_PANEL_45" id="P144_AIM_PLAYER_PANEL_45">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(144) 自機狙いパネル（045度）
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/144.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+このパーツは回転角度が45度までに制限されています。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P145_AIM_PLAYER_PANEL_60" id="P145_AIM_PLAYER_PANEL_60">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(145) 自機狙いパネル（060度）
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/145.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+このパーツは回転角度が60度までに制限されています。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P146_AIM_PLAYER_PANEL_90" id="P146_AIM_PLAYER_PANEL_90">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(146) 自機狙いパネル（090度）
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/146.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+このパーツは回転角度が90度までに制限されています。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P147_AIM_PLAYER_PANEL_120" id="P147_AIM_PLAYER_PANEL_120">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(147) 自機狙いパネル（120度）
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/147.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+このパーツは回転角度が120度までに制限されています。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P148_AIM_PLAYER_PANEL_150" id="P148_AIM_PLAYER_PANEL_150">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(148) 自機狙いパネル（150度）
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/148.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+このパーツは回転角度が150度までに制限されています。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P149_AIM_PLAYER_PANEL_180" id="P149_AIM_PLAYER_PANEL_180">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(149) 自機狙いパネル（180度）
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/149.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換するパーツです。<br>
+このパーツは回転角度が180度までに制限されています。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P061_AIM_INIT_DIRECTION_PANEL" id="P061_AIM_INIT_DIRECTION_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(061) 初期方向狙いパネル
+</td></tr><tr><td class="partsimage" rowspan="8">
+<img src="img/061.gif" alt="*">
+</td><td class="partsinfo">
+初期方向（コア基準）を目標に方向転換するパーツです。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+パターン[13]を指定すれば常に初期方向を向くようになります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (コア基準の初期方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (コア基準の初期方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (コア基準の初期方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (コア基準の初期方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (コア基準の初期方向) (回転速度:64)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (コア基準の初期方向) (回転速度:256)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (コア基準の初期方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P151_AIM_FIXED_DIRECTION_PANEL" id="P151_AIM_FIXED_DIRECTION_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(151) 固定方向狙いパネル
+</td></tr><tr><td class="partsimage" rowspan="8">
+<img src="img/151.gif" alt="*">
+</td><td class="partsinfo">
+上方向を目標に方向転換するパーツです。<br>
+コアの位置や方向の影響を受けず常に上方向を目標にします。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+パターン[13]を指定すれば常に初期方向を向くようになります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (目標方向:0) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (目標方向:0) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (目標方向:0) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (目標方向:0) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (目標方向:0) (回転速度:64)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (目標方向:0) (回転速度:256)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (目標方向:0) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P189_AIM_PLAYER_ANGLE_PANEL" id="P189_AIM_PLAYER_ANGLE_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(189) 自機方向合わせパネル
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/189.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーと同じ方向に方向転換するパーツです。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー角度) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー角度) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー角度) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー角度) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー角度) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー角度) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー角度) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー角度) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P190_AIM_PAIR_PARTS_PANEL" id="P190_AIM_PAIR_PARTS_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(190) ペアパーツ狙いパネル
+</td></tr><tr><td class="partsimage" rowspan="8">
+<img src="img/190.gif" alt="*">
+</td><td class="partsinfo">
+ペアパーツを目標に方向転換するパーツです。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (ペアパーツ方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (ペアパーツ方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (ペアパーツ方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (ペアパーツ方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (ペアパーツ方向) (回転速度:64)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (ペアパーツ方向) (回転速度:256)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (ペアパーツ方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P192_AIM_PLAYER_MOVE_ANGLE_PANEL" id="P192_AIM_PLAYER_MOVE_ANGLE_PANEL">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(192) 自機移動方向パネル
+</td></tr><tr><td class="partsimage" rowspan="9">
+<img src="img/192.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーの移動方向に合わせて方向転換するパーツです。<br>
+パターンによって回転速度や実行時間が変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー移動方向) (回転速度:24~32) (実行:60 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー移動方向) (回転速度:32~48) (実行:80~100 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:180 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー移動方向) (回転速度:48~72) (実行:100~140 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー移動方向) (回転速度:8~16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー移動方向) (回転速度:16)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー移動方向) (回転速度:32)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー移動方向) (回転速度:128)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー移動方向) (回転速度:4096)</span><br>
+</td></tr></table><br>
+
+
+<a name="P083_MOVE_JOINT_S_HSPD" id="P083_MOVE_JOINT_S_HSPD">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(083) 移動関節小（速）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/083.gif" alt="*">
+</td><td class="partsinfo">
+垂直方向に少しだけ素早く移動するパーツです。<br>
+パターン[1] 垂直方向に移動する<br>
+パターン[3] 元の位置に移動する<br>
+パターン[5] 垂直方向と元の位置を往復移動する<br>
+パターン[8] 垂直方向と元の位置を往復移動する（ウェイト+200）<br>
+パターン[11] 垂直方向と元の位置を往復移動する（ウェイト+400）<br>
+パターン[14] 垂直方向と元の位置を往復移動する（ウェイト+800）<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:40 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:40 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:40 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:40 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:40 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:40 フレーム)</span><br>
+<span class="partspattern">行動パターン[6]</span> (合計:40 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:40 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (合計:200 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:40 フレーム)</span><br>
+<span class="partspattern">行動パターン[9]</span> (合計:200 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:40 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (合計:400 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:40 フレーム)</span><br>
+<span class="partspattern">行動パターン[12]</span> (合計:400 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:40 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (合計:800 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:40 フレーム)</span><br>
+<span class="partspattern">行動パターン[15]</span> (合計:800 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:40 フレーム)</span><br>
+</td></tr></table><br>
+
+
+<a name="P084_MOVE_JOINT_S_MSPD" id="P084_MOVE_JOINT_S_MSPD">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(084) 移動関節小（中速）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/084.gif" alt="*">
+</td><td class="partsinfo">
+垂直方向に少しだけ移動するパーツです。<br>
+パターン[1] 垂直方向に移動する<br>
+パターン[3] 元の位置に移動する<br>
+パターン[5] 垂直方向と元の位置を往復移動する<br>
+パターン[8] 垂直方向と元の位置を往復移動する（ウェイト+200）<br>
+パターン[11] 垂直方向と元の位置を往復移動する（ウェイト+400）<br>
+パターン[14] 垂直方向と元の位置を往復移動する（ウェイト+800）<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:80 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:80 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:80 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:80 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:80 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:80 フレーム)</span><br>
+<span class="partspattern">行動パターン[6]</span> (合計:80 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:80 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (合計:200 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:80 フレーム)</span><br>
+<span class="partspattern">行動パターン[9]</span> (合計:200 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:80 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (合計:400 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:80 フレーム)</span><br>
+<span class="partspattern">行動パターン[12]</span> (合計:400 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:80 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (合計:800 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:80 フレーム)</span><br>
+<span class="partspattern">行動パターン[15]</span> (合計:800 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:80 フレーム)</span><br>
+</td></tr></table><br>
+
+
+<a name="P085_MOVE_JOINT_S_LSPD" id="P085_MOVE_JOINT_S_LSPD">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(085) 移動関節小（遅）
+</td></tr><tr><td class="partsimage" rowspan="7">
+<img src="img/085.gif" alt="*">
+</td><td class="partsinfo">
+垂直方向に少しだけゆっくり移動するパーツです。<br>
+パターン[1] 垂直方向に移動する<br>
+パターン[3] 元の位置に移動する<br>
+パターン[5] 垂直方向と元の位置を往復移動する<br>
+パターン[8] 垂直方向と元の位置を往復移動する（ウェイト+200）<br>
+パターン[11] 垂直方向と元の位置を往復移動する（ウェイト+400）<br>
+パターン[14] 垂直方向と元の位置を往復移動する（ウェイト+800）<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:160 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:160 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:160 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:160 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:160 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:160 フレーム)</span><br>
+<span class="partspattern">行動パターン[6]</span> (合計:160 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:160 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (合計:200 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:160 フレーム)</span><br>
+<span class="partspattern">行動パターン[9]</span> (合計:200 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:160 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (合計:400 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:160 フレーム)</span><br>
+<span class="partspattern">行動パターン[12]</span> (合計:400 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:160 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (合計:800 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:16) (実行:160 フレーム)</span><br>
+<span class="partspattern">行動パターン[15]</span> (合計:800 フレーム)<br>
+<span class="partsaction">パーツ垂直移動 (移動目標値:0) (実行:160 フレーム)</span><br>
+</td></tr></table><br>
+
+
+<a name="P060_SUICIDE_DEVICE" id="P060_SUICIDE_DEVICE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(060) 自爆装置
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="img/060.gif" alt="*">
+</td><td class="partsinfo">
+親パーツを自爆させるパーツです。<br>
+自爆までのフレーム値を行動パターンの初期フレーム値にマイナスで指定してください。<br>
+パターン[1] 子パーツに対して損傷を与える<br>
+パターン[3] 子パーツに対して損傷を与えない（分離）<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span><br>
+<span class="partsaction">自爆</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span><br>
+<span class="partsaction">自爆</span><br>
+<span class="partsaction">分離</span><br>
+</td></tr></table><br>
+
+
+<a name="P045_DETACH_JOINT" id="P045_DETACH_JOINT">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(045) 分離用関節
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="img/045.gif" alt="*">
+</td><td class="partsinfo">
+子パーツを分離するパーツです。<br>
+分離までのフレーム値を行動パターンの初期フレーム値にマイナスで指定してください。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span><br>
+<span class="partsaction">分離</span><br>
+</td></tr></table><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

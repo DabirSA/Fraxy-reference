@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Try function (Script)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Script) -</div>
+<hr class="line_s">
+
+<a name="CHOICEIMAGE" id="CHOICEIMAGE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CHOICEIMAGE
+	</td><td class="trycnp">"CHOICEIMAGE",itemID,imageID,imagePosX,imagePosY,imageSizeX,imageSizeY,blendMode,blendRate
+	</td></tr></table><div class="trydetail">
+		"CHOICES"の各項目を画像タイプに設定します。<br>
+		この命令で設定した項目は"CHOICEPOS"で位置を設定する必要があります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CHOICEIMAGE",int1,int2,int3,int4,int5,int6,int7,int8
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>対象項目ID (0~7)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>画像ID
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>画像元 X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>画像元 Y
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>画像サイズ X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>画像サイズ Y
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int7</td><td>ブレンドモード
+	<div class="tryparam"><div class="tryvalue">3</div>半透明合成</div>
+	<div class="tryparam"><div class="tryvalue">4</div>通過色付き半透明合成</div>
+	<div class="tryparam"><div class="tryvalue">5</div>加算合成</div>
+	<div class="tryparam"><div class="tryvalue">6</div>減算合成</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int8</td><td>ブレンド率 (0~255)
+	</td></tr></table></div><br>
+
+<a name="CHOICEIMAGEFONT" id="CHOICEIMAGEFONT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CHOICEIMAGEFONT
+	</td><td class="trycnp">"CHOICEIMAGEFONT",itemID,imageID,fontSizeX,fontSizeY,shiftX,shiftY,blendMode,blendRate
+	</td></tr></table><div class="trydetail">
+		"CHOICES"の各項目を画像フォントタイプに設定します。<br>
+		この命令で設定した項目は"CHOICEPOS"で位置を設定する必要があります。<br>
+		<br>
+		画像フォントに関しては<a target="view" href="fraxy_try_ref_drawobject.html#OBJECTIMAGEFONT"> OBJECTIMAGEFONT </a>を参照してください。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CHOICEIMAGEFONT",int1,int2,int3,int4,int5,int6,int7,int8
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>対象項目ID (0~7)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>画像ID
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>フォントサイズ X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>フォントサイズ Y
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>1文字ごとの描画位置補正 X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>1文字ごとの描画位置補正 Y
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int7</td><td>ブレンドモード
+	<div class="tryparam"><div class="tryvalue">3</div>半透明合成</div>
+	<div class="tryparam"><div class="tryvalue">4</div>通過色付き半透明合成</div>
+	<div class="tryparam"><div class="tryvalue">5</div>加算合成</div>
+	<div class="tryparam"><div class="tryvalue">6</div>減算合成</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int8</td><td>ブレンド率 (0~255)
+	</td></tr></table></div><br>
+
+<a name="CHOICEPOS" id="CHOICEPOS">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CHOICEPOS
+	</td><td class="trycnp">"CHOICEPOS",itemID,align,basePos,posX,posY
+	</td></tr></table><div class="trydetail">
+		"CHOICES"の各項目の位置を設定する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CHOICEPOS",int1,int2,int3,int4,int5
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>対象項目ID (0~7)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>文字揃え (0~15)
+	<div class="tryparam"><div class="tryvalue">0</div>左揃え</div>
+	<div class="tryparam"><div class="tryvalue">&amp;1</div>中央揃え(X)</div>
+	<div class="tryparam"><div class="tryvalue">&amp;2</div>右揃え</div>
+	<div class="tryparam"><div class="tryvalue">&amp;4</div>中央揃え(Y)</div>
+	<div class="tryparam"><div class="tryvalue">&amp;8</div>下揃え</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>基準となる位置
+	<div class="posboxdiv"><table class="posboxtable" cellpadding=3>
+	<tr class="posboxtr"><td align="left" valign="top">0</td><td align="center" valign="top">1</td><td align="right" valign="top">2</td></tr>
+	<tr class="posboxtr"><td align="left" valign="middle">3</td><td align="center" valign="middle">4</td><td align="right" valign="middle">5</td></tr>
+	<tr class="posboxtr"><td align="left" valign="bottom">6</td><td align="center" valign="bottom">7</td><td align="right" valign="bottom">8</td></tr>
+	</table></div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>位置補正 X (ドット)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>位置補正 Y (ドット)
+	</td></tr></table></div><br>
+
+<a name="CHOICERESET" id="CHOICERESET">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CHOICERESET
+	</td><td class="trycnp">"CHOICERESET",itemID
+	</td></tr></table><div class="trydetail">
+		"CHOICES"の各項目のタイプや位置設定を初期化する命令です。<br>
+		-1を指定した場合は全ての項目を初期化します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CHOICERESET",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>初期化する項目ID
+	<div class="tryparam"><div class="tryvalue">-1</div>全ての項目</div>
+	<div class="tryparam"><div class="tryvalue">0~7</div>指定した項目</div>
+	</td></tr></table></div><br>
+
+<a name="CHOICES" id="CHOICES">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CHOICES
+	</td><td class="trycnp">"CHOICES","words","words"...
+	</td></tr></table><div class="trydetail">
+		文字列の数だけ選択肢を作り表示する命令です。<br>
+		どれか一つ選択されるまでスクリプト処理は停止状態になります。<br>
+		選択されると選択された文字列のインデックスを_statに返し処理が再開されます。<br>
+		インデックスは各文字列に0から順番に割り振られています。<br>
+		<br>
+		文字列を""のように省略すると空欄として選択できなくなります。<br>
+		文字無しで選択できるようにしたい場合は" "のように半角スペースを入れてください。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">特殊属性</td><td class="tryinfoattribute">Break属性
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CHOICES","str1","str2"...
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1~8"</td><td>表示する文字列
+	</td></tr></table></div><br>
+
+<a name="CHOICEWORD" id="CHOICEWORD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CHOICEWORD
+	</td><td class="trycnp">"CHOICEWORD",itemID
+	</td></tr></table><div class="trydetail">
+		"CHOICES"の各項目を文字列タイプに設定します。<br>
+		この命令で設定した項目は"CHOICEPOS"で位置を設定する必要があります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CHOICEWORD",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>対象項目ID (0~7)
+	</td></tr></table></div><br>
+
+<a name="CONTINUE" id="CONTINUE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CONTINUE
+	</td><td class="trycnp">"CONTINUE"
+	</td></tr></table><div class="trydetail">
+		ループを継続する命令です。<br>
+		"REPEAT"と"LOOP"の間で使用してください。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CONTINUE"
+	</td></tr></table></div><br>
+
+<a name="DESTROYCHOICES" id="DESTROYCHOICES">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DESTROYCHOICES
+	</td><td class="trycnp">"DESTROYCHOICES",returnvalue
+	</td></tr></table><div class="trydetail">
+		現在表示されている選択肢を破棄します。<br>
+		この命令は"SETCOOPERATIVE"で協調レベルを 1 に設定したサブスクリプトで使用してください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DESTROYCHOICES",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>_stat に返す値
+	</td></tr></table></div><br>
+
+<a name="ELSE" id="ELSE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">ELSE
+	</td><td class="trycnp">"ELSE"
+	</td></tr></table><div class="trydetail">
+		"IF"の式が成り立たなかった場合のスキップ先を示す命令です。<br>
+		この命令は必ず"IF"と"ENDIF"の間で使用します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"ELSE"
+	</td></tr></table></div><br>
+
+<a name="ENDIF" id="ENDIF">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">ENDIF
+	</td><td class="trycnp">"ENDIF"
+	</td></tr></table><div class="trydetail">
+		"IF"の式の終わりを示す命令です。<br>
+		この命令は必ず"IF"とセットで使用します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"ENDIF"
+	</td></tr></table></div><br>
+
+<a name="EXITLOOP" id="EXITLOOP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">EXITLOOP
+	</td><td class="trycnp">"EXITLOOP"
+	</td></tr></table><div class="trydetail">
+		実行中のループから強制的に抜ける命令です。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"EXITLOOP"
+	</td></tr></table></div><br>
+
+<a name="GOTO" id="GOTO">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">GOTO
+	</td><td class="trycnp">"GOTO","labelname"
+	</td></tr></table><div class="trydetail">
+		指定されたラベルがある行にジャンプする命令です。<br>
+		ラベル名は先頭に * を付けてください。<br>
+		同名のラベルが複数存在する場合は行の浅い方が有効になります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"GOTO","label1"
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"label1"</td><td>ラベル名
+	</td></tr></table></div><br>
+
+<a name="GOSUB" id="GOSUB">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">GOSUB
+	</td><td class="trycnp">"GOSUB","labelname"
+	</td></tr></table><div class="trydetail">
+		指定されたラベルがある行にサブジャンプする命令です。<br>
+		ラベル名は先頭に * を付けてください。<br>
+		"GOTO"と違ってジャンプする前の行を記憶し、"RETURN"で戻ってくることができます。<br>
+		ジャンプ先で処理を終えたら必ず"RETURN"で戻るようにしてください。<br>
+		最大で16重の多重ジャンプをすることもできます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"GOSUB","label1"
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"label1"</td><td>ラベル名
+	</td></tr></table></div><br>
+
+<a name="IF" id="IF">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">IF
+	</td><td class="trycnp">"IF",expression
+	</td></tr></table><div class="trydetail">
+		指定された式を判定する命令です。<br>
+		この命令は必ず"ENDIF"とセットで使用します。<br>
+		式が成り立つ場合は次の行へ、成り立たない場合は"ELSE"または"ENDIF"までスキップされます。<br>
+		式が成り立ちなおかつ"ELSE"が記述されている場合は"ELSE"から"ENDIF"までスキップされます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"IF",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>判定する式
+	</td></tr></table></div><br>
+
+<a name="LIMIT" id="LIMIT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">LIMIT
+	</td><td class="trycnp">"LIMIT",enemyLimit,partsLimit
+	</td></tr></table><div class="trydetail">
+		敵の数やパーツ数が指定された数以下になるまでスクリプトの処理を停止する命令です。<br>
+		-1を指定するとその制限を無効化します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">特殊属性</td><td class="tryinfoattribute">Break属性
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"LIMIT",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>敵総数制限数 [-1]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>パーツ制限数 [-1]
+	</td></tr></table></div><br>
+
+<a name="LOOP" id="LOOP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">LOOP
+	</td><td class="trycnp">"LOOP"
+	</td></tr></table><div class="trydetail">
+		ループの終点を指定する命令です。<br>
+		この命令は必ず"REPEAT"とセットで使用します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"LOOP"
+	</td></tr></table></div><br>
+
+<a name="REPEAT" id="REPEAT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">REPEAT
+	</td><td class="trycnp">"REPEAT",loopNumber
+	</td></tr></table><div class="trydetail">
+		"REPEAT"から"LOOP"までの処理を指定された回数だけ繰り返す命令です。<br>
+		この命令は必ず"LOOP"とセットで使用します。<br>
+		最大で16重の多重ループをすることもできます。<br>
+		ループ中は現在のループのループ回数が変数(_cnt)に代入されます。<br>
+		指定回数が0の場合は"REPEAT"から"LOOP"までスキップされます。<br>
+		指定回数が-1の場合は無限ループになります。<br>
+		無限ループから抜け出す場合は"EXITLOOP"を利用してください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"REPEAT",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>ループ回数
+	<div class="tryparam"><div class="tryvalue">0~</div>指定回数だけループする</div>
+	<div class="tryparam"><div class="tryvalue">-1</div>無限ループ</div>
+	</td></tr></table></div><br>
+
+<a name="RETURN" id="RETURN">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">RETURN
+	</td><td class="trycnp">"RETURN"
+	</td></tr></table><div class="trydetail">
+		"GOSUB"で記憶した行へ戻る命令です。<br>
+		この命令は必ず"GOSUB"とセットで使用します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"RETURN"
+	</td></tr></table></div><br>
+
+<a name="SETSCRIPTADDRESS" id="SETSCRIPTADDRESS">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SETSCRIPTADDRESS
+	</td><td class="trycnp">"SETSCRIPTADDRESS","labelname",scriptID,option
+	</td></tr></table><div class="trydetail">
+		任意のスクリプトIDの実行位置を変更します。<br>
+		位置はラベルによる指定になります。<br>
+		gosubを指定した場合は一時的なサブルーチンジャンプになります。<br>
+		<br>
+		スクリプトIDには"ADDSUBSCRIPT"で作成したスクリプトID、もしくはメインスクリプト(ID0)を指定します。<br>
+		<br>
+		これは実行中でない別のスクリプトIDの位置情報を書き換えることができるため、<br>
+		場合によっては想定外の動作やエラーを誘発するという点に注意してください。<br>
+		例えば、対象スクリプトがループの最中にgotoで抜けてしまうとスタックに情報が残ったままになります。<br>
+		この動作を繰り返すと最終的にスタックがオーバーフローしてエラーになります。<br>
+		この場合は &amp;2 でスタック情報をクリアすることで回避できます。<br>
+		<br>
+		また、この命令を多用するとスクリプトの制御フローが解りにくくなります。<br>
+		よってこの命令による強制ジャンプは必要最低限に留めるべきです。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SETSCRIPTADDRESS","label1",int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"label1"</td><td>ラベル名
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>スクリプトID
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>制御オプション
+	<div class="tryparam"><div class="tryvalue">0</div>goto</div>
+	<div class="tryparam"><div class="tryvalue">1</div>gosub</div>
+	<div class="tryparam"><div class="tryvalue">&amp;2</div>gotoの場合にスタックをクリアする</div>
+	</td></tr></table></div><br>
+
+<a name="WAIT" id="WAIT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">WAIT
+	</td><td class="trycnp">"WAIT",waitFrame
+	</td></tr></table><div class="trydetail">
+		指定されたフレーム値だけスクリプト処理を停止する命令です。<br>
+		この命令が実行されるとスクリプト処理から抜けてゲームのメインループに戻します。<br>
+		そのため待ち時間は指定されたフレーム値+1フレームになります。<br>
+		フレーム値が 0 ならばスクリプト→メインゲーム→スクリプト、<br>
+		フレーム値が 1 ならばスクリプト→メインゲーム→（1フレーム待ち）→メインゲーム→スクリプト<br>
+		という流れになります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">特殊属性</td><td class="tryinfoattribute">Break属性
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"WAIT",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>停止する時間 (フレーム単位)
+	</td></tr></table></div><br>
+
+<a name="WAITFOR" id="WAITFOR">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">WAITFOR
+	</td><td class="trycnp">"WAITFOR",expression,waitFrame
+	</td></tr></table><div class="trydetail">
+		条件指定でスクリプトを停止する命令です。<br>
+		<br>
+		int1が偽(int1=0)の場合、実行中のスクリプトを中断し(int2)フレームの間停止します。<br>
+		停止後は再度この命令が実行されます。<br>
+		<br>
+		int1が真(int1!0)の場合は中断も停止もせずにスクリプトを継続します。<br>
+		この場合はBreak属性が無視されます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">特殊属性</td><td class="tryinfoattribute">Break属性
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"WAITFOR",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>条件式や値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>停止する時間 (フレーム単位)
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

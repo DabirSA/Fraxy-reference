@@ -1,0 +1,924 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="content-style-type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>- FRAXY event -</title>
+</head>
+
+<body class="contents_main">
+
+<hr class="line_s">
+
+<div class="block_table">
+	<div class="block_title">イベントで指定、設定する値のメモ</div>
+	<div class="block_contents">
+		<div class="block_text_b">基本</div>
+		<div class="block_text_m">条件判定や設定</div>
+		<div class="block_text_s">
+			<a href="#CONDITION_JUDGE">条件の判定</a><br>
+			<a href="#EVENT_EXSETTING">イベント特殊設定</a><br>
+			<a href="#OPERATOR">演算子</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">発生条件</div>
+		<div class="block_text_s">
+			<a href="#PLAYERSTATUS">プレイヤーの状態</a><br>
+			<a href="#DISTANCEANDANGLE">距離と角度</a><br>
+			<a href="#MOVEANDATTACK">行動と攻撃パターン</a><br>
+			<a href="#RANDOM">乱数</a><br>
+			<a href="#PREVIOUSEVENT">前のイベント</a><br>
+			<a href="#PARTSEXIST">パーツの存在確認</a><br>
+		</div>
+
+		<br>
+		<hr class="line_s">
+		<br>
+		<div class="block_text_b">イベント内容</div>
+		<div class="block_text_m">連結タイプ</div>
+		<div class="block_text_s">
+			<a href="#CONNECT">連結タイプ</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">パーツステータス</div>
+		<div class="block_text_s">
+			<a href="#STATUS_DAMAGERATE">被ダメージ率を変更する</a><br>
+			<a href="#STATUS_BULLETPOWER">バレットパワーを変更する</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">描画と表示フラグ</div>
+		<div class="block_text_s">
+			<a href="#HEALTHBAR_M">メインヘルスバー</a><br>
+			<a href="#HEALTHBAR_S">サブヘルスバー</a><br>
+			<a href="#CUSTOMBAR">カスタムバー</a><br>
+			<a href="#CUSTOMBAR_SETTING">カスタムバー設定</a><br>
+			<a href="#LAYER_PARTS">パーツの表示順位を変更する</a><br>
+			<a href="#LAYER_EFFECT">エフェクトの表示順位を変更する</a><br>
+			<a href="#LAYER_PARTSSHIFT">パーツの表示順位シフト値を変更する</a><br>
+			<a href="#LAYER_EFFECTSHIFT">エフェクトの表示順位シフト値をを変更する</a><br>
+			<a href="#LAYER_ALL">システム全体での表示順位</a><br>
+			<a href="#SHOT_EFFECT">ショットエフェクトタイプを変更する</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">特殊なフラグとオプション</div>
+		<div class="block_text_s">
+			<a href="#FLAG_AUTODESTROY">自動破壊フラグを変更する</a><br>
+			<a href="#FLAG_WHENDESTROY">破壊時の生成フラグを変更する</a><br>
+			<a href="#FLAG_HITCHECK">衝突判定フラグを変更する</a><br>
+			<a href="#FLAG_HITTYPE">衝突判定タイプを変更する</a><br>
+			<a href="#FLAG_DRAWOPTION">描画オプションを変更する</a><br>
+			<a href="#FLAG_TARGETMARKER">ターゲットマーカーフラグを変更する</a><br>
+			<a href="#FLAG_EFFECTFLAG">破壊エフェクトフラグを変更する</a><br>
+			<a href="#FLAG_EFFECTSIZE">破壊エフェクトサイズを変更する</a><br>
+			<a href="#FLAG_DESTROYDELAY">破壊ディレイを変更する</a><br>
+			<a href="#FLAG_KILLCOUNT">キルカウントフラグを変更する</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">プレイヤーの状態</div>
+		<div class="block_text_s">
+			<a href="#PLAYERSTATUS_STUN">プレイヤーのスタン値を変更する</a><br>
+			<a href="#PLAYERSTATUS_BIND">プレイヤーのバインド値を変更する</a><br>
+			<a href="#PLAYERSTATUS_RESTRAINT">プレイヤーの装備抑制値を変更する</a><br>
+			<a href="#PLAYERSTATUS_RESTRAINT">プレイヤーの装備抑制値を変更する</a><br>
+			<a href="#PLAYERSTATUS_POSITION">プレイヤーの位置を変更する</a><br>
+			<a href="#PLAYERSTATUS_ENERGY">プレイヤーのエネルギーを変更する</a><br>
+			<a href="#PLAYERSTATUS_ENERGYSTOCK">プレイヤーのエネルギーストックを変更する</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">パーツ検索</div>
+		<div class="block_text_s">
+			<a href="#PARTSSEARCH_SETTING">パーツ検索設定</a><br>
+			<a href="#PARTSSEARCH_DISTANCE">パーツ検索(距離)</a><br>
+			<a href="#PARTSSEARCH_DIRECTION">パーツ検索(方向)</a><br>
+		</div>
+		<br>
+	</div>
+</div>
+
+<hr class="line_s">
+
+<div class="block_table">
+	<div class="block_title">条件判定や設定</div>
+	<div class="block_contents">
+
+		<a name="CONDITION_JUDGE" id="CONDITION_JUDGE"></a>
+		<div class="block_text_b">条件の判定</div>
+		<div class="block_text_m"> - [AND]</div>
+		<div class="block_text_s">
+			条件が全て真(true)ならばイベントが実行されます。<br>
+		</div>
+		<br>
+		<div class="block_text_m"> - [OR]</div>
+		<div class="block_text_s">
+			条件が一つでも真(true)ならばイベントが実行されます。<br>
+		</div>
+		<br>
+
+		<a name="EVENT_EXSETTING" id="EVENT_EXSETTING"></a>
+		<div class="block_text_b">イベント特殊設定</div>
+		<div class="block_text_m"> - 実行後にこのイベントを削除しない</div>
+		<div class="block_text_s">
+			イベントを実行後に削除しないようにします。<br>
+		</div>
+		<br>
+		<div class="block_text_m"> - 条件が一致しない場合削除する</div>
+		<div class="block_text_s">
+			イベントが実行されなかった場合に削除します。<br>
+		</div>
+		<br>
+
+		<a name="OPERATOR" id="OPERATOR"></a>
+		<div class="block_text_b">条件演算子</div>
+		<div class="block_text_m">= (equal)</div>
+		<div class="block_text_s">
+			A = B<br>
+			AとBが同じならば真(true)、違うならば偽(false)となります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">! (not equal)</div>
+		<div class="block_text_s">
+			A ! B<br>
+			AとBが違うならば真(true)、同じならば偽(false)となります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">&gt; (greater than)</div>
+		<div class="block_text_s">
+			A &gt; B<br>
+			AがBよりも大きいならば真(true)、同じもしくは小さいならば偽(false)となります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">&lt; (less than)</div>
+		<div class="block_text_s">
+			A &lt; B<br>
+			AがBよりも小さいならば真(true)、同じもしくは大きいならば偽(false)となります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">&gt;= (greater equal)</div>
+		<div class="block_text_s">
+			A &gt;= B<br>
+			AがBよりも大きいか同じならば真(true)、小さいならば偽(false)となります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">&lt;= (less equal)</div>
+		<div class="block_text_s">
+			A &lt;= B<br>
+			AがBよりも小さいか同じならば真(true)、大きいならば偽(false)となります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">&amp; (and)</div>
+		<div class="block_text_s">
+			A &amp; B<br>
+			AとBのビットパターンを比較し、一つでも一致しているならば真(true)、一つも一致していないならば偽(false)となります。<br>
+			例)<br>
+			13(1,4,8) &amp; 4(4) : true<br>
+			13(1,4,8) &amp; 2(2) : false<br>
+			13(1,4,8) &amp; 10(2,8) : true<br>
+			13(1,4,8) &amp; 12(4,8) : true<br>
+			13(1,4,8) &amp; 18(2,16) : false<br>
+		</div>
+		<br>
+		<div class="block_text_m">&amp;! (and + not)</div>
+		<div class="block_text_s">
+			A &amp;! B<br>
+			AとBのビットパターンを比較し、一つも一致していないならば真(true)、一つでも一致しているならば偽(false)となります。<br>
+			例)<br>
+			13(1,4,8) &amp;! 4(4) : false<br>
+			13(1,4,8) &amp;! 2(2) : true<br>
+			13(1,4,8) &amp;! 10(2,8) : false<br>
+			13(1,4,8) &amp;! 12(4,8) : false<br>
+			13(1,4,8) &amp;! 18(2,16) : true<br>
+		</div>
+		<br>
+		<div class="block_text_m">&amp;= (and + equal)</div>
+		<div class="block_text_s">
+			A &amp;= B<br>
+			AとBのビットパターンを比較し、全て一致しているならば真(true)、一つでも一致していないならば偽(false)となります。<br>
+			例)<br>
+			13(1,4,8) &amp;= 4(4) : true<br>
+			13(1,4,8) &amp;= 2(2) : false<br>
+			13(1,4,8) &amp;= 10(2,8) : false<br>
+			13(1,4,8) &amp;= 12(4,8) : true<br>
+			13(1,4,8) &amp;= 18(2,16) : false<br>
+		</div>
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">発生条件</div>
+	<div class="block_contents">
+		<a name="PLAYERSTATUS" id="PLAYERSTATUS"></a>
+		<div class="block_text_b">プレイヤーの状態</div>
+		<div class="block_text_m">- P_操作状態 (P_Control status: 0~1)</div>
+		<div class="block_text_s">
+			プレイヤーが操作可能ならば 1 、不可能ならば 0 になります。<br>
+			プレイヤー破壊中とコンティニューの復帰中も 0 になります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_破壊値 (P_Destroy value: 0~)</div>
+		<div class="block_text_s">
+			通常時は 0 です。<br>
+			プレイヤーが破壊されるとこの値が1フレームごとに 1 増えます。<br>
+			=1で破壊された瞬間のみ、&gt;0もしくは!0で破壊中常時を検出できます。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_スタン値 (P_Stun value: 0~)</div>
+		<div class="block_text_s">
+			スタン状態ならばこの値が 0 以上になります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_エネルギー(%) (P_Energy: 0~100 %)</div>
+		<div class="block_text_s">
+			エネルギーの割合です。<br>
+			0~100 の値をとります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_ストック(%) (P_Stock: 0~100 %)</div>
+		<div class="block_text_s">
+			エネルギーストックの割合です。<br>
+			0~100 の値をとります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_装備使用 (P_Using equip: 0~2)</div>
+		<div class="block_text_s">
+			装備（武器系と補助系）を使用しようとしている（ボタンが押されている）場合は 1 、<br>
+			実際に使用した場合は 2 になります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_武器使用 (P_Using weapon: 0~2)</div>
+		<div class="block_text_s">
+			武器系を使用しようとしている（ボタンが押されている）場合は 1 、<br>
+			実際に使用した場合は 2 になります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_補助使用 (P_Using support: 0~2)</div>
+		<div class="block_text_s">
+			補助系を使用しようとしている（ボタンが押されている）場合は 1 、<br>
+			実際に使用した場合は 2 になります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_ブーストボタン (P_Boost button: 0~)</div>
+		<div class="block_text_s">
+			ブーストボタンが押されている場合、この値が1フレームごとに 1 増えます。<br>
+			ボタンが離されるとこの値は 0 になります。<br>
+			=1でボタンを押した瞬間を検知できます。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_ブースト (P_Boost: 0~)</div>
+		<div class="block_text_s">
+			プレイヤーがブーストで移動している場合、この値が1フレームごとに 1 増えます。<br>
+			移動を停止するとこの値は 0 になります。<br>
+			=1でブーストを発動した瞬間を検知できます。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_移動方向 (P_Move: 0~)</div>
+		<div class="block_text_s">
+			移動キーが押されていない場合は 0 になります。<br>
+			押されている場合は以下の値になります。<br>
+			左(left): &amp;1<br>
+			上(up): &amp;2<br>
+			右(right): &amp;4<br>
+			下(down): &amp;8<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_エクストラ (P_Extra button: 0~)</div>
+		<div class="block_text_s">
+			エクストラボタンの入力状態を参照します。<br>
+			ボタンが押されていない場合は 0、押された瞬間は 1、以降押しっぱなしならば値は増え続けます。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_スロット (P_Slot current: 1~5)</div>
+		<div class="block_text_s">
+			選択中のスロットのID(1~5)を参照します。
+		</div>
+		<br>
+		<div class="block_text_m">- P_スロット使用 (P_Slot1~5 use: 0~2)</div>
+		<div class="block_text_s">
+			各スロット別に使用状態を参照します。<br>
+			使用しようとしている（ボタンが押されている）場合は 1、<br>
+			実際に使用した場合は 2 になります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_スロットタイプ (P_Slot1~5 type: 0~)</div>
+		<div class="block_text_s">
+			各スロットの装備のタイプ値を参照します。<br>
+			何も装備されていないスロットは 0、何かしら装備されていればそれ以外の値になります。<br>
+			このタイプ値は武器や補助等のおおまかな分類ではなく、バレットやブラスター等の装備自体のIDになります。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_スロットレベル (P_Slot1~5 level: 1~5)</div>
+		<div class="block_text_s">
+			各スロットの基本レベルを参照します。<br>
+			この値にはオーバーソールパワーやアクティバイターの補正値は含まれません。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_スロットExレベル (P_Slot1~5 ExLevel: 1~5)</div>
+		<div class="block_text_s">
+			各スロットの現在のレベルを参照します。<br>
+			この値にはオーバーソールパワーやアクティバイターの補正値が含まれます。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_スロット状態 (P_Slot1~5 status: 0~100)</div>
+		<div class="block_text_s">
+			各スロットの装備が通知する値を参照します。<br>
+			現在のバージョンではチャージブラスターのチャージ状態が 0~100 の値で通知されます。<br>
+		</div>
+		<br>
+
+		<div class="block_text_b">距離と角度</div>
+		<a name="DISTANCEANDANGLE" id="DISTANCEANDANGLE"></a>
+		<div class="block_text_m">- 距離(Player) (distance[player]: 0~)</div>
+		<div class="block_text_s">
+			パーツとプレイヤーの直線距離を参照します。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- 距離(Pointer) (distance[pointer]: -1 or 0~)</div>
+		<div class="block_text_s">
+			パーツとポインターパーツの直線距離を参照します。<br>
+			ポインターパーツがみつからない場合は -1 を返します。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- 距離(Pair) (distance[pair]: -1 or 0~)</div>
+		<div class="block_text_s">
+			パーツとペアパーツの直線距離を参照します。<br>
+			ペアパーツがみつからない場合は -1 を返します。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- ペア/ポインターとの角度/絶対角度 (angle to pair/pointer)</div>
+		<div class="block_text_s">
+			パーツの正面を基準に、対象パーツの方向を返します。<br>
+			値は -2048~2047 の範囲で返します。<br>
+			0 ならばパーツの正面方向に対象パーツがいることになります。<br>
+			1~2047 ならばパーツから見て右側に、-2047~-1 ならば左側にいることになります。<br>
+			<br>
+			絶対角度は値を絶対値に変換して 0~2048 の範囲で返します。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- 自機との角度/絶対角度 (angle to P_Pos)</div>
+		<div class="block_text_s">
+			パーツの正面を基準に、プレイヤー位置の方向を返します。<br>
+			値は -2048~2047 の範囲で返します。<br>
+			0 ならばパーツの正面方向にプレイヤーがいることになります。<br>
+			1~2047 ならばパーツから見て右側に、-2047~-1 ならば左側にいることになります。<br>
+			<br>
+			絶対角度は値を絶対値に変換して 0~2048 の範囲で返します。<br>
+		</div>
+		<br>
+
+		<div class="block_text_b">行動と攻撃パターン</div>
+		<a name="MOVEANDATTACK" id="MOVEANDATTACK"></a>
+		<div class="block_text_m">- 行動/攻撃が停止ループ (move/atk is stop looping)</div>
+		<div class="block_text_s">
+			例えば行動パターンが、<br>
+			<br>
+			行動パターン[2] : 行動パターン[2]へジャンプする<br>
+			<br>
+			このような無限ループで停止している場合に真(true)を返します。<br>
+		</div>
+		<br>
+
+		<div class="block_text_b">未整理</div>
+		<a name="RANDOM" id="RANDOM"></a>
+		<div class="block_text_m">- 乱数 (random number)</div>
+		<div class="block_text_s">
+			入力された数値を n として 0~(n-1) の値を返します。<br>
+			負数を入力した場合は (n+1)~0 の値を返します。<br>
+			<br>
+			例えば rand(40) ならば 0~39 を返し、rand(-40)ならば -39~0 を返します。<br>
+		</div>
+		<br>
+		<a name="PREVIOUSEVENT" id="PREVIOUSEVENT"></a>
+		<div class="block_text_m">- 前のイベント (previous event status: -1~1)</div>
+		<div class="block_text_s">
+			これは特殊な条件です。<br>
+			直前（イベントリストの一つ上）のイベントの実行状態を返します。<br>
+			実行された場合は 1 、されなかった場合は 0 になります。<br>
+			このイベント自体がリストの一番上の場合は -1 を返します。<br>
+			そのパーツのイベントで最初に実行された場合も -1 を返します。（イベントが削除されて一番上になった場合など）<br>
+		</div>
+		<br>
+		<a name="PARTSEXIST" id="PARTSEXIST"></a>
+		<div class="block_text_m">- パーツの存在確認 (exist parts)</div>
+		<div class="block_text_s">
+			対象パーツの存在を確認します。<br>
+			存在する場合は 1 を返し、無い場合は 0 を返します。<br>
+		</div>
+
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">連結タイプ</div>
+	<div class="block_contents">
+		<a name="CONNECT" id="CONNECT"></a>
+		<div class="block_text_b">連結タイプ</div>
+		<div class="block_text_m">- (0) 固定型 (param: 0~0)</div>
+		<div class="block_text_s">
+			親パーツに固定します。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (1) しっぽ型 (param: 1~100)</div>
+		<div class="block_text_s">
+			親パーツにひっぱられるように動きます。<br>
+			計算に中心距離を使うため、中心距離が0の場合は全く動かなくなります。<br>
+			パラメータは動作の柔らかさの指定で小さいほど柔らかくなります。<br>
+			(柔らかい) 1 ----- 100 (硬い)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (2) プレイヤー依存型 (param: 1~100)</div>
+		<div class="block_text_s">
+			位置、角度共にプレイヤーを基準にします。<br>
+			パラメータは固定具合の指定で大きいほど緩くなります。<br>
+			(強い) 1 ----- 100 (緩い)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (3) プレイヤー位置依存型 (param: 1~100)</div>
+		<div class="block_text_s">
+			位置だけプレイヤーを基準にします。<br>
+			パラメータは固定具合の指定で大きいほど緩くなります。<br>
+			(強い) 1 ----- 100 (緩い)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (4) 放置型 (param: 1~100)</div>
+		<div class="block_text_s">
+			親パーツから切り離し現在の位置で静止します。<br>
+			パラメータは特別な意味はありませんが通常は1を指定してください。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (5) 再固定型 (param: 1~100)</div>
+		<div class="block_text_s">
+			親パーツを基準にします。<br>
+			このタイプはパラメータの値が自動的に減少し最終的に(0) 固定型のように固定されます。<br>
+			パラメータは完全に固定するまでのフレームを指定します。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (6) 半固定型 (param: 1~100)</div>
+		<div class="block_text_s">
+			親パーツを基準にします。<br>
+			固定具合は(5) 再固定型と同じですがパラメータの値が変化しないため完全に固定されません。<br>
+			パラメータは固定具合の指定で大きいほど緩くなります。<br>
+			(強い) 1 ----- 100 (緩い)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (7) しっぽ再固定 (param: 1~100)</div>
+		<div class="block_text_s">
+			(1) しっぽ型から(0) 固定型へ戻すためのタイプです。<br>
+			パラメータは固定するまでのフレームを指定します。<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (8) プレイヤー軸合わせ (param: 1~100)</div>
+		<div class="block_text_s">
+			プレイヤーの位置を追尾しますが、親パーツの位置と角度を基準とした軸上のみ移動します。<br>
+			パラメータは固定具合の指定で大きいほど緩くなります。<br>
+			(強い) 1 ----- 100 (緩い)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (9) 中点型 (param: 1~100)</div>
+		<div class="block_text_s">
+			位置は親とポインターの中間位置を基準にします。<br>
+			方向は親からポインターの方向を基準にします。<br>
+			パラメータは固定具合の指定で大きいほど緩くなります。<br>
+			(強い) 1 ----- 100 (緩い)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (10) ポインター型 (param: 1~100)</div>
+		<div class="block_text_s">
+			位置、方向共にポインターを基準にします。<br>
+			パラメータは固定具合の指定で大きいほど緩くなります。<br>
+			(強い) 1 ----- 100 (緩い)<br>
+		</div>
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">パーツステータス</div>
+	<div class="block_contents">
+		<div class="block_text_b">パーツステータス</div>
+		<a name="STATUS_DAMAGERATE" id="STATUS_DAMAGERATE"></a>
+		<div class="block_text_m">- 被ダメージ率を変更する</div>
+		<div class="block_text_s">
+			被ダメージ率: (suffer damage rate: ~0~) [default: 100%]<br>
+			<br>
+			デフォルトは 100 で100%のダメージを受ける設定になっています。<br>
+			50にすればダメージ半減、0なら全く受けず、マイナスなら吸収するようになります。<br>
+		</div>
+		<br>
+		<a name="STATUS_BULLETPOWER" id="STATUS_BULLETPOWER"></a>
+		<div class="block_text_m">- バレットパワーを変更する</div>
+		<div class="block_text_s">
+			バレットパワー: (bullet power: 0~n) [default: 10000]<br>
+			<br>
+			そのパーツが生成する敵弾の威力を変更します。<br>
+			デフォルトは 10000 で100%の威力になります。<br>
+		</div>
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">描画と表示フラグ</div>
+	<div class="block_contents">
+		<div class="block_text_b">ヘルスバー</div>
+		<a name="HEALTHBAR_M" id="HEALTHBAR_M"></a>
+		<div class="block_text_m">- メインヘルスバー</div>
+		<div class="block_text_s">
+			解除 : メインヘルスバーを解除します。<br>
+			未使用ならば使用 : 他のパーツがメインヘルスバーを使用中でなければ使用します。<br>
+			強制使用 : 他のパーツがメインヘルスバーを使用していても強制的に使用します。<br>
+		</div>
+		<br>
+		<a name="HEALTHBAR_S" id="HEALTHBAR_S"></a>
+		<div class="block_text_m">- サブヘルスバー</div>
+		<div class="block_text_s">
+			OFF : サブヘルスバーを解除します。<br>
+			ON : サブヘルスバーを使用します。<br>
+		</div>
+		<br>
+		<div class="block_text_b">カスタムバー</div>
+		<a name="CUSTOMBAR" id="CUSTOMBAR"></a>
+		<div class="block_text_m">- カスタムバー</div>
+		<div class="block_text_s">
+			パーツの固有パラメータや変数、グローバル変数をバー形式で表示できます。<br>
+			カスタムバーの実体はサブヘルスバーであるため、1パーツにつきどちらか1つだけ付けることができます。<br>
+			<br>
+			値Aには表示したい値を指定してください。<br>
+			この値にOFFを指定するとカスタムバーを消去します。<br>
+			<br>
+			値Bには値Aの最大値を格納した値を指定してください。<br>
+			最大値が1以下の場合はカスタムバーが消去されます。<br>
+		</div>
+		<br>
+		<a name="CUSTOMBAR_SETTING" id="CUSTOMBAR_SETTING"></a>
+		<div class="block_text_m">- カスタムバー設定</div>
+		<div class="block_text_s">
+			オプションはバーの外観を指定します。<br>
+			モードには細かい挙動を以下の値を組み合わせて設定してください。<br>
+			<br>
+			&amp;1 : 値が0になったらバーを削除する (deletes bar when the value is below 0)<br>
+			&amp;2 : 値の変化の残像エフェクトを描画する (draws decay bar)<br>
+			&amp;4 : パーツのヒットステータスを参照する (refer hit status)<br>
+			&amp;8 : スコア関連の処理を行う (enable score system (damage bonus))<br>
+			&amp;16 : 値が最大値の時に発光エフェクトを描画する (draws glow effect when value is maximum)<br>
+			&amp;32 : 発光エフェクトを常に描画する (always draws glow effect)<br>
+			&amp;64 : 値が最大値に達した時にフラッシュエフェクトを描画する (draws flash effect when the value reached maximum)<br>
+			&amp;128 : バーを縦方向にする (vertical bar)<br>
+			&amp;256 : ペアパーツ1を参照する (refer pair1)<br>
+			&amp;512 : ペアパーツ2を参照する (refer pair2)<br>
+			&amp;1024 : ペアパーツ3を参照する (refer pair3)<br>
+			&amp;2048 : ペアパーツ4を参照する (refer pair4)<br>
+			<br>
+			例えば、通常のサブヘルスバーと同じものをカスタムバーで作成する場合は<br>
+			値Aに耐久力、値Bに耐久力最大値、モードに 15 (1+2+4+8) を指定します。<br>
+			<br>
+			ペアパーツ指定は値Aや値Bの参照元を変更します。<br>
+		</div>
+		<br>
+		<div class="block_text_b">表示順位</div>
+		<a name="LAYER_PARTS" id="LAYER_PARTS"></a>
+		<div class="block_text_m">- パーツの表示順位を変更する</div>
+		<div class="block_text_s">
+			パーツの表示順位を (1) 最上 から (9) 最下 の範囲で変更します。<br>
+			システム全体におけるパーツの表示順位は<a href="#LAYER_ALL">システム全体での表示順位</a>を参照してください。<br>
+		</div>
+		<br>
+		<a name="LAYER_EFFECT" id="LAYER_EFFECT"></a>
+		<div class="block_text_m">- エフェクトの表示順位を変更する</div>
+		<div class="block_text_s">
+			パーツ破壊時のエフェクトとエフェクターの生成するエフェクトオブジェクトの表示順位を変更します。<br>
+			システム全体におけるエフェクトの表示順位は<a href="#LAYER_ALL">システム全体での表示順位</a>を参照してください。<br>
+			エフェクトの表示順位: (effect draw order: -1~10) [default: 0]<br>
+			-1 : 	最上 (top-most)<br>
+			0 : 	デフォルト (default)<br>
+			1 : 	上 (top)<br>
+			2 :<br>
+			3 :<br>
+			4 :<br>
+			5 : 	中 (middle)<br>
+			6 :<br>
+			7 :<br>
+			8 :<br>
+			9 : 	下 (bottom)<br>
+			10 : 	最下 (bottom-most)<br>
+		</div>
+		<br>
+		<a name="LAYER_PARTSSHIFT" id="LAYER_PARTSSHIFT"></a>
+		<div class="block_text_m">- パーツの表示順位シフト値を変更する</div>
+		<div class="block_text_s">
+			パーツ表示順位シフト値: (parts draw order shift value: ~0~)<br>
+			<br>
+			パーツの表示順位を指定値だけずらします。<br>
+			例えばパーツの表示順位が(5)でパーツ表示順位シフト値に1を指定すると(6)として描画されます。<br>
+			このシフト値は値が範囲を超えても自動的に範囲内に収められます。<br>
+			元の表示順位は保持されるので複数の表示順位を簡単に操作できます。<br>
+		</div>
+		<br>
+		<a name="LAYER_EFFECTSHIFT" id="LAYER_EFFECTSHIFT"></a>
+		<div class="block_text_m">- エフェクトの表示順位シフト値を変更する</div>
+		<div class="block_text_s">
+			エフェクト表示順位シフト値: (effect draw order shift value: ~0~)<br>
+			<br>
+			エフェクトの表示順位を指定値だけずらします。<br>
+			例えばエフェクトの表示順位が(5)でエフェクト表示順位シフト値に1を指定すると(6)として描画されます。<br>
+			このシフト値は値が範囲を超えても自動的に範囲内に収められます。<br>
+			元の表示順位は保持されるので複数の表示順位を簡単に操作できます。<br>
+		</div>
+		<br>
+		<a name="LAYER_ALL" id="LAYER_ALL"></a>
+		<div class="block_text_m">- システム全体での表示順位</div>
+		<div class="block_text_s">
+			イベントで操作可能な表示順位は<span class="block_text_color_a">パーツ</span>と<span class="block_text_color_b">エフェクト</span>のみです。<br>
+			<span class="block_text_color_c">プレイヤー</span>と<span class="block_text_color_c">プレイヤー弾</span>はプレイヤー設定で変更できます。<br>
+			<br>
+			（上）<br>
+			(*) スクリーンフェードイン/アウト<br>
+			(*) メニュー全般<br>
+			(*) インターフェース<br>
+			(*) スクリーンエフェクト各種<br>
+			(*) システム用エフェクト<br>
+			<span class="block_text_color_c">(3) プレイヤー</span><br>
+			<span class="block_text_color_c">(3) プレイヤー弾</span><br>
+			<span class="block_text_color_b">(-1) エフェクト</span><br>
+			<span class="block_text_color_c">(2) プレイヤー弾</span><br>
+			<span class="block_text_color_c">(2) プレイヤー</span><br>
+			(*) 敵弾<br>
+			<span class="block_text_color_c">(1) プレイヤー弾</span><br>
+			<span class="block_text_color_c">(1) プレイヤー</span><br>
+			<span class="block_text_color_b">(0) エフェクト</span><br>
+			<span class="block_text_color_c">(0) プレイヤー弾</span><br>
+			<span class="block_text_color_c">(0) プレイヤー</span><br>
+			<span class="block_text_color_b">(1) エフェクト</span><br>
+			<span class="block_text_color_a">(1) パーツ最上</span><br>
+			<span class="block_text_color_b">(2) エフェクト</span><br>
+			<span class="block_text_color_a">(2) パーツ</span><br>
+			<span class="block_text_color_b">(3) エフェクト</span><br>
+			<span class="block_text_color_a">(3) パーツ</span><br>
+			<span class="block_text_color_b">(4) エフェクト</span><br>
+			<span class="block_text_color_a">(4) パーツ</span><br>
+			<span class="block_text_color_b">(5) エフェクト</span><br>
+			<span class="block_text_color_a">(5) パーツ中</span><br>
+			<span class="block_text_color_b">(6) エフェクト</span><br>
+			<span class="block_text_color_a">(6) パーツ</span><br>
+			<span class="block_text_color_b">(7) エフェクト</span><br>
+			<span class="block_text_color_a">(7) パーツ</span><br>
+			<span class="block_text_color_b">(8) エフェクト</span><br>
+			<span class="block_text_color_a">(8) パーツ</span><br>
+			<span class="block_text_color_b">(9) エフェクト</span><br>
+			<span class="block_text_color_a">(9) パーツ最下</span><br>
+			<span class="block_text_color_b">(10) エフェクト</span><br>
+			(*) 背景<br>
+			（下）<br>
+		</div>
+		<br>
+		<a name="SHOT_EFFECT" id="SHOT_EFFECT"></a>
+		<div class="block_text_m">- ショットエフェクトタイプを変更する</div>
+		<div class="block_text_s">
+			ショットエフェクトタイプ: (shot effect type: -1~n)<br>
+			<br>
+			バルカンやバレットなどを発射する際のエフェクトタイプを変更します。<br>
+			プレイヤーバレットにも適用されますが、プレイヤーバレットに敵弾の発射エフェクトを付ける等はできません。<br>
+			またタイプによっては発射エフェクトが定義されていないものもあります。<br>
+			-1 : 無し (none)<br>
+			0 : デフォルト (default)<br>
+			1~n : 任意のタイプ (any type)<br>
+		</div>
+
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">特殊なフラグとオプション</div>
+	<div class="block_contents">
+		<div class="block_text_b">特殊なフラグとオプション</div>
+		<a name="FLAG_AUTODESTROY" id="FLAG_AUTODESTROY"></a>
+		<div class="block_text_m">- 自動破壊フラグを変更する</div>
+		<div class="block_text_s">
+			自動破壊フラグ: (auto destroy flag: 0~1) [default: 1]<br>
+			&amp;1 : 	破壊可能なパーツが無い場合、コアパーツを自爆させる<br>
+		</div>
+		<br>
+		<a name="FLAG_WHENDESTROY" id="FLAG_WHENDESTROY"></a>
+		<div class="block_text_m">- 破壊時の生成フラグを変更する</div>
+		<div class="block_text_s">
+			破壊時の生成フラグ: (create flag when destroyed: 0~) [default: 0]<br>
+			0 : 	デフォルトの設定を使用する (use default setting)<br>
+			1 : 	何も生成しない (none)<br>
+			&amp;2 : 	アイテムを生成 (create item)<br>
+			&amp;4 : 	撃ち返し 小 (counterattack-small)<br>
+			&amp;8 : 	撃ち返し 中 (counterattack-middle)<br>
+			&amp;16 : 	撃ち返し 大 (counterattack-large)<br>
+			&amp;32 : 	撃ち返し 特 (counterattack-extra)<br>
+		</div>
+		<br>
+		<a name="FLAG_HITCHECK" id="FLAG_HITCHECK"></a>
+		<div class="block_text_m">- 衝突判定フラグを変更する</div>
+		<div class="block_text_s">
+			衝突判定フラグ: (hit check flag: 0~3) [default: 1]<br>
+			&amp;1 : 	衝突判定を行う (enable hit check)<br>
+			&amp;2 : 	破壊時に衝突判定を除去しない (don't remove hit check when destroyed)<br>
+		</div>
+		<br>
+		<a name="FLAG_HITTYPE" id="FLAG_HITTYPE"></a>
+		<div class="block_text_m">- 衝突判定タイプを変更する</div>
+		<div class="block_text_s">
+			どのタイプのオブジェクトと判定を行うかを以下の値から指定します。<br>
+			衝突判定タイプ: (hit check type: 0~3) [default: 3]<br>
+			&amp;1 : 	プレイヤー (player)<br>
+			&amp;2 : 	プレイヤーの弾 (player bullet)<br>
+		</div>
+		<br>
+		<a name="FLAG_DRAWOPTION" id="FLAG_DRAWOPTION"></a>
+		<div class="block_text_m">- 描画オプションを変更する</div>
+		<div class="block_text_s">
+			描画オプション: (draw option: 0~3) [default: 3]<br>
+			&amp;1 : 	出現時や非表示にした場合にフェイズエフェクトを描画する (draw phase effect (appear and hide))<br>
+			&amp;2 : 	表示フラグを変更した場合にフェイズエフェクトを描画する (draw phase effect (normal and shadow))<br>
+		</div>
+		<br>
+		<a name="FLAG_TARGETMARKER" id="FLAG_TARGETMARKER"></a>
+		<div class="block_text_m">- ターゲットマーカーフラグを変更する</div>
+		<div class="block_text_s">
+			ターゲットマーカーフラグ: (target marker flag: 0~2) [default: 0]<br>
+			1 : 	赤マーカー (red marker)<br>
+			2 : 	黄マーカー (yellow marker)<br>
+		</div>
+		<br>
+		<a name="FLAG_EFFECTFLAG" id="FLAG_EFFECTFLAG"></a>
+		<div class="block_text_m">- 破壊エフェクトフラグを変更する</div>
+		<div class="block_text_s">
+			破壊エフェクトフラグ: (destroy effect flag: 0~31) [default: 31]<br>
+			&amp;1 : 	効果音 (sound effect)<br>
+			&amp;2 : 	爆発 (explosion effect)<br>
+			&amp;4 : 	火花 (spark effect)<br>
+			&amp;8 : 	閃光 (flash effect)<br>
+			&amp;16 : 	衝撃波 (shock wave effect)<br>
+			<br>
+			パーツが破壊された場合に生成されるエフェクトのフラグを変更します。<br>
+			爆発エフェクトを生成するエフェクターに破壊エフェクトフラグを設定するとその値が適用されます。<br>
+			ただし破壊エフェクトサイズは適用されないので固有パラメータで設定してください。<br>
+		</div>
+		<br>
+		<a name="FLAG_EFFECTSIZE" id="FLAG_EFFECTSIZE"></a>
+		<div class="block_text_m">- 破壊エフェクトサイズを変更する</div>
+		<div class="block_text_s">
+			破壊エフェクトサイズ: (destroy effect size: 0~500%) [default: 100]<br>
+		</div>
+		<br>
+		<a name="FLAG_DESTROYDELAY" id="FLAG_DESTROYDELAY"></a>
+		<div class="block_text_m">- 破壊ディレイを変更する</div>
+		<div class="block_text_s">
+			破壊ディレイ: (destroy delay: 0 or 1~65535) [default: 0]<br>
+			0 : 	パーツごとのデフォルト値 (default)<br>
+			<br>
+			連鎖爆発のディレイを変更します。<br>
+			このディレイは非表示のパーツにも適用されます。（通常、非表示のパーツはディレイを無視して即消去されます）<br>
+		</div>
+		<br>
+		<a name="FLAG_KILLCOUNT" id="FLAG_KILLCOUNT"></a>
+		<div class="block_text_m">- キルカウントフラグを変更する</div>
+		<div class="block_text_s">
+			キルカウントフラグ: (kill count flag: 0~15) [default core: 5] [default parts: 4]<br>
+			&amp;1 : 破壊時にキルカウント(Core)を増やす (when destroyed, increase kill count (Core))<br>
+			&amp;2 : 自爆、消去時にキルカウント(Core)を増やす (when suicided or deleted, increase kill count (Core))<br>
+			&amp;4 : 破壊時にキルカウント(Parts)を増やす (when destroyed, increase kill count (Parts))<br>
+			&amp;8 : 自爆、消去時にキルカウント(Parts)を増やす (when suicided or deleted, increase kill count (Parts))<br>
+			<br>
+			キルカウントはパーツが破壊された際に自動でカウントされます。<br>
+		</div>
+
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">プレイヤーの状態</div>
+	<div class="block_contents">
+		<div class="block_text_b">プレイヤーの状態</div>
+		<a name="PLAYERSTATUS_STUN" id="PLAYERSTATUS_STUN"></a>
+		<div class="block_text_m">- プレイヤーのスタン値を変更する</div>
+		<div class="block_text_s">
+			値A - スタン値: (value A - stun value: 0~65535)<br>
+			<br>
+			スタンはエネルギー回復力を低下させ、ブーストを使用出来なくします。<br>
+			スタン値はスタンの持続時間に影響し、大きいほど持続時間が延びます。<br>
+			この値に 0 を指定するとスタンが解除されます。<br>
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_BIND" id="PLAYERSTATUS_BIND"></a>
+		<div class="block_text_m">- プレイヤーのバインド値を変更する</div>
+		<div class="block_text_s">
+			値A - バインドカウンタ: (value A - bind counter: 0~65535 frame)<br>
+			値B - バインドパワー(Move): (value B - bind power Move: 0~100 %)<br>
+			値C - バインドパワー(Turn): (value C - bind power Turn: 0~100 %)<br>
+			<br>
+			バインドは移動速度や回転速度を低下させます。<br>
+			<br>
+			バインドカウンタは持続時間をフレーム値で指定します。<br>
+			バインドパワー(Move)は移動速度低下率で、100を指定すると移動できなくします。<br>
+			バインドパワー(Turn)は回転速度低下率で、100を指定すると回転できなくします。<br>
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_RESTRAINT" id="PLAYERSTATUS_RESTRAINT"></a>
+		<div class="block_text_m">- プレイヤーの装備抑制値を変更する</div>
+		<div class="block_text_s">
+			値A - 装備抑制カウンタ: (value A - restraint counter: 0~65535 frame)<br>
+			値B - 装備抑制パワー: (value B - restraint power: 0~1)<br>
+			<br>
+			装備抑制は各装備を使用した際の効果を無効化します。<br>
+			キー入力情報は無効化されません。<br>
+			<br>
+			装備抑制カウンタは持続時間をフレーム値で指定します。<br>
+			装備抑制パワーは 1 を指定すると全ての装備が対象になります。<br>
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_POSITION" id="PLAYERSTATUS_POSITION"></a>
+		<div class="block_text_m">- プレイヤーの位置を変更する</div>
+		<div class="block_text_s">
+			オプション: (option: 0~1)<br>
+			<br>
+			プレイヤーの位置を対象パーツの位置に変更します。<br>
+			オプションは以下の値を指定します。<br>
+			&amp;1 : 	簡易エフェクトを表示する (phase effect)
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_ENERGY" id="PLAYERSTATUS_ENERGY"></a>
+		<div class="block_text_m">- プレイヤーのエネルギーを変更する</div>
+		<div class="block_text_s">
+			プレイヤーのエネルギーを変更します。<br>
+			オプションは値をどのように扱うかを指定します。<br>
+			無し :			値をそのまま扱います。<br>
+			パーセント :	エネルギーの最大値に対する百分率に変換します。<br>
+			パーミル :		エネルギーの最大値に対する千分率に変換します。<br>
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_ENERGYSTOCK" id="PLAYERSTATUS_ENERGYSTOCK"></a>
+		<div class="block_text_m">- プレイヤーのエネルギーストックを変更する</div>
+		<div class="block_text_s">
+			プレイヤーのエネルギーストックを変更します。<br>
+			オプションは値をどのように扱うかを指定します。<br>
+			無し :			値をそのまま扱います。<br>
+			パーセント :	エネルギーストックの最大値に対する百分率に変換します。<br>
+			パーミル :		エネルギーストックの最大値に対する千分率に変換します。<br>
+		</div>
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">パーツ検索</div>
+	<div class="block_contents">
+		<div class="block_text_b">パーツ検索</div>
+		<a name="PARTSSEARCH_SETTING" id="PARTSSEARCH_SETTING"></a>
+		<div class="block_text_m">- パーツ検索設定</div>
+		<div class="block_text_s">
+			(基点0,0) は座標0,0から検索します。<br>
+			(基点プレイヤー) はプレイヤーの座標から検索します。<br>
+			(基点パーツ) は任意のパーツの座標から検索します。<br>
+			<br>
+			検索オプション (search option)<br>
+				0:			このパーツのコアから検索 (search from this core)<br>
+				&amp;1:		全てのパーツから検索 (search all parts)<br>
+				0:			自分の検索インデックスを使用する (use own SearchIndex)<br>
+				&amp;2:		コアの検索インデックスを使用する (use core SearchIndex)<br>
+				&amp;4:		検索インデックスが範囲外の場合は 0(無し) を返す (return zero when index is out of range)<br>
+				0:			ソート無し (no sort, Index order)<br>
+				&amp;16:	昇順 (ascending order)<br>
+				&amp;32:	降順 (descending order)<br>
+				0:			検索対象の部分一致検索 (search for partial matching)<br>
+				&amp;128:	検索対象の完全一致検索 (search for perfect matching)<br>
+			<br>
+			検索対象 (Search type) (Narrowing type)<br>
+				0:			指定なし (all)<br>
+				&amp;1:		コア (core)<br>
+				&amp;2:		非コア (not core)<br>
+				&amp;4:		ヘルスバー (healthbar)<br>
+				&amp;8:		ターゲットマーカーA (targetMarkerA)<br>
+				&amp;16:		ターゲットマーカーB (targetMarkerB)<br>
+				&amp;32:	耐久力が設定されているパーツ (not invincible, maximum durability is not negative)<br>
+				&amp;64:	耐久力が設定されていない破壊不可能なパーツ (invincible, maximum durability is negative)<br>
+				&amp;128:	衝突判定があるパーツ (hitbox)<br>
+		</div>
+		<br>
+		<a name="PARTSSEARCH_DISTANCE" id="PARTSSEARCH_DISTANCE"></a>
+		<div class="block_text_m">- パーツ検索(距離)</div>
+		<div class="block_text_s">
+			パーツを検索しペアパーツなどに設定するイベントです。<br>
+			事前にパーツ検索設定が必要です。<br>
+			<br>
+			基点からの距離で検索します。<br>
+			有効距離はドット単位で指定し、-1を指定すると有効距離を無視します。<br>
+		</div>
+		<br>
+		<a name="PARTSSEARCH_DIRECTION" id="PARTSSEARCH_DIRECTION"></a>
+		<div class="block_text_m">- パーツ検索(距離)</div>
+		<div class="block_text_s">
+			パーツを検索しペアパーツなどに設定するイベントです。<br>
+			事前にパーツ検索設定が必要です。<br>
+			<br>
+			基点からの方向で検索します。<br>
+			中心角は0~2047の範囲で指定します。<br>
+			-1を指定すると全方向になります。<br>
+		</div>
+	</div>
+</div>
+
+<hr class="line_s">
+
+</body>
+</html>

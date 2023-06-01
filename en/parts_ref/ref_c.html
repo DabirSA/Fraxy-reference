@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="default-style" content="../fraxy.css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Parts list [C]</title>
+</head>
+
+<body class="contents_main">
+<hr class="line_s">
+<div class="style_center">
+<div class="categorytitle">- FRAXY Parts list [C] -</div>
+<br>
+[C] Core<br>
+<br>
+Core parts are important parts which form the heart of the game's action.<br>
+<br>
+Every enemy will be built around one of these core parts.<br>
+</div>
+<hr class="line_s">
+
+<table width="95%" border=0><tr><td class="style_left">
+
+Core type - 
+<a href="#P001_ROLLING_CORE">Rolling Core</a>,
+<a href="#P010_ROLLING_CORE_2">Rolling Core 2</a>,
+<a href="#P006_BIG_CORE">Big Core</a>,
+<a href="#P013_BIG_CORE_2">Big Core 2</a>,
+<a href="#P016_CANCER_CORE">Cancer Core</a>,
+<a href="#P019_SMALL_CORE">Small Core</a>,
+<a href="#P035_FIGHTER_CORE">Fighter Core</a>,
+<a href="#P041_FIGHTER_CORE_2">Fighter Core 2</a>,
+<a href="#P036_MISSILE_CORE">Missile Core</a>,
+<a href="#P038_BLOCK_CORE">Block Core</a>,
+<a href="#P040_MINI_CORE">Mini Core</a>,
+<a href="#P057_BIT_CORE">Bit Core</a>,
+<a href="#P062_DEPLOY_CORE">Deploy Core</a>,
+<a href="#P137_HEAD_CORE">Head Core</a>,
+
+</td></tr></table>
+<br>
+<hr class="line_s">
+<div class="style_center">
+
+<a name="P001_ROLLING_CORE" id="P001_ROLLING_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(001) Rolling core
+</td></tr><tr><td class="partsimage" rowspan="6">
+<img src="../img/001.gif" alt="*">
+</td><td class="partsinfo">
+A core part that moves towards the player while rotating clockwise or counterclockwise.<br>
+Its rotation direction and speed change depending on the chosen movement action.<br>
+</td></tr><tr><td class="partsspecial">
+On destruction: Generates item
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 1~1 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: 16~32) (Duration: 1~1 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 151~300) (Duration: 1~1 frames)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [3]</span> (Total: 1~1 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: -16~-32) (Duration: 1~1 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 151~300) (Duration: 1~1 frames)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [5]</span> (Total: 1~1 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: 4~8) (Duration: 1~1 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 151~300) (Duration: 1~1 frames)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [7]</span> (Total: 1~1 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: -4~-8) (Duration: 1~1 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 151~300) (Duration: 1~1 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P010_ROLLING_CORE_2" id="P010_ROLLING_CORE_2">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(010) Rolling core 2
+</td></tr><tr><td class="partsimage" rowspan="4">
+<img src="../img/010.gif" alt="*">
+</td><td class="partsinfo">
+A core part that moves towards the player while rotating in alternating directions.<br>
+Its rotation speed changes depending on the chosen movement action.<br>
+</td></tr><tr><td class="partsspecial">
+On destruction: Generates item
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 349~250 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: 40~56) (Duration: 349~250 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 151~300) (Constant)</span><br>
+
+<span class="partspattern">Movement action [2]</span> (Total: 349~250 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: -40~-56) (Duration: 349~250 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 151~300) (Constant)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [4]</span> (Total: 349~250 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: 8~16) (Duration: 349~250 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 151~300) (Constant)</span><br>
+
+<span class="partspattern">Movement action [5]</span> (Total: 349~250 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: -8~-16) (Duration: 349~250 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 151~300) (Constant)</span><br>
+</td></tr></table><br>
+
+<a name="P006_BIG_CORE" id="P006_BIG_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(006) Big core
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="../img/006.gif" alt="*">
+</td><td class="partsinfo">
+A core part that turns toward the player and tries to rush them down.<br>
+</td></tr><tr><td class="partsspecial">
+On destruction: Generates item
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 200~160 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~28) (Duration: 150 frames)</span><br>
+
+<span class="partspattern">Movement action [2]</span> (Total: 170 frames)<br>
+<span class="partsaction">Move (facing direction) (Movement speed: 175~200) (Duration: 100~150 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P013_BIG_CORE_2" id="P013_BIG_CORE_2">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(013) Big core 2
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="../img/013.gif" alt="*">
+</td><td class="partsinfo">
+A core part that strafes around the player while facing towards them.<br>
+</td></tr><tr><td class="partsspecial">
+On destruction: Generates item
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 1196~800 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 12~24) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +1024) (Movement speed: 101~200) (Duration: 1196~800 frames)</span><br>
+
+<span class="partspattern">Movement action [2]</span> (Total: 1196~800 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 12~24) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +3072) (Movement speed: 101~200) (Duration: 1196~800 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P016_CANCER_CORE" id="P016_CANCER_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(016) Cancer core
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="../img/016.gif" alt="*">
+</td><td class="partsinfo">
+A core part that strafes around the player while facing towards them, then tries to rush them down.<br>
+</td></tr><tr><td class="partsspecial">
+On destruction: Generates item
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 200~250 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4) (Duration: 200 frames)</span><br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~30) (Duration: 150 frames)</span><br>
+<span class="partsaction">Move (facing direction +1024) (Movement speed: 100~150) (Duration: 200~250 frames)</span><br>
+
+<span class="partspattern">Movement action [2]</span> (Total: 200 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4) (Duration: 200 frames)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 120~170) (Duration: 80~130 frames)</span><br>
+
+<span class="partspattern">Movement action [3]</span> (Total: 200~250 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4) (Duration: 200 frames)</span><br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~30) (Duration: 150 frames)</span><br>
+<span class="partsaction">Move (facing direction +3072) (Movement speed: 100~150) (Duration: 200~250 frames)</span><br>
+
+<span class="partspattern">Movement action [4]</span> (Total: 200 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4) (Duration: 200 frames)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 120~170) (Duration: 80~130 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P019_SMALL_CORE" id="P019_SMALL_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(019) Small core
+</td></tr><tr><td class="partsimage" rowspan="4">
+<img src="../img/019.gif" alt="*">
+</td><td class="partsinfo">
+A core part that moves towards the player while rotating clockwise or counterclockwise.<br>
+Functions similarly to a rolling core.<br>
+Its rotation direction changes depending on the chosen movement action.<br>
+</td></tr><tr><td class="partsspecial">
+On destruction: Generates item
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 1~1 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: 8~20) (Duration: 1~1 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 101~200) (Duration: 1~1 frames)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [3]</span> (Total: 1~1 frames)<br>
+<span class="partsaction">Rotate (Rotation speed: -8~-20) (Duration: 1~1 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 101~200) (Duration: 1~1 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P035_FIGHTER_CORE" id="P035_FIGHTER_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(035) Fighter core
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="../img/035.gif" alt="*">
+</td><td class="partsinfo">
+A core part that moves at high speed while trying to face the player.<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 1~1 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 10~24) (Duration: 1~1 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 706~1300) (Duration: 1~1 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P041_FIGHTER_CORE_2" id="P041_FIGHTER_CORE_2">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(041) Fighter core 2
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="../img/041.gif" alt="*">
+</td><td class="partsinfo">
+A core part that moves at high speed while trying to face the player.<br>
+The only difference from the standard fighter core is its higher default durability.<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 1~1 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 10~24) (Duration: 1~1 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 706~1300) (Duration: 1~1 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P036_MISSILE_CORE" id="P036_MISSILE_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(036) Missile core
+</td></tr><tr><td class="partsimage" rowspan="5">
+<img src="../img/036.gif" alt="*">
+</td><td class="partsinfo">
+A core part that moves at super-high speed while trying to face the player, and self-destructs after a set time.<br>
+Movement actions [4], [6] and [8] move the core a little in one direction before proceeding with its normal action.<br>
+[4] Moves backwards<br>
+[6] Moves right<br>
+[8] Moves left<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 300 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 8~12) (Duration: 300 frames)</span><br>
+<span class="partsaction">Move (towards player) (Movement speed: 1708~2500) (Duration: 300 frames)</span><br>
+<span class="partspattern">Movement action [2]</span><br>
+<span class="partsaction">Self-destruct</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [4]</span> (Total: 15 frames)<br>
+<span class="partsaction">Move (facing direction +2048) (Movement speed: 220) (Duration: 15 frames)</span><br>
+<span class="partsaction">Jumps to movement action [1] after finishing</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [6]</span> (Total: 15 frames)<br>
+<span class="partsaction">Move (facing direction +1152) (Movement speed: 220) (Duration: 15 frames)</span><br>
+<span class="partsaction">Jumps to movement action [1] after finishing</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [8]</span> (Total: 15 frames)<br>
+<span class="partsaction">Move (facing direction +2944) (Movement speed: 220) (Duration: 15 frames)</span><br>
+<span class="partsaction">Jumps to movement action [1] after finishing</span><br>
+</td></tr></table><br>
+
+<a name="P038_BLOCK_CORE" id="P038_BLOCK_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(038) Block core
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="../img/038.gif" alt="*">
+</td><td class="partsinfo">
+A core part that alternates between rotating on the spot and moving towards the player.<br>
+</td></tr><tr><td class="partsspecial">
+On destruction: Generates item
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 200~140 frames)<br>
+<span class="partsaction">Rotate (initial facing direction) (Rotation speed: 16~24) (Duration: 160~100 frames)</span><br>
+
+<span class="partspattern">Movement action [2]</span> (Total: 140 frames)<br>
+<span class="partsaction">Move (towards player) (Movement speed: 30~50) (Duration: 100 frames)</span><br>
+
+<span class="partspattern">Movement action [3]</span> (Total: 200~140 frames)<br>
+<span class="partsaction">Rotate (initial facing direction +1024) (Rotation speed: 16~24) (Duration: 160~100 frames)</span><br>
+
+<span class="partspattern">Movement action [4]</span> (Total: 140 frames)<br>
+<span class="partsaction">Move (towards player) (Movement speed: 30~50) (Duration: 100 frames)</span><br>
+
+<span class="partspattern">Movement action [5]</span> (Total: 200~140 frames)<br>
+<span class="partsaction">Rotate (initial facing direction +2048) (Rotation speed: 16~24) (Duration: 160~100 frames)</span><br>
+
+<span class="partspattern">Movement action [6]</span> (Total: 140 frames)<br>
+<span class="partsaction">Move (towards player) (Movement speed: 30~50) (Duration: 100 frames)</span><br>
+
+<span class="partspattern">Movement action [7]</span> (Total: 200~140 frames)<br>
+<span class="partsaction">Rotate (initial facing direction +3072) (Rotation speed: 16~24) (Duration: 160~100 frames)</span><br>
+
+<span class="partspattern">Movement action [8]</span> (Total: 140 frames)<br>
+<span class="partsaction">Move (towards player) (Movement speed: 30~50) (Duration: 100 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P040_MINI_CORE" id="P040_MINI_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(040) Mini core
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="../img/040.gif" alt="*">
+</td><td class="partsinfo">
+A core part that turns to face the player, then charges forward at high speed.<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 80~50 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 20~32) (Duration: 80~50 frames)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 101~200) (Duration: 1~1 frames)</span><br>
+
+<span class="partspattern">Movement action [2]</span> (Total: 200~150 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 8~12) (Duration: 200~150 frames)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 201~300) (Duration: 200~150 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P057_BIT_CORE" id="P057_BIT_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(057) Bit core
+</td></tr><tr><td class="partsimage" rowspan="4">
+<img src="../img/057.gif" alt="*">
+</td><td class="partsinfo">
+A core part that circles around the player while aiming towards them, occasionally darting about and changing direction.<br>
+If the initial movement action is set to [1] or [3], begins by darting forwards.<br>
+[1] and [3] enter the normal movement loop at different points.<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Total: 50~30 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~24) (Constant)</span><br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 48~80) (Duration: 50~30 frames)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 600~650) (Duration: 20 frames)</span><br>
+<span class="partsaction">Jumps to movement action [5] after finishing</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [3]</span> (Total: 50~30 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~24) (Constant)</span><br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 48~80) (Duration: 50~30 frames)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 600~650) (Duration: 20 frames)</span><br>
+<span class="partsaction">Jumps to movement action [9] after finishing</span><br>
+</td></tr><tr><td class="partsmove">
+
+<span class="partspattern">Movement action [5]</span> (Total: 30 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~24) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +1280) (Movement speed: 401~500) (Duration: 30 frames)</span><br>
+
+<span class="partspattern">Movement action [6]</span> (Total: 50~30 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 48~80) (Duration: 50~30 frames)</span><br>
+
+<span class="partspattern">Movement action [7]</span> (Total: 120~160 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~24) (Constant)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 100~160) (Duration: 40 frames)</span><br>
+<span class="partsaction">Move (facing direction +3328) (Movement speed: 220~300) (Duration: 120~160 frames)</span><br>
+
+<span class="partspattern">Movement action [8]</span> (Total: 50~30 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 48~80) (Duration: 50~30 frames)</span><br>
+
+<span class="partspattern">Movement action [9]</span> (Total: 30 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~24) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +2816) (Movement speed: 401~500) (Duration: 30 frames)</span><br>
+
+<span class="partspattern">Movement action [10]</span> (Total: 50~30 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 48~80) (Duration: 50~30 frames)</span><br>
+
+<span class="partspattern">Movement action [11]</span> (Total: 120~160 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 16~24) (Constant)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 100~160) (Duration: 40 frames)</span><br>
+<span class="partsaction">Move (facing direction +768) (Movement speed: 220~300) (Duration: 120~160 frames)</span><br>
+
+<span class="partspattern">Movement action [12]</span> (Total: 50~30 frames)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 48~80) (Duration: 50~30 frames)</span><br>
+</td></tr></table><br>
+
+<a name="P062_DEPLOY_CORE" id="P062_DEPLOY_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(062) Deploy core
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="../img/062.gif" alt="*">
+</td><td class="partsinfo">
+A special core part used to make multiple enemies appear at the same time.<br>
+Silently self-destructs as soon as it spawns, leaving its child parts behind.<br>
+All child parts that are not parented to a core part will also be destroyed.<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span><br>
+<span class="partsaction">Self-destruct</span><br>
+</td></tr></table><br>
+
+<a name="P137_HEAD_CORE" id="P137_HEAD_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(137) Head core
+</td></tr><tr><td class="partsimage" rowspan="17">
+<img src="../img/137.gif" alt="*">
+</td><td class="partsinfo">
+A special core part with a variety of movement behaviours.<br>
+All of its actions loop indefinitely. It is designed for you to use events to switch between them.<br>
+Use variables to track and control its behaviour.<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [1]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [2]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [3]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +1024) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [4]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +3072) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [5]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +2048) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [6]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 10~300) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +1024) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [7]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+<span class="partsaction">Move (facing direction) (Movement speed: 10~300) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +3072) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [8]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +2048) (Movement speed: 10~300) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +1024) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [9]</span> (Constant)<br>
+<span class="partsaction">Change direction (face player) (Rotation speed: 4~64) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +2048) (Movement speed: 10~300) (Constant)</span><br>
+<span class="partsaction">Move (facing direction +3072) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [10]</span> (Constant)<br>
+<span class="partsaction">Rotate (Rotation speed: 4~80) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [11]</span> (Constant)<br>
+<span class="partsaction">Rotate (Rotation speed: -4~-80) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [12]</span> (Constant)<br>
+<span class="partsaction">Move (facing direction) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [13]</span> (Constant)<br>
+<span class="partsaction">Move (facing direction +1024) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [14]</span> (Constant)<br>
+<span class="partsaction">Move (facing direction +3072) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [15]</span> (Constant)<br>
+<span class="partsaction">Move (facing direction +2048) (Movement speed: 10~300) (Constant)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">Movement action [16]</span> (Constant)<br>
+<span class="partsaction">Remain still (Constant)</span><br>
+</td></tr></table><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

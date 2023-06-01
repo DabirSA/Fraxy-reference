@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Try Basic2</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">
+<div class="categorytitle">- FRAXY Try script -</div>
+<br>
+各数値の範囲や単位<br>
+<br>
+</div>
+<hr class="line_s">
+<br>
+<div class="style_center">
+<table class="messagetable"><tr align="left"><td>
+ここでは様々な数値の範囲や単位を説明します。<br>
+</td></tr></table>
+
+<br>
+<table class="messagetable"><tr align="left"><td>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			方向や角度
+		</div>
+		<div class="trytextbody">
+			方向や角度は0時方向を基準に時計回り、値は0~4095の値をとります。<br>
+			この値はオーバーしても以下のように補正されるため問題ありません。<br>
+			<br>
+			<table class="messagetable">
+				<tr align="left"><td width="80">-3072</td><td width="20">=</td><td width="80">-270度</td><td width="20">=</td><td>90度</td></tr>
+				<tr align="left"><td width="80">-2048</td><td width="20">=</td><td width="80">-180度</td><td width="20">=</td><td>180度</td></tr>
+				<tr align="left"><td width="80">-1024</td><td width="20">=</td><td width="80">-90度</td><td width="20">=</td><td>270度</td></tr>
+				<tr align="left"><td width="80">0</td><td width="20">=</td><td width="80">0度</td><td width="20">=</td><td>0度</td></tr>
+				<tr align="left"><td width="80">1024</td><td width="20">=</td><td width="80">90度</td><td width="20">=</td><td>90度</td></tr>
+				<tr align="left"><td width="80">2048</td><td width="20">=</td><td width="80">180度</td><td width="20">=</td><td>180度</td></tr>
+				<tr align="left"><td width="80">3072</td><td width="20">=</td><td width="80">270度</td><td width="20">=</td><td>270度</td></tr>
+				<tr align="left"><td width="80">4096</td><td width="20">=</td><td width="80">360度</td><td width="20">=</td><td>0度</td></tr>
+				<tr align="left"><td width="80">5120</td><td width="20">=</td><td width="80">450度</td><td width="20">=</td><td>90度</td></tr>
+				<tr align="left"><td width="80">...</td><td width="20"></td><td width="80"></td><td width="20"></td><td></td></tr>
+			</table>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			距離や座標
+		</div>
+		<div class="trytextbody">
+			距離や座標は基本的にドット単位になります。<br>
+		</div>
+	</div>
+	<br><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			時間
+		</div>
+		<div class="trytextbody">
+			時間は秒単位とフレーム単位があります。<br>
+			タイマー関連では秒単位、それ以外ではフレーム単位が使用されます。<br>
+			FRAXYは秒間30～40フレームを想定して作られているため1フレーム=0.030~0.025秒になりますが、<br>
+			高負荷時にフレームスキップを行わないため実時間とずれる場合があります。<br>
+		</div>
+	</div>
+	<br><br>
+</td></tr></table>
+
+</div>
+<hr class="line_s">
+<div class="blank"></div>
+</body>
+</html>

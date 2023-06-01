@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Parts info</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">
+<div class="categorytitle">- FRAXY Parts info -</div>
+<br>
+パーツの行動/攻撃パターンの説明<br>
+<br>
+</div>
+<hr class="line_s">
+<div class="style_center">
+<br><table class="messagetable"><tr align="left"><td>
+ここでは各パターンの記述の読み取り方を説明します。<br>
+</td></tr></table>
+
+<br><table class="partstable"><tr><td class="partsname" colspan="2">
+(039) バルカン自機狙い
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="img/039.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを狙ってバルカンを発射するパーツです。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:100~80 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:24~32) (実行:60~60 フレーム)</span><br>
+</td></tr><tr><td class="partsattack">
+<span class="partspattern">攻撃パターン[1]</span> (合計:100~100 フレーム)<br>
+<span class="partsaction">バルカン(2x1~14x1) (実行:10~70 フレーム)</span><br>
+</td></tr></table><br>
+
+<br><table class="partstable"><tr><td class="partsname" colspan="2">
+(013) ビッグコア2
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="img/013.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換しつつ、プレイヤーの周囲を回るように移動するコアパーツです。<br>
+</td></tr><tr><td class="partsspecial">
+破壊時: アイテム生成
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:1196~800 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:12~24) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+1024) (移動速度:101~200) (実行:1196~800 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[2]</span> (合計:1196~800 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:12~24) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+3072) (移動速度:101~200) (実行:1196~800 フレーム)</span><br>
+</td></tr></table><br>
+
+<br><table class="messagetable"><tr align="left"><td>
+行動パターンは <font class="partsmove">緑色</font> 、攻撃パターンは <font class="partsattack">赤色</font> の枠で記述されています。<br>
+<br>
+特殊な設定がある場合は <font class="partsspecial">黄色</font> の枠に記述されています。<br>
+<br>
+各パターンや設定が定義されていない場合は記述されていません。<br>
+</td></tr></table><br>
+
+<br><table class="partstable"><tr><td class="partsname" colspan="2">
+(008) レーザー中
+</td></tr><tr><td class="partsimage" rowspan="5">
+<img src="img/008.gif" alt="*">
+</td><td class="partsinfo">
+レーザーを発射するパーツです。<br>
+パターンによってレーザーの持続時間が変わります。<br>
+</td></tr><tr><td class="partsattack">
+<span class="partspattern">攻撃パターン[1]</span> (合計:400~400 フレーム)<br>
+<span class="partsaction">レーザー(サイズ:100%) (実行:101~200 フレーム)</span><br>
+</td></tr><tr><td class="partsattack">
+<span class="partspattern">攻撃パターン[3]</span> (合計:500~500 フレーム)<br>
+<span class="partsaction">レーザー(サイズ:100%) (実行:201~300 フレーム)</span><br>
+</td></tr><tr><td class="partsattack">
+<span class="partspattern">攻撃パターン[5]</span> (合計:600~600 フレーム)<br>
+<span class="partsaction">レーザー(サイズ:100%) (実行:301~400 フレーム)</span><br>
+</td></tr><tr><td class="partsattack">
+<span class="partspattern">攻撃パターン[7]</span> (常時)<br>
+<span class="partsaction">レーザー(サイズ:100%)</span><br>
+</td></tr></table><br>
+
+<br><table class="messagetable"><tr align="left"><td>
+パターンが複数定義されている場合はこのように複数記述されています。<br>
+動作はそれぞれの枠の中でループします。<br>
+<br>
+パターン内の括弧に囲まれた内容の数値が (実行:101~200 フレーム) のように範囲で記述されている場合は、<br>
+(Rank1~Rank100) での値を意味します。<br>
+範囲で記述されていない場合は Rank によって変化しません。<br>
+<br>
+(実行:フレーム) はその動作を行うフレーム数を意味します。<br>
+(合計:フレーム) はその動作パターンが終了するまでのフレーム数を意味します。<br>
+同パターンに複数の動作が定義されている場合、<br>
+最もフレーム数の大きい値が合計フレーム値として扱われます。<br>
+<br>
+表には記述されていませんが各動作は実行後にウェイトフレームが入ります。<br>
+ウェイトフレーム値は (合計フレーム値-実行フレーム値) で求める事ができます。<br>
+これらの関係は以下のような図になります。
+</td></tr></table>
+<br>
+<table border="0" width="80%"><tr align="center">
+<td class="partsetc1" width="15%" rowspan="2">パターン開始<br>0 フレーム</td>
+<td class="partsetc0" width="70%" colspan="2">合計フレーム</td>
+<td class="partsetc1" width="15%" rowspan="2">パターン終了<br>次のパターンへ</td>
+</tr>
+<tr align="center">
+<td class="partsetc2" width="45%">実行フレーム</td>
+<td class="partsetc3" width="25%">ウェイトフレーム</td>
+</tr>
+</table>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Parts list [C]</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">
+<div class="categorytitle">- FRAXY Parts list [C] -</div>
+<br>
+[C] Core<br>
+<br>
+コア系は動作の主軸となる重要なパーツです。<br>
+<br>
+敵の中心となるパーツは必ずこのコア系を使用します。<br>
+</div>
+<hr class="line_s">
+
+<table width="95%" border=0><tr><td class="style_left">
+
+コア系 - 
+<a href="#P001_ROLLING_CORE">ローリングコア</a>,
+<a href="#P010_ROLLING_CORE_2">ローリングコア2</a>,
+<a href="#P006_BIG_CORE">ビッグコア</a>,
+<a href="#P013_BIG_CORE_2">ビッグコア2</a>,
+<a href="#P016_CANCER_CORE">キャンサーコア</a>,
+<a href="#P019_SMALL_CORE">スモールコア</a>,
+<a href="#P035_FIGHTER_CORE">ファイターコア</a>,
+<a href="#P041_FIGHTER_CORE_2">ファイターコア2</a>,
+<a href="#P036_MISSILE_CORE">ミサイルコア</a>,
+<a href="#P038_BLOCK_CORE">ブロックコア</a>,
+<a href="#P040_MINI_CORE">ミニコア 突撃型</a>,
+<a href="#P057_BIT_CORE">ビットコア</a>,
+<a href="#P062_DEPLOY_CORE">デプロイコア</a>,
+<a href="#P137_HEAD_CORE">ヘッドコア</a>,
+
+</td></tr></table>
+<br>
+<hr class="line_s">
+<div class="style_center">
+
+<a name="P001_ROLLING_CORE" id="P001_ROLLING_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(001) ローリングコア
+</td></tr><tr><td class="partsimage" rowspan="6">
+<img src="img/001.gif" alt="*">
+</td><td class="partsinfo">
+時計回りもしくは反時計回りに回転しながらプレイヤーに向かって進むコアパーツです。<br>
+パターンによって回転方向や回転速度が変わります。<br>
+</td></tr><tr><td class="partsspecial">
+破壊時: アイテム生成
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:1~1 フレーム)<br>
+<span class="partsaction">回転 (回転速度:16~32) (実行:1~1 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:151~300) (実行:1~1 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:1~1 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-16~-32) (実行:1~1 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:151~300) (実行:1~1 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (合計:1~1 フレーム)<br>
+<span class="partsaction">回転 (回転速度:4~8) (実行:1~1 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:151~300) (実行:1~1 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (合計:1~1 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-4~-8) (実行:1~1 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:151~300) (実行:1~1 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P010_ROLLING_CORE_2" id="P010_ROLLING_CORE_2">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(010) ローリングコア2
+</td></tr><tr><td class="partsimage" rowspan="4">
+<img src="img/010.gif" alt="*">
+</td><td class="partsinfo">
+交互に回転しながらプレイヤーに向かって進むコアパーツです。<br>
+パターンによって回転速度が変わります。<br>
+</td></tr><tr><td class="partsspecial">
+破壊時: アイテム生成
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:349~250 フレーム)<br>
+<span class="partsaction">回転 (回転速度:40~56) (実行:349~250 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:151~300) (常時)</span><br>
+
+<span class="partspattern">行動パターン[2]</span> (合計:349~250 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-40~-56) (実行:349~250 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:151~300) (常時)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[4]</span> (合計:349~250 フレーム)<br>
+<span class="partsaction">回転 (回転速度:8~16) (実行:349~250 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:151~300) (常時)</span><br>
+
+<span class="partspattern">行動パターン[5]</span> (合計:349~250 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-8~-16) (実行:349~250 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:151~300) (常時)</span><br>
+</td></tr></table><br>
+
+<a name="P006_BIG_CORE" id="P006_BIG_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(006) ビッグコア
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="img/006.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換し、突進するように移動するコアパーツです。<br>
+</td></tr><tr><td class="partsspecial">
+破壊時: アイテム生成
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:200~160 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~28) (実行:150 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[2]</span> (合計:170 フレーム)<br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:175~200) (実行:100~150 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P013_BIG_CORE_2" id="P013_BIG_CORE_2">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(013) ビッグコア2
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="img/013.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換しつつ、プレイヤーの周囲を回るように移動するコアパーツです。<br>
+</td></tr><tr><td class="partsspecial">
+破壊時: アイテム生成
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:1196~800 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:12~24) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+1024) (移動速度:101~200) (実行:1196~800 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[2]</span> (合計:1196~800 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:12~24) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+3072) (移動速度:101~200) (実行:1196~800 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P016_CANCER_CORE" id="P016_CANCER_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(016) キャンサーコア
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="img/016.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換しつつ、プレイヤーの周囲を回るように移動した後、突進するように移動するコアパーツです。<br>
+</td></tr><tr><td class="partsspecial">
+破壊時: アイテム生成
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:200~250 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4) (実行:200 フレーム)</span><br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~30) (実行:150 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+1024) (移動速度:100~150) (実行:200~250 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[2]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4) (実行:200 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:120~170) (実行:80~130 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[3]</span> (合計:200~250 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4) (実行:200 フレーム)</span><br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~30) (実行:150 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+3072) (移動速度:100~150) (実行:200~250 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[4]</span> (合計:200 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4) (実行:200 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:120~170) (実行:80~130 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P019_SMALL_CORE" id="P019_SMALL_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(019) スモールコア
+</td></tr><tr><td class="partsimage" rowspan="4">
+<img src="img/019.gif" alt="*">
+</td><td class="partsinfo">
+時計回りもしくは反時計回りに回転しながらプレイヤーに向かって進むコアパーツです。<br>
+動作的にはローリングコアと似ています。<br>
+パターンによって回転方向が変わります。<br>
+</td></tr><tr><td class="partsspecial">
+破壊時: アイテム生成
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:1~1 フレーム)<br>
+<span class="partsaction">回転 (回転速度:8~20) (実行:1~1 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:101~200) (実行:1~1 フレーム)</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:1~1 フレーム)<br>
+<span class="partsaction">回転 (回転速度:-8~-20) (実行:1~1 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:101~200) (実行:1~1 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P035_FIGHTER_CORE" id="P035_FIGHTER_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(035) ファイターコア
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="img/035.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換しつつ、高速で移動するコアパーツです。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:1~1 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:10~24) (実行:1~1 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:706~1300) (実行:1~1 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P041_FIGHTER_CORE_2" id="P041_FIGHTER_CORE_2">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(041) ファイターコア2
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="img/041.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換しつつ、高速で移動するコアパーツです。<br>
+ファイターコアとの違いは基本耐久力だけです。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:1~1 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:10~24) (実行:1~1 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:706~1300) (実行:1~1 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P036_MISSILE_CORE" id="P036_MISSILE_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(036) ミサイルコア
+</td></tr><tr><td class="partsimage" rowspan="5">
+<img src="img/036.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換しつつ、超高速で移動し、一定時間後に自爆するコアパーツです。<br>
+初期行動パターンを[4]、[6]、[8]に設定すると以下の方向に少しだけ移動してから通常の行動に移ります。<br>
+[4] 下へ移動する<br>
+[6] 右へ移動する<br>
+[8] 左へ移動する<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:300 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~12) (実行:300 フレーム)</span><br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:1708~2500) (実行:300 フレーム)</span><br>
+<span class="partspattern">行動パターン[2]</span><br>
+<span class="partsaction">自爆</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[4]</span> (合計:15 フレーム)<br>
+<span class="partsaction">移動 (自分の向いている方向+2048) (移動速度:220) (実行:15 フレーム)</span><br>
+<span class="partsaction">終了後に行動パターン[1]へジャンプする</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (合計:15 フレーム)<br>
+<span class="partsaction">移動 (自分の向いている方向+1152) (移動速度:220) (実行:15 フレーム)</span><br>
+<span class="partsaction">終了後に行動パターン[1]へジャンプする</span><br>
+
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (合計:15 フレーム)<br>
+<span class="partsaction">移動 (自分の向いている方向+2944) (移動速度:220) (実行:15 フレーム)</span><br>
+<span class="partsaction">終了後に行動パターン[1]へジャンプする</span><br>
+</td></tr></table><br>
+
+<a name="P038_BLOCK_CORE" id="P038_BLOCK_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(038) ブロックコア
+</td></tr><tr><td class="partsimage" rowspan="3">
+<img src="img/038.gif" alt="*">
+</td><td class="partsinfo">
+方向転換とプレイヤーを目標とした移動を交互に行うコアパーツです。<br>
+</td></tr><tr><td class="partsspecial">
+破壊時: アイテム生成
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:200~140 フレーム)<br>
+<span class="partsaction">方向転換 (自分の向いている方向) (回転速度:16~24) (実行:160~100 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[2]</span> (合計:140 フレーム)<br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:30~50) (実行:100 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[3]</span> (合計:200~140 フレーム)<br>
+<span class="partsaction">方向転換 (自分の向いている方向+1024) (回転速度:16~24) (実行:160~100 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[4]</span> (合計:140 フレーム)<br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:30~50) (実行:100 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[5]</span> (合計:200~140 フレーム)<br>
+<span class="partsaction">方向転換 (自分の向いている方向+2048) (回転速度:16~24) (実行:160~100 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[6]</span> (合計:140 フレーム)<br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:30~50) (実行:100 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[7]</span> (合計:200~140 フレーム)<br>
+<span class="partsaction">方向転換 (自分の向いている方向+3072) (回転速度:16~24) (実行:160~100 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[8]</span> (合計:140 フレーム)<br>
+<span class="partsaction">移動 (プレイヤー方向) (移動速度:30~50) (実行:100 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P040_MINI_CORE" id="P040_MINI_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(040) ミニコア 突撃型
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="img/040.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換した後、高速で突撃するコアパーツです。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:80~50 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:20~32) (実行:80~50 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:101~200) (実行:1~1 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[2]</span> (合計:200~150 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:8~12) (実行:200~150 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:201~300) (実行:200~150 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P057_BIT_CORE" id="P057_BIT_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(057) ビットコア
+</td></tr><tr><td class="partsimage" rowspan="4">
+<img src="img/057.gif" alt="*">
+</td><td class="partsinfo">
+プレイヤーを目標に方向転換しつつ、機敏に動き回るコアパーツです。<br>
+初期行動パターンを[1]か[3]に設定すると射出されるような動作から開始されます。<br>
+また[1]と[3]では射出動作後の通常動作の開始パターンが変わります。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (合計:50~30 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~24) (常時)</span><br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~80) (実行:50~30 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:600~650) (実行:20 フレーム)</span><br>
+<span class="partsaction">終了後に行動パターン[5]へジャンプする</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (合計:50~30 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~24) (常時)</span><br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~80) (実行:50~30 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:600~650) (実行:20 フレーム)</span><br>
+<span class="partsaction">終了後に行動パターン[9]へジャンプする</span><br>
+</td></tr><tr><td class="partsmove">
+
+<span class="partspattern">行動パターン[5]</span> (合計:30 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~24) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+1280) (移動速度:401~500) (実行:30 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[6]</span> (合計:50~30 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~80) (実行:50~30 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[7]</span> (合計:120~160 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~24) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:100~160) (実行:40 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+3328) (移動速度:220~300) (実行:120~160 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[8]</span> (合計:50~30 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~80) (実行:50~30 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[9]</span> (合計:30 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~24) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+2816) (移動速度:401~500) (実行:30 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[10]</span> (合計:50~30 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~80) (実行:50~30 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[11]</span> (合計:120~160 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:16~24) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:100~160) (実行:40 フレーム)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+768) (移動速度:220~300) (実行:120~160 フレーム)</span><br>
+
+<span class="partspattern">行動パターン[12]</span> (合計:50~30 フレーム)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:48~80) (実行:50~30 フレーム)</span><br>
+</td></tr></table><br>
+
+<a name="P062_DEPLOY_CORE" id="P062_DEPLOY_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(062) デプロイコア
+</td></tr><tr><td class="partsimage" rowspan="2">
+<img src="img/062.gif" alt="*">
+</td><td class="partsinfo">
+複数の敵を同時に出現させる場合に使用する特殊なコアパーツです。<br>
+出現と同時にこのパーツは消滅し、子パーツが分離されます。<br>
+分離された子パーツがコア属性でない場合は破壊されてしまいます。<br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span><br>
+<span class="partsaction">自爆</span><br>
+</td></tr></table><br>
+
+<a name="P137_HEAD_CORE" id="P137_HEAD_CORE">
+</a><br><table class="partstable"><tr><td class="partsname" colspan="2">
+(137) ヘッドコア
+</td></tr><tr><td class="partsimage" rowspan="17">
+<img src="img/137.gif" alt="*">
+</td><td class="partsinfo">
+様々な移動行動を保有する特殊なコアパーツです。<br>
+全ての動作は永久的に繰り返されるため動作の切り替えはイベントで制御することを想定しています。<br>
+変数を行動カウンタに見立てて制御するといいでしょう。
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[1]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[2]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[3]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+1024) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[4]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+3072) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[5]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+2048) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[6]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:10~300) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+1024) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[7]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:10~300) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+3072) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[8]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+2048) (移動速度:10~300) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+1024) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[9]</span> (常時)<br>
+<span class="partsaction">方向転換 (プレイヤー方向) (回転速度:4~64) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+2048) (移動速度:10~300) (常時)</span><br>
+<span class="partsaction">移動 (自分の向いている方向+3072) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[10]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:4~80) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[11]</span> (常時)<br>
+<span class="partsaction">回転 (回転速度:-4~-80) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[12]</span> (常時)<br>
+<span class="partsaction">移動 (自分の向いている方向) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[13]</span> (常時)<br>
+<span class="partsaction">移動 (自分の向いている方向+1024) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[14]</span> (常時)<br>
+<span class="partsaction">移動 (自分の向いている方向+3072) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[15]</span> (常時)<br>
+<span class="partsaction">移動 (自分の向いている方向+2048) (移動速度:10~300) (常時)</span><br>
+</td></tr><tr><td class="partsmove">
+<span class="partspattern">行動パターン[16]</span> (常時)<br>
+<span class="partsaction">静止 (常時)</span><br>
+</td></tr></table><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Player)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Player) -</div>
+<hr class="line_s">
+
+
+
+<a name="DESTROYPLAYER" id="DESTROYPLAYER">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DESTROYPLAYER
+	</td><td class="trycnp">"DESTROYPLAYER",effecttype
+	</td></tr></table><div class="trydetail">
+		存在しているプレイヤーを消去する命令です。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DESTROYPLAYER",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>エフェクトタイプ
+	<div class="tryparam"><div class="tryvalue">-1</div>無し</div>
+	<div class="tryparam"><div class="tryvalue">0</div>爆発</div>
+	<div class="tryparam"><div class="tryvalue">1</div>フェイズイン</div>
+	</td></tr></table></div><br>
+
+<a name="FULLENERGY" id="FULLENERGY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">FULLENERGY
+	</td><td class="trycnp">"FULLENERGY",messageflag
+	</td></tr></table><div class="trydetail">
+		プレイヤーのエネルギーを全回復させる命令です。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"FULLENERGY",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>メッセージと効果音の有無
+	<div class="tryparam"><div class="tryvalue">0</div>メッセージと効果音無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>メッセージと効果音有り</div>
+	</td></tr></table></div><br>
+
+<a name="PLAYERANGLE" id="PLAYERANGLE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERANGLE
+	</td><td class="trycnp">"PLAYERANGLE",angle,flag
+	</td></tr></table><div class="trydetail">
+		プレイヤーの方向と方向固定フラグを変更する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERANGLE",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>プレイヤーの方向 (0~4095) [ignore]
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>プレイヤーの方向固定 [ignore]
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	<div class="tryparam"><div class="tryvalue">0</div>しない</div>
+	<div class="tryparam"><div class="tryvalue">1</div>する</div>
+	</td></tr></table></div><br>
+
+<a name="PLAYERBIND" id="PLAYERBIND">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERBIND
+	</td><td class="trycnp">"PLAYERBIND",counter,powerM,powerT
+	</td></tr></table><div class="trydetail">
+		プレイヤーのバインド値を変更します。<br>
+		<br>
+		バインドパワーのMoveは移動速度を、Turnは回転速度を低下させます。<br>
+		50なら半減、100なら全く動けなくなります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERBIND",int1,int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>バインドの持続フレーム値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>バインドパワーMove (0~100)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>バインドパワーTurn (0~100)
+	</td></tr></table></div><br>
+
+<a name="PLAYERDESTROYED" id="PLAYERDESTROYED">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERDESTROYED
+	</td><td class="trycnp">"PLAYERDESTROYED",option,"labelname",scriptID
+	</td></tr></table><div class="trydetail">
+		プレイヤーが残機無しで破壊された際の処理を設定する命令です。<br>
+		この命令を実行しなかった場合はゲームオーバー処理になります。<br>
+		<br>
+		goto/gosubの場合、どのスクリプトIDでジャンプするかを指定できます。<br>
+		スクリプトIDを省略もしくは 0 を指定するとメインスクリプトが対象になります。<br>
+		<br>
+		ラベルに飛んだ場合にプレイヤーを復活させるには"SETPLAYER"を使います。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERDESTROYED",int1,"label2",int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>処理方法
+	<div class="tryparam"><div class="tryvalue">0</div>ゲームオーバー</div>
+	<div class="tryparam"><div class="tryvalue">1</div>クリア</div>
+	<div class="tryparam"><div class="tryvalue">2</div>指定したラベルへジャンプする (goto)</div>
+	<div class="tryparam"><div class="tryvalue">3</div>指定したラベルへサブルーチンジャンプする (gosub)</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"label2"</td><td>ジャンプ先ラベル名
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>スクリプトID
+	</td></tr></table></div><br>
+
+<a name="PLAYEREMP" id="PLAYEREMP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYEREMP
+	</td><td class="trycnp">"PLAYEREMP",empvalue
+	</td></tr></table><div class="trydetail">
+		プレイヤーのスタン値を変更します。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYEREMP",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>スタン値 (0~)
+	</td></tr></table></div><br>
+
+<a name="PLAYERENERGY" id="PLAYERENERGY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERENERGY
+	</td><td class="trycnp">"PLAYERENERGY",energy
+	</td></tr></table><div class="trydetail">
+		プレイヤーのエネルギーを変更します。<br>
+		現在のエネルギーは変数(_penergy)、最大値は変数(_penergymax)で参照できます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERENERGY",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>エネルギー (0~)
+	</td></tr></table></div><br>
+
+<a name="PLAYEREXTEND" id="PLAYEREXTEND">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYEREXTEND
+	</td><td class="trycnp">"PLAYEREXTEND",count,base,every,add,mul,limit
+	</td></tr></table><div class="trydetail">
+		プレイヤーのスコアによるエクステンドを設定する命令です。<br>
+		<br>
+		初期設定は "PLAYEREXTEND",0,10000,40000,10000,5,100000 という値が入っていてエクステンドが無効化されています。<br>
+		これを "PLAYEREXTEND",-1 と無制限に設定すると以下のようになります。<br>
+		1回目: 10000<br>
+		2回目: 50000<br>
+		3回目: 100000<br>
+		4回目: 200000 (以降+100000)<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYEREXTEND",int1,int2,int3,int4,int5,int6
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>エクステンドの回数制限
+	<div class="tryparam"><div class="tryvalue">-1</div>無制限</div>
+	<div class="tryparam"><div class="tryvalue">0</div>エクステンドを無効化</div>
+	<div class="tryparam"><div class="tryvalue">1~</div>指定回数まで</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>ベース値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>エブリ値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>加算値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>乗算値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>リミット値
+	</td></tr></table></div><br>
+
+<a name="PLAYERFLAG" id="PLAYERFLAG">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERFLAG
+	</td><td class="trycnp">"PLAYERFLAG",showflag,invincibleflag,controlflag
+	</td></tr></table><div class="trydetail">
+		プレイヤーの様々なフラグを変更する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERFLAG",int1,int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>表示フラグ [ignore]
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	<div class="tryparam"><div class="tryvalue">0</div>非表示にする</div>
+	<div class="tryparam"><div class="tryvalue">1</div>表示する</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>無敵フラグ [ignore]
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	<div class="tryparam"><div class="tryvalue">0</div>OFFにする</div>
+	<div class="tryparam"><div class="tryvalue">1</div>ONにする</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>操作フラグ [ignore]
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	<div class="tryparam"><div class="tryvalue">0</div>操作不能にする</div>
+	<div class="tryparam"><div class="tryvalue">1</div>操作可能にする</div>
+	</td></tr></table></div><br>
+
+<a name="PLAYERGRAPHICS" id="PLAYERGRAPHICS">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERGRAPHICS
+	</td><td class="trycnp">"PLAYERGRAPHICS","fplfile"
+	</td></tr></table><div class="trydetail">
+		任意のfplファイルを読み込んでプレイヤーのグラフィックを強制的に変更します。<br>
+		ファイル名を省略するとデフォルトのファイルを読み込みます。<br>
+		ファイルが見つからなかった場合は _stat に -2 を返します。<br>
+		<br>
+		画像ファイルが同じ場合、画像の再読み込みは行いません。<br>
+		一つの画像ファイルに複数の自機グラフィックを用意してfplだけ切り替えると負荷を少し抑えることができます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERGRAPHICS","str1"
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>読み込むファイル名 (*.fpl)
+	</td></tr></table></div><br>
+
+<a name="PLAYERLEFT" id="PLAYERLEFT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERLEFT
+	</td><td class="trycnp">"PLAYERLEFT",playerleft
+	</td></tr></table><div class="trydetail">
+		プレイヤーの残機を変更する命令です。<br>
+		残機が残っていれば破壊されても即復活し継続することができます。<br>
+		現在の残機数は変数(_pleft)で取得できます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERLEFT",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>プレイヤーの残機数
+	</td></tr></table></div><br>
+
+<a name="PLAYERPOS" id="PLAYERPOS">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERPOS
+	</td><td class="trycnp">"PLAYERPOS",x,y
+	</td></tr></table><div class="trydetail">
+		プレイヤーの位置を変更します。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERPOS",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>絶対座標 X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>絶対座標 Y
+	</td></tr></table></div><br>
+
+<a name="PLAYERRESPAWN" id="PLAYERRESPAWN">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERRESPAWN
+	</td><td class="trycnp">"PLAYERRESPAWN",type,param1,param2,effect
+	</td></tr></table><div class="trydetail">
+		プレイヤーの復活位置を設定する命令です。<br>
+		デフォルトの場合はフリープレイと同様になります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERRESPAWN",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>復活位置タイプ [ignore]
+	<div class="tryparam"><div class="tryvalue">0</div>デフォルト</div>
+	<div class="tryparam"><div class="tryvalue">1</div>絶対座標 (X=パラメータ1, Y=パラメータ2)</div>
+	<div class="tryparam"><div class="tryvalue">2</div>プレイヤーの位置を継承</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>パラメータ1 [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>パラメータ2 [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>エフェクトタイプ [ignore]
+	<div class="tryparam"><div class="tryvalue">0</div>デフォルト</div>
+	<div class="tryparam"><div class="tryvalue">1</div>フェイズアウト</div>
+	</td></tr></table></div><br>
+
+<a name="PLAYERRESTRAINT" id="PLAYERRESTRAINT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERRESTRAINT
+	</td><td class="trycnp">"PLAYERRESTRAINT",counter,power
+	</td></tr></table><div class="trydetail">
+		プレイヤーの装備抑制値を変更します。<br>
+		装備抑制はキー入力情報は反映されますがバレットやブラスター、シールド等の発射や効果を無効化します。<br>
+		<br>
+		装備抑制パワーは抑制する装備のタイプ値を指定します。<br>
+		現在のバージョンでは 1 を指定すると全ての装備が抑制されます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERRESTRAINT",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>装備抑制の持続フレーム値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>装備抑制パワー (0~)
+	<div class="tryparam"><div class="tryvalue">0</div>無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>アクティブ系</div>
+	<div class="tryparam"><div class="tryvalue">&amp;4</div>バレット系</div>
+	<div class="tryparam"><div class="tryvalue">&amp;8</div>ブラスター系</div>
+	<div class="tryparam"><div class="tryvalue">&amp;16</div>サポート系</div>
+	</td></tr></table></div><br>
+
+<a name="PLAYERSCORE" id="PLAYERSCORE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERSCORE
+	</td><td class="trycnp">"PLAYERSCORE",playerscore
+	</td></tr></table><div class="trydetail">
+		プレイヤーのスコアを変更する命令です。<br>
+		現在のスコアは変数(_pscore)で取得できます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERSCORE",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>プレイヤーのスコア
+	</td></tr></table></div><br>
+
+<a name="PLAYERSHIP" id="PLAYERSHIP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERSHIP
+	</td><td class="trycnp">"PLAYERSHIP",playertype,baseweapon,sub1,sub2,sub3,sub4
+	</td></tr></table><div class="trydetail">
+		プレイヤータイプと武装を変更する命令です。<br>
+		プレイヤータイプを変更する場合はトライ開始直後に行う事を推奨します。<br>
+		変更された武装はレベルが1に設定されます。<br>
+		標準武装に無しを設定した場合、自動的にバレットが設定されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERSHIP",int1,int2,int3,int4,int5,int6
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>プレイヤータイプ [ignore]
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	<div class="tryparam"><div class="tryvalue">0</div>スタンダード</div>
+	<div class="tryparam"><div class="tryvalue">1</div>アタッカー</div>
+	<div class="tryparam"><div class="tryvalue">2</div>タンカー</div>
+	<div class="tryparam"><div class="tryvalue">3</div>クイッカー</div>
+	<div class="tryparam"><div class="tryvalue">4</div>バレットヘル</div>
+	<div class="tryparam"><div class="tryvalue">5</div>デッドロッカー</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>標準武装 [ignore]
+	</td></tr><tr><td class="tryinfocategory">int3~6</td><td>追加武装1~4
+	<div class="tryparam"><div class="tryvalue">-1</div>変更しない</div>
+	<div class="tryparam"><div class="tryvalue">0</div>無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>バレット</div>
+	<div class="tryparam"><div class="tryvalue">2</div>ワイドバレット</div>
+	<div class="tryparam"><div class="tryvalue">3</div>バルカン</div>
+	<div class="tryparam"><div class="tryvalue">4</div>スタンバレット</div>
+	<div class="tryparam"><div class="tryvalue">5</div>ブラスター</div>
+	<div class="tryparam"><div class="tryvalue">6</div>マルチブラスター</div>
+	<div class="tryparam"><div class="tryvalue">7</div>スタンブラスター</div>
+	<div class="tryparam"><div class="tryvalue">8</div>チャージブラスターPT</div>
+	<div class="tryparam"><div class="tryvalue">9</div>チャージブラスターQT</div>
+	<div class="tryparam"><div class="tryvalue">10</div>オーバーローダー</div>
+	<div class="tryparam"><div class="tryvalue">11</div>テンポラルシールド</div>
+	<div class="tryparam"><div class="tryvalue">12</div>ブラーデコイ</div>
+	<div class="tryparam"><div class="tryvalue">13</div>ソールディフューザー</div>
+	<div class="tryparam"><div class="tryvalue">14</div>ソールアクティバイター</div>
+	<div class="tryparam"><div class="tryvalue">15</div>アブソリュートシールド</div>
+	</td></tr></table></div><br>
+
+<a name="PLAYERSLOT" id="PLAYERSLOT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERSLOT
+	</td><td class="trycnp">"PLAYERSLOT",slot,equipID
+	</td></tr></table><div class="trydetail">
+		対象スロットの装備を変更します。<br>
+		対象スロットに0を指定すると選択中のスロットが対象になります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERSLOT",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>対象スロット
+	<div class="tryparam"><div class="tryvalue">0</div>選択中のスロット</div>
+	<div class="tryparam"><div class="tryvalue">1~5</div>対象スロット</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>装備ID
+	<div class="tryparam"><div class="tryvalue">0</div>無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>バレット</div>
+	<div class="tryparam"><div class="tryvalue">2</div>ワイドバレット</div>
+	<div class="tryparam"><div class="tryvalue">3</div>バルカン</div>
+	<div class="tryparam"><div class="tryvalue">4</div>スタンバレット</div>
+	<div class="tryparam"><div class="tryvalue">5</div>ブラスター</div>
+	<div class="tryparam"><div class="tryvalue">6</div>マルチブラスター</div>
+	<div class="tryparam"><div class="tryvalue">7</div>スタンブラスター</div>
+	<div class="tryparam"><div class="tryvalue">8</div>チャージブラスターPT</div>
+	<div class="tryparam"><div class="tryvalue">9</div>チャージブラスターQT</div>
+	<div class="tryparam"><div class="tryvalue">10</div>オーバーローダー</div>
+	<div class="tryparam"><div class="tryvalue">11</div>テンポラルシールド</div>
+	<div class="tryparam"><div class="tryvalue">12</div>ブラーデコイ</div>
+	<div class="tryparam"><div class="tryvalue">13</div>ソールディフューザー</div>
+	<div class="tryparam"><div class="tryvalue">14</div>ソールアクティバイター</div>
+	<div class="tryparam"><div class="tryvalue">15</div>アブソリュートシールド</div>
+	</td></tr></table></div><br>
+
+<a name="PLAYERSLOTLV" id="PLAYERSLOTLV">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERSLOTLV
+	</td><td class="trycnp">"PLAYERSLOTLV",slot,level
+	</td></tr></table><div class="trydetail">
+		対象スロットのレベルを変更します。<br>
+		対象スロットに-1を指定すると全てのスロットが対象になります。<br>
+		対象スロットに0を指定すると選択中のスロットが対象になります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERSLOTLV",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>対象スロット
+	<div class="tryparam"><div class="tryvalue">-1</div>全てのスロット</div>
+	<div class="tryparam"><div class="tryvalue">0</div>選択中のスロット</div>
+	<div class="tryparam"><div class="tryvalue">1~5</div>対象スロット</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>スロットレベル (1~5)
+	</td></tr></table></div><br>
+
+<a name="PLAYERSTATUS" id="PLAYERSTATUS">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERSTATUS
+	</td><td class="trycnp">"PLAYERSTATUS",energylevel,regenlevel
+	</td></tr></table><div class="trydetail">
+		プレイヤーのステータスレベルを変化させる命令です。<br>
+		マイナスを指定すれば弱化させることもできます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERSTATUS",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>エネルギーレベルの増減値 [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>リジェネレーションレベルの増減値 [ignore]
+	</td></tr></table></div><br>
+
+<a name="PLAYERSTOCK" id="PLAYERSTOCK">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PLAYERSTOCK
+	</td><td class="trycnp">"PLAYERSTOCK",energy
+	</td></tr></table><div class="trydetail">
+		プレイヤーのエネルギーストックを変更します。<br>
+		現在のエネルギーは変数(_pstock)、最大値は変数(_pstockmax)で参照できます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PLAYERSTOCK",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>エネルギーストック (0~)
+	</td></tr></table></div><br>
+
+<a name="POWERUP" id="POWERUP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">POWERUP
+	</td><td class="trycnp">"POWERUP",addlevelvalue,messageflag
+	</td></tr></table><div class="trydetail">
+		プレイヤーの装備レベルを変化させる命令です。<br>
+		全ての装備のレベルに増減値を加算します。<br>
+		マイナスを指定すれば弱化させることもできます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"POWERUP",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>武装レベルの増減値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>メッセージと効果音の有無
+	<div class="tryparam"><div class="tryvalue">0</div>メッセージと効果音無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>メッセージと効果音有り</div>
+	</td></tr></table></div><br>
+
+<a name="SETPLAYER" id="SETPLAYER">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SETPLAYER
+	</td><td class="trycnp">"SETPLAYER",option
+	</td></tr></table><div class="trydetail">
+		プレイヤーを生成せずに開始した場合にプレイヤーを生成する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SETPLAYER",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>オプション [0]
+	<div class="tryparam"><div class="tryvalue">-1</div>プレイヤーを削除</div>
+	<div class="tryparam"><div class="tryvalue">0</div>プレイヤーを生成</div>
+	<div class="tryparam"><div class="tryvalue">1</div>プレイヤーを生成（予約）</div>
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

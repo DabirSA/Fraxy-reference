@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try getinfo</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try getinfo -</div>
+<hr class="line_s">
+
+<a name="GETINFO" id="GETINFO">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">GETINFO
+	</td><td class="trycnp">"GETINFO",type,param,variable
+	</td></tr></table><div class="trydetail">
+		各種情報を取得し指定した変数に代入する命令です。<br>
+		変数を省略した場合は変数(_stat)に代入されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">命令書式</td><td>"GETINFO",int1,int2,var3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">関数書式</td><td>getinfo(int1,int2)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>取得する情報のタイプ
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>情報取得用パラメータ
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var3</td><td>代入先変数 (_stat)
+	</td></tr></table><div class="trydetail">
+		情報のタイプと情報取得用パラメータ(type,param)は以下の値を指定してください。<br>
+		PartIDはgetinfo(52,ID)で取得できます。<br>
+	</div>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">2,0</td><td>プレイヤーの位置 X (_pxで代用可能)
+		</td></tr><tr><td class="tryinfocategory">3,0</td><td>プレイヤーの位置 Y (_pyで代用可能)
+		</td></tr><tr><td class="tryinfocategory">4,0</td><td>プレイヤーの向いている方向
+		</td></tr><tr><td class="tryinfocategory">8,0</td><td>プレイヤーの自機タイプ
+			<div class="tryparam"><div class="tryvalue">0</div>スタンダード</div>
+			<div class="tryparam"><div class="tryvalue">1</div>アタッカー</div>
+			<div class="tryparam"><div class="tryvalue">2</div>タンカー</div>
+			<div class="tryparam"><div class="tryvalue">3</div>クイッカー</div>
+			<div class="tryparam"><div class="tryvalue">4</div>バレットヘル</div>
+			<div class="tryparam"><div class="tryvalue">5</div>デッドロッカー</div>
+		</td></tr><tr><td class="tryinfocategory">9,0</td><td>プレイヤーのスコア (_pscoreで代用可能)
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">10,PartID</td><td>敵パーツの存在
+			<div class="tryparam"><div class="tryvalue">~0</div>存在しない</div>
+			<div class="tryparam"><div class="tryvalue">1~</div>存在する</div>
+		</td></tr><tr><td class="tryinfocategory">11,PartID</td><td>敵パーツの識別ID（UID）
+		</td></tr><tr><td class="tryinfocategory">12,PartID</td><td>敵パーツの位置 X
+		</td></tr><tr><td class="tryinfocategory">13,PartID</td><td>敵パーツの位置 Y
+		</td></tr><tr><td class="tryinfocategory">14,PartID</td><td>敵パーツの方向
+		</td></tr><tr><td class="tryinfocategory">15,PartID</td><td>敵パーツの耐久力
+		</td></tr><tr><td class="tryinfocategory">16,PartID</td><td>敵パーツの最大耐久力
+		</td></tr><tr><td class="tryinfocategory">17,PartID</td><td>敵パーツのエネルギー
+		</td></tr><tr><td class="tryinfocategory">18,PartID</td><td>敵パーツの最大エネルギー
+		</td></tr><tr><td class="tryinfocategory">19,PartID</td><td>敵パーツのエネルギー回復力
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">20,PartID</td><td>敵パーツのスコア
+		</td></tr><tr><td class="tryinfocategory">21,PartID</td><td>敵パーツのスタン値
+		</td></tr><tr><td class="tryinfocategory">22,PartID</td><td>敵パーツの破壊ステータス
+			<div class="tryparam"><div class="tryvalue">0</div>生存</div>
+			<div class="tryparam"><div class="tryvalue">1~</div>破壊中</div>
+		</td></tr><tr><td class="tryinfocategory">23,PartID</td><td>敵パーツのコアパーツのPartID
+			<div class="tryparam"><div class="tryvalue">-2</div>自身がコアパーツ（分離による発生）</div>
+			<div class="tryparam"><div class="tryvalue">-1</div>自身がコアパーツ</div>
+			<div class="tryparam"><div class="tryvalue">1~</div>コアパーツのPartID</div>
+		</td></tr><tr><td class="tryinfocategory">24,PartID</td><td>敵パーツの親パーツのPartID
+		</td></tr><tr><td class="tryinfocategory">25,PartID</td><td>敵パーツのポインターパーツのPartID
+		</td></tr><tr><td class="tryinfocategory">26,PartID</td><td>敵パーツのペアパーツ1のPartID
+		</td></tr><tr><td class="tryinfocategory">27,PartID</td><td>敵パーツのペアパーツ2のPartID
+		</td></tr><tr><td class="tryinfocategory">28,PartID</td><td>敵パーツのペアパーツ3のPartID
+		</td></tr><tr><td class="tryinfocategory">29,PartID</td><td>敵パーツのペアパーツ4のPartID
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">30,PartID</td><td>敵パーツの動作状態
+			<div class="tryparam"><div class="tryvalue">-1</div>停止</div>
+			<div class="tryparam"><div class="tryvalue">0</div>動作中</div>
+			<div class="tryparam"><div class="tryvalue">1~</div>停止（フレーム）</div>
+		</td></tr><tr><td class="tryinfocategory">31,PartID</td><td>敵パーツの行動パターン
+		</td></tr><tr><td class="tryinfocategory">32,PartID</td><td>敵パーツの行動フレーム
+		</td></tr><tr><td class="tryinfocategory">33,PartID</td><td>敵パーツの行動停止状態
+			<div class="tryparam"><div class="tryvalue">-1</div>停止</div>
+			<div class="tryparam"><div class="tryvalue">0</div>動作中</div>
+			<div class="tryparam"><div class="tryvalue">1~</div>停止（フレーム）</div>
+		</td></tr><tr><td class="tryinfocategory">34,PartID</td><td>敵パーツの攻撃パターン
+		</td></tr><tr><td class="tryinfocategory">35,PartID</td><td>敵パーツの攻撃フレーム
+		</td></tr><tr><td class="tryinfocategory">36,PartID</td><td>敵パーツの攻撃停止状態
+			<div class="tryparam"><div class="tryvalue">-1</div>停止</div>
+			<div class="tryparam"><div class="tryvalue">0</div>動作中</div>
+			<div class="tryparam"><div class="tryvalue">1~</div>停止（フレーム）</div>
+		</td></tr><tr><td class="tryinfocategory">37,PartID</td><td>敵パーツの破壊パターン
+		</td></tr><tr><td class="tryinfocategory">38,PartID</td><td>敵パーツの破壊フレーム
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">40,PartID</td><td>敵パーツの通知ステータス
+		</td></tr><tr><td class="tryinfocategory">41,PartID</td><td>敵パーツの変数1
+		</td></tr><tr><td class="tryinfocategory">42,PartID</td><td>敵パーツの変数2
+		</td></tr><tr><td class="tryinfocategory">43,PartID</td><td>敵パーツの変数3
+		</td></tr><tr><td class="tryinfocategory">44,PartID</td><td>敵パーツの変数4
+
+		</td></tr><tr><td class="tryinfocategory">49,PartID</td><td>敵パーツのランク
+	</td></tr></table>
+
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">50,0</td><td>敵の総数 (コア数)
+		</td></tr><tr><td class="tryinfocategory">51,0</td><td>全てのコアとパーツの合計数
+		</td></tr><tr><td class="tryinfocategory">52,ID</td><td>直前に生成した敵の任意のパーツのPartID<br> IDにはエディタで再読み込みした際のIDを指定してください。<br>取得できる PartID は敵パーツの情報を得るために必要になります。
+		</td></tr><tr><td class="tryinfocategory">53,0</td><td>直前に生成した敵のパーツ数
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">60,0</td><td>ゲームスタイル
+			<div class="tryparam"><div class="tryvalue">0</div>通常</div>
+			<div class="tryparam"><div class="tryvalue">1</div>エクストリーム</div>
+			<div class="tryparam"><div class="tryvalue">2</div>お遊び</div>
+	</td></tr></table>
+	<table class="tryinfo">
+		</td></tr><tr><td class="tryinfocategory">61,0</td><td>ランク
+			<div class="tryparam"><div class="tryvalue">・</div>0~100 の範囲</div>
+		</td></tr><tr><td class="tryinfocategory">61,1</td><td>ランクの内部値
+			<div class="tryparam"><div class="tryvalue">・</div>1000~110000の範囲ですが、最大値はこの値を上回る場合があります。</div>
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">62,0</td><td>リプレイ再生中か否か
+			<div class="tryparam"><div class="tryvalue">0</div>No</div>
+			<div class="tryparam"><div class="tryvalue">1</div>Yes</div>
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">70,0</td><td>デバッグログのサイズ
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">81~88,0</td><td>グローバル変数1～8 (_global1 ～ _global8で代用可能)
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">98,0</td><td>キルカウント(All)
+		</td></tr><tr><td class="tryinfocategory">98,1</td><td>キルカウント(Enemy)
+		</td></tr><tr><td class="tryinfocategory">98,2</td><td>キルカウント(Core) (_killcoreで代用可能)
+		</td></tr><tr><td class="tryinfocategory">98,3</td><td>キルカウント(Parts) (_killpartsで代用可能)
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">99,0</td><td>トライ開始からのフレーム値
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">100,0</td><td>プレイヤーの選択中のスロットID
+		</td></tr><tr><td class="tryinfocategory">101,0</td><td>プレイヤーのスロットレベルボーナス
+		</td></tr><tr><td class="tryinfocategory">102,slotID</td><td>プレイヤーのスロットタイプ (slotID=1~5)
+		</td></tr><tr><td class="tryinfocategory">103,slotID</td><td>プレイヤーのスロットレベル (slotID=1~5)
+		</td></tr><tr><td class="tryinfocategory">104,slotID</td><td>プレイヤーのスロットExレベル (slotID=1~5)
+		</td></tr><tr><td class="tryinfocategory">105,slotID</td><td>プレイヤーのスロット状態 (slotID=1~5)
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">110,0</td><td>プレイヤーのエネルギー (_penergyで代用可能)
+		</td></tr><tr><td class="tryinfocategory">110,1</td><td>プレイヤーのエネルギー最大値 (_penergymaxで代用可能)
+		</td></tr><tr><td class="tryinfocategory">110,2</td><td>プレイヤーのエネルギーレベル
+		</td></tr><tr><td class="tryinfocategory">110,3</td><td>プレイヤーのエネルギーレベル最大値
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">111,0</td><td>プレイヤーのリジェネレーション
+		</td></tr><tr><td class="tryinfocategory">111,2</td><td>プレイヤーのリジェネレーションレベル
+		</td></tr><tr><td class="tryinfocategory">111,3</td><td>プレイヤーのリジェネレーションレベル最大値
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">112,0</td><td>プレイヤーのエネルギーストック (_pstockで代用可能)
+		</td></tr><tr><td class="tryinfocategory">112,1</td><td>プレイヤーのエネルギーストック最大値 (_pstockmaxで代用可能)
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">113,0</td><td>プレイヤーのスタン値
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">114,0</td><td>プレイヤーのバインド持続フレーム
+		</td></tr><tr><td class="tryinfocategory">114,1</td><td>プレイヤーのバインドパワーMove
+		</td></tr><tr><td class="tryinfocategory">114,2</td><td>プレイヤーのバインドパワーTurn
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">115,0</td><td>プレイヤーの装備抑制持続フレーム
+		</td></tr><tr><td class="tryinfocategory">115,1</td><td>プレイヤーの装備抑制パワー
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">116,0</td><td>プレイヤーのヒート値
+		</td></tr><tr><td class="tryinfocategory">116,1</td><td>プレイヤーのヒート値の最大値
+		</td></tr><tr><td class="tryinfocategory">116,2</td><td>プレイヤーのヒート値の限界値
+		</td></tr><tr><td class="tryinfocategory">116,3</td><td>プレイヤーのヒート値の冷却値
+	</td></tr></table>
+	<table class="tryinfo">
+		<tr><td class="tryinfocategory">201~216,PartID</td><td>敵パーツの固有パラメータ1～16
+	</td></tr></table>
+
+
+	</div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

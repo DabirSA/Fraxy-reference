@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Effect)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Effect) -</div>
+<hr class="line_s">
+
+<a name="BLUR" id="BLUR">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BLUR
+	</td><td class="trycnp">"BLUR",holdframe,maxframe,zoomrate,blendrate,searingrate
+	</td></tr></table><div class="trydetail">
+		画面全体をぼかす（ブラー）エフェクトを発生させる命令です。<br>
+		通常は持続フレームと最大フレームに同じ値を指定してください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BLUR",int1,int2,int3,int4,int5
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>持続フレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>最大フレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>ズーム率 (1~32)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>ブレンド率 (0~255)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>初期残像ブレンド率 (-96~96)
+	</td></tr></table></div><br>
+
+<a name="FLASH" id="FLASH">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">FLASH
+	</td><td class="trycnp">"FLASH",inframe,holdframe,outframe,blendrate,blendmode
+	</td></tr></table><div class="trydetail">
+		フラッシュやフェードイン/アウトなどの画面全体エフェクトを行う命令です。<br>
+		色は"COLOR"で指定されている色が使用されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"FLASH",int1,int2,int3,int4,int5
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>フェードインフレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>持続フレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>フェードアウトフレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>ブレンド率 (0~255)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>ブレンドモード
+	<div class="tryparam"><div class="tryvalue">3</div>半透明合成</div>
+	<div class="tryparam"><div class="tryvalue">5</div>加算合成</div>
+	<div class="tryparam"><div class="tryvalue">6</div>減算合成</div>
+	</td></tr></table></div><br>
+
+<a name="GRAYSCALE" id="GRAYSCALE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">GRAYSCALE
+	</td><td class="trycnp">"GRAYSCALE",inframe,holdframe,outframe,blendrate,blendmode
+	</td></tr></table><div class="trydetail">
+		画面全体をグレースケールにする命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"GRAYSCALE",int1,int2,int3,int4,int5
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>フェードインフレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>持続フレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>フェードアウトフレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>ブレンド率 (0~255)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>ブレンドモード
+	<div class="tryparam"><div class="tryvalue">3</div>半透明合成</div>
+	<div class="tryparam"><div class="tryvalue">5</div>加算合成</div>
+	<div class="tryparam"><div class="tryvalue">6</div>減算合成</div>
+	</td></tr></table></div><br>
+
+<a name="INVERT" id="INVERT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">INVERT
+	</td><td class="trycnp">"INVERT",inframe,holdframe,outframe,blendrate,blendmode
+	</td></tr></table><div class="trydetail">
+		画面全体の階調を反転させる命令です。<br>
+		反転に使用する色を"COLOR"で設定する必要があります。<br>
+		通常は "COLOR",255,255,255 と設定してください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"INVERT",int1,int2,int3,int4,int5
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>フェードインフレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>持続フレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>フェードアウトフレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>ブレンド率 (0~255)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>ブレンドモード
+	<div class="tryparam"><div class="tryvalue">3</div>半透明合成</div>
+	<div class="tryparam"><div class="tryvalue">5</div>加算合成</div>
+	<div class="tryparam"><div class="tryvalue">6</div>減算合成</div>
+	</td></tr></table></div><br>
+
+<a name="MOSAIC" id="MOSAIC">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">MOSAIC
+	</td><td class="trycnp">"MOSAIC",inframe,holdframe,outframe,flag,BlockSizeX,BlockSizeY
+	</td></tr></table><div class="trydetail">
+		画面全体にモザイクをかける命令です。<br>
+		ブロックサイズに 0 を指定するとウインドウのサイズが適用されます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"MOSAIC",int1,int2,int3,int4,int5,int6
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>フェードインフレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>持続フレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>フェードアウトフレーム数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>フラグ (0~2)
+	<div class="tryparam"><div class="tryvalue">0</div>モザイクを解除する</div>
+	<div class="tryparam"><div class="tryvalue">1</div>ハーフトーンモザイクを使用する</div>
+	<div class="tryparam"><div class="tryvalue">2</div>モザイクを使用する</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>ブロックサイズ X (0 or 1~)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>ブロックサイズ Y (0 or 1~)
+	</td></tr></table></div><br>
+
+<a name="QUAKE" id="QUAKE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">QUAKE
+	</td><td class="trycnp">"QUAKE",framevalue
+	</td></tr></table><div class="trydetail">
+		画面全体を揺らすエフェクトを発生させる命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"QUAKE",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>実行フレーム値
+	</td></tr></table></div><br>
+
+<a name="SHAKE" id="SHAKE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SHAKE
+	</td><td class="trycnp">"SHAKE",framevalue
+	</td></tr></table><div class="trydetail">
+		画面全体を歪ませるエフェクトを発生させる命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SHAKE",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>実行フレーム値
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

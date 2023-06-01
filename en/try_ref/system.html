@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (System)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (System) -</div>
+<hr class="line_s">
+
+<a name="DEBUG" id="DEBUG">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DEBUG
+	</td><td class="trycnp">"DEBUG","string"
+	</td></tr></table><div class="trydetail">
+		デバッグログに任意の文字列を書き込みます。<br>
+		書き込める文字列の長さは半角255文字までになります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DEBUG","str1"
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>文字列
+	</td></tr></table></div><br>
+
+<a name="DEBUGMODE" id="DEBUGMODE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DEBUGMODE
+	</td><td class="trycnp">"DEBUGMODE",debugmode
+	</td></tr></table><div class="trydetail">
+		デバッグモードを変更する命令です。<br>
+		デバッグが ON になっている場合、ポーズやトライ終了時のメニューにデバッグログ関連の項目が追加されます。<br>
+		デバッグログを保存する場合、書き出し先は実行中のトライのフォルダになります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DEBUGMODE",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>デバッグモード
+	<div class="tryparam"><div class="tryvalue">-1</div>ログを初期化する</div>
+	<div class="tryparam"><div class="tryvalue">0</div>デバッグを OFF にする</div>
+	<div class="tryparam"><div class="tryvalue">1~n</div>デバッグを ON にする</div>
+	<div class="tryparam"><div class="tryvalue">&amp;1</div>"DEBUG"の文字列 (string of "DEBUG")</div>
+	<div class="tryparam"><div class="tryvalue">&amp;2</div>システム関係 (system)</div>
+	<div class="tryparam"><div class="tryvalue">&amp;4</div>エラー情報 (error)</div>
+	<div class="tryparam"><div class="tryvalue">&amp;8</div>ファイル入出力 (file in/out)</div>
+	<div class="tryparam"><div class="tryvalue">&amp;16</div>各種生成関係 (create object, enemy, sound, etc...)</div>
+	<div class="tryparam"><div class="tryvalue">&amp;32</div>設定関係 (setting)</div>
+	<div class="tryparam"><div class="tryvalue">&amp;64</div>その他 (etc...)</div>
+	</td></tr></table></div><br>
+
+<a name="DISABLEREPLAY" id="DISABLEREPLAY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DISABLEREPLAY
+	</td><td class="trycnp">"DISABLEREPLAY"
+	</td></tr></table><div class="trydetail">
+		リプレイの記録を無効化する命令です。<br>
+		一度無効化すると再度有効化できません。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DISABLEREPLAY"
+	</td></tr></table></div><br>
+
+<a name="END" id="END">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">END
+	</td><td class="trycnp">"END"
+	</td></tr></table><div class="trydetail">
+		トライを終了する命令です。<br>
+		この命令が実行されるとトライを完了したと見なして結果表示に移行します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">特殊属性</td><td class="tryinfoattribute">Break属性
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"END"
+	</td></tr></table></div><br>
+
+<a name="FCSLOAD" id="FCSLOAD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">FCSLOAD
+	</td><td class="trycnp">"FCSLOAD","filename"
+	</td></tr></table><div class="trydetail">
+		カスタムスプライトファイルを読み込む命令です。<br>
+		同時に複数のファイルを扱うことはできません。<br>
+		先に読み込まれていた分は初期化により消去されます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"FCSLOAD","str1"
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>ファイル名
+	</td></tr></table></div><br>
+
+<a name="FRAXY_TRY" id="FRAXY_TRY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">FRAXY_TRY
+	</td><td class="trycnp">"FRAXY_TRY","name",option
+	</td></tr></table><div class="trydetail">
+		FRAXYのトライであることを宣言する命令です。<br>
+		必ず最初に記述してください。<br>
+		"FRAXY_TRY"は必ず大文字で記述してください。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"FRAXY_TRY","str1",int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>トライの名称
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>トライのオプション設定
+	<div class="tryparam"><div class="tryvalue">&amp;1</div>開始時にプレイヤーを生成しない</div>
+	</td></tr></table></div><br>
+
+<a name="GAMEOVER" id="GAMEOVER">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">GAMEOVER
+	</td><td class="trycnp">"GAMEOVER"
+	</td></tr></table><div class="trydetail">
+		トライの失敗メニューを表示する命令です。<br>
+		"END"と違ってコンティニューが可能なのでスクリプトの構造に注意してください。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">特殊属性</td><td class="tryinfoattribute">Break属性
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"GAMEOVER"
+	</td></tr></table></div><br>
+
+<a name="SETKILLCOUNT" id="SETKILLCOUNT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SETKILLCOUNT
+	</td><td class="trycnp">"SETKILLCOUNT",all,enemy,core,parts
+	</td></tr></table><div class="trydetail">
+		各キルカウントの値を変更する命令です。<br>
+		パラメータを省略もしくは-1を指定すると値は変更されません。<br>
+		<br>
+		キルカウントはパーツが破壊や消去される際に自動でカウントされます。<br>
+		<br>
+		キルカウント(All)はパーツが破棄された場合に必ずカウントされます。<br>
+		これは表示状態や破棄手段（破壊、自爆、消去など）を問いません。<br>
+		<br>
+		キルカウント(Enemy)は大本のコアが破棄された場合に必ずカウントされます。<br>
+		これは表示状態や破棄手段（破壊、自爆、消去など）を問いません。<br>
+		<br>
+		キルカウント(Core)はパーツのキルカウントフラグに&amp;1や&amp;2が指定されていて条件を満たす場合にカウントされます。<br>
+		<br>
+		キルカウント(Parts)はパーツのキルカウントフラグに&amp;4や&amp;8が指定されていて条件を満たす場合にカウントされます。<br>
+		<br>
+		各キルカウントの値は"GETINFO"で取得できます。<br>
+		キルカウント(Core)とキルカウント(Parts)は変数 _killcore と _killparts でも参照できます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SETKILLCOUNT",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>キルカウント(All) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>キルカウント(Enemy) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>キルカウント(Core) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>キルカウント(Parts) [ignore]
+	</td></tr></table></div><br>
+
+<a name="WINDOW" id="WINDOW">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">WINDOW
+	</td><td class="trycnp">"WINDOW",width,height
+	</td></tr></table><div class="trydetail">
+		ウインドウサイズを変更する命令です。<br>
+		最大サイズは実行環境の解像度に依存します。<br>
+		あまり大きな値を指定するとうまく動かなくなる場合があるので注意してください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"WINDOW",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>横幅 (320~)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>縦幅 (240~)
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

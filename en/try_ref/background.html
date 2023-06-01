@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Background)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Background) -</div>
+<hr class="line_s">
+
+<a name="BGBASEPOS" id="BGBASEPOS">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGBASEPOS
+	</td><td class="trycnp">"BGBASEPOS",bgset,ID,baseposX,baseposY
+	</td></tr></table><div class="trydetail">
+		背景の基点を設定する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGBASEPOS",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>背景セット (1~4)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>ID (0~2)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>基点 X [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>基点 Y [ignore]
+	</td></tr></table>
+	</div><br>
+
+<a name="BGCHANGE" id="BGCHANGE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGCHANGE
+	</td><td class="trycnp">"BGCHANGE",bgset
+	</td></tr></table><div class="trydetail">
+		背景セットを変更する命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGCHANGE",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>背景セット
+	<div class="tryparam"><div class="tryvalue">0</div>デフォルトの背景</div>
+	<div class="tryparam"><div class="tryvalue">1~4</div>"BGLOAD"でロードした背景</div>
+	</td></tr></table>
+	</div><br>
+
+<a name="BGFADE" id="BGFADE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGFADE
+	</td><td class="trycnp">"BGFADE",fadespeedID0,fadespeedID1,fadespeedID2
+	</td></tr></table><div class="trydetail">
+		背景変更時のフェード速度を変更する命令です。<br>
+		この命令で設定した値は全ての背景で有効になります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGFADE",int1,int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>ID0のフェード速度 (1~255) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>ID1のフェード速度 (1~255) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>ID2のフェード速度 (1~255) [ignore]
+	</td></tr></table>
+	</div><br>
+
+<a name="BGLOAD" id="BGLOAD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGLOAD
+	</td><td class="trycnp">"BGLOAD","filename",bgset,ID,Zvalue,blendmode,blendrate,baseX,baseY
+	</td></tr></table><div class="trydetail">
+		背景セットに背景画像を読み込む命令です。<br>
+		<br>
+		背景セットは二つの画像を読み込んでID0～2に登録します。<br>
+		描画はID0から順番に行われます。<br>
+		また、設定の背景処理オプションが設定されている場合もID0から描画されます。<br>
+		<br>
+		背景画像は自動的にタイル状に配置されるため画像サイズはどのようなサイズでも構いませんが、<br>
+		上下左右が綺麗に連結できる画像でないと不自然になります。<br>
+		<br>
+		画像の基点は省略すると画像の中心が指定されます。<br>
+		<br>
+		ファイルが見つからなかった場合は _stat に -2 を返します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGLOAD","str1",int2,int3,int4,int5,int6,int7,int8
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>読み込む画像ファイル名 (*.bmp *.jpg *.mag)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>読み込み先背景セット (1~4)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>読み込み先ID (0~2)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>スクロール用Z値 (-1,500~4000)
+	<div class="tryparam"><div class="tryvalue">-1</div>スクロール無効化</div>
+	<div class="tryparam"><div class="tryvalue">1000</div>プレイヤーと同高度</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>ブレンドモード
+	<div class="tryparam"><div class="tryvalue">3</div>半透明合成</div>
+	<div class="tryparam"><div class="tryvalue">4</div>半透明合成（黒(0,0,0)を通過色とする）</div>
+	<div class="tryparam"><div class="tryvalue">5</div>加算合成</div>
+	<div class="tryparam"><div class="tryvalue">6</div>減算合成</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>ブレンド率 (0~255)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int7</td><td>画像の基点 X [SizeX/2]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int8</td><td>画像の基点 Y [SizeY/2]
+	</td></tr></table>
+	</div><br>
+
+<a name="BGMOVE" id="BGMOVE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGMOVE
+	</td><td class="trycnp">"BGMOVE",bgset,ID,targetbaseposX,targetbaseposY,movespeed,option
+	</td></tr></table><div class="trydetail">
+		背景の基点を自動的に移動させる命令です。<br>
+		移動フレーム値は基点が移動し終わるまでのフレーム値を指定します。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGMOVE",int1,int2,int3,int4,int5,int6
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>背景セット (1~4)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>ID (0~2)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>移動先基点 X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>移動先基点 Y
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>移動フレーム値
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>オプション
+	<div class="tryparam"><div class="tryvalue">0</div>指定無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>滑らかに移動させる</div>
+	</td></tr></table>
+	</div><br>
+
+<a name="BGRESET" id="BGRESET">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGRESET
+	</td><td class="trycnp">"BGRESET"
+	</td></tr></table><div class="trydetail">
+		背景の位置、スクロール速度、スクロール方向を全て0にリセットする命令です。<br>
+		フリープレイの背景設定でスクロールが設定されている場合、トライ開始時に背景がズレてしまいます。<br>
+		そのズレをむりやりリセットするための命令です。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGRESET"
+	</td></tr></table>
+	</div><br>
+
+<a name="BGSCROLL" id="BGSCROLL">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGSCROLL
+	</td><td class="trycnp">"BGSCROLL",scrollspeed,speedfadevalue,scrollangle,anglefadevalue
+	</td></tr></table><div class="trydetail">
+		背景をスクロールさせる命令です。<br>
+		各パラメータは省略すると値を変更しません。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGSCROLL",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>スクロール速度 [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>スクロール速度のフェード値 (1~) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>スクロール方向 (0~4095) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>スクロール方向のフェード値 (1~) [ignore]
+	</td></tr></table>
+	</div><br>
+
+<a name="EFFECTSCROLL" id="EFFECTSCROLL">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">EFFECTSCROLL
+	</td><td class="trycnp">"EFFECTSCROLL",scrollspeed,speedfadevalue,scrollangle,anglefadevalue
+	</td></tr></table><div class="trydetail">
+		爆発やエフェクターが生成したエフェクトをスクロールさせる命令です。<br>
+		"BGSCROLL"と同じ値を指定すれば背景とエフェクトのスクロールを合わせることができます。<br>
+		各パラメータは省略すると値を変更しません。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"EFFECTSCROLL",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>スクロール速度 [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>スクロール速度のフェード値 (1~) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>スクロール方向 (0~4095) [ignore]
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>スクロール方向のフェード値 (1~) [ignore]
+	</td></tr></table>
+	</div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

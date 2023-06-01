@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Try function (Sound)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Sound) -</div>
+<hr class="line_s">
+
+
+<a name="DSEFREQUENCY" id="DSEFREQUENCY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DSEFREQUENCY
+	</td><td class="trycnp">"DSEFREQUENCY",soundID,frequency,frame
+	</td></tr></table><div class="trydetail">
+		周波数を変更する命令です。<br>
+		周波数を上げると音が高く、再生速度が速くなり、<br>
+		下げると音が低く、再生速度が遅くなります。<br>
+		設定できる周波数の最小と最大は実行環境に依存します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DSEFREQUENCY",int1,int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>サウンドバッファID (0~63)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>周波数 (50~44100 Hz)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>フェードフレーム
+	</td></tr></table></div><br>
+
+<a name="DSEGETFREQUENCY" id="DSEGETFREQUENCY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DSEGETFREQUENCY
+	</td><td class="trycnp">"DSEGETFREQUENCY",soundID,mode
+	</td></tr></table><div class="trydetail">
+		周波数を取得する命令です。<br>
+		_stat に周波数を返します。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DSEGETFREQUENCY",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>サウンドバッファID (0~63)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>取得モード (0~1)
+	<div class="tryparam"><div class="tryvalue">0</div>現在の周波数</div>
+	<div class="tryparam"><div class="tryvalue">1</div>元の周波数</div>
+	</td></tr></table></div><br>
+
+<a name="DSELOAD" id="DSELOAD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DSELOAD
+	</td><td class="trycnp">"DSELOAD","filename",soundID
+	</td></tr></table><div class="trydetail">
+		重要 : この命令を含めDSE系命令は効果音設定でDirectSoundが指定されていないと実行されません。<br>
+		<br>
+		効果音をサウンドバッファにロードします。<br>
+		サウンドバッファIDは0~63まで使用できます。<br>
+		既に使用中のバッファを指定した場合、再生中ならば停止、解放してからロードします。<br>
+		ロードに失敗した場合は _stat に 0 以下の値を返します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DSELOAD","str1",int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>ファイル名 (*.wav *.mp3)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>サウンドバッファID (0~63)
+	</td></tr></table></div><br>
+
+<a name="DSEPLAY" id="DSEPLAY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DSEPLAY
+	</td><td class="trycnp">"DSEPLAY",soundID,volume,loop,fadeframe
+	</td></tr></table><div class="trydetail">
+		指定したサウンドバッファを再生します。<br>
+		フェードインフレームに0以上の値を指定するとフェードインが有効になります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DSEPLAY",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>サウンドバッファID (0~63)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>音量 (0~100 %)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>ループオプション
+	<div class="tryparam"><div class="tryvalue">0</div>ループ無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>無限ループ</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>フェードインフレーム
+	</td></tr></table></div><br>
+
+<a name="DSESTOP" id="DSESTOP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DSESTOP
+	</td><td class="trycnp">"DSESTOP",soundID,fadeframe
+	</td></tr></table><div class="trydetail">
+		指定したサウンドバッファを停止します。<br>
+		フェードアウトフレームに0以上の値を指定するとフェードアウトが有効になります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DSESTOP",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>サウンドバッファID (0~63)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>フェードアウトフレーム
+	</td></tr></table></div><br>
+
+<a name="DSEVOLUME" id="DSEVOLUME">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DSEVOLUME
+	</td><td class="trycnp">"DSEVOLUME",soundID,volume,fadeframe
+	</td></tr></table><div class="trydetail">
+		指定したサウンドバッファの音量を変更します。<br>
+		フェードフレームに0以上の値を指定するとフェードが有効になります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DSEVOLUME",int1,int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>サウンドバッファID (0~63)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>音量 (0~100 %)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>フェードフレーム
+	</td></tr></table></div><br>
+
+<a name="BGMPLAY" id="BGMPLAY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGMPLAY
+	</td><td class="trycnp">"BGMPLAY","filename",loopflag,message
+	</td></tr></table><div class="trydetail">
+		BGMを読み込んで再生する命令です。<br>
+		既に読み込んだBGMを再生中の場合は読み込むことができません。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGMPLAY","str1",int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>BGMのファイル名 (*.mid *.mp3)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>BGMのループ設定
+	<div class="tryparam"><div class="tryvalue">0</div>ループ無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>無限ループ</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>BGMファイル名のメッセージ表示
+	<div class="tryparam"><div class="tryvalue">0</div>無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>有り</div>
+	</td></tr></table></div><br>
+
+<a name="BGMSTOP" id="BGMSTOP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BGMSTOP
+	</td><td class="trycnp">"BGMSTOP"
+	</td></tr></table><div class="trydetail">
+		再生中、または再生が終了したBGMを停止する命令です。<br>
+		別のBGMを読み込む前に必ずこの命令で停止させてください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">特殊属性</td><td class="tryinfoattribute">Break属性
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BGMSTOP"
+	</td></tr></table></div><br>
+
+<a name="SEPLAY" id="SEPLAY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SEPLAY
+	</td><td class="trycnp">"SEPLAY","filename",loopflag,precedence
+	</td></tr></table><div class="trydetail">
+		効果音を読み込んで再生する命令です。<br>
+		既に読み込んだ効果音を再生中の場合は読み込むことができません。<br>
+		再生優先順位は既にゲーム中で再生されている他の効果音（爆発音など）と優先値を比較し、値が大きければ再生します。<br>
+		他の効果音の優先値はSEフォルダのsound.txtに記述されています。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SEPLAY","str1",int2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>効果音のファイル名 (*.wav)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>効果音のループ設定
+	<div class="tryparam"><div class="tryvalue">0</div>ループ無し</div>
+	<div class="tryparam"><div class="tryvalue">1</div>無限ループ</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>再生優先順位 (0~)
+	</td></tr></table></div><br>
+
+<a name="SESTOP" id="SESTOP">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SESTOP
+	</td><td class="trycnp">"SESTOP"
+	</td></tr></table><div class="trydetail">
+		再生中、または再生が終了した効果音を停止する命令です。<br>
+		別の効果音を読み込む前に必ずこの命令で停止させてください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">特殊属性</td><td class="tryinfoattribute">Break属性
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SESTOP"
+	</td></tr></table></div><br>
+
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

@@ -1,0 +1,781 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<script type="text/javascript">
+<!--
+function PartsMenu(num){obj=document.getElementById(num).style;flag=obj.display;if(flag=="none"){obj.display="block"}else{obj.display="none"}}
+// -->
+</script>
+<title>Parts list</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">- v.20150510beta -</div>
+<hr class="line_s">
+<br>
+&gt;&gt;<a href="fraxy_parts_ref_info.html"  target="view"> 各記述の説明 </a>
+<br>
+<br>
+
+<hr class="line_s">
+<div class="style_center">- カテゴリ別 -</div><br>
+&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html"> [A] 武装系一覧 </a><br>
+&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html"> [B] ブリック系一覧 </a><br>
+&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html"> [C] コア系一覧 </a><br>
+&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html"> [D] アーマー系一覧 </a><br>
+&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html"> [E] エフェクター系一覧 </a><br>
+&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html"> [J] 関節系一覧 </a><br>
+<br>
+&gt;&gt;<a target="view" href="fraxy_parts_ref_a2.html"> [A] 武装系別案 </a><br>
+<br>
+<noscript>
+<span id="js_tree" style="display:none">
+</noscript>
+<hr class="line_s">
+<div class="style_center">- パーツ別 -</div><br>
+<a href="#" onclick="PartsMenu('type_a');return false" onkeypress="PartsMenu('type_a');return false"> [A] 武装系 </a><br>
+<span id="type_a" style="display:none">
+	<span class="menuc1"><a href="#" onclick="PartsMenu('vulcan');return false" onkeypress="PartsMenu('vulcan');return false"> バルカン系 </a><br></span>
+	<span id="vulcan" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P003_VULCAN"> バルカン </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P032_VULCAN_2"> バルカン2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P005_TWIN_VULCAN"> ツインバルカン </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P039_AIM_PLAYER_VULCAN"> バルカン自機狙い </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P043_CROSS_VULCAN"> バルカン十字回転 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P044_REVERSE_CROSS_VULCAN"> バルカン十字逆回転 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P049_MULTI_VULCAN"> バルカン3-9方向 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P058_SMALL_VULCAN"> バルカン小 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('bullet');return false" onkeypress="PartsMenu('bullet');return false"> バレット系 </a><br></span>
+	<span id="bullet" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P004_BULLET"> バレット </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P033_TWIN_BULLET"> ツインバレット </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P053_SMALL_BULLET"> バレット小 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('power_ball');return false" onkeypress="PartsMenu('power_ball');return false"> パワーボール系 </a><br></span>
+	<span id="power_ball" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P021_POWER_BALL"> パワーボール </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('laser');return false" onkeypress="PartsMenu('laser');return false"> レーザー系 </a><br></span>
+	<span id="laser" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P080_LASER_S"> レーザー小 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P008_LASER_M"> レーザー中 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P034_LASER_L"> レーザー大 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('power_laser');return false" onkeypress="PartsMenu('power_laser');return false"> パワーレーザー系 </a><br></span>
+	<span id="power_laser" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P203_POWER_LASER"> パワーレーザー </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('homing_laser');return false" onkeypress="PartsMenu('homing_laser');return false"> 追尾レーザー系 </a><br></span>
+	<span id="homing_laser" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P020_HOMING_LASER"> 追尾レーザー </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('plasma_ring');return false" onkeypress="PartsMenu('plasma_ring');return false"> プラズマリング系 </a><br></span>
+	<span id="plasma_ring" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P054_PLASMA_RING"> プラズマリング </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('burner');return false" onkeypress="PartsMenu('burner');return false"> バーナー系 </a><br></span>
+	<span id="burner" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P055_BURNER"> バーナー </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('blade');return false" onkeypress="PartsMenu('blade');return false"> ブレード系 </a><br></span>
+	<span id="blade" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P056_BLADE"> ブレード </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('gravity_field');return false" onkeypress="PartsMenu('gravity_field');return false"> グラビティフィールド系 </a><br></span>
+	<span id="gravity_field" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P079_GRAVITY_FIELD"> グラビティフィールド </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P138_GRAVITY_FIELD_2"> グラビティフィールド2 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('slow_ray');return false" onkeypress="PartsMenu('slow_ray');return false"> スローレイ系 </a><br></span>
+	<span id="slow_ray" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P081_SLOW_RAY"> スローレイ </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('remote_blast');return false" onkeypress="PartsMenu('remote_blast');return false"> リモートブラスト系 </a><br></span>
+	<span id="remote_blast" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P082_REMOTE_BLAST"> リモートブラスト </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('grenade');return false" onkeypress="PartsMenu('grenade');return false"> グレネード系 </a><br></span>
+	<span id="grenade" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P101_GRENADE"> グレネード </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('needle_gun');return false" onkeypress="PartsMenu('needle_gun');return false"> ニードルガン系 </a><br></span>
+	<span id="needle_gun" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P135_NEEDLE_GUN"> ニードルガン </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('ripple');return false" onkeypress="PartsMenu('ripple');return false"> リップル系 </a><br></span>
+	<span id="ripple" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P136_RIPPLE"> リップル </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('energyegg');return false" onkeypress="PartsMenu('energyegg');return false"> エネルギーエッグ系 </a><br></span>
+	<span id="energyegg" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P141_ENERGY_EGG"> エネルギーエッグ </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('missile');return false" onkeypress="PartsMenu('missile');return false"> ミサイル系 </a><br></span>
+	<span id="missile" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P150_MISSILE"> ミサイル </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('reflectray');return false" onkeypress="PartsMenu('reflectray');return false"> リフレクトレイ系 </a><br></span>
+	<span id="reflectray" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P185_REFLECT_RAY"> リフレクトレイ </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('ionring');return false" onkeypress="PartsMenu('ionring');return false"> イオンリング系 </a><br></span>
+	<span id="ionring" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P186_ION_RING"> イオンリング </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('energywall');return false" onkeypress="PartsMenu('energywall');return false"> エネルギーウォール系 </a><br></span>
+	<span id="energywall" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P187_ENERGY_WALL"> エネルギーウォール </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('sonic_wave');return false" onkeypress="PartsMenu('sonic_wave');return false"> ソニックウェーブ系 </a><br></span>
+	<span id="sonic_wave" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P090_SONIC_WAVE_S"> ソニックウェーブ小 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P091_SONIC_WAVE_M"> ソニックウェーブ中 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P092_SONIC_WAVE_L"> ソニックウェーブ大 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('searchlight');return false" onkeypress="PartsMenu('searchlight');return false"> サーチライト系 </a><br></span>
+	<span id="searchlight" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P152_SEARCH_LIGHT"> サーチライト </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('barrier');return false" onkeypress="PartsMenu('barrier');return false"> バリアー系 </a><br></span>
+	<span id="barrier" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P139_BARRIER"> バリアー </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P140_BARRIER_2"> バリアー2 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('gravity_bind');return false" onkeypress="PartsMenu('gravity_bind');return false"> グラビティバインド系 </a><br></span>
+	<span id="gravity_bind" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P199_GRAVITY_BIND"> グラビティバインド </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('booster');return false" onkeypress="PartsMenu('booster');return false"> ブースター系 </a><br></span>
+	<span id="booster" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P022_BOOSTER"> ブースター </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P042_BOOSTER_2"> ブースター2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P050_SMALL_BOOSTER"> ブースター小 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P051_SMALL_BOOSTER_2"> ブースター小2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P086_THRUSTER_DEVICE"> スラスターデバイス </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P087_THRUSTER_DEVICE_2"> スラスターデバイス2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P088_SMALL_THRUSTER_DEVICE"> スラスターデバイス小 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P089_SMALL_THRUSTER_DEVICE_2"> スラスターデバイス小2 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('etc_a');return false" onkeypress="PartsMenu('etc_a');return false"> その他 </a><br></span>
+	<span id="etc_a" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P046_ITEM_BOX"> アイテムボックス </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P023_PARTS_REPAIR"> パーツHP回復 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P063_PARTS_REPAIR_2"> パーツHP回復2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P024_PARTS_RECOVERY"> パーツ異常回復 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P064_PARTS_RECOVERY_2"> パーツ異常回復2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P087_THRUSTER_DEVICE_2"> スラスターデバイス2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P025_PARTS_REGENERATION"> パーツEN回復 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_a.html#P065_PARTS_REGENERATION_2"> パーツEN回復2 </a><br></span>
+	</span>
+
+</span>
+
+<br>
+<a href="#" onclick="PartsMenu('type_b');return false" onkeypress="PartsMenu('type_b');return false"> [B] ブリック系 </a><br>
+<span id="type_b" style="display:none">
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('brick');return false" onkeypress="PartsMenu('brick');return false"> ブリック系 </a><br></span>
+	<span id="brick" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P066_BRICK_SQUARE_A"> ブリック-四角形1A </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P067_BRICK_SQUARE_B"> ブリック-四角形1B </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P068_BRICK_TRIANGLE_A"> ブリック-三角形1A </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P069_BRICK_TRIANGLE_B"> ブリック-三角形1B </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P070_BRICK_SEMICIRCLE_A"> ブリック-半円形1A </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P071_BRICK_SEMICIRCLE_B"> ブリック-半円形1B </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P072_BRICK_RECTANGLE_1A"> ブリック-長方形1A </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P073_BRICK_RECTANGLE_1B"> ブリック-長方形1B </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P072_BRICK_RECTANGLE_2A"> ブリック-長方形2A </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_b.html#P073_BRICK_RECTANGLE_2B"> ブリック-長方形2B </a><br></span>
+	</span>
+
+</span>
+
+<br>
+<a href="#" onclick="PartsMenu('type_c');return false" onkeypress="PartsMenu('type_c');return false"> [C] コア系 </a><br>
+<span id="type_c" style="display:none">
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('core');return false" onkeypress="PartsMenu('core');return false"> コア系 </a><br></span>
+	<span id="core" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P001_ROLLING_CORE"> ローリングコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P010_ROLLING_CORE_2"> ローリングコア2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P006_BIG_CORE"> ビッグコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P013_BIG_CORE_2"> ビッグコア2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P016_CANCER_CORE"> キャンサーコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P019_SMALL_CORE"> スモールコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P035_FIGHTER_CORE"> ファイターコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P041_FIGHTER_CORE_2"> ファイターコア2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P036_MISSILE_CORE"> ミサイルコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P038_BLOCK_CORE"> ブロックコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P040_MINI_CORE"> ミニコア 突撃型 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P057_BIT_CORE"> ビットコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P062_DEPLOY_CORE"> デプロイコア </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_c.html#P137_HEAD_CORE"> ヘッドコア </a><br></span>
+	</span>
+
+</span>
+
+<br>
+<a href="#" onclick="PartsMenu('type_d');return false" onkeypress="PartsMenu('type_d');return false"> [D] アーマー系 </a><br>
+<span id="type_d" style="display:none">
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('wing');return false" onkeypress="PartsMenu('wing');return false"> ウイング系 </a><br></span>
+	<span id="wing" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P011_WING"> ウイング01 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P026_LARGE_WING"> ウイング02 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P027_LARGE_WING_2"> ウイング03 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P037_SMALL_WING"> ウイング04 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P171_WING_5"> ウイング05 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P172_WING_6"> ウイング06 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P173_WING_7"> ウイング07 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P174_WING_8"> ウイング08 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P175_WING_9"> ウイング09 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P176_WING_10"> ウイング10 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P177_WING_11"> ウイング11 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P178_WING_12"> ウイング12 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P179_WING_13"> ウイング13 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P180_WING_14"> ウイング14 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P181_WING_15"> ウイング15 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('tank');return false" onkeypress="PartsMenu('tank');return false"> タンク系 </a><br></span>
+	<span id="tank" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P009_TANK"> タンク </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P017_EXPLOSION_TANK"> タンク爆発型 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('tip');return false" onkeypress="PartsMenu('tip');return false"> 先端パーツ系 </a><br></span>
+	<span id="tip" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P012_TIP"> 先端パーツ01 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P018_TIP_2"> 先端パーツ02 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P116_TIP_3"> 先端パーツ03 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P123_TIP_4"> 先端パーツ04 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P124_TIP_5"> 先端パーツ05 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P133_TIP_6"> 先端パーツ06 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P163_TIP_7"> 先端パーツ07 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P164_TIP_8"> 先端パーツ08 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P170_TIP_9"> 先端パーツ09 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P221_TIP_10"> 先端パーツ10 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P222_TIP_11"> 先端パーツ11 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P223_TIP_12"> 先端パーツ12 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P224_TIP_13"> 先端パーツ13 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P225_TIP_14"> 先端パーツ14 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P226_TIP_15"> 先端パーツ15 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P227_TIP_16"> 先端パーツ16 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P228_TIP_17"> 先端パーツ17 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P229_TIP_18"> 先端パーツ18 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('plate');return false" onkeypress="PartsMenu('plate');return false"> プレート系 </a><br></span>
+	<span id="plate" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P028_PLATE"> プレート01 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P029_PLATE_2"> プレート02 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P030_PLATE_3"> プレート03 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P031_PLATE_4"> プレート04 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P047_PLATE_5"> プレート05 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P052_PLATE_6"> プレート06 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P115_PLATE_7"> プレート07 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P117_PLATE_8"> プレート08 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P118_PLATE_9"> プレート09 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P119_PLATE_10"> プレート10 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P120_PLATE_11"> プレート11 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P121_PLATE_12"> プレート12 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P122_PLATE_13"> プレート13 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P165_PLATE_14"> プレート14 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P166_PLATE_15"> プレート15 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P167_PLATE_16"> プレート16 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P168_PLATE_17"> プレート17 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P169_PLATE_18"> プレート18 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P230_PLATE_19"> プレート19 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P231_PLATE_20"> プレート20 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P232_PLATE_21"> プレート21 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P233_PLATE_22"> プレート22 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P234_PLATE_23"> プレート23 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P235_PLATE_24"> プレート24 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P236_PLATE_25"> プレート25 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P237_PLATE_26"> プレート26 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P238_PLATE_27"> プレート27 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P239_PLATE_28"> プレート28 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P240_PLATE_29"> プレート29 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P241_PLATE_30"> プレート30 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P242_PLATE_31"> プレート31 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P252_PLATE_32"> プレート32 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P253_PLATE_33"> プレート33 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P254_PLATE_34"> プレート34 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P255_PLATE_35"> プレート35 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P256_PLATE_36"> プレート36 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P257_PLATE_37"> プレート37 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('decoration');return false" onkeypress="PartsMenu('decoration');return false"> 装飾パーツ系 </a><br></span>
+	<span id="decoration" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P125_DECORATION"> 装飾パーツ01 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P126_DECORATION_2"> 装飾パーツ02 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P132_DECORATION_3"> 装飾パーツ03 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P134_DECORATION_4"> 装飾パーツ04 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P158_DECORATION_5"> 装飾パーツ05 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P159_DECORATION_6"> 装飾パーツ06 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P160_DECORATION_7"> 装飾パーツ07 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P161_DECORATION_8"> 装飾パーツ08 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P162_DECORATION_9"> 装飾パーツ09 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P210_DECORATION_10"> 装飾パーツ10 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P211_DECORATION_11"> 装飾パーツ11 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P212_DECORATION_12"> 装飾パーツ12 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P213_DECORATION_13"> 装飾パーツ13 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P214_DECORATION_14"> 装飾パーツ14 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P215_DECORATION_15"> 装飾パーツ15 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P216_DECORATION_16"> 装飾パーツ16 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P217_DECORATION_17"> 装飾パーツ17 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P218_DECORATION_18"> 装飾パーツ18 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P219_DECORATION_19"> 装飾パーツ19 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P220_DECORATION_20"> 装飾パーツ20 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P243_DECORATION_21"> 装飾パーツ21 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P244_DECORATION_22"> 装飾パーツ22 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P245_DECORATION_23"> 装飾パーツ23 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P246_DECORATION_24"> 装飾パーツ24 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P247_DECORATION_25"> 装飾パーツ25 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P248_DECORATION_26"> 装飾パーツ26 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P249_DECORATION_27"> 装飾パーツ27 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P250_DECORATION_28"> 装飾パーツ28 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P251_DECORATION_29"> 装飾パーツ29 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('block');return false" onkeypress="PartsMenu('block');return false"> ブロック系 </a><br></span>
+	<span id="block" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P127_BLOCK"> ブロック </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('shell');return false" onkeypress="PartsMenu('shell');return false"> シェル系 </a><br></span>
+	<span id="shell" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P128_SHELL_1A"> シェル1A </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P129_SHELL_1B"> シェル1B </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P130_SHELL_2A"> シェル2A </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P131_SHELL_2B"> シェル2B </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('ring');return false" onkeypress="PartsMenu('ring');return false"> リング系 </a><br></span>
+	<span id="ring" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P205_RING"> リング01 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P206_RING_2"> リング02 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P207_RING_3"> リング03 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P208_RING_4"> リング04 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_d.html#P209_RING_5"> リング05 </a><br></span>
+	</span>
+
+</span>
+
+<br>
+<a href="#" onclick="PartsMenu('type_e');return false" onkeypress="PartsMenu('type_e');return false"> [E] エフェクター系 </a><br>
+<span id="type_e" style="display:none">
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('effector');return false" onkeypress="PartsMenu('effector');return false"> エフェクター系 </a><br></span>
+	<span id="effector" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P102_EFFECTOR_EXPLOSION"> エフェクター（爆発） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P103_EFFECTOR_SHINE"> エフェクター（光） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P104_EFFECTOR_SHOCKWAVE"> エフェクター（衝撃波） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P200_EFFECTOR_SHOCKWAVES"> エフェクター（衝撃波総合） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P105_EFFECTOR_SHOCKWAVE_SLOW"> エフェクター（衝撃波遅） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P106_EFFECTOR_SPARK"> エフェクター（火花） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P196_EFFECTOR_SPARK_2"> エフェクター（火花2） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P204_EFFECTOR_SPARK_3"> エフェクター（火花3） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P107_EFFECTOR_FLASH"> エフェクター（閃光） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P108_EFFECTOR_THUNDER_LINE"> エフェクター（電撃線） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P109_EFFECTOR_THUNDER_STREAM"> エフェクター（電撃渦） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P197_EFFECTOR_THUNDER_GATHER"> エフェクター（電撃集束） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P198_EFFECTOR_THUNDER_DIFFUSE"> エフェクター（電撃放散） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P110_EFFECTOR_AURA"> エフェクター（オーラ） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P111_EFFECTOR_FLASH_RED"> エフェクター（閃光-赤） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P112_EFFECTOR_EXPLOSIVE"> エフェクター（爆発-発火） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P113_EFFECTOR_CHARGE"> エフェクター（チャージ） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P259_EFFECTOR_CHARGE_2"> エフェクター（チャージ2） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P114_EFFECTOR_CONCENTRATION"> エフェクター（集中） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P157_EFFECTOR_BOOSTER"> エフェクター（ブースター） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P183_EFFECTOR_BOOSTER_2"> エフェクター（ブースター2） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P193_EFFECTOR_SIMPLE_REDUCE"> エフェクター（シンプル-縮小） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P194_EFFECTOR_SIMPLE_ENLARGE"> エフェクター（シンプル-拡大） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P261_EFFECTOR_DISTORTION"> エフェクター（ディストーション） </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('screen');return false" onkeypress="PartsMenu('screen');return false"> スクリーン系 </a><br></span>
+	<span id="screen" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P153_SCREEN_EFFECTOR_FLASH"> スクリーン（フラッシュ） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P154_SCREEN_EFFECTOR_QUAKE"> スクリーン（地震） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P155_SCREEN_EFFECTOR_SHAKE"> スクリーン（振動） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P156_SCREEN_EFFECTOR_BLUR"> スクリーン（ブラー） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P201_SCREEN_EFFECTOR_INVERT"> スクリーン（ネガポジ反転） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P202_SCREEN_EFFECTOR_GRAYSCALE"> スクリーン（グレースケール） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P260_SCREEN_EFFECTOR_MOSAIC"> スクリーン（モザイク） </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('sound');return false" onkeypress="PartsMenu('sound');return false"> サウンド系 </a><br></span>
+	<span id="sound" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P184_SOUND_EFFECTOR"> サウンドエフェクター </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('playerbullet');return false" onkeypress="PartsMenu('playerbullet');return false"> プレイヤーバレット系 </a><br></span>
+	<span id="playerbullet" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P188_PLAYER_BULLET"> プレイヤーバレット </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('checkpoint');return false" onkeypress="PartsMenu('checkpoint');return false"> チェックポインター系 </a><br></span>
+	<span id="checkpoint" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P191_CHECK_POINTER"> チェックポインター </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('swordeffector');return false" onkeypress="PartsMenu('swordeffector');return false"> ソードエフェクター系 </a><br></span>
+	<span id="swordeffector" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P195_SWORD_EFFECTOR"> ソードエフェクター </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('textureeffector');return false" onkeypress="PartsMenu('textureeffector');return false"> テクスチャエフェクター系 </a><br></span>
+	<span id="textureeffector" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_e.html#P258_TEXTURE_EFFECTOR"> テクスチャエフェクター </a><br></span>
+	</span>
+</span>
+
+<br>
+<a href="#" onclick="PartsMenu('type_j');return false" onkeypress="PartsMenu('type_j');return false"> [J] 関節系 </a><br>
+<span id="type_j" style="display:none">
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('turn_joint');return false" onkeypress="PartsMenu('turn_joint');return false"> 回転関節系 </a><br></span>
+	<span id="turn_joint" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P014_TURN_15-30_JOINT_S"> 回転関節小15-30度 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P093_TURN_JOINT_15"> 回転関節（015度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P094_TURN_JOINT_30"> 回転関節（030度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P095_TURN_JOINT_45"> 回転関節（045度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P096_TURN_JOINT_60"> 回転関節（060度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P097_TURN_JOINT_90"> 回転関節（090度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P098_TURN_JOINT_120"> 回転関節（120度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P099_TURN_JOINT_150"> 回転関節（150度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P100_TURN_JOINT_180"> 回転関節（180度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P002_AIM_PLAYER_JOINT_S"> 自機狙い関節小 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P007_AIM_PLAYER_JOINT_M"> 自機狙い関節中 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P048_AIM_PLAYER_JOINT_L"> 自機狙い関節大 </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('turn_panel');return false" onkeypress="PartsMenu('turn_panel');return false"> 回転パネル系 </a><br></span>
+	<span id="turn_panel" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P077_SMALL_ROLLING_PANEL"> 回転盤小 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P078_SMALL_ROLLING_PANEL_2"> 回転盤小2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P015_ROLLING_PANEL"> 回転盤中 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P076_ROLLING_PANEL_2"> 回転盤中2 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P182_SPECIFY_ROLLING_PANEL"> 指定角度回転パネル </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('special_panel');return false" onkeypress="PartsMenu('special_panel');return false"> 特殊パネル系 </a><br></span>
+	<span id="special_panel" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P059_AIM_PLAYER_PANEL"> 自機狙いパネル </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P142_AIM_PLAYER_PANEL_15"> 自機狙いパネル（015度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P143_AIM_PLAYER_PANEL_30"> 自機狙いパネル（030度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P144_AIM_PLAYER_PANEL_45"> 自機狙いパネル（045度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P145_AIM_PLAYER_PANEL_60"> 自機狙いパネル（060度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P146_AIM_PLAYER_PANEL_90"> 自機狙いパネル（090度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P147_AIM_PLAYER_PANEL_120"> 自機狙いパネル（120度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P148_AIM_PLAYER_PANEL_150"> 自機狙いパネル（150度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P149_AIM_PLAYER_PANEL_180"> 自機狙いパネル（180度） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P061_AIM_INIT_DIRECTION_PANEL"> 初期方向狙いパネル </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P151_AIM_FIXED_DIRECTION_PANEL"> 固定方向狙いパネル </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P189_AIM_PLAYER_ANGLE_PANEL"> 自機方向合わせパネル </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P190_AIM_PAIR_PARTS_PANEL"> ペアパーツ狙いパネル </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P192_AIM_PLAYER_MOVE_ANGLE_PANEL"> 自機移動方向パネル </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('move_joint');return false" onkeypress="PartsMenu('move_joint');return false"> 移動関節系 </a><br></span>
+	<span id="move_joint" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P083_MOVE_JOINT_S_HSPD"> 移動関節小（速） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P084_MOVE_JOINT_S_MSPD"> 移動関節小（中速） </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P085_MOVE_JOINT_S_LSPD"> 移動関節小（遅） </a><br></span>
+	</span>
+
+	<span class="menuc1"><a href="#" onclick="PartsMenu('etc_j');return false" onkeypress="PartsMenu('etc_j');return false"> その他 </a><br></span>
+	<span id="etc_j" style="display:none">
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P060_SUICIDE_DEVICE"> 自爆装置 </a><br></span>
+		<span class="menuc2">&gt;&gt;<a target="view" href="fraxy_parts_ref_j.html#P045_DETACH_JOINT"> 分離用関節 </a><br></span>
+	</span>
+
+</span>
+
+<noscript>
+</span>
+</noscript>
+<br>
+<hr class="line_s">
+<div class="style_center">- 追加と変更 -</div>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20150510beta <br></span>
+		<span class="menuc2">chg:<a target="view" href="fraxy_parts_ref_e.html#P188_PLAYER_BULLET"> プレイヤーバレット </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20130701beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P261_EFFECTOR_DISTORTION"> エフェクター（ディストーション） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20120623beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P258_TEXTURE_EFFECTOR"> テクスチャエフェクター </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P259_EFFECTOR_CHARGE_2"> エフェクター（チャージ2） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P260_SCREEN_EFFECTOR_MOSAIC"> スクリーン（モザイク） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20120108beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P221_TIP_10"> 先端パーツ10 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P222_TIP_11"> 先端パーツ11 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P223_TIP_12"> 先端パーツ12 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P224_TIP_13"> 先端パーツ13 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P225_TIP_14"> 先端パーツ14 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P226_TIP_15"> 先端パーツ15 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P227_TIP_16"> 先端パーツ16 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P228_TIP_17"> 先端パーツ17 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P229_TIP_18"> 先端パーツ18 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P230_PLATE_19"> プレート19 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P231_PLATE_20"> プレート20 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P232_PLATE_21"> プレート21 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P233_PLATE_22"> プレート22 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P234_PLATE_23"> プレート23 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P235_PLATE_24"> プレート24 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P236_PLATE_25"> プレート25 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P237_PLATE_26"> プレート26 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P238_PLATE_27"> プレート27 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P239_PLATE_28"> プレート28 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P240_PLATE_29"> プレート29 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P241_PLATE_30"> プレート30 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P242_PLATE_31"> プレート31 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P252_PLATE_32"> プレート32 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P253_PLATE_33"> プレート33 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P254_PLATE_34"> プレート34 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P255_PLATE_35"> プレート35 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P256_PLATE_36"> プレート36 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P257_PLATE_37"> プレート37 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P210_DECORATION_10"> 装飾パーツ10 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P211_DECORATION_11"> 装飾パーツ11 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P212_DECORATION_12"> 装飾パーツ12 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P213_DECORATION_13"> 装飾パーツ13 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P214_DECORATION_14"> 装飾パーツ14 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P215_DECORATION_15"> 装飾パーツ15 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P216_DECORATION_16"> 装飾パーツ16 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P217_DECORATION_17"> 装飾パーツ17 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P218_DECORATION_18"> 装飾パーツ18 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P219_DECORATION_19"> 装飾パーツ19 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P220_DECORATION_20"> 装飾パーツ20 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P243_DECORATION_21"> 装飾パーツ21 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P244_DECORATION_22"> 装飾パーツ22 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P245_DECORATION_23"> 装飾パーツ23 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P246_DECORATION_24"> 装飾パーツ24 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P247_DECORATION_25"> 装飾パーツ25 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P248_DECORATION_26"> 装飾パーツ26 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P249_DECORATION_27"> 装飾パーツ27 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P250_DECORATION_28"> 装飾パーツ28 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P251_DECORATION_29"> 装飾パーツ29 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P205_RING"> リング01 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P206_RING_2"> リング02 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P207_RING_3"> リング03 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P208_RING_4"> リング04 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P209_RING_5"> リング05 </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20110622beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P203_POWER_LASER"> パワーレーザー </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P204_EFFECTOR_SPARK_3"> エフェクター（火花3） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20101223beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P201_SCREEN_EFFECTOR_INVERT"> スクリーン（ネガポジ反転） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P202_SCREEN_EFFECTOR_GRAYSCALE"> スクリーン（グレースケール） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20101104beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P200_EFFECTOR_SHOCKWAVES"> エフェクター（衝撃波総合） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20100819beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P197_EFFECTOR_THUNDER_GATHER"> エフェクター（電撃集束） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P198_EFFECTOR_THUNDER_DIFFUSE"> エフェクター（電撃放散） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P199_GRAVITY_BIND"> グラビティバインド </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20100730beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P192_AIM_PLAYER_MOVE_ANGLE_PANEL"> 自機移動方向パネル </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P193_EFFECTOR_SIMPLE_REDUCE"> エフェクター（シンプル-縮小） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P194_EFFECTOR_SIMPLE_ENLARGE"> エフェクター（シンプル-拡大） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P196_EFFECTOR_SPARK_2"> エフェクター（火花2） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P195_SWORD_EFFECTOR"> ソードエフェクター </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20100319beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P191_CHECK_POINTER"> チェックポインター </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20100103beta <br></span>
+		<span class="menuc2">chg:<a target="view" href="fraxy_parts_ref_e.html#P188_PLAYER_BULLET"> プレイヤーバレット </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P189_AIM_PLAYER_ANGLE_PANEL"> 自機方向合わせパネル </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P190_AIM_PAIR_PARTS_PANEL"> ペアパーツ狙いパネル </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20091218beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P188_PLAYER_BULLET"> プレイヤーバレット </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20091020beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P185_REFLECT_RAY"> リフレクトレイ </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P186_ION_RING"> イオンリング </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P187_ENERGY_WALL"> エネルギーウォール </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20090826beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P184_SOUND_EFFECTOR"> サウンドエフェクター </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20090524beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P183_EFFECTOR_BOOSTER_2"> エフェクター（ブースター2） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20090330beta <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P153_SCREEN_EFFECTOR_FLASH"> スクリーン（フラッシュ） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P154_SCREEN_EFFECTOR_QUAKE"> スクリーン（地震） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P155_SCREEN_EFFECTOR_SHAKE"> スクリーン（振動） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P156_SCREEN_EFFECTOR_BLUR"> スクリーン（ブラー） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P157_EFFECTOR_BOOSTER"> エフェクター（ブースター） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P158_DECORATION_5"> 装飾パーツ05 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P159_DECORATION_6"> 装飾パーツ06 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P160_DECORATION_7"> 装飾パーツ07 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P161_DECORATION_8"> 装飾パーツ08 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P162_DECORATION_9"> 装飾パーツ09 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P163_TIP_7"> 先端パーツ07 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P164_TIP_8"> 先端パーツ08 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P165_PLATE_14"> プレート14 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P166_PLATE_15"> プレート15 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P167_PLATE_16"> プレート16 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P168_PLATE_17"> プレート17 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P169_PLATE_18"> プレート18 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P170_TIP_9"> 先端パーツ09 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P171_WING_5"> ウイング05 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P172_WING_6"> ウイング06 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P173_WING_7"> ウイング07 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P174_WING_8"> ウイング08 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P175_WING_9"> ウイング09 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P176_WING_10"> ウイング10 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P177_WING_11"> ウイング11 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P178_WING_12"> ウイング12 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P179_WING_13"> ウイング13 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P180_WING_14"> ウイング14 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P181_WING_15"> ウイング15 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P182_SPECIFY_ROLLING_PANEL"> 指定角度回転パネル </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20090204 <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P150_MISSILE"> ミサイル </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P152_SEARCH_LIGHT"> サーチライト </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P151_AIM_FIXED_DIRECTION_PANEL"> 固定方向狙いパネル </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20081118 <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P142_AIM_PLAYER_PANEL_15"> 自機狙いパネル（015度） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P143_AIM_PLAYER_PANEL_30"> 自機狙いパネル（030度） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P144_AIM_PLAYER_PANEL_45"> 自機狙いパネル（045度） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P145_AIM_PLAYER_PANEL_60"> 自機狙いパネル（060度） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P146_AIM_PLAYER_PANEL_90"> 自機狙いパネル（090度） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P147_AIM_PLAYER_PANEL_120"> 自機狙いパネル（120度） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P148_AIM_PLAYER_PANEL_150"> 自機狙いパネル（150度） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_j.html#P149_AIM_PLAYER_PANEL_180"> 自機狙いパネル（180度） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080825 <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P141_ENERGY_EGG"> エネルギーエッグ </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="fraxy_parts_ref_c.html#P137_HEAD_CORE"> ヘッドコア </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080814 <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P138_GRAVITY_FIELD_2"> グラビティフィールド2 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P139_BARRIER"> バリアー </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P140_BARRIER_2"> バリアー2 </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="fraxy_parts_ref_j.html#P059_AIM_PLAYER_PANEL"> 自機狙いパネル </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="fraxy_parts_ref_c.html#P137_HEAD_CORE"> ヘッドコア </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080723 <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_c.html#P137_HEAD_CORE"> ヘッドコア </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P135_NEEDLE_GUN"> ニードルガン </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P136_RIPPLE"> リップル </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P116_TIP_3"> 先端パーツ03 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P123_TIP_4"> 先端パーツ04 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P124_TIP_5"> 先端パーツ05 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P133_TIP_6"> 先端パーツ06 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P115_PLATE_7"> プレート07 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P117_PLATE_8"> プレート08 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P118_PLATE_9"> プレート09 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P119_PLATE_10"> プレート10 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P120_PLATE_11"> プレート11 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P121_PLATE_12"> プレート12 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P122_PLATE_13"> プレート13 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P125_DECORATION"> 装飾パーツ01 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P126_DECORATION_2"> 装飾パーツ02 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P132_DECORATION_3"> 装飾パーツ03 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P134_DECORATION_4"> 装飾パーツ04 </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P127_BLOCK"> ブロック </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P128_SHELL_1A"> シェル1A </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P129_SHELL_1B"> シェル1B </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P130_SHELL_2A"> シェル2A </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_d.html#P131_SHELL_2B"> シェル2B </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080706 <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P113_EFFECTOR_CHARGE"> エフェクター（チャージ） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P114_EFFECTOR_CONCENTRATION"> エフェクター（集中） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080617 <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P110_EFFECTOR_AURA"> エフェクター（オーラ） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P111_EFFECTOR_FLASH_RED"> エフェクター（閃光-赤） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P112_EFFECTOR_EXPLOSIVE"> エフェクター（爆発-発火） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080606 <br></span>
+		<span class="menuc2">chg:<a target="view" href="fraxy_parts_ref_e.html#P106_EFFECTOR_SPARK"> エフェクター（火花） </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080522 <br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_a.html#P101_GRENADE"> グレネード </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P102_EFFECTOR_EXPLOSION"> エフェクター（爆発） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P103_EFFECTOR_SHINE"> エフェクター（光） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P104_EFFECTOR_SHOCKWAVE"> エフェクター（衝撃波） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P105_EFFECTOR_SHOCKWAVE_SLOW"> エフェクター（衝撃波遅） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P106_EFFECTOR_SPARK"> エフェクター（火花） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P107_EFFECTOR_FLASH"> エフェクター（閃光） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P108_EFFECTOR_THUNDER_LINE"> エフェクター（電撃線） </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fraxy_parts_ref_e.html#P109_EFFECTOR_THUNDER_STREAM"> エフェクター（電撃渦） </a><br></span>
+
+<div class="spacebox"></div>
+<hr class="line_s">
+<div class="blank"></div>
+</body>
+</html>

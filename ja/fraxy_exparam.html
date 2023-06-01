@@ -1,0 +1,1830 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="content-style-type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>- FRAXY exparam -</title>
+</head>
+
+<body class="contents_main">
+
+<hr class="line_s">
+
+<div class="block_table">
+	<div class="block_title">固有パラメータメモ</div>
+	<div class="block_contents">
+		<div class="block_text_b">一覧</div>
+		<div class="block_text_m">バルカン系</div>
+		<div class="block_text_s">
+			<a href="#VULCAN">バルカン</a><br>
+			<a href="#VULCAN">バレット</a><br>
+			<a href="#VULCAN">パワーボール</a><br>
+			<a href="#VULCAN">プラズマリング</a><br>
+			<a href="#VULCAN">バーナー</a><br>
+			<a href="#VULCAN">スローレイ</a><br>
+			<a href="#VULCAN">ニードルガン</a><br>
+			<a href="#VULCAN">リップル</a><br>
+			<a href="#GRENADE">グレネード</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">炸裂系</div>
+		<div class="block_text_s">
+			<a href="#ENERGYEGG">エネルギーエッグ</a><br>
+			<a href="#MISSILE">ミサイル</a><br>
+			<a href="#REMOTEBLAST">リモートブラスト</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">未分類1</div>
+		<div class="block_text_s">
+			<a href="#HOMINGLASER">追尾レーザー</a><br>
+			<a href="#REFLECTRAY">リフレクトレイ</a><br>
+			<a href="#IONRING">イオンリング</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">未分類2</div>
+		<div class="block_text_s">
+			<a href="#LASER">レーザー</a><br>
+			<a href="#POWERLASER">パワーレーザー</a><br>
+			<a href="#BLADE">ブレード</a><br>
+			<a href="#SONICWAVE">ソニックウェーブ</a><br>
+			<a href="#BARRIER">バリアー</a><br>
+			<a href="#SEARCHLIGHT">サーチライト</a><br>
+			<a href="#ENERGYWALL">エネルギーウォール</a><br>
+			<a href="#GRAVITYFIELD">グラビティフィールド</a><br>
+			<a href="#GRAVITYBIND">グラビティバインド</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">エフェクター系</div>
+		<div class="block_text_s">
+			<a href="#EFFECTOR">エフェクター</a><br>
+			<a href="#EFFECTORTHUNDER">エフェクター（電撃）</a><br>
+			<a href="#EFFECTORCHARGE2">エフェクター（チャージ2）</a><br>
+			<a href="#EFFECTORDISTORTION">エフェクター（ディストーション）</a><br>
+			<a href="#SCREENEFFECTOR">スクリーンエフェクター</a><br>
+			<a href="#SOUNDEFFECTOR">サウンドエフェクター</a><br>
+			<a href="#PLAYERBULLET">プレイヤーバレット</a><br>
+			<a href="#CHECKPOINTER">チェックポインター</a><br>
+			<a href="#SWORDEFFECTOR">ソードエフェクター</a><br>
+			<a href="#TEXTUREEFFECTOR">テクスチャエフェクター</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">プレイヤーバレット</div>
+		<div class="block_text_s">
+			<a href="#PLAYER_BULLET">バレット</a><br>
+			<a href="#PLAYER_STUNBULLET">スタンバレット</a><br>
+			<a href="#PLAYER_BLASTER">ブラスター</a><br>
+			<a href="#PLAYER_STUNBLASTER">スタンブラスター</a><br>
+			<a href="#PLAYER_BLURDECOY">ブラーデコイ</a><br>
+			<a href="#PLAYER_SOLLDIFFUSER">ソールディフューザー</a><br>
+			<a href="#PLAYER_ABSOLUTESHIELD">アブソリュートシールド</a><br>
+			<a href="#PLAYER_FLASHBULLET">フラッシュバレット</a><br>
+			<a href="#PLAYER_LASER">レーザー</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">その他</div>
+		<div class="block_text_s">
+			<a href="#TURNPANEL">指定角度回転パネル</a><br>
+			<a href="#SPIN">回転/方向転換系</a><br>
+			<a href="#MOVEJOINT">移動関節系</a><br>
+			<a href="#BOOSTER">ブースター</a><br>
+			<a href="#BOOSTER">スラスターデバイス</a><br>
+			<a href="#ITEMBOX">アイテムボックス</a><br>
+		</div>
+	</div>
+</div>
+
+<hr class="line_s">
+
+<div class="change_table">
+	<div class="change_version">最新版</div>
+	<div class="change_category">
+		<a name="VULCAN" id="VULCAN"></a>
+			<div class="change_info">- バルカン系
+				<div class="change_detail">
+					・バルカン系、バレット系、パワーボール、プラズマリング、バーナー、スローレイ、ニードルガン、リップル<br>
+					<br>
+					固有パラメータ1: 速度制御フラグ (speed control flag: ~-1 or 1~)<br>
+					固有パラメータ2: 初期速度 (speed A: -4000~4000)<br>
+					固有パラメータ3: 変化後の速度 (speed B: -4000~4000)<br>
+					固有パラメータ4: 回転量 (rotation speed: -4096~4096)<br>
+					固有パラメータ5: 発射方向数 (number of bullets per shot: 0 or 1~)<br>
+					固有パラメータ6: 発射角度 (firing angle: 0~)<br>
+					固有パラメータ7: 無し (none)<br>
+					固有パラメータ8: 消滅までのフレーム値 (life time: 0 or 1~)<br>
+					固有パラメータ14: 屈曲方向 (inflect angle: -1 or 0~4095)<br>
+					固有パラメータ15: 屈曲フレーム (inflect frame: 0 or 1~n)<br>
+					固有パラメータ16: 回転オプション (rotation option: 0~)<br>
+					<br>
+					固有パラメータ1に0以外の値を指定すると固有パラメータ1~4と16が適用されます。<br>
+					固有パラメータ5に0以外の値を指定すると固有パラメータ5~6が適用されます。<br>
+					固有パラメータ8に0以外の値を指定すると固有パラメータ8が適用されます。<br>
+					<br>
+					固有パラメータ1は以下の値を指定します。<br>
+					フェードタイプによる速度制御を指定する場合はフェードタイプの値を負数に置き換えてください。<br>
+					1~ : 値に応じたサイン波形による速度制御 (speed control by sin wave)<br>
+					~-1 : フェードタイプによる速度制御 (speed control by fade type)<br>
+					<br>
+					固有パラメータ14と15の屈曲は指定フレーム後に屈曲方向へ方向転換します。<br>
+					屈曲フレームに 0 を指定すると屈曲を無効化します。<br>
+					屈曲方向は以下の値を設定してください。<br>
+						-1 : プレイヤー方向 (aim player)<br>
+						0~4095 : 相対方向 (relative direction)<br>
+					<br>
+					相対方向はその時点での弾の進行方向が基準になります。<br>
+					1024なら90度右方向、3072なら90度左方向へ方向転換します。<br>
+					<br>
+					固有パラメータ16の回転オプションは以下の値を指定します。<br>
+					0 : 回転 (rotation)<br>
+					1 : 発射方向へ回転 (rotation to firing direction)<br>
+					2 : プレイヤーを追尾 (homing)<br>
+					&amp;8 : 回転量をフェードアウトさせる (fadeout the rotation speed)<br>
+					&amp;16 : 回転量をフェードインさせる (fadein the rotation speed)<br>
+					&amp;32 : 回転量の制御にフェードタイプ(24)を使用する (use fadetype(24) for rotation speed control)<br>
+				</div>
+			</div>
+		<a name="GRENADE" id="GRENADE"></a>
+			<div class="change_info">- グレネード
+				<div class="change_detail">
+					固有パラメータ1: 速度制御フラグ (speed control flag: ~-1 or 1~)<br>
+					固有パラメータ2: 初期速度 (speed A: -4000~4000)<br>
+					固有パラメータ3: 変化後の速度 (speed B: -4000~4000)<br>
+					固有パラメータ4: 回転量 (rotation speed: -4096~4096)<br>
+					固有パラメータ5: 発射方向数 (number of bullets per shot: 0 or 1~)<br>
+					固有パラメータ6: 発射角度 (firing angle: 0~)<br>
+					固有パラメータ7: 無し (none)<br>
+					固有パラメータ8: 消滅までのフレーム値 (life time: 0 or 1~)<br>
+					固有パラメータ12: 爆発サイズ (explosion size: 0 or 1~1000 %)<br>
+					固有パラメータ14: 屈曲方向 (inflect angle: -1 or 0~4095)<br>
+					固有パラメータ15: 屈曲フレーム (inflect frame: 0 or 1~n)<br>
+					固有パラメータ16: 回転オプション (rotation option: 0~)<br>
+					<br>
+					固有パラメータ1に0以外の値を指定すると固有パラメータ1~4と16が適用されます。<br>
+					固有パラメータ5に0以外の値を指定すると固有パラメータ5~6が適用されます。<br>
+					固有パラメータ8に0以外の値を指定すると固有パラメータ8が適用されます。<br>
+					固有パラメータ12に0以外の値を指定すると固有パラメータ12が適用されます。<br>
+					<br>
+					固有パラメータ1は以下の値を指定します。<br>
+					フェードタイプによる速度制御を指定する場合はフェードタイプの値を負数に置き換えてください。<br>
+					1~ : 値に応じたサイン波形による速度制御 (speed control by sin wave)<br>
+					~-1 : フェードタイプによる速度制御 (speed control by fade type)<br>
+					<br>
+					固有パラメータ14と15の屈曲は指定フレーム後に屈曲方向へ方向転換します。<br>
+					屈曲フレームに 0 を指定すると屈曲を無効化します。<br>
+					屈曲方向は以下の値を設定してください。<br>
+						-1 : プレイヤー方向 (aim player)<br>
+						0~4095 : 相対方向 (relative direction)<br>
+					<br>
+					相対方向はその時点での弾の進行方向が基準になります。<br>
+					1024なら90度右方向、3072なら90度左方向へ方向転換します。<br>
+					<br>
+					固有パラメータ16の回転オプションは以下の値を指定します。<br>
+					0 : 回転 (rotation)<br>
+					1 : 発射方向へ回転 (rotation to firing direction)<br>
+					2 : プレイヤーを追尾 (homing)<br>
+					&amp;8 : 回転量をフェードアウトさせる (fadeout the rotation speed)<br>
+					&amp;16 : 回転量をフェードインさせる (fadein the rotation speed)<br>
+					&amp;32 : 回転量の制御にフェードタイプ(24)を使用する (use fadetype(24) for rotation speed control)<br>
+				</div>
+			</div>
+		<a name="MISSILE" id="MISSILE"></a>
+			<div class="change_info">- ミサイル
+				<div class="change_detail">
+					追尾性をもったミサイルを発射するパーツです。<br>
+					ミサイルはプレイヤーの弾で破壊することができます。<br>
+					プレイヤーと接触するか一定時間が経過した場合、爆発しエクスプロージョンを発生させます。<br>
+					プレイヤーの弾によって破壊した場合は消滅します。<br>
+					<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ<br>
+					固有パラメータ2: 初期速度 (begin speed: -4000~4000)<br>
+					固有パラメータ3: 最終速度 (end speed: -4000~4000)<br>
+					固有パラメータ4: 速度変化値 (fade value of speed: 000000~999999)<br>
+					<br>
+					固有パラメータ5: 発射タイプ (burst type: -3~3)<br>
+					固有パラメータ6: 発射する弾の種類 (bullet type: 0~24)<br>
+					固有パラメータ7: 耐久力 (durability: -2=自機弾と衝突判定無し -1=破壊不可 1以上=パーツと同等の耐久力指定)<br>
+					固有パラメータ8: 消滅までのフレーム値 (self-destruct frame: 1~1000)<br>
+					<br>
+					固有パラメータ9: 初期回転速度 (begin rotate: -128~128)<br>
+					固有パラメータ10: 最終回転速度 (end rotate: -128~128)<br>
+					固有パラメータ11: 回転速度変化値 (fade value of rotate: 000000~999999)<br>
+					固有パラメータ12: 爆発サイズ (explosion size: 1~500 %)<br>
+					<br>
+					固有パラメータ13: 撃ち返しオプション (shrapnel option: -1~7)<br>
+					固有パラメータ14: 屈曲方向 (inflect angle: -1 or 0~4095)<br>
+					固有パラメータ15: 屈曲フレーム (inflect frame: 0 or 1~n)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					    1 : 	固有パラメータ適用フラグ (exparam flag)<br>
+					   &amp;2 : 	追尾能力 (homing)<br>
+					   &amp;4 : 	&amp;2の場合に完全な追尾をする (perfect homing)<br>
+					   &amp;8 :		エフェクトを描画する (booster effect)<br>
+					  &amp;16 :		軌跡を描画する (shadow effect)<br>
+					  &amp;32 :		プレイヤー衝突時にフラッシュする (flash)<br>
+					  &amp;64 : 	プロキシミティ (proximity)<br>
+					 &amp;256 : 	発射反動↑ (launch reaction-front)<br>
+					 &amp;512 : 	発射反動↓ (launch reaction-back)<br>
+					&amp;1024 : 	発射反動← (launch reaction-left)<br>
+					&amp;2048 : 	発射反動→ (launch reaction-right)<br>
+					デフォルトのミサイルは1+2+8+16+32+256=315の設定になっています。<br>
+					プロキシミティはプレイヤーに接近しつつも明らかに直撃しないと判断された場合に爆発します。<br>
+					<br>
+					固有パラメータ4と11の速度変化値は初期速度～フェード～最終速度の各フレームの比率を指定します。<br>
+					ちょっと解りにくいので以下の例を参考にしてください。<br>
+					fade value = 104050 -&gt; 10:40:50 -&gt; 1:4:5 -&gt; begin10%:fade40%:end50%<br>
+					消滅までのフレーム値が100ならば、初期速度10フレーム、最終速度へのフェード40フレーム、最終速度50フレームになります。<br>
+					16進数で指定できるようにするべきだと思ったのですがめんどくさいのでこんな仕様に。<br>
+					当然ですが上の例の値は010405や10405と指定しても同じ比率になります。 <br>
+					1:1:1の場合は33%:33%:34%になります、たぶん。<br>
+					<br>
+					固有パラメータ5の発射タイプは以下の値を設定してください。<br>
+					正数を指定すると自機狙い、負数を指定すると弾の正面方向が基準になります。<br>
+					0 : 	全方向 (all range: 4096)<br>
+					1 : 	ライン (line)<br>
+					2 : 	多方向 (wide: 1280)<br>
+					3 : 	ペアパーツの設定を使う (use pair setting: ex5 and ex6)<br>
+					<br>
+					固有パラメータ6の弾の種類は以下の値を指定します。<br>
+					記述されていない値を指定した場合は発射されません。<br>
+					 0 : 	無し<br>
+					 1 : 	バルカン<br>
+					 2 : 	バレット<br>
+					 4 : 	パワーボール<br>
+					 6 : 	ホーミングレーザー<br>
+					 8 : 	プラズマリング<br>
+					12 : 	スローレイ<br>
+					14 : 	エクスプロージョン（グレネードの爆発のみ）<br>
+					16 : 	グレネード<br>
+					17 : 	ニードルガン<br>
+					18 : 	リップル<br>
+					21 : 	ミサイル<br>
+					23 : 	リフレクトレイ<br>
+					24 : 	イオンリング<br>
+					<br>
+					固有パラメータ13の撃ち返しオプションは以下の値を指定します。<br>
+					   -1 : 	撃ち返し無し (none)<br>
+					   0 : 	デフォルト (default)<br>
+					   &amp;1 : 	消滅時に撃ち返し (self-destructed)<br>
+					   &amp;2 : 	破壊時に撃ち返し (destroyed)<br>
+					   &amp;4 : 	自機接触時に撃ち返し (collided with player)<br>
+					<br>
+					ペアパーツを設定するとそのパーツの固有パラメータを撃ち返し弾に反映させることができます。<br>
+					<br>
+					固有パラメータ14と15の屈曲は指定フレーム後に屈曲方向へ方向転換します。<br>
+					屈曲フレームに 0 を指定すると屈曲を無効化します。<br>
+					屈曲方向は以下の値を設定してください。<br>
+						-1 : プレイヤー方向 (aim player)<br>
+						0~4095 : 相対方向 (relative direction)<br>
+					<br>
+					相対方向はその時点での弾の進行方向が基準になります。<br>
+					1024なら90度右方向、3072なら90度左方向へ方向転換します。<br>
+				</div>
+			</div>
+		<a name="SEARCHLIGHT" id="SEARCHLIGHT"></a>
+			<div class="change_info">- サーチライト
+				<div class="change_detail">
+					範囲内のプレイヤーを感知する特殊なパーツです。<br>
+					プレイヤーがライトの範囲内にいる場合、通知ステータスに&amp;1を返します。<br>
+					<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ<br>
+					固有パラメータ2: 長さ (length: 1~1024dot)<br>
+					固有パラメータ3: 幅A (width A: 1~1024dot)<br>
+					固有パラメータ4: 幅B (width B: 1~1024dot)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					-1~-9 : 	範囲を単色で加算描画 (solid draw)<br>
+					    1 : 	固有パラメータ適用フラグ (exparam flag)<br>
+					   &amp;2 : 	描画する (draw effect)<br>
+					デフォルトのサーチライトは1+2=3の設定になっています。<br>
+					マイナスの値を指定した場合は&amp;のついているフラグは指定できません。<br>
+				</div>
+			</div>
+		<a name="LASER" id="LASER"></a>
+			<div class="change_info">- レーザー
+				<div class="change_detail">
+					レーザーには壁判定属性値や壁属性値がありません。<br>
+					<br>
+					固有パラメータ1: フラグ (flag: 0~2)<br>
+					固有パラメータ2: 長さ (length: 0~2048 dot)<br>
+					固有パラメータ3: 横幅 (width: 0~2000 %)<br>
+					固有パラメータ4: 無し (none)<br>
+					固有パラメータ5: 無し (none)<br>
+					固有パラメータ6: レーザーの伸びる速度 (speed: 1~512 dot)<br>
+					固有パラメータ7: 発射までのフレーム値 (charge frame: -1~256)<br>
+					固有パラメータ8: 消滅までのフレーム値 (lifetime frame: -1~ )<br>
+					固有パラメータ9: 反射属性値 (reflect attribute: -1~)<br>
+					<br>
+					プレイヤーと接触している場合、通知ステータスに &amp;2 を返します。<br>
+					ディフューザーやアブソリュートシールドと接触している場合、通知ステータスに &amp;8 を返します。<br>
+					<br>
+					固有パラメータ1のフラグは以下の値を設定します。<br>
+					   0 : 	固有パラメータ2~8を使用しない (default)<br>
+					   1 : 	固有パラメータ2~8を使用する (refer exparam)<br>
+					   2 : 	固有パラメータ2~8を使用し、いくつかのパラメータを常に反映する (always refer exparam)<br>
+					<br>
+					固有パラメータ2~8は0を設定するとデフォルトの値が設定されます。<br>
+					<br>
+					固有パラメータ1に2を設定すると固有パラメータ2と3、6、7を常に反映します。<br>
+					この場合は値に0を設定してもデフォルト値に設定されません。<br>
+				</div>
+			</div>
+		<a name="POWERLASER" id="POWERLASER"></a>
+			<div class="change_info">- パワーレーザー
+				<div class="change_detail">
+					壁判定属性値を設定でき、壁属性値を持っているエネルギーウォールやバリアーと接触判定ができます。<br>
+					壁判定属性値の扱い方は反射属性値と同じです。<br>
+					<br>
+					固有パラメータ1: フラグ (flag: 0~2)<br>
+					固有パラメータ2: 長さ (length: 0~2048 dot)<br>
+					固有パラメータ3: 横幅 (width: 0~1000 %)<br>
+					固有パラメータ4: 無し (none)<br>
+					固有パラメータ5: 描画オプション (draw option: 0~)<br>
+					固有パラメータ6: レーザーの伸びる速度 (speed: 1~512 dot)<br>
+					固有パラメータ7: 発射までのフレーム値 (charge frame: -1~256)<br>
+					固有パラメータ8: 消滅までのフレーム値 (lifetime frame: -1~)<br>
+					固有パラメータ9: 反射属性値 (reflect attribute: -1~)<br>
+					固有パラメータ11: 壁判定属性値 (wall hitcheck attribute: -1~)<br>
+					<br>
+					プレイヤーと接触している場合、通知ステータスに &amp;2 を返します。<br>
+					ディフューザーやアブソリュートシールドと接触している場合、通知ステータスに &amp;8 を返します。<br>
+					エネルギーウォールやバリアーと接触している場合、通知ステータスに &amp;16 を返します。<br>
+					<br>
+					固有パラメータ1のフラグは以下の値を設定します。<br>
+					0 : 	固有パラメータ2~8を使用しない (default)<br>
+					1 : 	固有パラメータ2~8を使用する (refer exparam)<br>
+					2 : 	固有パラメータ2~8を使用し、いくつかのパラメータを常に反映する (always refer exparam)<br>
+					<br>
+					固有パラメータ2~8は 0 を設定するとデフォルトの値が設定されます。<br>
+					<br>
+					固有パラメータ1に 2 を設定すると固有パラメータ2と3、5、6、7を常に反映します。<br>
+					この場合は値に 0 を設定してもデフォルト値に設定されません。<br>
+					<br>
+					固有パラメータ5の描画オプションは以下の値を設定します。<br>
+					0 : 	指定無し (none)<br>
+					1 : 	スクリュータイプ (screw type)<br>
+					2 : 	逆スクリュータイプ (reverse screw type)<br>
+					3 : 	ソリッドタイプ (solid type)<br>
+					&amp;8 : 減衰無し (without fadeout)<br>
+					&amp;16 : 電撃エフェクトA (lightning effect A)<br>
+					&amp;32 : 電撃エフェクトB (lightning effect B)<br>
+					&amp;64 : 発光エフェクト (light effect)<br>
+				</div>
+			</div>
+		<a name="BLADE" id="BLADE"></a>
+			<div class="change_info">- ブレード
+				<div class="change_detail">
+					固有パラメータ1: 固有パラメータ使用フラグ (0=OFF, 1=ON)<br>
+					固有パラメータ2: 長さ (1~300%)<br>
+					固有パラメータ3: 幅 (1~300%)<br>
+					固有パラメータ9: 反射属性値 (reflect attribute: -1~)<br>
+					固有パラメータ11: 壁判定属性値 (wall hitcheck attribute: -1~)<br>
+					<br>
+					プレイヤーと接触している場合、通知ステータスに &amp;2 を返します。<br>
+					ディフューザーやアブソリュートシールドと接触している場合、通知ステータスに &amp;8 を返します。<br>
+					エネルギーウォールやバリアーと接触している場合、通知ステータスに &amp;16 を返します。<br>
+				</div>
+			</div>
+		<a name="BARRIER" id="BARRIER"></a>
+			<div class="change_info">- バリアー
+				<div class="change_detail">
+					固有パラメータ1: 固有パラメータ使用フラグ (exparam flag and option)<br>
+					固有パラメータ2: サイズ (size: 1~2000 dot)<br>
+					固有パラメータ3: 耐久力 (durability: -2~-1,1~999999) -1=破壊不能 -2=自機弾と衝突判定しない<br>
+					固有パラメータ4: 弧のサイズ (arc size: 1~2048)<br>
+					固有パラメータ9: 反射属性値 (reflect attribute: -1~)<br>
+					固有パラメータ11: 壁属性値 (wall attribute: -1~)<br>
+					<br>
+					固有パラメータ1に0以外の値を指定すると固有パラメータ1~4が適用されます。<br>
+					<br>
+					固有パラメータ1のオプションは以下の値を指定します。<br>
+					-1 : 反時計回り（内部で2に変換されます） (counterclockwise, it's changed to 2 automatically)<br>
+					0 : 固有パラメータを適用しない (default)<br>
+					1 : 時計回り (clockwise)<br>
+					2 : 反時計回り (counterclockwise)<br>
+					&amp;4 : 非表示 (invisible)<br>
+					&amp;8 : 固有パラメータを常に反映する (always refer exparam)<br>
+					&amp;16 : 自機弾を消去する (eliminate player bullet)<br>
+					&amp;32 : ダメージを転送する (transfer damage)<br>
+					<br>
+					固有パラメータを常に反映する(&amp;8)は固有パラメータ2と4、9、11が有効です。<br>
+					<br>
+					自機弾を消去する(&amp;16)は接触した自機弾をエフェクトや効果音無しで消去します。<br>
+					<br>
+					ダメージを転送する(&amp;32)はバリアーが受けたダメージをパーツに転送します。<br>
+					パーツにも転送先が設定されている場合、その対象に転送されます。<br>
+					この転送はエネルギーによるダメージの軽減が適用されません。<br>
+					<br>
+					バリアーが破壊された場合、パーツの通知ステータスに &amp;1 を返します。<br>
+					この通知は破壊された瞬間に一度だけ送られます。<br>
+					通知ステータスはイベントの条件で参照できます。<br>
+					<br>
+					プレイヤーと接触している場合、通知ステータスに &amp;2 を返します。<br>
+					プレイヤーの弾と接触している場合、通知ステータスに &amp;4 を返します。<br>
+				</div>
+			</div>
+		<a name="ENERGYEGG" id="ENERGYEGG"></a>
+			<div class="change_info">- エネルギーエッグ
+				<div class="change_detail">
+					特殊な弾エネルギーエッグを発射するパーツです。<br>
+					エネルギーエッグは自機弾によって破壊することができます。<br>
+					プレイヤーと接触した場合、ある程度のダメージとスタンを与えて消滅します。<br>
+					破壊や消滅せずに一定時間が経過した場合、爆発してバルカンをプレイヤーに向けて発射します。<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					<br>
+					固有パラメータ1: 速度制御フラグ (speed control flag: ~-1 or 1~)<br>
+					固有パラメータ2: 初期速度 (speed A: -4000~4000)<br>
+					固有パラメータ3: 変化後の速度 (speed B: -4000~4000)<br>
+					固有パラメータ4: 回転量 (rotation speed: -4096~4096)<br>
+					固有パラメータ5: 発射タイプ (burst type: -3~3)<br>
+					固有パラメータ6: 発射する弾の種類 (shrapnel shot type: 0~24)<br>
+					固有パラメータ7: 耐久力 (durability: -2=自機弾と衝突判定無し -1=破壊不可 1以上=パーツと同等の耐久力指定)<br>
+					固有パラメータ8: 消滅までのフレーム値 (life time: 1~1000)<br>
+					固有パラメータ13: 撃ち返しオプション (shrapnel option: -1~7)<br>
+					固有パラメータ14: 屈曲方向 (inflect angle: -1 or 0~4095)<br>
+					固有パラメータ15: 屈曲フレーム (inflect frame: 0 or 1~n)<br>
+					固有パラメータ16: 回転オプション (rotation option: 0~)<br>
+					<br>
+					固有パラメータ1は以下の値を指定します。<br>
+					フェードタイプによる速度制御を指定する場合はフェードタイプの値を負数に置き換えてください。<br>
+					1~ : 値に応じたサイン波形による速度制御 (speed control by sin wave)<br>
+					~-1 : フェードタイプによる速度制御 (speed control by fade type)<br>
+					<br>
+					固有パラメータ5の発射タイプは以下の値を設定してください。<br>
+					正数を指定すると自機狙い、負数を指定すると弾の正面方向が基準になります。<br>
+					0 : 	全方向 (all range: 4096)<br>
+					1 : 	ライン (line)<br>
+					2 : 	多方向 (wide: 1280)<br>
+					3 : 	ペアパーツの設定を使う (use pair setting: ex5 and ex6)<br>
+					<br>
+					固有パラメータ6の弾の種類は以下の値を指定します。<br>
+					記述されていない値を指定した場合は発射されません。<br>
+					 0 : 	無し<br>
+					 1 : 	バルカン<br>
+					 2 : 	バレット<br>
+					 4 : 	パワーボール<br>
+					 6 : 	ホーミングレーザー<br>
+					 8 : 	プラズマリング<br>
+					12 : 	スローレイ<br>
+					14 : 	エクスプロージョン（グレネードの爆発のみ）<br>
+					16 : 	グレネード<br>
+					17 : 	ニードルガン<br>
+					18 : 	リップル<br>
+					21 : 	ミサイル<br>
+					23 : 	リフレクトレイ<br>
+					24 : 	イオンリング<br>
+					<br>
+					固有パラメータ13の撃ち返しオプションは以下の値を指定します。<br>
+					-1 : 	撃ち返し無し (none)<br>
+					0 : 	デフォルト (default)<br>
+					&amp;1 : 	消滅時に撃ち返し (self-destructed)<br>
+					&amp;2 : 	破壊時に撃ち返し (destroyed)<br>
+					&amp;4 : 	自機接触時に撃ち返し (collided with player)<br>
+					<br>
+					固有パラメータ14と15の屈曲は指定フレーム後に屈曲方向へ方向転換します。<br>
+					屈曲フレームに 0 を指定すると屈曲を無効化します。<br>
+					屈曲方向は以下の値を設定してください。<br>
+						-1 : プレイヤー方向 (aim player)<br>
+						0~4095 : 相対方向 (relative direction)<br>
+					<br>
+					相対方向はその時点での弾の進行方向が基準になります。<br>
+					1024なら90度右方向、3072なら90度左方向へ方向転換します。<br>
+					<br>
+					固有パラメータ16の回転オプションは以下の値を指定します。<br>
+					0 : 回転 (rotation)<br>
+					1 : 発射方向へ回転 (rotation to firing direction)<br>
+					2 : プレイヤーを追尾 (homing)<br>
+					&amp;8 : 回転量をフェードアウトさせる (fadeout the rotation speed)<br>
+					&amp;16 : 回転量をフェードインさせる (fadein the rotation speed)<br>
+					&amp;32 : 回転量の制御にフェードタイプ(24)を使用する (use fadetype(24) for rotation speed control)<br>
+					<br>
+					ペアパーツを設定するとそのパーツの固有パラメータを撃ち返し弾に反映させることができます。<br>
+				</div>
+			</div>
+		<a name="GRAVITYFIELD" id="GRAVITYFIELD"></a>
+			<div class="change_info">- グラビティフィールド
+				<div class="change_detail">
+					固有パラメータ1: 固有パラメータ使用フラグ兼重力方向 (-1=反転, 0=OFF, 1=通常)<br>
+					固有パラメータ2: 効果範囲 (1~2000dot)<br>
+					固有パラメータ3: 重力の強さ (1~300%)<br>
+				</div>
+			</div>
+		<a name="SONICWAVE" id="SONICWAVE"></a>
+			<div class="change_info">- ソニックウェーブ
+				<div class="change_detail">
+					固有パラメータ1: 固有パラメータ使用フラグ兼波方向 (-1=反転, 0=OFF, 1=通常)<br>
+					固有パラメータ2: 横幅 (1~2000%)<br>
+					固有パラメータ3: 波の強さ (1~300%)<br>
+					固有パラメータ4: 縦幅 (1~100%)<br>
+					パラメータ次第でソニックウェーブの用途がかなり変わります。<br>
+				</div>
+			</div>
+		<a name="HOMINGLASER" id="HOMINGLASER"></a>
+			<div class="change_info">- 追尾レーザー
+				<div class="change_detail">
+					固有パラメータ1: 固有パラメータ使用フラグ (flag: 0 or 1)<br>
+					固有パラメータ2: 最大速度 (max speed: 0~8000)<br>
+					固有パラメータ3: 発射時の反動率 (reaction: 0~300%)<br>
+					固有パラメータ4: 追尾時の最大回転量 (rotate: 0~256)<br>
+					固有パラメータ5: 太さ (width: 0 or 1~500%)<br>
+					固有パラメータ6: 長さ (length: 0 or 1~1000%)<br>
+					固有パラメータ7: 最大速度までのフレーム率 (frame rate for max speed: 0 or 1~256)<br>
+					固有パラメータ8: 消滅までのフレーム値 (lifetime frame: 0 or 1~)<br>
+					固有パラメータ9: 発射までのフレーム値 (charge frame: -1~256)<br>
+					<br>
+					固有パラメータ1に1を指定すると固有パラメータ1~4が適用されます。<br>
+					固有パラメータ5に0以外の値を指定すると固有パラメータ5が適用されます。<br>
+					固有パラメータ6に0以外の値を指定すると固有パラメータ6が適用されます。<br>
+					固有パラメータ7に0以外の値を指定すると固有パラメータ7が適用されます。<br>
+					固有パラメータ8に0以外の値を指定すると固有パラメータ8が適用されます。<br>
+					固有パラメータ9に0以外の値を指定すると固有パラメータ9が適用されます。<br>
+				</div>
+			</div>
+		<a name="REFLECTRAY" id="REFLECTRAY"></a>
+			<div class="change_info">- リフレクトレイ
+				<div class="change_detail">
+					固有パラメータ1: 速度制御フラグ (speed control flag: ~-1 or 1~)<br>
+					固有パラメータ2: 初期速度 (speed A: -4000~4000)<br>
+					固有パラメータ3: 変化後の速度 (speed B: -4000~4000)<br>
+					固有パラメータ4: 回転量 (rotation speed: -4096~4096)<br>
+					固有パラメータ5: 発射方向数 (number of bullets per shot: 0 or 1~)<br>
+					固有パラメータ6: 発射角度 (firing angle: 0~)<br>
+					固有パラメータ7: 無し (none)<br>
+					固有パラメータ8: 消滅までのフレーム値 (life time: 0 or 1~)<br>
+					固有パラメータ9: 反射属性値 (reflect attribute: -1~)<br>
+					固有パラメータ10: 最大反射回数 (maximum reflect count: -1~)<br>
+					固有パラメータ11: レイの長さ (length: 0 or 1~ frame)<br>
+					固有パラメータ14: 屈曲方向 (inflect angle: -1 or 0~4095)<br>
+					固有パラメータ15: 屈曲フレーム (inflect frame: 0 or 1~n)<br>
+					固有パラメータ16: 回転オプション (rotation option: 0~)<br>
+					<br>
+					固有パラメータ1は以下の値を指定します。<br>
+					フェードタイプによる速度制御を指定する場合はフェードタイプの値を負数に置き換えてください。<br>
+					1~ : 値に応じたサイン波形による速度制御 (speed control by sin wave)<br>
+					~-1 : フェードタイプによる速度制御 (speed control by fade type)<br>
+					<br>
+					固有パラメータ9の反射属性値は以下の値を指定します。<br>
+					-1 : 反射属性を無効化 (invalidate reflection)<br>
+					0  : 反射属性を指定しない (default)<br>
+					1~ : 指定された値の反射属性をビット値で設定 (reflect attribute)<br>
+					反射板と反射弾はそれぞれ反射属性値を持っています。<br>
+					この反射属性値が一つでも一致する場合は反射し、全く一致しない場合は通過します。<br>
+					<br>
+					ビット値は以下の値を一つ、もしくは複数足した値になります。<br>
+					1,2,4,8,16,32,64,128,256,512,1024,2048,...<br>
+					例えば5を指定した場合、1と4という値を持っていることになります。<br>
+					5(1,4)を持つ反射板に対して反射する弾は1もしくは4の値を持っている弾のみになります。<br>
+					例外として反射板の属性値を0に指定した場合、反射する弾は属性値が0の弾だけになります。<br>
+					反射弾の属性値に0を指定すると反射属性が無効化されていない反射板全てに対して反射します。<br>
+					<br>
+					固有パラメータ10の最大反射回数は以下の値を指定します。<br>
+					-1 : 反射を無効化 (invalidate reflection)<br>
+					0 : 反射回数無制限 (default) (infinity reflection)<br>
+					1~ : 指定された回数だけ反射 (maximum reflect count)<br>
+					<br>
+					固有パラメータ11のレイの長さは以下の値を指定します。<br>
+					0 : デフォルト値 (default)<br>
+					1~ : 指定されたフレーム値 (specified frame value)<br>
+					<br>
+					固有パラメータ14と15の屈曲は指定フレーム後に屈曲方向へ方向転換します。<br>
+					屈曲フレームに 0 を指定すると屈曲を無効化します。<br>
+					屈曲方向は以下の値を設定してください。<br>
+						-1 : プレイヤー方向 (aim player)<br>
+						0~4095 : 相対方向 (relative direction)<br>
+					<br>
+					相対方向はその時点での弾の進行方向が基準になります。<br>
+					1024なら90度右方向、3072なら90度左方向へ方向転換します。<br>
+					<br>
+					固有パラメータ16の回転オプションは以下の値を指定します。<br>
+					0 : 回転 (rotation)<br>
+					1 : 発射方向へ回転 (rotation to firing direction)<br>
+					2 : プレイヤーを追尾 (homing)<br>
+					&amp;8 : 回転量をフェードアウトさせる (fadeout the rotation speed)<br>
+					&amp;16 : 回転量をフェードインさせる (fadein the rotation speed)<br>
+					&amp;32 : 回転量の制御にフェードタイプ(24)を使用する (use fadetype(24) for rotation speed control)<br>
+				</div>
+			</div>
+		<a name="IONRING" id="IONRING"></a>
+			<div class="change_info">- イオンリング
+				<div class="change_detail">
+					固有パラメータ1: 速度制御フラグ (speed control flag: ~-1 or 1~)<br>
+					固有パラメータ2: 初期速度 (speed A: -4000~4000)<br>
+					固有パラメータ3: 変化後の速度 (speed B: -4000~4000)<br>
+					固有パラメータ4: 回転量 (rotation speed: -4096~4096)<br>
+					固有パラメータ5: 発射方向数 (number of bullets per shot: 0 or 1~)<br>
+					固有パラメータ6: 発射角度 (firing angle: 0~)<br>
+					固有パラメータ7: 耐久力 (durability: -2~-1,1~999999) -1=破壊不能 -2=自機弾と衝突判定しない<br>
+					固有パラメータ8: 消滅までのフレーム値 (life time: 0 or 1~)<br>
+					固有パラメータ9: 反射属性値 (reflect attribute: -1~)<br>
+					固有パラメータ10: 最大反射回数 (maximum reflect count: -1~)<br>
+					固有パラメータ11: オプション (option)<br>
+					固有パラメータ12: 最大サイズ (maximum size: 1~300 %)<br>
+					固有パラメータ13: 伸縮幅 (auto scaling: -99~99 %)<br>
+					固有パラメータ14: 伸縮周期 (auto scaling cycle: 2~1000 frame)<br>
+					固有パラメータ16: 回転オプション (rotation option: 0~)<br>
+					<br>
+					固有パラメータ1は以下の値を指定します。<br>
+					フェードタイプによる速度制御を指定する場合はフェードタイプの値を負数に置き換えてください。<br>
+					1~ : 値に応じたサイン波形による速度制御 (speed control by sin wave)<br>
+					~-1 : フェードタイプによる速度制御 (speed control by fade type)<br>
+					<br>
+					固有パラメータ9~10はリフレクトレイを参照してください。<br>
+					<br>
+					固有パラメータ11のオプションは以下の値を指定します。<br>
+					&amp;1 : 貫通属性 (pierce)<br>
+					&amp;2 : 発射時の拡大縮小を無効化 (invalidate the scaling when launching)<br>
+					&amp;4 : ビッグサイズ (64x64) (graphic size: 64x64) (default: 32x32)<br>
+					&amp;8 : 塗りつぶしタイプ (graphic type: fill)<br>
+					<br>
+					貫通属性を設定すると弾の攻撃力が1/8に減少します。<br>
+					<br>
+					固有パラメータ13~14の伸縮は弾の大きさを指定された周期で伸縮させます。<br>
+					伸縮幅は最大サイズを基準に何％まで縮小するかを指定します。<br>
+					最大サイズが200%だった場合に伸縮幅に30(もしくは-30)を指定した場合は140~200%のサイズで伸縮します。<br>
+					この場合、200 -&gt; 140 -&gt; 200 -&gt;...という周期になりますが、マイナスの値を指定すると140 -&gt; 200 -&gt; 140 -&gt;...<br>
+					という具合に初期値を反転させることができます。<br>
+					<br>
+					固有パラメータ16の回転オプションは以下の値を指定します。<br>
+					0 : 回転 (rotation)<br>
+					1 : 発射方向へ回転 (rotation to firing direction)<br>
+					2 : プレイヤーを追尾 (homing)<br>
+					&amp;8 : 回転量をフェードアウトさせる (fadeout the rotation speed)<br>
+					&amp;16 : 回転量をフェードインさせる (fadein the rotation speed)<br>
+					&amp;32 : 回転量の制御にフェードタイプ(24)を使用する (use fadetype(24) for rotation speed control)<br>
+				</div>
+			</div>
+		<a name="ENERGYWALL" id="ENERGYWALL"></a>
+			<div class="change_info">- エネルギーウォール
+				<div class="change_detail">
+					固有パラメータ1: 動作オプション (option)<br>
+					固有パラメータ2: 長さ (length: -1 or 1~1024 dot)<br>
+					固有パラメータ3: 幅 (width: 1~100 dot)<br>
+					固有パラメータ4: 耐久力 (durability: -2~-1,1~999999) -1=破壊不能 -2=自機弾と衝突判定しない<br>
+					固有パラメータ5: 描画オプション (draw option)<br>
+					固有パラメータ6: 発動フレーム値 (frame until finish generating: 1~ frame)<br>
+					固有パラメータ9: 反射属性値 (reflect attribute: -1~)<br>
+					固有パラメータ11: 壁属性値 (wall attribute: -1~)<br>
+					<br>
+					固有パラメータ1のオプションは以下の値を指定します。<br>
+					&amp;1 : プレイヤーとの接触判定を無効化 (invalidate collision with player)<br>
+					&amp;8 : 固有パラメータを常に反映する (always refer exparam)<br>
+					&amp;16 : 自機弾を消去する (eliminate player bullet)<br>
+					&amp;32 : ダメージを転送する (transfer damage)<br>
+					<br>
+					固有パラメータを常に反映する(&amp;8)は固有パラメータ2と3、5、6、9、11が有効です。<br>
+					<br>
+					自機弾を消去する(&amp;16)は接触した自機弾をエフェクトや効果音無しで消去します。<br>
+					<br>
+					ダメージを転送する(&amp;32)はエネルギーウォールが受けたダメージをパーツに転送します。<br>
+					パーツにも転送先が設定されている場合、その対象に転送されます。<br>
+					この転送はエネルギーによるダメージの軽減が適用されません。<br>
+					<br>
+					固有パラメータ2の長さはエネルギーウォールの長さをドット単位で指定します。<br>
+					長さに -1 を指定した場合、自身とペアパーツの間にエネルギーウォールを生成します。<br>
+					<br>
+					固有パラメータ5の描画オプションは以下の値を指定します。<br>
+					0 : 始点と終点の中間をパーツに合わせる (cardinal point: center)<br>
+					1 : 始点をパーツに合わせる (cardinal point: start point)<br>
+					2 : 終点をパーツに合わせる (cardinal point: end point)<br>
+					&amp;4 : 始点を描画しない (don't draw start point)<br>
+					&amp;8 : 終点を描画しない (don't draw end point)<br>
+					&amp;16 : 棒を描画しない (don't draw bar)<br>
+					&amp;32 : 稲妻を描画しない (don't draw lightning)<br>
+					&amp;64 : 発動開始時の発光を描画しない (don't draw light of generate)<br>
+					<br>
+					0~2はどれか一つのみ指定できます。<br>
+					&amp;4 以降は 0~2 にそれぞれの値を加算して複数指定できます。<br>
+					<br>
+					固有パラメータ6の発動フレーム値はエネルギーウォールが完全に生成し終わるまでのフレーム値を指定します。<br>
+					1を指定すれば瞬時に生成されます。<br>
+					<br>
+					耐久力が無くなって破壊された場合、通知ステータスに &amp;1 を返します。<br>
+					プレイヤーと接触している場合、通知ステータスに &amp;2 を返します。<br>
+					プレイヤーの弾と接触している場合、通知ステータスに &amp;4 を返します。<br>
+				</div>
+			</div>
+		<a name="GRAVITYBIND" id="GRAVITYBIND"></a>
+			<div class="change_info">- グラビティバインド
+				<div class="change_detail">
+					プレイヤーが接触している場合、通知ステータスに &amp;2 を返します。<br>
+					<br>
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: サイズ (size: 1~2000 dot)<br>
+					固有パラメータ3: 描画オプション (draw option: 0~)<br>
+					固有パラメータ4: バインドフレーム (bind frame: 0~)<br>
+					固有パラメータ5: バインドパワー(Move) (bind power M: 0~100 %)<br>
+					固有パラメータ6: バインドパワー(Turn) (bind power T: 0~100 %)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   0 : 	デフォルト (default)<br>
+					   1 : 	固有パラメータ2以降を反映する (refer exparam)<br>
+					   2 : 	固有パラメータ2以降を常に反映する (always refer exparam)<br>
+					<br>
+					固有パラメータ2のサイズは半径サイズをドット単位で設定します。<br>
+					<br>
+					固有パラメータ3の描画オプションは以下の値を設定します。<br>
+						&amp;1 :	回転方向反転 (reverse rotation)<br>
+						&amp;2 :	接触時のエフェクトを描画しない (dont draw hit effect)<br>
+						&amp;4 :	範囲エフェクト1を描画しない (dont draw area effect1)<br>
+						&amp;8 :	範囲エフェクト2を描画しない (dont draw area effect2)<br>
+						&amp;16 :	放電エフェクトを描画しない (dont draw lightning effect)<br>
+					<br>
+					固有パラメータ4はバインドの持続時間を設定します。<br>
+					触れている間は常にこの値が代入されます。<br>
+					1 を設定すれば触れている間のみ、10 ならば触れてから10フレームの間は持続することになります。<br>
+					<br>
+					固有パラメータ5~6のバインドパワーは拘束力の強さです。<br>
+					移動速度と方向転換速度を別々に設定できます。<br>
+					どちらも 100 を指定すればプレイヤーを完全に拘束します。<br>
+				</div>
+			</div>
+		<a name="REMOTEBLAST" id="REMOTEBLAST"></a>
+			<div class="change_info">- リモートブラスト
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~1)<br>
+					固有パラメータ2: 最大追跡距離 (chase range: 0~1024 dot)<br>
+					固有パラメータ3: 追跡速度 (chase speed: 0~65536)<br>
+					固有パラメータ4: ロックするまでのフレーム値 (frame(chase-&gt;lock): 1~)<br>
+					固有パラメータ5: 発射タイプ (burst type: -3~3)<br>
+					固有パラメータ6: 発射する弾の種類 (0~24)<br>
+					<br>
+					固有パラメータ9: ロックするまでの速度 (lock speed: 1~)<br>
+					固有パラメータ10: ロックから爆発までのフレーム値 (frame(lock-&gt;explode): 1~)<br>
+					固有パラメータ11: カーソルサイズ (cursor size: 1~500 %)<br>
+					固有パラメータ12: 爆発サイズ (explode size: 1~500 %)<br>
+					<br>
+					固有パラメータ1は以下の値を指定します。<br>
+					 0 : 	デフォルト (default)<br>
+					 1 : 	固有パラメータを反映する (refer exparam)<br>
+					<br>
+					固有パラメータ5の発射タイプは以下の値を設定してください。<br>
+					正数を指定すると自機狙い、負数を指定すると弾の正面方向が基準になります。<br>
+					0 : 	全方向 (all range: 4096)<br>
+					1 : 	ライン (line)<br>
+					2 : 	多方向 (wide: 1280)<br>
+					3 : 	ペアパーツの設定を使う (use pair setting: ex5 and ex6)<br>
+					<br>
+					固有パラメータ6の弾の種類は以下の値を指定します。<br>
+					記述されていない値を指定した場合は発射されません。<br>
+					 0 : 	無し<br>
+					 1 : 	バルカン<br>
+					 2 : 	バレット<br>
+					 4 : 	パワーボール<br>
+					 6 : 	ホーミングレーザー<br>
+					 8 : 	プラズマリング<br>
+					12 : 	スローレイ<br>
+					14 : 	エクスプロージョン（グレネードの爆発のみ）<br>
+					16 : 	グレネード<br>
+					17 : 	ニードルガン<br>
+					18 : 	リップル<br>
+					21 : 	ミサイル<br>
+					23 : 	リフレクトレイ<br>
+					24 : 	イオンリング<br>
+					<br>
+					リモートブラストは追跡状態とロック状態があり、以下のような流れになります。<br>
+					[追跡状態]---ロックするまでのフレーム値---[ロック状態]---ロックから爆発までのフレーム値---[爆発]<br>
+					<br>
+					固有パラメータ9のロックするまでの速度はプレイヤーが接触している場合、1フレーム毎にロックするまでのフレーム値を指定値だけ減少させます。<br>
+					つまりロックするまでのフレーム値と同じ値に設定すると触れた瞬間ロック状態に移行します。<br>
+				</div>
+			</div>
+
+		<a name="SCREENEFFECTOR" id="SCREENEFFECTOR"></a>
+			<div class="change_info">- スクリーンエフェクター
+				<div class="change_detail">
+					『スクリーン（フラッシュ）』<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: 0 or 1)<br>
+					固有パラメータ2: 赤 (Red: 0~255)<br>
+					固有パラメータ3: 緑 (Green: 0~255)<br>
+					固有パラメータ4: 青 (Blue: 0~255)<br>
+					固有パラメータ5: ブレンド率 (blend rate: 0~255)<br>
+					固有パラメータ6: ブレンドモード (blend mode: 0~6)<br>
+					固有パラメータ7: フェードインフレーム (fade in: 0~ frame)<br>
+					固有パラメータ8: ホールドフレーム (hold: 0~ frame)<br>
+					固有パラメータ9: フェードアウトフレーム (fade out: 0~ frame)<br>
+					<br>
+					ブレンドモードは通常は以下の値から指定してください。<br>
+					3: 半透明合成<br>
+					5: 加算合成<br>
+					6: 減算合成<br>
+					<br>
+					『スクリーン（地震）』<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: 0 or 1)<br>
+					固有パラメータ2: フレーム値 (quake: 0~ frame)<br>
+					<br>
+					『スクリーン（振動）』<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: 0 or 1)<br>
+					固有パラメータ2: フレーム値 (shake: 0~ frame)<br>
+					<br>
+					『スクリーン（ブラー）』<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: 0 or 1)<br>
+					固有パラメータ2: 持続フレーム (blur frame: 0~ frame)<br>
+					固有パラメータ3: 最大フレーム (max frame: 0~ frame)<br>
+					固有パラメータ4: ズーム率 (zoom rate: 0~32)<br>
+					固有パラメータ5: ブレンド率 (blend rate: 0~255)<br>
+					固有パラメータ6: 残像ブレンド率 (shadow blend rate: -96~96)<br>
+					<br>
+					『スクリーン（ネガポジ反転）』<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: 0 or 1)<br>
+					固有パラメータ2: 赤 (Red: 0~255)<br>
+					固有パラメータ3: 緑 (Green: 0~255)<br>
+					固有パラメータ4: 青 (Blue: 0~255)<br>
+					固有パラメータ5: ブレンド率 (blend rate: 0~255)<br>
+					固有パラメータ6: ブレンドモード (blend mode: 0~6)<br>
+					固有パラメータ7: フェードインフレーム (fade in: 0~ frame)<br>
+					固有パラメータ8: ホールドフレーム (hold: 0~ frame)<br>
+					固有パラメータ9: フェードアウトフレーム (fade out: 0~ frame)<br>
+					<br>
+					固有パラメータ1が 0 の場合はデフォルトで定義されている値になります。<br>
+					RGB値はやや特殊なため説明は省略します。<br>
+					通常のネガポジ反転の場合はRGB全てに 255 を指定します。<br>
+					ブレンドモードは通常は以下の値から指定してください。<br>
+					3: 半透明合成<br>
+					5: 加算合成<br>
+					6: 減算合成<br>
+					<br>
+					『スクリーン（グレースケール）』<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: 0 or 1)<br>
+					固有パラメータ2: 無し (none)<br>
+					固有パラメータ3: 無し (none)<br>
+					固有パラメータ4: 無し (none)<br>
+					固有パラメータ5: ブレンド率 (blend rate: 0~255)<br>
+					固有パラメータ6: ブレンドモード (blend mode: 0~6)<br>
+					固有パラメータ7: フェードインフレーム (fade in: 0~ frame)<br>
+					固有パラメータ8: ホールドフレーム (hold: 0~ frame)<br>
+					固有パラメータ9: フェードアウトフレーム (fade out: 0~ frame)<br>
+					<br>
+					固有パラメータ1が 0 の場合はデフォルトで定義されている値になります。<br>
+					ブレンドモードは通常は以下の値から指定してください。<br>
+					3: 半透明合成<br>
+					5: 加算合成<br>
+					6: 減算合成<br>
+					<br>
+					『スクリーン（モザイク）』<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: 0~2)<br>
+					固有パラメータ2: ブロックサイズ X (blocksize X: 0 or 1~)<br>
+					固有パラメータ3: ブロックサイズ Y (blocksize Y: 0 or 1~)<br>
+					固有パラメータ4: フェードインフレーム (fadein frame: 0~)<br>
+					固有パラメータ5: ホールドフレーム (hold frame: 0~)<br>
+					固有パラメータ6: フェードアウトフレーム (fadeout frame: 0~)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+						0 : 		モザイクを解除する (mosaic OFF)<br>
+						1 : 		ハーフトーンモザイクを使用する (enable halftone mosaic)<br>
+						2 : 		モザイクを使用する (enable mosaic)<br>
+					<br>
+					ハーフトーンモザイクは品質が向上しますが処理速度が多少低下します。<br>
+					<br>
+					固有パラメータ2と3はモザイクのブロックサイズを指定します。<br>
+					これらの値に 0 を指定した場合はそれぞれウインドウの最大幅が適用されます。<br>
+				</div>
+			</div>
+		<a name="EFFECTOR" id="EFFECTOR"></a>
+			<div class="change_info">- エフェクター
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: サイズ (size rate: 0~500 %)<br>
+					固有パラメータ3: 回転速度 (rotate speed)<br>
+					固有パラメータ4: 描画フレームレート (draw frame rate: 1~ %)<br>
+					固有パラメータ5~12: スプライトID (sprite ID)<br>
+					固有パラメータ13: 動作や速度の係数 (action/speed coefficient)<br>
+					固有パラメータ14: X係数 (X coefficient)<br>
+					固有パラメータ15: Y係数 (Y coefficient)<br>
+					固有パラメータ16: ブレンド率係数 (blendrate coefficient)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	サイズの変更を適用 (change size(ex2))<br>
+					   &amp;2 : 	回転速度の変更を適用 (change rotate speed(ex3))<br>
+					   &amp;4 : 	描画フレームレートの変更を適用 (change draw frame rate(ex4))<br>
+					   &amp;8 : 	スプライトの変更を適用 (change sprite(ex5~12))<br>
+					   &amp;16 : 	角度をランダムにする (random angle)<br>
+					   &amp;32 : 	αブレンドをOFF (disable alpha blend)<br>
+					   &amp;64 : 	αブレンドをON (enable alpha blend)<br>
+					   &amp;128 : 	アニメーション速度を変更しない (dont change animation speed)<br>
+					   &amp;256 : 	アニメーションをループさせる (loop animation)<br>
+					   &amp;512 : 	アニメーションの開始フレームをランダムにする (start frame at random)<br>
+					   &amp;1024 : 	スプライトを上下反転する (turn the sprite)<br>
+					   &amp;2048 : 	ひっつき属性 (sticky)<br>
+					   &amp;4096 : 	エフェクトスクロールを有効化 (enable effect scrolling)<br>
+					   &amp;8192 : 	ブレンドモードを減算にする (subtract blending)<br>
+					   &amp;16384 : 	各係数の変更を適用 (change coefficient(ex13~16))
+					<br>
+					固有パラメータ5~12は設定されているエフェクトのスプライトを変更します。<br>
+					エフェクターによって使われているスプライトの数が違うので注意してください。<br>
+					また、いくつかのエフェクターでは変更できません。<br>
+					スプライトIDは内部で定義されている値を指定します。<br>
+					指定できるスプライトのIDは雑用ウインドウのスプライトリストを参照してください。<br>
+					<br>
+					固有パラメータ4の描画フレームレートは元が16フレームの場合、50を指定すると8フレームに、200を指定すると32フレームになります。<br>
+					アニメーションスプライトを指定した場合、アニメーション速度にもこの値が適用されます。<br>
+					固有パラメータ1に &amp;128 が指定されている場合、アニメーション速度は変更されません。<br>
+					<br>
+					固有パラメータ13~16の係数は各エフェクターごとに効果が異なります。<br>
+					<br>
+					・通常のエフェクター系 (common)<br>
+					固有パラメータ13: 速度係数 (speed coefficient: -n~100~n %)<br>
+					固有パラメータ14: 拡大係数X (zoom X coefficient: -n~100~n %)<br>
+					固有パラメータ15: 拡大係数Y (zoom Y coefficient: -n~100~n %)<br>
+					固有パラメータ16: ブレンド率係数 (blendrate coefficient: 0~100~n %)<br>
+					<br>
+					・衝撃波エフェクター系 (shockwave)<br>
+					固有パラメータ13: 速度係数 (speed coefficient: -n~100~n %)<br>
+					固有パラメータ14: 無し (none)<br>
+					固有パラメータ15: 無し (none)<br>
+					固有パラメータ16: ブレンド率係数 (blendrate coefficient: 0~100~n %)<br>
+					<br>
+					・爆発エフェクター系 (explosion)<br>
+					固有パラメータ13: 速度係数 (speed coefficient: -n~100~n %)<br>
+					固有パラメータ14: 無し (none)<br>
+					固有パラメータ15: 無し (none)<br>
+					固有パラメータ16: ブレンド率係数 (blendrate coefficient: 0~100~n %)<br>
+				</div>
+			</div>
+		<a name="EFFECTORTHUNDER" id="EFFECTORTHUNDER"></a>
+			<div class="change_info">- エフェクター（電撃）
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: サイズ (size rate: 0~500 %)<br>
+					固有パラメータ3: 生成角範囲 (arc range: 0~4096)<br>
+					固有パラメータ4: 描画フレームレート (draw frame rate: 1~ %)<br>
+					固有パラメータ5~12: スプライトID (sprite ID)<br>
+					固有パラメータ13: 乱数 (random number: 0~100~n %)<br>
+					固有パラメータ14: 拡大係数X (zoom X coefficient: -n~100~n %)<br>
+					固有パラメータ15: 拡大係数Y (zoom Y coefficient: -n~100~n %)<br>
+					固有パラメータ16: ブレンド率係数 (blendrate coefficient: 0~100~n %)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	サイズの変更を適用 (change size(ex2))<br>
+					   &amp;2 : 	生成角範囲の変更を適用 (change arc range(ex3))<br>
+					   &amp;4 : 	描画フレームレートの変更を適用 (change draw frame rate(ex4))<br>
+					   &amp;8 : 	スプライトの変更を適用 (change sprite(ex5~12))<br>
+					   &amp;16 : 	角度をランダムにする (random angle)<br>
+					   &amp;32 : 	αブレンドをOFF (disable alpha blend)<br>
+					   &amp;64 : 	αブレンドをON (enable alpha blend)<br>
+					   &amp;128 : 	アニメーション速度を変更しない (dont change animation speed)<br>
+					   &amp;256 : 	アニメーションをループさせる (loop animation)<br>
+					   &amp;512 : 	アニメーションの開始フレームをランダムにする (start frame at random)<br>
+					   &amp;1024 : 	スプライトを上下反転する (turn the sprite)<br>
+					   &amp;2048 : 	ひっつき属性 (sticky)<br>
+					   &amp;4096 : 	エフェクトスクロールを有効化 (enable effect scrolling)<br>
+					   &amp;8192 : 	ブレンドモードを減算にする (subtract blending)<br>
+					   &amp;16384 : 	各係数の変更を適用 (change coefficient(ex13~16))
+					<br>
+					固有パラメータ5~12は設定されているエフェクトのスプライトを変更します。<br>
+					エフェクターによって使われているスプライトの数が違うので注意してください。<br>
+					また、いくつかのエフェクターでは変更できません。<br>
+					スプライトIDは内部で定義されている値を指定します。<br>
+					指定できるスプライトのIDは雑用ウインドウのスプライトリストを参照してください。<br>
+					<br>
+					固有パラメータ4の描画フレームレートは元が16フレームの場合、50を指定すると8フレームに、200を指定すると32フレームになります。<br>
+					アニメーションスプライトを指定した場合、アニメーション速度にもこの値が適用されます。<br>
+					固有パラメータ1に &amp;128 が指定されている場合、アニメーション速度は変更されません。<br>
+				</div>
+			</div>
+		<a name="EFFECTORCHARGE2" id="EFFECTORCHARGE2"></a>
+			<div class="change_info">- エフェクター（チャージ2）
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: サイズ (size rate: 0~500 %)<br>
+					固有パラメータ3: 生成角範囲 (arc range: 0~4096)<br>
+					固有パラメータ4: 描画フレームレート (draw frame rate: 1~ %)<br>
+					固有パラメータ5~12: スプライトID (sprite ID)<br>
+					固有パラメータ13: 生成範囲 (generate range: 0~100)<br>
+					固有パラメータ14: 拡大係数X (zoom X coefficient: -n~100~n %)<br>
+					固有パラメータ15: 拡大係数Y (zoom Y coefficient: -n~100~n %)<br>
+					固有パラメータ16: ブレンド率係数 (blendrate coefficient)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	サイズの変更を適用 (change size(ex2))<br>
+					   &amp;2 : 	生成角範囲の変更を適用 (change arc range(ex3))<br>
+					   &amp;4 : 	描画フレームレートの変更を適用 (change draw frame rate(ex4))<br>
+					   &amp;8 : 	スプライトの変更を適用 (change sprite(ex5~12))<br>
+					   &amp;16 : 	角度をランダムにする (random angle)<br>
+					   &amp;32 : 	αブレンドをOFF (disable alpha blend)<br>
+					   &amp;64 : 	αブレンドをON (enable alpha blend)<br>
+					   &amp;128 : 	アニメーション速度を変更しない (dont change animation speed)<br>
+					   &amp;256 : 	アニメーションをループさせる (loop animation)<br>
+					   &amp;512 : 	アニメーションの開始フレームをランダムにする (start frame at random)<br>
+					   &amp;1024 : 	スプライトを上下反転する (turn the sprite)<br>
+					   &amp;2048 : 	ひっつき属性 (sticky)<br>
+					   &amp;4096 : 	エフェクトスクロールを有効化 (enable effect scrolling)<br>
+					   &amp;8192 : 	ブレンドモードを減算にする (subtract blending)<br>
+					   &amp;16384 : 	各係数の変更を適用 (change coefficient(ex13~16))
+				</div>
+			</div>
+		<a name="TURNPANEL" id="TURNPANEL"></a>
+			<div class="change_info">- 指定角度回転パネル
+				<div class="change_detail">
+					現在の角度から指定された角度だけ回転するパネルです。<br>
+					<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: 回転速度 (turn speed: -4096~4096)<br>
+					固有パラメータ3: 回転速度フェードタイプ (turn speed fade type: -1~11)<br>
+					固有パラメータ4: 回転角度 (turn angle: ~0~)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	回転速度の変更を適用 (change turn speed(ex2))<br>
+					   &amp;2 : 	回転速度フェードタイプの変更を適用 (change fade type(ex3))<br>
+					   &amp;4 : 	回転角度の変更を適用 (change turn angle(ex4))<br>
+					   &amp;4096 : 	回転速度をフレーム値と見なす (The turn speed is regarded as the frame value)<br>
+					<br>
+					固有パラメータ1に&amp;4096を指定すると回転速度を回転に必要なフレーム値と見なします。<br>
+					例えば回転速度16と回転角度1024だったならば、16フレームで1024(90度)回転することになります。<br>
+					また、この場合は回転速度フェードタイプが値の変化に影響を与えます。<br>
+				</div>
+			</div>
+		<a name="MOVEJOINT" id="MOVEJOINT"></a>
+			<div class="change_info">- 移動関節系
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: 目標値 (target value: 0~)<br>
+					固有パラメータ3: フェードタイプ (fade type: -1~11)<br>
+					固有パラメータ4: 動作フレーム (action frame: 0~)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	目標値の変更を適用 (change target value(ex2))<br>
+					   &amp;2 : 	フェードタイプの変更を適用 (change fade type(ex3))<br>
+					   &amp;4 : 	動作フレームの変更を適用 (change action frame(ex4))<br>
+					<br>
+					フェードタイプは値の変化方法です。<br>
+					タイプによっては0～目標値～0という具合に値が戻るタイプや<br>
+					目標値～0～目標値という具合に目標値から開始されるタイプもあります。<br>
+					<br>
+					動作フレームを設定すると移動関節（遅）や（速）の差が無くなります。<br>
+					移動関節（遅）は160、（中速）は80、（速）は40フレームが設定されています。<br>
+				</div>
+			</div>
+		<a name="SPIN" id="SPIN"></a>
+			<div class="change_info">- 回転/方向転換系
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: 回転速度 (turn speed: -4096~4096)<br>
+					固有パラメータ3: 回転速度フェードタイプ (turn speed fade type: -1~11)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	回転速度の変更を適用 (change turn speed(ex2))<br>
+					   &amp;2 : 	回転速度フェードタイプの変更を適用 (change fade type(ex3))<br>
+					<br>
+					フェードタイプは移動関節系と同様ですが、動作タイプによっては適用されません。<br>
+					<br>
+					回転や方向転換の動作を含むパーツ全てに適用できますが、この固有パラメータは今後変更される可能性が高いです。<br>
+				</div>
+			</div>
+		<a name="BOOSTER" id="BOOSTER"></a>
+			<div class="change_info">- ブースター/スラスターデバイス
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: 加速値 (speed value : -4096~4096)<br>
+					固有パラメータ3: フェードタイプ (fade type: -1~11)<br>
+					固有パラメータ4: 動作フレーム (action frame: -1~)<br>
+					固有パラメータ5: 最終フレーム (end frame: 0~)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	加速値の変更を適用 (change speed value(ex2))<br>
+					   &amp;2 : 	フェードタイプの変更を適用 (change fade type(ex3))<br>
+					   &amp;4 : 	動作フレームの変更を適用 (change action frame(ex4))<br>
+					   &amp;8 : 	最終フレームの変更を適用 (change end frame(ex5))<br>
+					<br>
+					固有パラメータ2の加速値に4096以上の値を指定するとブースターのエフェクトが大きくなります。（加速自体の最大値は4096です）<br>
+					<br>
+					固有パラメータ4の動作フレームに-1を指定すると永久に動作します。<br>
+					<br>
+					固有パラメータ5の最終フレームは加速値のフェード最終フレームです。<br>
+					この値を設定しなかった場合は動作フレームと同じ値が使用されます。<br>
+					なんだか分かりにくいですが動作フレームに-1を指定した場合にフェード処理を使いたい場合に設定してください。<br>
+					例えば100を指定した場合、0～100フレームまでフェード処理が実行され、それ以降は100フレーム目の値を維持します。<br>
+					<br>
+					固有パラメータ追加のために移動関連の処理を書き換えたので以前と少し動作が変わっているかもしれません。<br>
+					最大加速値も2560から4096まで上げたのでブースターを大量に重ねたボスが色々な意味で危ないです。<br>
+				</div>
+			</div>
+		<a name="ITEMBOX" id="ITEMBOX"></a>
+			<div class="change_info">- アイテムボックス
+				<div class="change_detail">
+					・アイテムボックス<br>
+					固有パラメータ1: アイテムフラグ (item flag: 0 or -4~7)<br>
+					固有パラメータ2~8: アイテムID1~7 (item ID: 1~14)<br>
+					<br>
+					固有パラメータ1に0以外の値を指定すると生成するアイテムを変更します。<br>
+					固有パラメータ1が1以上の場合、固有パラメータ1はアイテムの種類の数になります。<br>
+					例えば、固有パラメータ1に2を指定した場合、固有パラメータ2と3の二つが結合したアイテムが生成されます。<br>
+					アイテムの数が1個の場合は指定されたアイテムのみの単品になり、2個以上の場合は中央点のあるアイテムが生成されます。<br>
+					<br>
+					固有パラメータ1に-1以下を指定すると予め用意されている組み合わせでアイテムを生成します。<br>
+					-1は最下級アイテム、-4は最上級アイテムが生成されます。<br>
+					<br>
+					アイテムIDは以下の値を指定してください。<br>
+					1 : 最大エネルギーアップ (max energy)<br>
+					2 : 回復力アップ (regenerate)<br>
+					3 : 装備パワーアップ (equip power up)<br>
+					4 : オーバーソール (over soll)<br>
+					5 : フルチャージ (full charge)<br>
+					6 : 耐久力（最大エネルギーと回復力）アップ (max energy and regenerate)<br>
+					7 : メイン装備（バレット系列）パワーアップ (bullet type power up)<br>
+					8 : サブ装備（ブラスター系列）パワーアップ (blaster type power up)<br>
+					9 : サポート装備パワーアップ (support type power up)<br>
+					10 : 全装備パワーアップ (all equip power up)<br>
+					11 : 全装備パワーダウン (all equip power down)<br>
+					12 : 残機アップ (extend)<br>
+					13 : ！ (!)<br>
+					14 : ！？ (!?)<br>
+				</div>
+			</div>
+		<a name="SOUNDEFFECTOR" id="SOUNDEFFECTOR"></a>
+			<div class="change_info">- サウンドエフェクター
+				<div class="change_detail">
+					効果音を再生するためのエフェクターです。<br>
+					<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: 効果音ID (sound ID: 11~)<br>
+					固有パラメータ2: オプション (option: 0~1)<br>
+					<br>
+					固有パラメータ1は効果音のIDを指定します。<br>
+					IDは雑用ウインドウのサウンドリストを参照してください。<br>
+					<br>
+					固有パラメータ2は以下の値を設定します。<br>
+					   0 : 	特になし (none)<br>
+					   1 : 	ループ再生 (loop)<br>
+					<br>
+					再生は行動パターン3、停止は行動パターン1に設定されています。<br>
+					ループ再生でない場合は停止は特に必要ありません。<br>
+					<br>
+					ループ再生の場合は停止が実行されるかエフェクターが破壊されるまで再生し続けます。<br>
+					ループ再生中はそのエフェクターで他の効果音を再生することができなくなります。<br>
+					<br>
+					効果音の出力方法がMCIの場合はループ再生ができません。<br>
+				</div>
+			</div>
+		<a name="PLAYERBULLET" id="PLAYERBULLET"></a>
+			<div class="change_info">- プレイヤーバレット
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: タイプ (type: 1~11)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	タイプの変更を適用 (change speed value(ex2))<br>
+					<br>
+					固有パラメータ2のタイプは以下の値を設定します。<br>
+						1 :		バレット (bullet)<br>
+						2 :		スタンバレット (stun bullet)<br>
+						3 :		ブラスター (blaster)<br>
+						4 :		スタンブラスター (stun blaster)<br>
+						6 : 	ブラーデコイ (blur decoy)<br>
+						7 : 	ソールディフューザー (soll diffuser)<br>
+						10 : 	フラッシュバレット (flash bullet)<br>
+						11 : 	レーザー (laser)<br>
+					<br>
+					固有パラメータ2のタイプによって各パラメータの意味合いが変わります。<br>
+					各タイプごとの詳細は以下を参照してください。<br>
+					<br>
+					<a href="#PLAYER_BULLET">バレット</a><br>
+					<a href="#PLAYER_STUNBULLET">スタンバレット</a><br>
+					<a href="#PLAYER_BLASTER">ブラスター</a><br>
+					<a href="#PLAYER_STUNBLASTER">スタンブラスター</a><br>
+					<a href="#PLAYER_BLURDECOY">ブラーデコイ</a><br>
+					<a href="#PLAYER_SOLLDIFFUSER">ソールディフューザー</a><br>
+					<a href="#PLAYER_FLASHBULLET">フラッシュバレット</a><br>
+					<a href="#PLAYER_LASER">レーザー</a><br>
+				</div>
+			</div>
+
+		<a name="PLAYER_BULLET" id="PLAYER_BULLET"></a>
+		<a name="PLAYER_STUNBULLET" id="PLAYER_STUNBULLET"></a>
+			<div class="change_info">- プレイヤーバレット（バレット/スタンバレット）
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: タイプ (type: 1~)<br>
+					固有パラメータ3: 攻撃力 (fire power: 0~)<br>
+					固有パラメータ4: 消滅までのフレーム (frame: -1~)<br>
+					固有パラメータ5: スピード (speed: -4096~4096)<br>
+					固有パラメータ6: 加速値 (speed rate: ~0~)<br>
+					固有パラメータ7: 基本サイズA (size A: 1~1024)<br>
+					固有パラメータ9: EMP値 (emp value: 0~4096)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	タイプの変更を適用 (change speed value(ex2))<br>
+					   &amp;2 : 	攻撃力の変更を適用 (change fire power(ex3))<br>
+					   &amp;4 : 	消滅までのフレームの変更を適用 (change frame(ex4))<br>
+					   &amp;8 : 	スピードの変更を適用 (change speed(ex5))<br>
+					   &amp;16 : 	加速値の変更を適用 (change speed rate(ex6))<br>
+					   &amp;32 : 	基本サイズAの変更を適用 (change size A(ex7))<br>
+					   &amp;128 : 	EMP値の変更を適用 (change emp value(ex9))<br>
+					<br>
+					固有パラメータ2のタイプは以下の値を設定します。<br>
+						1 :		バレット (bullet)<br>
+						2 :		スタンバレット (stun bullet)<br>
+					<br>
+					固有パラメータ6の加速値は1以上なら加速、-1以下なら減速になります。<br>
+					<br>
+					固有パラメータ7の基本サイズAは弾自体の衝突判定サイズを設定します。<br>
+					通常のバレットが2~3、ブラスターが4~6くらいに設定されています。<br>
+				</div>
+			</div>
+
+		<a name="PLAYER_BLASTER" id="PLAYER_BLASTER"></a>
+		<a name="PLAYER_STUNBLASTER" id="PLAYER_STUNBLASTER"></a>
+			<div class="change_info">- プレイヤーバレット（ブラスター/スタンブラスター）
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: タイプ (type: 1~)<br>
+					固有パラメータ3: 攻撃力 (fire power: 0~)<br>
+					固有パラメータ4: 消滅までのフレーム (frame: -1~)<br>
+					固有パラメータ5: スピード (speed: -4096~4096)<br>
+					固有パラメータ6: 加速値 (speed rate: ~0~)<br>
+					固有パラメータ7: 基本サイズA (size A: 1~1024)<br>
+					固有パラメータ8: 基本サイズB (size B: 1~1024)<br>
+					固有パラメータ9: EMP値 (emp value: 0~4096)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	タイプの変更を適用 (change speed value(ex2))<br>
+					   &amp;2 : 	攻撃力の変更を適用 (change fire power(ex3))<br>
+					   &amp;4 : 	消滅までのフレームの変更を適用 (change frame(ex4))<br>
+					   &amp;8 : 	スピードの変更を適用 (change speed(ex5))<br>
+					   &amp;16 : 	加速値の変更を適用 (change speed rate(ex6))<br>
+					   &amp;32 : 	基本サイズAの変更を適用 (change size A(ex7))<br>
+					   &amp;64 : 	基本サイズBの変更を適用 (change size B(ex8))<br>
+					   &amp;128 : 	EMP値の変更を適用 (change emp value(ex9))<br>
+					<br>
+					固有パラメータ2のタイプは以下の値を設定します。<br>
+						3 :		ブラスター (blaster)<br>
+						4 :		スタンブラスター (stun blaster)<br>
+					<br>
+					固有パラメータ6の加速値は1以上なら加速、-1以下なら減速になります。<br>
+					<br>
+					固有パラメータ7の基本サイズAは弾自体の衝突判定サイズを設定します。<br>
+					通常のバレットが2~3、ブラスターが4~6くらいに設定されています。<br>
+					<br>
+					固有パラメータ8の基本サイズBはブラスターの爆発サイズを設定します。<br>
+				</div>
+			</div>
+
+		<a name="PLAYER_BLURDECOY" id="PLAYER_BLURDECOY"></a>
+			<div class="change_info">- プレイヤーバレット（ブラーデコイ）
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 7)<br>
+					固有パラメータ2: タイプ (type: 6)<br>
+					固有パラメータ3: 属性値 (attribute: 255)<br>
+					固有パラメータ4: 消滅までのフレーム (frame: -1~)<br>
+					<br>
+					固有パラメータ1は 7 を設定してください。<br>
+					<br>
+					固有パラメータ2のタイプは以下の値を設定します。<br>
+						6 : 	ブラーデコイ (blur decoy)<br>
+					<br>
+					属性値は未実装ですが今後仕様を変更する可能性があるので255を設定してください。<br>
+				</div>
+			</div>
+
+		<a name="PLAYER_SOLLDIFFUSER" id="PLAYER_SOLLDIFFUSER"></a>
+			<div class="change_info">- プレイヤーバレット（ソールディフューザー）
+				<div class="change_detail">
+					ソールディフューザー(type=7)の場合は以下のパラメータを設定してください。<br>
+					固有パラメータ1: フラグ (flag: 111)<br>
+					固有パラメータ2: タイプ (type: 7)<br>
+					固有パラメータ3: 属性値 (attribute: 255)<br>
+					固有パラメータ4: 消滅までのフレーム (frame: -1~)<br>
+					固有パラメータ5: オプション (option: 0~1)<br>
+					固有パラメータ6: 無し (none)<br>
+					固有パラメータ7: 効果範囲 (size: 1~1024)<br>
+					固有パラメータ8: 吸収率 (absorb rate: 0~1024%)<br>
+					<br>
+					固有パラメータ1は 111 を設定してください。<br>
+					<br>
+					固有パラメータ2のタイプは以下の値を設定します。<br>
+						7 : 	ソールディフューザー (soll diffuser)<br>
+					<br>
+					属性値は未実装ですが今後仕様を変更する可能性があるので255を指定してください。<br>
+					効果範囲は半径dot単位くらいになります。<br>
+					吸収率はエネルギーストックへの吸収効率になります。（0を指定すれば吸収無し、100で通常のディフューザーと同等）<br>
+					<br>
+					固有パラメータ5のオプションは以下の値を設定してください。<br>
+						&amp;1 :		張り付き (sticky)<br>
+				</div>
+			</div>
+
+		<a name="PLAYER_ABSOLUTESHIELD" id="PLAYER_ABSOLUTESHIELD"></a>
+			<div class="change_info">- プレイヤーバレット（アブソリュートシールド）
+				<div class="change_detail">
+					アブソリュートシールド(type=8)の場合は以下のパラメータを設定してください。<br>
+					固有パラメータ1: フラグ (flag: 3~)<br>
+					固有パラメータ2: タイプ (type: 8)<br>
+					固有パラメータ3: 色 (color: 0~50)<br>
+					固有パラメータ4: サイズ (radius: 1~1024 dot)<br>
+					固有パラメータ5: ストック吸収率 (EN-stock absorb rate: 0~n %)<br>
+					<br>
+					固有パラメータ1のフラグは以下の値を設定します。<br>
+					3 : 		各パラメータを適用する (enable exparam)<br>
+					&amp;4		固有パラメータを常に反映する (always refer exparam)<br>
+					<br>
+					固有パラメータ2のタイプは以下の値を設定します。<br>
+					8 : 		アブソリュートシールド (absolute shield)<br>
+					<br>
+					固有パラメータ3の色は 0~50 の範囲で変化します。<br>
+					0 : 赤 (red)<br>
+					50 : 青 (blue)<br>
+					<br>
+					固有パラメータ5のストック吸収率はソールディフューザーのように敵弾をストックに還元する割合を指定します。<br>
+				</div>
+			</div>
+
+		<a name="PLAYER_FLASHBULLET" id="PLAYER_FLASHBULLET"></a>
+			<div class="change_info">- プレイヤーバレット（フラッシュバレット）
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 3~)<br>
+					固有パラメータ2: タイプ (type: 10)<br>
+					固有パラメータ3: 攻撃力 (fire power: 0~)<br>
+					固有パラメータ4: 消滅までのフレーム (frame: 1~512)<br>
+					固有パラメータ5: 初期速度 (initial speed: 1~4096 dot)<br>
+					固有パラメータ6: 最高速度 (maximum speed: 1~4096 dot)<br>
+					固有パラメータ7: 基本サイズ (line size: 1~512 dot)<br>
+					固有パラメータ8: 爆発サイズ (effect size: 2~512 dot)<br>
+					固有パラメータ9: EMP値 (emp value: 0~4096)<br>
+					固有パラメータ10: 描画オプション (draw option: 0~n)<br>
+					固有パラメータ11: 接触と反射のオプション (collision and reflection option: 0~65535)<br>
+					固有パラメータ12: 反射回数 (reflect number: 0~65535)<br>
+					固有パラメータ13: 反射ディレイ (reflect delay: 0~65535)<br>
+					固有パラメータ14: 誘導オプション (homing option: -1 or 0~1)<br>
+					固有パラメータ15: 回転と誘導性能 (rotate: 1~256)<br>
+					固有パラメータ16: 目標方向固定オプション (target direction option: -1 or 0~4095)<br>
+					<br>
+					固有パラメータ1のフラグは以下の値を設定します。<br>
+					3 : 		各パラメータを適用する (enable exparam)<br>
+					&amp;4096 : 	エフェクトスクロールを有効化 (enable effect scroll)<br>
+					<br>
+					固有パラメータ2のタイプは以下の値を設定します。<br>
+						10 : 	フラッシュバレット (flash bullet)<br>
+					<br>
+					固有パラメータ5と6の速度はドット単位である点に注意してください。<br>
+					初期速度は最高速度より速く設定することもできます。<br>
+					<br>
+					固有パラメータ7の基本サイズは接触判定のラインの太さです。<br>
+					この判定で接触した場合、接触点に固有パラメータ8の爆発サイズによるダメージ判定を発生させます。<br>
+					<br>
+					固有パラメータ8の爆発サイズは実際にダメージ判定のあるサイズです。<br>
+					これには基本サイズよりも1以上大きい値を指定しないと接触対象にダメージが入らない場合があります。<br>
+					<br>
+					固有パラメータ10はライン関連の描画オプションを設定します。<br>
+					0~3の基本タイプと&amp;8以降の値を組み合わせて指定してください。<br>
+					<br>
+					0 : 		無し (line - none)<br>
+					1 : 		単色 (line - solid)<br>
+					2 : 		レーザー (line - laser)<br>
+					3 : 		電撃 (line - lightning)<br>
+					<br>
+					&amp;8 : 	ジグザグ+1 (zigzag +1)<br>
+					&amp;16 : 	ジグザグ+2 (zigzag +2)<br>
+					&amp;32 : 	ジグザグ+4 (zigzag +4)<br>
+					&amp;64 : 	ランダム幅+1 (random width +1)<br>
+					&amp;128 : 	ランダム幅+2 (random width +2)<br>
+					&amp;256 : 	ランダム幅+4 (random width +4)<br>
+					&amp;512 : 	幅を縮ませる (reduce width)<br>
+					&amp;1024 : 幅を伸ばす (enlarge width)<br>
+					<br>
+					ジグザグはラインを分割してジグザグに、ランダム幅は分割時に幅をランダムにします。<br>
+					速度が一定以下の場合は分割できないためどちらも反映されません。<br>
+					<br>
+					固有パラメータ11の接触と反射のオプションは以下の値を設定します。<br>
+					<br>
+					&amp;1 : 	反射時に反射ディレイを飛距離に依存させる (reflection: distance affects the reflect delay)<br>
+					&amp;2 : 	反射時に最高速度を減衰する (reflection: attenuates the maximum speed when reflected)<br>
+					&amp;4 : 	反射時に敵に対して僅かな誘導をする (reflection: low guidance when reflected)<br>
+					&amp;8 : 	反射時に敵に対して誘導をする (reflection: guidance when reflected)<br>
+					&amp;16 : 	反射後に目標方向を無効化する (reflection: disable the target direction after reflection)<br>
+					&amp;256 : 	接触対象が破壊出来る場合は消滅/反射せずに貫通する (collision/refrection: pierces the target if that has lower durability)<br>
+					&amp;512 : 	貫通時に反射回数を消費しない (collision/refrection: don't decrease the reflect number when piercing the target)<br>
+					<br>
+					固有パラメータ12の反射回数は指定された回数まで反射します。<br>
+					0 を指定すると反射しません。<br>
+					<br>
+					固有パラメータ13の反射ディレイは接触してから反射するまでの待機時間をフレーム単位で設定します。<br>
+					待機中は接触対象に張り付いた状態になります。<br>
+					<br>
+					固有パラメータ14の回数誘導オプションは以下の値を設定します。<br>
+					<br>
+					0 : 		誘導しない (disable homing)<br>
+					1 : 		誘導する (enable homing)<br>
+					&amp;2 : 	発射や反射後の回転誘導無効時間 +2フレーム (+2 frame disable homing after launch or reflection)<br>
+					&amp;4 : 	発射や反射後の回転誘導無効時間 +4フレーム (+4 frame disable homing after launch or reflection)<br>
+					&amp;8 : 	発射や反射後の回転誘導無効時間 +8フレーム (+8 frame disable homing after launch or reflection)<br>
+					&amp;16 : 	発射や反射後の回転誘導無効時間 +16フレーム (+16 frame disable homing after launch or reflection)<br>
+					&amp;32 : 	再誘導する (search new target if current target is destroyed)<br>
+					<br>
+					誘導可能な対象は耐久力が設定されている（破壊可能と判断された）敵パーツのみです。<br>
+					敵弾に対しては誘導しません。<br>
+					反射と併用できます。<br>
+					<br>
+					固有パラメータ15の回転と誘導性能は値が小さいほど高性能になります。<br>
+					<br>
+					固有パラメータ16の目標方向固定オプションは以下の値を設定します。<br>
+					<br>
+					-1 : 		無効 (disable target direction)<br>
+					0~4095 : 	有効化と発射方向 (enable and launch direction)<br>
+					<br>
+					有効化するとパーツの方向を目標方向に設定し、指定された発射方向に発射します。<br>
+					発射方向はパーツの方向に対する相対指定です。<br>
+					反射と併用でき、反射後も目標方向は維持されます。<br>
+					誘導オプションと併用した場合、誘導対象が見つかった時点で目標方向固定が無効化されます。<br>
+				</div>
+			</div>
+
+		<a name="PLAYER_LASER" id="PLAYER_LASER"></a>
+			<div class="change_info">- プレイヤーバレット（レーザー）
+				<div class="change_detail">
+					重要: レーザーを生成する場合は行動パターン3か5を使用してください。<br>
+					パターン1をそのまま使用すると多重生成し続けてしまいます。<br>
+					<br>
+					固有パラメータ1: フラグ (flag: 3~)<br>
+					固有パラメータ2: タイプ (type: 11)<br>
+					固有パラメータ3: 攻撃力 (fire power: 0~)<br>
+					固有パラメータ4: 消滅までのフレーム (frame: -1 or 1~512)<br>
+					固有パラメータ5: 速度 (speed: 1~4096 dot)<br>
+					固有パラメータ6: 最大射程距離 (maximum range: 1~4096 dot)<br>
+					固有パラメータ7: 基本サイズ (line size: 1~512 dot)<br>
+					固有パラメータ8: 爆発サイズ (effect size: 2~512 dot)<br>
+					固有パラメータ9: EMP値 (emp value: 0~4096)<br>
+					固有パラメータ10: 動作オプション (option: 0~n)<br>
+					固有パラメータ11: 描画オプション (draw option: 0~n)<br>
+					固有パラメータ12: チャージフレーム (charge frame: 1~512 frame)<br>
+					固有パラメータ13: 残像フレーム (afterimage frame: 1~64 frame)<br>
+					<br>
+					固有パラメータ1のフラグは以下の値を設定します。<br>
+					3 : 		各パラメータを適用する (enable exparam)<br>
+					&amp;4		固有パラメータを常に反映する (always refer exparam)
+					<br>
+					常に反映できる固有パラメータは 3,5,6,7,8,9,10,11,13 です。<br>
+					<br>
+					固有パラメータ2のタイプは以下の値を設定します。<br>
+						11 : 	レーザー (laser)<br>
+					<br>
+					固有パラメータ4は消滅までのフレームを設定します。<br>
+					-1 を設定した場合は任意に動作を停止するまで発射し続けます。<br>
+					<br>
+					固有パラメータ5と6はドット単位である点に注意してください。<br>
+					<br>
+					固有パラメータ7の基本サイズは接触判定のラインの太さです。<br>
+					この判定で接触した場合、接触点に固有パラメータ8の爆発サイズによるダメージ判定を発生させます。<br>
+					<br>
+					固有パラメータ8の爆発サイズは実際にダメージ判定のあるサイズです。<br>
+					これには基本サイズよりも1以上大きい値を指定しないと接触対象にダメージが入らない場合があります。<br>
+					<br>
+					固有パラメータ10は動作オプションを設定します。<br>
+					0~3の基本タイプと&amp;4以降の値を組み合わせて指定してください。<br>
+					<br>
+					0 : 		貫通しない (no pierce)<br>
+					1 : 		半貫通 (semi pierce)<br>
+					2 : 		貫通する (pierce)<br>
+					3 : 		全て貫通する (perfect pierce)<br>
+					<br>
+					&amp;4 : 	敵弾を消去する (erases enemy bullets)<br>
+					<br>
+					固有パラメータ11の描画オプションは以下の値を設定します。<br>
+					<br>
+					&amp;1 : 	エフェクトのサイズを補正する (adjust effect size)<br>
+					<br>
+					&amp;2 : 	発射口-発光エフェクト (muzzle effect: lighting)<br>
+					&amp;4 : 	発射口-基本エフェクトA (muzzle effect: base A)<br>
+					&amp;8 : 	発射口-基本エフェクトB (muzzle effect: base B)<br>
+					<br>
+					&amp;16 : 	先端-発光エフェクト (tip effect: lighting)<br>
+					&amp;32 : 	先端-基本エフェクトA (tip effect: base A)<br>
+					&amp;64 : 	先端-基本エフェクトB (tip effect: base B)<br>
+					<br>
+					&amp;256 : 	レーザーエフェクト (line effect: laser)<br>
+					&amp;512 : 	電撃A-直線 (line effect: lightning A)<br>
+					&amp;1024 : 	電撃A-ランダム (line effect: lightning A-random)<br>
+					&amp;2048 : 	電撃B-直線 (line effect: lightning B)<br>
+					&amp;4096 : 	電撃B-ランダム (line effect: lightning B-random)<br>
+					<br>
+					固有パラメータ12のチャージフレームは生成後から実際に発射されるまでの溜め時間を設定します。<br>
+					<br>
+					固有パラメータ13の残像フレームはラインエフェクトの残像効果の持続時間を設定します。<br>
+					やや負荷が高いので低めに設定してください。<br>
+					<br>
+					レーザーは以下の通知ステータスを返します。<br>
+					エネルギーウォールやバリアーなどと接触している場合、通知ステータスに &amp;16 を返します。<br>
+					敵弾と接触している場合、通知ステータスに &amp;32 を返します。<br>
+					敵パーツと接触している場合、通知ステータスに &amp;64 を返します。<br>
+					破壊できない敵パーツと接触している場合、通知ステータスに &amp;128 を返します。<br>
+				</div>
+			</div>
+
+		<a name="CHECKPOINTER" id="CHECKPOINTER"></a>
+			<div class="change_info">- チェックポインター
+				<div class="change_detail">
+					チェックポイントを生成する特殊なエフェクターです。<br>
+					チェックポイントはプレイヤーの復活地点として使用されます。<br>
+					プレイヤーが接触するとそのチェックポイントはアクティブになり、他のチェックポイントは非アクティブになります。<br>
+					プレイヤーはチェックポイントに接触している間、無敵状態になります。<br>
+					この無敵状態はチェックポイントを出た瞬間解除されます。（死亡復活時の無敵も解除されます）<br>
+					<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: フラグ (flag: -1~)<br>
+					固有パラメータ2: 半径サイズ (size: 1~4096 dot)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   -1 : 	全てのフラグを無効化 (invalidate all flags)<br>
+					   0 : 	デフォルト (default)<br>
+					   &amp;1 : 	アクティブ状態で生成 (active)<br>
+					   &amp;2 : 	エフェクト描画 (draw effect)<br>
+					<br>
+					プレイヤーが接触している場合、通知ステータスに&amp;2を返します。<br>
+					チェックポイントがアクティブになった瞬間、通知ステータスに&amp;4を返します。<br>
+					チェックポイントがアクティブの間、通知ステータスに&amp;8を返します。<br>
+					チェックポイントが非アクティブになった瞬間、通知ステータスに&amp;16を返します。<br>
+					チェックポイントが非アクティブの間、通知ステータスに&amp;32を返します。<br>
+				</div>
+			</div>
+		<a name="SWORDEFFECTOR" id="SWORDEFFECTOR"></a>
+			<div class="change_info">- ソードエフェクター
+				<div class="change_detail">
+					ブレードの残像エフェクトを生成する特殊なエフェクターです。<br>
+					このパーツはエフェクターに分類されていますが動作は攻撃パターンに登録されているので注意してください。<br>
+					<br>
+					プレイヤーが接触している場合、通知ステータスに&amp;2を返します。<br>
+					この接触判定は残像の1フレーム目のみです。<br>
+					<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: オプション (option: 0~)<br>
+					固有パラメータ2: 描画タイプ (draw type: -1~7)<br>
+					固有パラメータ3: スプライトID (sprite ID)<br>
+					固有パラメータ4: フレーム値 (frame: 0~256)<br>
+					固有パラメータ5: サイズ (size: 0~65536, 256=1.0)<br>
+					固有パラメータ6: 色相 (Hue: ~0~, 4096=360.0)<br>
+					固有パラメータ7: 彩度 (Saturation: -4096~0, -4096=0.0, 0=1.0)<br>
+					固有パラメータ8: 輝度 (Lightness: -4096~0~4096, -4096=0.0, 0=0.5, 4096=1.0)<br>
+					固有パラメータ9: ブレンドモード (blend mode: 0~6)<br>
+					固有パラメータ10: アルファブレンド (alpha blend: -1~6)<br>
+					固有パラメータ11: ブレンド率 (blend rate: 0~, 0=0%, 256=100%)<br>
+					固有パラメータ12: ブレンド率の減衰 (attenuation of blend rate)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+						0 : 	デフォルト (default)<br>
+						1 : 	固有パラメータ2以降を反映する (refer exparam)<br>
+						2 : 	固有パラメータ2以降を常に反映する (always refer exparam)<br>
+						&amp;4 : 	ペアパーツを使用する (use pair parts)<br>
+						&amp;4096 : 	エフェクトスクロールを有効化 (enable effect scrolling)<br>
+					<br>
+					固有パラメータ2の描画タイプは以下の値を設定します。<br>
+						-1 : 	単色塗り (solid(HSL color))<br>
+						0 : 	分割スプライト（左上） (division sprite(TopLeft))<br>
+						1 :		分割スプライト（右上） (division sprite(TopRight))<br>
+						2 :		分割スプライト（右下） (division sprite(BottomRight))<br>
+						3 :		分割スプライト（左下） (division sprite(BottomLeft))<br>
+						4 :		スプライト（左上） (sprite(TopLeft))<br>
+						5 :		スプライト（右上） (sprite(TopRight))<br>
+						6 :		スプライト（右下） (sprite(BottomRight))<br>
+						7 :		スプライト（左下） (sprite(BottomLeft))<br>
+					<br>
+					単色塗り(solid)はスプライト指定無し、色指定(HSL)で描画します。<br>
+					<br>
+					分割スプライト(division sprite)はスプライト(1~511)のみ指定できます。<br>
+					1枚のスプライトを任意方向に分割してアニメーションスプライトとして扱います。<br>
+					<br>
+					スプライト(sprite)はスプライト(1~511)、アニメーションスプライト(-127~-1)共に指定可能です。<br>
+					<br>
+					固有パラメータ3はスプライトIDを設定します。<br>
+					描画タイプが単色塗り(-1)の場合は無視されます。<br>
+					<br>
+					固有パラメータ5はサイズを設定します。<br>
+					オプションに &amp;2 が指定されている（ペアパーツを使用する）場合は無視されます。<br>
+					<br>
+					固有パラメータ6~8は描画タイプが単色塗り(-1)の場合、描画色をHSLで設定します。<br>
+					単色塗り(-1)以外の場合は無視されます。<br>
+					H(Hue)は4096=360度、4096以上を指定すると自動的に値がロールします。<br>
+					S(Saturation)は0を基準として値を小さくするごとに鮮やかさが減少し、-4096でモノクロになります。<br>
+					L(Lightness)は0を基準として値を大きくすると明るく、小さくすると暗くなります。<br>
+					<br>
+					固有パラメータ9のブレンドモードは以下の値を設定します。<br>
+						0 :		デフォルト (default(addition))<br>
+						3 :		半透明合成 (translucent)<br>
+						4 :		半透明合成 (translucent(black disregard))<br>
+						5 :		加算合成 (addition)<br>
+						6 :		減算合成 (subtraction)<br>
+					<br>
+					固有パラメータ10のアルファブレンドは以下の値を設定します。<br>
+						-1 : 	OFF<br>
+						0 :		ON (subtraction)<br>
+						3 :		半透明合成 (translucent)<br>
+						4 :		半透明合成 (translucent(black disregard))<br>
+						5 :		加算合成 (addition)<br>
+						6 :		減算合成 (subtraction)<br>
+					<br>
+					固有パラメータ11~12はブレンド率とその増減値を設定します。<br>
+					ブレンド率は0が0%、256が100%になり、256以上を設定しても描画時は100%として扱われます。<br>
+				</div>
+			</div>
+		<a name="TEXTUREEFFECTOR" id="TEXTUREEFFECTOR"></a>
+			<div class="change_info">- テクスチャエフェクター
+				<div class="change_detail">
+					ペアパーツを使ってスプライトをテクスチャのように描画するエフェクターです。<br>
+					このパーツはエフェクターに分類されていますが動作は攻撃パターンに登録されているので注意してください。<br>
+					<br>
+					テクスチャの描画領域を指定する方法は2種類あります。<br>
+					<br>
+					・4点テクスチャ (Texture type: 0)<br>
+					4点テクスチャはペアパーツ1～4(P1~P4)で4つの点を指定して描画領域にします。<br>
+					基本的には線分で四角形を作るような順番で指定してください。<br>
+					交差させることもできますが、位置や方向によっては正常に描画されない場合があります。（これはHSPの仕様で修正できません）<br>
+					<br>
+					・ペアパーツテクスチャ (Texture type: 1~8)<br>
+					ペアパーツテクスチャはペアパーツに指定されたパーツの矩形を描画領域にします。<br>
+					対象ペアパーツを1~4の4つまで指定でき、接触判定はペアパーツ1だけに適用されます。<br>
+					タイプ値ごとに始点が異なります。<br>
+					また、タイプ値1～4は法線が時計回り、5～8は反時計回りになります。（つまり1～4に対して5～8はスプライトが反転します）<br>
+					<br>
+					接触判定は固有パラメータを設定することで有効になります。<br>
+					プレイヤーが接触判定領域に接触している場合、通知ステータスに&amp;2を返します。<br>
+					固有パラメータ12による残像は接触判定を持ちません。<br>
+					<br>
+					このパーツは次の固有パラメータを変更することができます。<br>
+					固有パラメータ1: オプション (option: 0~)<br>
+					固有パラメータ2: 描画タイプ (draw type: 0~)<br>
+					固有パラメータ3: スプライトID (sprite ID)<br>
+					固有パラメータ4: テクスチャタイプ (texture type: 0~8)<br>
+					固有パラメータ5: 描画オプション (draw option: 0~)<br>
+					固有パラメータ6: 色相 (Hue: ~0~, 4096=360.0)<br>
+					固有パラメータ7: 彩度 (Saturation: -4096~0, -4096=0.0, 0=1.0)<br>
+					固有パラメータ8: 輝度 (Lightness: -4096~0~4096, -4096=0.0, 0=0.5, 4096=1.0)<br>
+					固有パラメータ9: ブレンドモード (blend mode: 0~6)<br>
+					固有パラメータ10: アルファブレンド (alpha blend: -1~6)<br>
+					固有パラメータ11: ブレンド率 (blend rate: 0~, 0=0%, 256=100%)<br>
+					固有パラメータ12: エフェクトフレーム値 (effect frame value: 1~255)<br>
+					固有パラメータ13: 動作速度係数 (action speed coefficient: -4000~4000%)<br>
+					固有パラメータ14: 拡大係数X (zoom X coefficient: -4000~4000%)<br>
+					固有パラメータ15: 拡大係数Y (zoom Y coefficient: -4000~4000%)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+						0 : 		デフォルト (default)<br>
+						1 : 		固有パラメータ2以降を反映する (refer exparam)<br>
+						2 : 		固有パラメータ2以降を常に反映する (always refer exparam)<br>
+						&amp;4 :	接触判定の有効化 (enable hitbox)<br>
+					<br>
+					固有パラメータ2の描画タイプは以下の値を設定します。<br>
+						0 : 	単色塗り (solid(HSL color))<br>
+						1 :		スプライト(sprite)<br>
+					<br>
+					単色塗り(solid)はスプライト指定無し、色指定(HSL)で描画します。<br>
+					スプライト(sprite)はスプライト(1~)、アニメーションスプライト(-127~-1)共に指定可能です。<br>
+					<br>
+					固有パラメータ3はスプライトIDを設定します。<br>
+					描画タイプが単色塗り(solid)の場合は無視されます。<br>
+					<br>
+					固有パラメータ4はテクスチャタイプを設定します。<br>
+						0 : 		4点テクスチャ (4point texture)<br>
+						1~8 : 		ペアパーツテクスチャ (pair parts texture)<br>
+					<br>
+					4点テクスチャはペアパーツ1～4(P1~P4)で4つの点を指定して描画領域にします。<br>
+					<br>
+					ペアパーツテクスチャはペアパーツに指定されたパーツの矩形を描画領域にします。<br>
+					対象となるペアパーツは1~4の4つまで指定でき、接触判定はペアパーツ1だけ適用されます。<br>
+					<br>
+					固有パラメータ5は以下の値を設定します。<br>
+						&amp;1 : 		ブレンド率の自動減衰 (auto attenuation of blend rate)<br>
+						&amp;2 :		フェードインの有効化 (enable fadein)<br>
+						&amp;4 :		フェードアウトの有効化 (enable fadeout)<br>
+						&amp;128 : 		アニメーション速度を変更しない (don't adjust animation speed)<br>
+						&amp;256 : 		アニメーションをループさせる (loop animation)<br>
+						&amp;512 : 		アニメーションの開始フレームをランダムにする (animation starts from random frame)<br>
+						&amp;1024 : 	アニメーションの開始フレームにカウンタを使う (use sub counter for start frame of animation)<br>
+						&amp;4096 : 	エフェクトスクロールを有効化 (enable effect scrolling)<br>
+					<br>
+					固有パラメータ6~8は描画タイプが単色塗り(-1)の場合、描画色をHSLで設定します。<br>
+					描画タイプがスプライト(sprite)の場合は無視されます。<br>
+					H(Hue)は4096=360度、4096以上を指定すると自動的に値がロールします。<br>
+					S(Saturation)は0を基準として値を小さくするごとに鮮やかさが減少し、-4096でモノクロになります。<br>
+					L(Lightness)は0を基準として値を大きくすると明るく、小さくすると暗くなります。<br>
+					<br>
+					固有パラメータ9のブレンドモードは以下の値を設定します。<br>
+						0 :		デフォルト (default(addition))<br>
+						3 :		半透明合成 (translucent)<br>
+						4 :		半透明合成 (translucent(black disregard))<br>
+						5 :		加算合成 (addition)<br>
+						6 :		減算合成 (subtraction)<br>
+					<br>
+					固有パラメータ10のアルファブレンドは以下の値を設定します。<br>
+						-1 : 	OFF<br>
+						0 :		ON (default(subtraction))<br>
+						3 :		半透明合成 (translucent)<br>
+						4 :		半透明合成 (translucent(black disregard))<br>
+						5 :		加算合成 (addition)<br>
+						6 :		減算合成 (subtraction)<br>
+					<br>
+					固有パラメータ11はブレンド率を設定します。<br>
+					ブレンド率は0が0%、256が100%になり、256以上を設定しても描画時は100%として扱われます。<br>
+					<br>
+					固有パラメータ12は生成されたエフェクトオブジェクトの持続時間を設定します。<br>
+					固有パラメータ5に自動減衰(&amp;1)が指定されている場合はブレンド率が自動的に減衰するようになります。<br>
+					<br>
+					固有パラメータ13は動作速度係数を設定します。<br>
+					動作速度係数は各パターンの基本速度に影響します。<br>
+					<br>
+					固有パラメータ14と15は拡大係数を設定します。<br>
+					4点テクスチャは固有パラメータ14のみ適用されます。<br>
+					ペアパーツテクスチャは固有パラメータ14と15が適用されます。<br>
+				</div>
+			</div>
+		<a name="EFFECTORDISTORTION" id="EFFECTORDISTORTION"></a>
+			<div class="change_info">- エフェクター（ディストーション）
+				<div class="change_detail">
+					固有パラメータ1: フラグ (flag: 0~)<br>
+					固有パラメータ2: 変形フェードタイプ (transform fadetype: 0~n)<br>
+					固有パラメータ3: 変形率A (transform rate A: -n~n, 4096=1.0)<br>
+					固有パラメータ4: 変形率B (transform rate B: -n~n, 4096=1.0)<br>
+					固有パラメータ5: 最小サイズA (min size A: -n~n dot)<br>
+					固有パラメータ6: 最小サイズB (min size B: -n~n dot)<br>
+					固有パラメータ7: 最大サイズA (max size A: -n~n dot)<br>
+					固有パラメータ8: 最大サイズB (max size B: -n~n dot)<br>
+					固有パラメータ9: ブレンドモード (blend mode: -7~-2 or 2~6)<br>
+					固有パラメータ10: ブレンド率フェードタイプ (blend rate fadetype: 0~n)<br>
+					固有パラメータ11: ブレンド率 (blend rate: 0~n, 4096=100%)<br>
+					固有パラメータ12: 持続フレーム値 (lifetime: 1~ frame)<br>
+					固有パラメータ13: 方向 (angle: -4096~-1 or 0~4095)<br>
+					固有パラメータ14: 中心角 (arc range: -n~n, 4096=360deg)<br>
+					固有パラメータ15: メッシュ精度X (mesh X: -8~32)<br>
+					固有パラメータ16: メッシュ精度Y (mesh Y: -8~32)<br>
+					<br>
+					固有パラメータ1は以下の値を設定します。<br>
+					   &amp;1 : 	固有パラメータを適用する (enable exparam)<br>
+					   &amp;2 : 	プリセットを使用する (use preset)<br>
+					   &amp;4096 : 	エフェクトスクロールを有効化 (enable effect scrolling)<br>
+					<br>
+					プリセットを使用する場合は以下の固有パラメータのみが適用されます。<br>
+					固有パラメータ2: 変形プリセット (transform preset: -n~n)<br>
+					固有パラメータ3: 変形率 (transform rate: -n~n, 4096=1.0)<br>
+					固有パラメータ7: サイズ (size: -n~n dot)<br>
+					固有パラメータ11: ブレンド率 (blend rate: 0~n, 4096=100%)<br>
+					固有パラメータ12: 持続フレーム値 (lifetime: 1~ frame)<br>
+					<br>
+					固有パラメータ2は以下の値を指定してください。<br>
+					・変形フェードタイプ<br>
+						0~n : 任意のフェードタイプ (fadetype)<br>
+					<br>
+					・変形プリセット<br>
+						1 : プリセット-波紋 (preset - wave circle)<br>
+						2 : プリセット-膨張 (preset - expansion)<br>
+						3 : プリセット-リング (preset - ring)<br>
+						4 : プリセット-ゲル (preset - gel)<br>
+					<br>
+					固有パラメータ3と4の変形率はどのくらい変形させるかを指定します。<br>
+					0ならば0.0でほぼ変形無し、4096で1.0、8192で2.0倍…となります。<br>
+					Aは生成直後(0frame)の変形率で時間と共にBへ変化します。<br>
+					負数を指定すると反転したり、大きい値を指定すると最大サイズよりも大きくなります。<br>
+					<br>
+					固有パラメータ5~8のサイズは最小と最大それぞれの半径をドット単位で指定します。<br>
+					Aは生成直後(0frame)のサイズで時間と共にBへ変化します。<br>
+					<br>
+					固有パラメータ9のブレンドモードは以下の値を指定してください。<br>
+					-7~-1 : 	ワイヤーフレーム (wireframe)<br>
+						2 :		通常合成 (disable blend rate)<br>
+						3 :		半透明合成 (translucent)<br>
+						4 :		半透明合成 (translucent(black disregard))<br>
+						5 :		加算合成 (addition)<br>
+						6 :		減算合成 (subtraction)<br>
+					<br>
+					ブレンドモードに負数を指定するとメッシュをワイヤーフレームで描画します。<br>
+					範囲や精度の確認に使用してください。<br>
+					この場合、ブレンドレートは無視され変形描画も行われません。<br>
+					<br>
+					固有パラメータ10と11のブレンド率とフェードタイプは最小サイズと最大サイズの間でのブレンド率を制御します。<br>
+					ブレンド率は4096で100%と解釈されます。<br>
+					フェードタイプは定義されているもの全て使用できますが通常は以下の値を使用してください。<br>
+						0 : 変化無し (no change)<br>
+						3 : 山型 (mountain)<br>
+						6 : リニア (linear)<br>
+						7 : リニア (linear)<br>
+						10 : カーブ (curve)<br>
+						11 : カーブ (curve)<br>
+					<br>
+					固有パラメータ13の方向はパーツの向きに加える方向を指定します。<br>
+					負数を指定した場合は符号を取り除いた値の範囲でランダムな方向になります。<br>
+					<br>
+					固有パラメータ14は中心角を指定します。<br>
+					4096ならば完全な円形になり、これ以外の値を指定すると特殊な変形補正が加えられます。<br>
+					2048ならば半円、1024ならば90度の扇型になります。<br>
+					負数を指定した場合は符号を取り除いた値の範囲でランダムな角度になります。<br>
+					<br>
+					固有パラメータ15と16のメッシュ精度は変形時にどのくらい細かく計算するかを指定します。<br>
+					メッシュ精度Xは円周の分割数になります。<br>
+					メッシュ精度Yは中心（最小サイズ）から円周（最大サイズ）までの分割数になります。<br>
+					どちらの値も大きくすると処理負荷が高くなりやすいので注意してください。<br>
+					負数を指定すると現在の最小と最大サイズから分割数を自動計算します。<br>
+					この場合、-1ならば1倍、-2ならば2倍という具合に計算結果を補正します。<br>
+				</div>
+			</div>
+		<!-- -->
+	</div>
+</div>
+
+<hr class="line_s">
+
+</body>
+</html>

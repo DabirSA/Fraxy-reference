@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Table)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Table) -</div>
+<hr class="line_s">
+
+
+<a name="TABLEADD" id="TABLEADD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TABLEADD
+	</td><td class="trycnp">"TABLEADD","key",value
+	</td></tr></table><div class="trydetail">
+		テーブルに値を書き込みます。<br>
+		値の読み書きはキーを使ってアクセスします。<br>
+		値は整数、実数、文字列を指定できます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TABLEADD","str1",val2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>キー
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">val2</td><td>値
+	</td></tr></table></div><br>
+
+<a name="TABLEGET" id="TABLEGET">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TABLEGET
+	</td><td class="trycnp">"TABLEGET","key",variable
+	</td></tr></table><div class="trydetail">
+		変数に値を代入します。<br>
+		変数の型は値に合わせて変更されます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TABLEGET","str1",var2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>キー
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var2</td><td>代入先変数
+	</td></tr></table></div><br>
+
+<a name="TABLEINIT" id="TABLEINIT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TABLEINIT
+	</td><td class="trycnp">"TABLEINIT",slotnum
+	</td></tr></table><div class="trydetail">
+		テーブルを初期化します。<br>
+		テーブルスロットはハッシュ値の振り分けに影響します。<br>
+		 大きいほどアクセス速度が安定する代わりに出力ファイルサイズが大きくなります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TABLEINIT",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>テーブルスロット数
+	</td></tr></table></div><br>
+
+<a name="TABLELOAD" id="TABLELOAD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TABLELOAD
+	</td><td class="trycnp">"TABLELOAD","filename","encryptkey"
+	</td></tr></table><div class="trydetail">
+		テーブルファイルを読み込みます。<br>
+		暗号キーは保存時と同じキーを指定する必要があります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TABLELOAD","str1","str2"
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>ファイル名
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str2"</td><td>暗号キー
+	</td></tr></table></div><br>
+
+<a name="TABLEREMOVE" id="TABLEREMOVE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TABLEREMOVE
+	</td><td class="trycnp">"TABLEREMOVE","key"
+	</td></tr></table><div class="trydetail">
+		テーブルから値を削除します。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TABLEREMOVE","str1"
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>キー
+	</td></tr></table></div><br>
+
+<a name="TABLESAVE" id="TABLESAVE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">TABLESAVE
+	</td><td class="trycnp">"TABLESAVE","filename","encryptkey"
+	</td></tr></table><div class="trydetail">
+		テーブルをファイルに書き出します。<br>
+		暗号キーは読み込み時に同じキーが必要になります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"TABLESAVE","str1","str2"
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>ファイル名
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str2"</td><td>暗号キー
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

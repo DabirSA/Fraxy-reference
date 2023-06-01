@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Enemy)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Enemy) -</div>
+<hr class="line_s">
+
+<a name="BUFFER" id="BUFFER">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">BUFFER
+	</td><td class="trycnp">"BUFFER",buffersize,buffernumber
+	</td></tr></table><div class="trydetail">
+		敵ファイルを読み込むためのバッファを確保する命令です。<br>
+		このバッファに読み込まれた敵ファイルは通常よりも高速に生成できます。<br>
+		<br>
+		サイズを32768、バッファ数を10に設定した場合、<br>
+		約32KBまでのファイルを10個（ID0~9）まで読み込むことができるようになります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"BUFFER",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>バッファ一つあたりのサイズ (byte)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>確保するバッファ数
+	</td></tr></table></div><br>
+
+<a name="CLEARENEMY" id="CLEARENEMY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CLEARENEMY
+	</td><td class="trycnp">"CLEARENEMY",cleartype
+	</td></tr></table><div class="trydetail">
+		敵全てを消去する命令です。<br>
+		この命令で破壊状態になった敵は"LIMIT"などの敵総数制限数やパーツ制限数にカウントされなくなります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CLEARENEMY",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>消去方法
+	<div class="tryparam"><div class="tryvalue">0</div>爆発</div>
+	<div class="tryparam"><div class="tryvalue">1</div>フェイズイン</div>
+	</td></tr></table></div><br>
+
+<a name="CREATE" id="CREATE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CREATE
+	</td><td class="trycnp">"CREATE","enemyfile",enemyangle,angle,distance,rank,message
+	</td></tr></table><div class="trydetail">
+		敵を生成する命令です。<br>
+		生成位置はプレイヤーの位置を基準にして方向と距離で指定します。<br>
+		<br>
+		バッファに読み込んだファイルで生成する場合は<br>
+		ファイル名に"*0"のように*にバッファIDを付与して記述してください。<br>
+		<br>
+		生成に成功した場合は _stat にコアパーツのIDを返します。<br>
+		生成に失敗した場合は _stat に -1 を返します。<br>
+		ファイルが見つからなかった場合は _stat に -2 を返します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CREATE","str1",int2,int3,int4,int5,int6
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>生成する敵のファイル名
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>初期方向 (0~4095)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>生成方向 (0~4095)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>生成距離 (0~)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>敵ランク(0~100)
+	<div class="tryparam"><div class="tryvalue">0</div>通常のランク上昇に依存したランク</div>
+	<div class="tryparam"><div class="tryvalue">1~100</div>指定されたランク</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>生成メッセージの有無
+	<div class="tryparam"><div class="tryvalue">0</div>メッセージを表示しない</div>
+	<div class="tryparam"><div class="tryvalue">1</div>メッセージを表示する</div>
+	</td></tr></table></div><br>
+
+<a name="CREATE2" id="CREATE2">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">CREATE2
+	</td><td class="trycnp">"CREATE2","enemyfile",enemyangle,x,y,rank,message
+	</td></tr></table><div class="trydetail">
+		敵を生成する命令です。<br>
+		生成位置は"POS"で設定されている位置を基準に絶対座標で指定します。<br>
+		<br>
+		バッファに読み込んだファイルで生成する場合は<br>
+		ファイル名に"*0"のように*にバッファIDを付与して記述してください。<br>
+		<br>
+		生成に成功した場合は _stat にコアパーツのIDを返します。<br>
+		生成に失敗した場合は _stat に -1 を返します。<br>
+		ファイルが見つからなかった場合は _stat に -2 を返します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"CREATE2","str1",int2,int3,int4,int5,int6
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>生成する敵のファイル名
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>初期方向 (0~4095)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>生成位置 X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>生成位置 Y
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int5</td><td>敵ランク(0~100)
+	<div class="tryparam"><div class="tryvalue">0</div>通常のランク上昇に依存したランク</div>
+	<div class="tryparam"><div class="tryvalue">1~100</div>指定されたランク</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int6</td><td>生成メッセージの有無
+	<div class="tryparam"><div class="tryvalue">0</div>メッセージを表示しない</div>
+	<div class="tryparam"><div class="tryvalue">1</div>メッセージを表示する</div>
+	</td></tr></table></div><br>
+
+<a name="DESTROYENEMY" id="DESTROYENEMY">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DESTROYENEMY
+	</td><td class="trycnp">"DESTROYENEMY",enemyID,cleartype
+	</td></tr></table><div class="trydetail">
+		指定した敵を消去する命令です。<br>
+		この命令で破壊状態になった敵は"LIMIT"などの敵総数制限数やパーツ制限数にカウントされなくなります。<br>
+		<br>
+		対象IDは"CREATE"などで生成した際に返されるIDを指定します。<br>
+		対象IDがコアパーツでない場合は消去に失敗します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DESTROYENEMY",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>対象敵ID
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>消去方法
+	<div class="tryparam"><div class="tryvalue">0</div>爆発</div>
+	<div class="tryparam"><div class="tryvalue">1</div>フェイズイン</div>
+	</td></tr></table></div><br>
+
+<a name="EBULLETCOLOR" id="EBULLETCOLOR">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">EBULLETCOLOR
+	</td><td class="trycnp">"EBULLETCOLOR",changeflag,H,S,L
+	</td></tr></table><div class="trydetail">
+		敵弾の色調を変更する命令です。<br>
+		色は色相・彩度・明度（HSL）で指定します。<br>
+		ユーザーがオプションで単色化を設定している場合、デフォルト色との差によって狙った色調にならない事もあります。<br>
+		<br>
+		この命令は非常に負荷が高いためリアルタイムに色調を変更すると処理落ちの原因になります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"EBULLETCOLOR",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>変更フラグ
+	<div class="tryparam"><div class="tryvalue">0</div>指定されたHSLに変更する</div>
+	<div class="tryparam"><div class="tryvalue">1</div>ユーザー指定に戻す</div>
+	<div class="tryparam"><div class="tryvalue">&amp;2</div>フェード処理</div>
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>H 色相
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>S 彩度
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>L 明度
+	</td></tr></table></div><br>
+
+<a name="LOAD" id="LOAD">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">LOAD
+	</td><td class="trycnp">"LOAD","filename",ID
+	</td></tr></table><div class="trydetail">
+		"BUFFER"で作成したバッファに敵ファイルを読み込む命令です。<br>
+		読み込まれた敵ファイルから生成する場合は"CREATE"などの敵ファイル指定に<br>
+		"*0"と入力するとID0のファイル、"*1"と入力すればID1のファイルを読み込むことができます。<br>
+		読み込みに失敗した場合は _stat に -1 を返します。<br>
+		ファイルが見つからない場合は _stat に -2 を返します。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"LOAD","str1",int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>読み込む敵ファイル名
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>読み込み先バッファID
+	</td></tr></table></div><br>
+
+<a name="PARTSGRAPHICS" id="PARTSGRAPHICS">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">PARTSGRAPHICS
+	</td><td class="trycnp">"PARTSGRAPHICS","fpgfile",option
+	</td></tr></table><div class="trydetail">
+		任意のfpgファイルを読み込んでパーツのグラフィックを変更します。<br>
+		ファイル名を省略するとデフォルトのファイルを読み込みます。<br>
+		ファイルが見つからなかった場合は _stat に -2 を返します。<br>
+		<br>
+		初期化の場合は必ずベースとなる画像が設定されている必要があります。<br>
+		上書きは設定されている部分だけを読み込みます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"PARTSGRAPHICS","str1",int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"str1"</td><td>パーツ設定ファイル名 (*.fpg)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>オプション
+	<div class="tryparam"><div class="tryvalue">0</div>上書きで読み込む</div>
+	<div class="tryparam"><div class="tryvalue">1</div>初期化して読み込む</div>
+	<div class="tryparam"><div class="tryvalue">&amp;2</div>フェード処理</div>
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

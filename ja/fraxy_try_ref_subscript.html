@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>FRAXY Try function (SubScript)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (SubScript) -</div>
+<hr class="line_s">
+
+<a name="ADDSUBSCRIPT" id="ADDSUBSCRIPT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">ADDSUBSCRIPT
+	</td><td class="trycnp">"ADDSUBSCRIPT","labelname",variable
+	</td></tr></table><div class="trydetail">
+		指定したラベルを開始点としてサブスクリプトを登録します。<br>
+		サブスクリプトはIDの順番でメインスクリプトの後に実行されます。（メインスクリプトはID=0として扱われます）<br>
+		最大で15個まで登録でき、同じサブスクリプトの重複登録も可能です。<br>
+		<br>
+		登録に成功した場合はvar2にIDを返します。<br>
+		失敗した場合はvar2に-1以下の負数を返します。<br>
+		<br>
+		"LIMIT"と"WAIT"による停止はメインスクリプトとサブスクリプトでそれぞれ個別に管理しています。<br>
+		そのためメインスクリプトが停止中でもサブスクリプトを動かすことができます。<br>
+		<br>
+		基本的に上記以外の要素はメインスクリプトと全てのサブスクリプトで共有します。<br>
+		例えば、サブスクリプトで"CHOICES"を使用するとメインスクリプトも停止することになります。<br>
+		変数やオブジェクトも共有するため、"CREATEOBJECT"などを使用するサブスクリプトを重複登録する場合は注意してください。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"ADDSUBSCRIPT","label1",var2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">"label1"</td><td>開始点となるラベル
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var2</td><td>サブスクリプトIDを返す変数
+	</td></tr></table></div><br>
+
+<a name="DELSUBSCRIPT" id="DELSUBSCRIPT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DELSUBSCRIPT
+	</td><td class="trycnp">"DELSUBSCRIPT",subscriptID
+	</td></tr></table><div class="trydetail">
+		登録したサブスクリプトを削除します。<br>
+		通常、int1には"ADDSUBSCRIPT"でIDを格納した変数を指定してください。<br>
+		int1に-1を指定した場合は現在実行しているサブスクリプトの登録を削除します。<br>
+		<br>
+		この命令自体は<span class="tryinfoattribute">Break属性</span>を持ちません。<br>
+		しかしサブスクリプトが自身の登録を削除した場合は<span class="tryinfoattribute">Break属性</span>を持っているとして処理されます。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DELSUBSCRIPT",int1
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>削除するサブスクリプトのID
+	<div class="tryparam"><div class="tryvalue">-1</div>現在実行しているサブスクリプト</div>
+	<div class="tryparam"><div class="tryvalue">1~</div>任意のサブスクリプト</div>
+	</td></tr></table></div><br>
+
+<a name="SETCOOPERATIVE" id="SETCOOPERATIVE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SETCOOPERATIVE
+	</td><td class="trycnp">"SETCOOPERATIVE",scriptID,level
+	</td></tr></table><div class="trydetail">
+		スクリプトの協調レベルを変更します。<br>
+		対象スクリプトIDにはサブスクリプトIDを指定してください。<br>
+		0 を指定するとメインスクリプトが対象になります。<br>
+		協調レベルの初期値は 0 で、選択肢表示などの特殊な状況下で処理が停止するようになっています。<br>
+		協調レベルを 1 に変更するとそれらの状況下で処理が停止しないようになります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SETCOOPERATIVE",int1,int2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>対象スクリプトID
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>協調レベル (0~1)
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>

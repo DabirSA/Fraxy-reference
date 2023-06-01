@@ -1,0 +1,1701 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try how to</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">
+<div class="categorytitle">- FRAXY Try script -</div>
+<br>
+スクリプトの構成とサンプル<br>
+<br>
+</div>
+<hr class="line_s">
+<br>
+<div class="style_center">
+<table class="messagetable"><tr align="left"><td>
+ここではトライの作り方やスクリプトの構成方法を説明します。<br>
+</td></tr></table>
+<br>
+<div class="messagetable" align="left">
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">まず初めに</div>
+			<div class="trysmallmenuitem">
+				<a href="#BASIC_REQUEST">トライの作成に必要なもの</a><br>
+				<a href="#BASIC_INIT">初期設定に関して</a><br>
+				<a href="#BSSIC_BEGINNER">Hello world!</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">スクリプトの制御</div>
+			<div class="trysmallmenuitem">
+				<a href="#SCRIPT_BASIC">スクリプトの基本</a><br>
+				<a href="#SCRIPT_BREAK">Break属性について</a><br>
+				<a href="#SCRIPT_REPEAT">"REPEAT"の使い方</a><br>
+				<a href="#SCRIPT_REPEAT_2">"CONTINUE"の使い方</a><br>
+				<a href="#SCRIPT_REPEAT_3">"REPEAT"を使って複数の敵を生成する</a><br>
+				<a href="#SCRIPT_GOTO">"GOTO"の使い方</a><br>
+				<a href="#SCRIPT_GOSUB">"GOSUB"とサブルーチンの使い方</a><br>
+				<a href="#SCRIPT_TIMER">タイマーの設定と使い方</a><br>
+				<a href="#SCRIPT_CHOICES">"CHOICES" 選択肢の作成と使い方</a><br>
+				<a href="#SCRIPT_CHOICES_2">"CHOICES" 選択肢の項目の細かい設定</a><br>
+				<a href="#SCRIPT_CHOICES_3">"CHOICES" 時限式の選択肢</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">画面設定</div>
+			<div class="trysmallmenuitem">
+				<a href="#SCREEN_WINDOWSIZE">ウインドウサイズの設定</a><br>
+				<a href="#SCREEN_AREALIMIT">移動可能領域の設定</a><br>
+				<a href="#SCREEN_VERTICALSCROLL">縦スクロール風にする</a><br>
+				<a href="#SCREEN_HORIZONSCROLL">横スクロール風にする</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">ゲームシステム設定</div>
+			<div class="trysmallmenuitem">
+				<a href="#GAMESYSTEM_RANK">ランクに関わる設定</a><br>
+				<a href="#GAMESYSTEM_SCORE">スコアに関わる設定</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">プレイヤー設定</div>
+			<div class="trysmallmenuitem">
+				<a href="#PLAYER_CREATE">プレイヤーの生成と消去</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">敵の生成と設定</div>
+			<div class="trysmallmenuitem">
+				<a href="#ENEMY_CREATE">敵を生成する</a><br>
+				<a href="#ENEMY_DELETE">敵を削除する</a><br>
+				<a href="#ENEMY_EXIST">敵の存在を確認する</a><br>
+				<a href="#ENEMY_PRELOAD">敵ファイルのプリロード</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">アイテムの設定</div>
+			<div class="trysmallmenuitem">
+				<a href="#ITEM_CREATE">アイテムを作成する</a><br>
+				<a href="#ITEM_CONSTRUCT">アイテムの構成を変更する</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">背景の設定と制御</div>
+			<div class="trysmallmenuitem">
+				<a href="#BACKGROUND_LOAD">背景の読み込みと設定</a><br>
+				<a href="#BACKGROUND_CHANGE">背景を切り替える</a><br>
+				<a href="#BACKGROUND_MOVE">背景を動かす</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">オブジェクト</div>
+			<div class="trysmallmenuitem">
+				<a href="#OBJECT_ABOUT">オブジェクトとは</a><br>
+				<a href="#OBJECT_WORD">オブジェクトで文字を表示する</a><br>
+				<a href="#OBJECT_IMAGE">オブジェクトで画像を表示する</a><br>
+				<a href="#OBJECT_FILL">オブジェクトで矩形を塗りつぶす</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">サブスクリプト</div>
+			<div class="trysmallmenuitem">
+				<a href="#SUBSCRIPT_ABOUT">サブスクリプトとは</a><br>
+				<a href="#SUBSCRIPT_CREATE">サブスクリプトの追加と破棄</a><br>
+				<a href="#SUBSCRIPT_SAMPLE">サブスクリプトの使用例</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">音楽と効果音</div>
+			<div class="trysmallmenuitem">
+				<a href="#SOUND_BGMSE">"BGMPLAY"と"SEPLAY"</a><br>
+				<a href="#SOUND_ABOUTDSE">DSE系命令について</a><br>
+				<a href="#SOUND_DSEPLAY">"DSEPLAY"による再生</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">画面特殊効果</div>
+			<div class="trysmallmenuitem">
+				<a href="#SCREENEFFECT_ABOUT">スクリーンエフェクトについて</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">デバッグ機能</div>
+			<div class="trysmallmenuitem">
+				<a href="#DEBUG_DEBUGMODE">"DEBUGMODE"と"DEBUG"の使い方</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">プリプロセッサ命令</div>
+			<div class="trysmallmenuitem">
+				<a href="#PREPROCESS_INCLUDE">#includeの使い方</a><br>
+			</div>
+		</div>
+
+		<div class="trysmallmenu">
+			<div class="trysmallmenutitle">その他</div>
+			<div class="trysmallmenuitem">
+				<a href="#ETC_FILEPATH">ファイルの読み込みとパスについて</a><br>
+				<a href="#ETC_KILLCOUNTER">キルカウンターについて</a><br>
+				<a href="#ETC_SCROLL">スクロールについて</a><br>
+			</div>
+		</div>
+</div>
+<hr class="line_s">
+<table class="messagetable"><tr align="left"><td>
+	<br>
+
+<!-- _BASIC_ -->
+
+	<a name="BASIC_REQUEST" id="BASIC_REQUEST"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			トライの作成に必要なもの
+		</div>
+		<div class="trytextbody">
+			・適当なテキストエディタ<br>
+			<br>
+			専用のエディタなどはありません。<br>
+			テキストエディタで必要最低限の内容を記述し、拡張子を*.ftdにすればトライとして認識されるようになります。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="BASIC_INIT" id="BASIC_INIT"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			初期設定に関して
+		</div>
+		<div class="trytextbody">
+			初期状態では以下のような設定になっています。<br>
+			<br>
+			・全方向<br>
+			・スクリーン（ウインドウ）サイズはプログラム起動時の設定が使用される<br>
+			・プレイヤーはトライ開始直後に生成される<br>
+			・プレイヤーのタイプや装備はフリープレイの設定が使用される<br>
+			・その他背景などの設定もフリープレイの設定が使用される<br>
+			<br>
+			縦や横スクロール風にしたり、オープニングなどの演出を加えたい場合は<br>
+			各種命令を使って設定を変更する必要があります。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="BSSIC_BEGINNER" id="BSSIC_BEGINNER"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			Hello world!
+		</div>
+		<div class="trytextbody">
+			まずはお約束のこんにちは世界から。<br>
+			実行すると画面左上に文字が表示されると同時にトライが終了します。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"MESSAGE", "Hello world!"
+"END"
+</code></pre>
+		<div class="trytextbody">
+			1行目の "FRAXY_TRY" はトライを宣言するための重要な命令です。<br>
+			この命令によりトライとして認識されるようになります。<br>
+			必ず最初に記述してください。<br>
+			パラメータとして指定されている 0 は初期設定オプションです。<br>
+			今回は特に指定することが無いので 0 としています。<br>
+			<br>
+			"MESSAGE" は文字を画面左上のシステムメッセージ欄に表示します。<br>
+			手軽なため、頻繁に使う命令です。<br>
+			<br>
+			最後の "END" はトライを終了します。<br>
+			トライは必ずこの命令か "GAMEOVER" で終了するようにしてください。<br>
+		</div>
+	</div>
+	<br>
+
+<!-- _SCRIPT_ -->
+
+	<a name="SCRIPT_BASIC" id="SCRIPT_BASIC"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			スクリプトの基本
+		</div>
+		<div class="trytextbody">
+			スクリプトは1行目から順番に実行されます。<br>
+			<br>
+			以下はサンプルを見てください。<br>
+			敵を1機生成し、それが破壊されると終了します。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+"END"
+</code></pre>
+		<div class="trytextbody">
+			"LIMIT" は敵やパーツの数によってスクリプトの実行を停止します。<br>
+			パラメータは敵の数とパーツの数です。<br>
+			<br>
+			敵の数はコアとして認識されているパーツの数です。<br>
+			敵が分離するとコアの数が変化するので注意してください。<br>
+			<br>
+			パーツの数は存在している全てのパーツの合計です。<br>
+			<br>
+			このサンプルではどちらも 0 が指定されているので<br>
+			敵が1機以上、もしくはパーツが1つ以上存在している場合、"LIMIT" の行で処理が停止することになります。<br>
+			<br>
+			これらの値に -1 を指定するとそのパラメータは無視されます。<br>
+			例えば "LIMIT", -1, 0 と記述した場合、<br>
+			パーツが1つ以上存在している場合に "LIMIT" の行で処理が停止することになり、敵の数は無視されます。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="SCRIPT_BREAK" id="SCRIPT_BREAK"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			Break属性について
+		</div>
+		<div class="trytextbody">
+			上のサンプルでは "LIMIT" を使ってスクリプトを制御していました。<br>
+			"LIMIT" はBreak属性を持っていて、スクリプトを制御する上でとても重要になります。<br>
+			<br>
+			トライはゲーム処理とスクリプト処理を交互に行います。<br>
+			Break属性はスクリプト処理を中断してゲーム処理に実行権を移すことを意味します。<br>
+			<br>
+			上のサンプルは別の方法でも同様の事が可能です。<br>
+			まずは "WAITFOR" を使ったサンプルです。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"WAITFOR", ((getinfo(50,0) = 0) & (getinfo(51,0) = 0)), 0
+"END"
+</code></pre>
+		<div class="trytextbody">
+			"WAITFOR" はBreak属性を持ち、値を評価します。<br>
+			値が真ならばBreakも停止もせずに次の行に移行します。<br>
+			値が偽ならばBreakし、任意のフレームの間だけ処理を停止します。<br>
+			<br>
+			ここでは getinfo(50,0) と getinfo(51,0) のどちらも 0 の場合に真になるようにしています。<br>
+			getinfo(50,0) は敵（コア）の数、getinfo(51,0) はパーツの数を返す関数です。<br>
+			<br>
+			"LIMIT" は敵の数とパーツの数による判定で、待ち時間は 0 で固定されていますが、<br>
+			"WAITFOR" は任意の値や式で判定し、待ち時間も自由に指定できます。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="SCRIPT_REPEAT" id="SCRIPT_REPEAT"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"REPEAT"の使い方
+		</div>
+		<div class="trytextbody">
+			"REPEAT" は任意の回数だけ処理を繰り返します。<br>
+			この命令でも上のサンプルと同様の処理が実現できます。<br>
+			"LIMIT" と比較すると行数が大幅に増えて面倒に思えますが、<br>
+			ループの中で変数操作や他の命令を加える事でより複雑な処理も実現できます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"REPEAT", -1
+	"IF", ((getinfo(50,0) = 0) & (getinfo(51,0) = 0))
+		"EXITLOOP"
+	"ENDIF"
+	"WAIT", 0
+"LOOP"
+"END"
+</code></pre>
+		<div class="trytextbody">
+			"REPEAT" は必ず "LOOP" と対で記述してください。<br>
+			<br>
+			ここではループ回数に -1 を指定して無現ループにしています。<br>
+			無限ループの中で getinfo(50,0) と getinfo(51,0) の値を監視し、<br>
+			どちらも 0 になった場合に "EXITLOOP" で無限ループから脱出します。<br>
+			<br>
+			"WAIT" はBreak属性を持ち、任意のフレームの間だけスクリプトの処理を停止します。<br>
+			このスクリプトで "WAIT" を入れ忘れた場合、<br>
+			Break属性の無い命令のみで無限ループを実行する事になり、理論上ではハングアップすることになります。<br>
+			対策として1フレームで実行できる命令の回数が1024回までに制限されているためハングアップすることはありませんが、<br>
+			非常に動作が遅くなるため注意してください。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="SCRIPT_REPEAT_2" id="SCRIPT_REPEAT_2"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"CONTINUE"の使い方
+		</div>
+		<div class="trytextbody">
+			"CONTINUE" はループ内で使用する命令で、<br>
+			任意の位置でループカウンタを加算しループの開始位置に戻ります。<br>
+			ループ回数が残っていない場合は終了位置にジャンプします。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"REPEAT", 5
+	a++
+	"IF", (a ! 3)
+		"CONTINUE"
+	"ENDIF"
+	"MESSAGE", "a = 3"
+"LOOP"
+"WAIT", 120
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCRIPT_REPEAT_3" id="SCRIPT_REPEAT_3"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"REPEAT"を使って複数の敵を生成する
+		</div>
+		<div class="trytextbody">
+			例えば敵を複数生成したい場合、一つ一つ記述するのは効率的ではありません。<br>
+			規則性があるならば "REPEAT" を使って簡単に生成できます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"CREATE", "starfish.fed", 2048, -1024, 150, 0, 1
+"CREATE", "starfish.fed", 2048,  -512, 150, 0, 1
+"CREATE", "starfish.fed", 2048,     0, 150, 0, 1
+"CREATE", "starfish.fed", 2048,   512, 150, 0, 1
+"CREATE", "starfish.fed", 2048,  1024, 150, 0, 1
+"LIMIT", 0, 0
+"END"
+</code></pre>
+<br>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"REPEAT", 5
+	"CREATE", "starfish.fed", 2048, -1024+_cnt*512, 150, 0, 1
+"LOOP"
+"LIMIT", 0, 0
+"END"
+</code></pre>
+		<div class="trytextbody">
+			"REPEAT" を使用している方で _cnt というシステム変数を使用しています。<br>
+			これはループカウンタで現在実行中の "REPEAT" のループした回数が代入されています。<br>
+			ループ回数は 0 からカウントされます。<br>
+			<br>
+			ループカウンタはループごとに値を保持しているため、多重ループの場合は現在実行中のループのカウンタを参照します。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"REPEAT", 5
+	x = _cnt
+	"REPEAT", 5
+		y = _cnt
+		"MESSAGE", "x,y = "+x+","+y
+		"WAIT", 80
+	"LOOP"
+"LOOP"
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCRIPT_GOTO" id="SCRIPT_GOTO"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"GOTO"の使い方
+		</div>
+		<div class="trytextbody">
+			"GOTO" は任意のラベルの行にジャンプします。<br>
+			これは単純なプログラムジャンプです。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"GOTO", "*LABEL1"
+"MESSAGE", "このメッセージは飛ばされる"
+*LABEL1
+"MESSAGE", "終わり"
+"END"
+</code></pre>
+		<div class="trytextbody">
+			"GOTO" は "REPEAT" と同じようにループ構造を作ることができます。<br>
+			この場合、"EXITLOOP" は使えないので "GOTO" を使って抜け出す事になります。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+*LABEL1
+	"WAIT", 0
+	x++
+	"IF", x = 200
+		"GOTO", "*LABEL2"
+	"ENDIF"
+"GOTO", "*LABEL1"
+*LABEL2
+"END"
+</code></pre>
+		<div class="trytextbody">
+			注意しなくてはならないのは "REPEAT" のループ内や "GOSUB" のサブルーチンから "GOTO" で抜けだしてはいけないという点です。<br>
+			"REPEAT" はシステムにループの基点情報を書き込み、 "LOOP" や "EXITLOOP" でその情報を消去しています。<br>
+			"GOSUB" も "RETURN" で情報を消去しています。<br>
+			"GOTO" で抜けてしまった場合はその情報が消去されずシステム内に溜まり続けてエラーを引き起こします。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+*LABEL3
+"REPEAT", -1
+	"WAIT", 0
+	x++
+	"GOTO", "*LABEL2"	// "EXITLOOP" を使わなければならない
+"LOOP"
+*LABEL2
+"IF", x < 100
+	"GOTO", "*LABEL3"
+"ENDIF"
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCRIPT_GOSUB" id="SCRIPT_GOSUB"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"GOSUB"とサブルーチンの使い方
+		</div>
+		<div class="trytextbody">
+			"GOSUB" は任意のラベルの行にジャンプします。<br>
+			"GOTO" との違いはジャンプする前の位置をシステムに保持する点です。<br>
+			そのため "RETURN" で元の位置に戻る事ができ、そして "RETURN" で戻らなければならないという事でもあります。<br>
+			<br>
+			"GOSUB" の飛び先のラベルから "RETURN" までのコードをサブルーチンと呼びます。<br>
+			注意点は "REPEAT" と同様、サブルーチン内から "GOTO" で抜け出してはいけません。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"GOSUB", "*LABEL1"
+"MESSAGE", "RETURNで戻ってきた"
+"END"
+
+*LABEL1
+	"MESSAGE", "GOSUBで*LABEL1に飛んだ"
+	"RETURN"
+</code></pre>
+		<div class="trytextbody">
+			サブルーチンは処理を部分的に分離して呼び出すように使用するのが一般的です。<br>
+			複数個所で同じ処理を行うような場合はサブルーチン化することでコードを短くでき、<br>
+			修正や変更する場合もサブルーチンに集約しているため楽になります。<br>
+			<br>
+			上で「サブルーチン内から "GOTO" で抜け出してはいけません」と書いていますが、<br>
+			例えば次のような場合は構造的には問題ない（結果的に戻ってきて "RETURN" が実行される）ためエラーは発生しません。<br>
+			これは "REPEAT" でも同じ事が言えます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"GOSUB", "*LABEL1"
+"END"
+
+*LABEL1
+	"GOTO", "*LABEL2"
+*LABEL3
+	"RETURN"
+
+*LABEL2
+	"GOTO", "*LABEL3"
+</code></pre>
+		<div class="trytextbody">
+			また次のように別の "RETURN" で戻ってもエラーにはなりません。<br>
+			しかし構造的に解りにくくなるので推奨はしません。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"GOSUB", "*LABEL1"
+"END"
+
+*LABEL1
+	"GOTO", "*LABEL2"
+	"RETURN"
+
+*LABEL2
+	"RETURN"
+
+</code></pre>
+
+	</div>
+	<br>
+
+	<a name="SCRIPT_TIMER" id="SCRIPT_TIMER"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			タイマーの設定と使い方
+		</div>
+		<div class="trytextbody">
+			タイマーはシステムとして用意されているタイムカウンタです。<br>
+			"TIMER" で時間（秒単位）を設定し "START" でカウントを開始、"STOP" で停止できます。<br>
+			時間切れになるとゲームオーバーになります。<br>
+			"TIMERADD" で残り時間に任意の秒数を加算できます。<br>
+			残り時間はシステム変数の _time で参照できますが、こちらは秒ではなくフレーム単位（1秒=40フレーム）になります。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"TIMER", 10
+"START"
+"MESSAGE", "_timeの値は "+_time
+"LIMIT", 0, 0
+"END"
+</code></pre>
+		<div class="trytextbody">
+			"TIMEREND" で時間切れの処理を変更できます。<br>
+			ラベルジャンプを指定した場合は以下の点に注意してください。<br>
+			・ジャンプする際にループなどの情報は全て破棄される<br>
+			・ジャンプするスクリプトは常にメインスクリプト(ID0)のみ<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"TIMER", 10
+"TIMEREND", 2, "*TIMEUP"
+"START"
+"LIMIT", 0, 0
+"END"
+
+*TIMEUP
+	"MESSAGE", "時間切れでラベルに飛んだ"
+	"WAIT", 80
+	"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCRIPT_CHOICES" id="SCRIPT_CHOICES"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"CHOICES" 選択肢の作成と使い方
+		</div>
+		<div class="trytextbody">
+			"CHOICES" は選択肢を作成します。<br>
+			選択肢が生成されると全てのスクリプトが強制的に停止状態になり選択待ちになります。<br>
+			項目が選ばれるとシステム変数 _stat に項目のIDを返し、"CHOICES" が実行されたスクリプトから再開されます。<br>
+			IDは項目一つ目から順番に 0, 1, 2... と割り振られています。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"CHOICES", "Item-1", "Item-2", "Item-3"
+"MESSAGE", "IDは "+_stat
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCRIPT_CHOICES_2" id="SCRIPT_CHOICES_2"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"CHOICES" 選択肢の項目の細かい設定
+		</div>
+		<div class="trytextbody">
+			通常の "CHOICES" は画面中央に簡単な選択肢を生成します。<br>
+			各項目は位置や表示タイプを設定することができます。<br>
+			<br>
+			表示タイプと位置を設定してから "CHOICES" を実行します。<br>
+			このサンプルでは文字タイプを使用していますが他のタイプに関してはトライフォルダ内のサンプルをご覧ください。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"CHOICEWORD", 0
+"CHOICEWORD" ,1
+"CHOICEWORD", 2
+"CHOICEPOS", 0, 5, 4, -60, 0
+"CHOICEPOS", 1, 5, 4,   0, 0
+"CHOICEPOS", 2, 5, 4,  60, 0
+"CHOICES", "Item-1", "Item-2", "Item-3"
+"MESSAGE", "IDは "+_stat
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCRIPT_CHOICES_3" id="SCRIPT_CHOICES_3"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"CHOICES" 時限式の選択肢
+		</div>
+		<div class="trytextbody">
+			少し複雑になりますがサブスクリプトを使用することで時限式の選択肢を作る事もできます。<br>
+			"SETCOOPERATIVE" で協調レベルを変更し、"CHOICES" による強制停止を無効化している点が重要になります。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+// サブスクリプト作成、協調レベルを 1 に設定
+"ADDSUBSCRIPT", "*CHOICE_TIMER", subID_CHOICE_TIMER
+"SETCOOPERATIVE", subID_CHOICE_TIMER, 1
+
+// タイマーとして使う変数 280/40=約7秒
+t = 280
+
+// 表示用オブジェクト作成
+"CREATEOBJECT", objID_message,   5, 1, 0,  20, -1, 8
+"OBJECTWORD", "", objID_message
+
+// 選択肢作成
+"CHOICES", "Item-1", "Item-2", "Item-3"
+"MESSAGE", "IDは "+_stat
+
+// 選択肢が選ばれた場合、サブスクリプト削除
+"IF", (subID_CHOICE_TIMER ! 0)
+	"DELSUBSCRIPT", subID_CHOICE_TIMER
+"ENDIF"
+"WAIT", 80
+"END"
+
+// サブスクリプト本体、時間切れになった場合は選択肢に-1を返しサブスクリプトを削除する
+// 協調レベルが 1 に設定されているので "CHOICES" が実行されても止まらない
+*CHOICE_TIMER
+	"WAIT", 0
+
+	// タイマー処理
+	t--
+	"OBJECTSTRING", "残り "+strf("%2.2f",(double(t)/40))+" 秒", objID_message, 256
+
+	// タイマーが 0 になったら選択肢の結果を -1 として破棄し、実行中のサブスクリプトを削除
+	"IF", t = 0
+		subID_CHOICE_TIMER = 0
+		"DESTROYCHOICES", -1
+		"DELSUBSCRIPT", -1
+	"ENDIF"
+	"GOTO", "*CHOICE_TIMER"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _SCREEN_ -->
+
+	<a name="SCREEN_WINDOWSIZE" id="SCREEN_WINDOWSIZE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			ウインドウサイズの設定
+		</div>
+		<div class="trytextbody">
+			ウインドウサイズを変更するには "WINDOW" を使用します。<br>
+			変更されたウインドウサイズはトライ終了時に自動的に復元されます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+"WAIT", 80
+"WINDOW", 320, 240
+"WAIT", 80
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCREEN_AREALIMIT" id="SCREEN_AREALIMIT"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			移動可能領域の設定
+		</div>
+		<div class="trytextbody">
+			プレイヤーの移動可能領域を設定するには "AREALIMIT" を使用します。<br>
+			この領域は円形と四角形があります。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"MESSAGE", "四角形"
+"WINDOW", 480, 360
+"AREALIMIT", 2, 3, 160, 160
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+
+"MESSAGE", "円形"
+"WINDOW", 480, 360
+"AREALIMIT", 1, 1, 160, 0
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCREEN_VERTICALSCROLL" id="SCREEN_VERTICALSCROLL"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			縦スクロール風にする
+		</div>
+		<div class="trytextbody">
+			通常は全方向フリースクロールとなっていますが、よくある縦/横スクロール風にすることもできます。<br>
+			以下の命令で設定します。<br>
+			<br>
+			"AREAFIXED" でフリースクロールを無効化。<br>
+			"AREALIMIT" で移動可能領域を制限。<br>
+			"PLAYERANGLE" でプレイヤーの方向を制限。<br>
+			その他スクロールを設定する命令でスクロール方向に合わせる。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"WINDOW", 480, 360
+"AREAFIXED", 1
+"AREALIMIT", 2, 2, 140, 170
+"PLAYERANGLE", 0, 1
+"ITEMSCROLL", 256, 1, 2048, 1
+"BGSCROLL", 1024, 0, 2048, 0
+
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SCREEN_HORIZONSCROLL" id="SCREEN_HORIZONSCROLL"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			横スクロール風にする
+		</div>
+		<div class="trytextbody">
+			縦スクロールのサンプルを横スクロールに変更したものです。<br>
+			とりあえず実行してみると…何か違和感を感じるかもしれません。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"WINDOW", 480, 360
+"AREAFIXED", 1
+"AREALIMIT", 2, 0, 230, 170
+"PLAYERANGLE", 1024, 1
+"ITEMSCROLL", 256, 1, 3072, 1
+"BGSCROLL", 1024, 0, 3072, 0
+
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+"END"
+</code></pre>
+		<div class="trytextbody">
+			プレイヤーが上方向基準で生成され、くるりと回転して右を向いているはずです。<br>
+			これは初期状態でプレイヤーが上方向基準で生成されているために発生する現象です。<br>
+			これを修正するには "FRAXY_TRY" のオプションでプレイヤーを生成せずに開始し、<br>
+			設定が終わった段階で "SETPLAYER" でプレイヤーを生成するようにします。<br>
+			縦スクロールの場合もこのように設定しておくと確実です。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 1
+
+"WINDOW", 480, 360
+"AREAFIXED", 1
+"AREALIMIT", 2, 0, 230, 170
+"PLAYERANGLE", 1024, 1
+"ITEMSCROLL", 256, 1, 3072, 1
+"BGSCROLL", 1024, 0, 3072, 0
+"SETPLAYER"
+
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+"END"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _GAMESYSTEM_ -->
+
+	<a name="GAMESYSTEM_RANK" id="GAMESYSTEM_RANK"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			ランクに関わる設定
+		</div>
+		<div class="trytextbody">
+			敵のランク関連はフリープレイの設定が引き継がれますが設定を変える事もできます。<br>
+			"RANK" はランクを任意の値に設定、"RANKRATE" は敵パーツを破壊した際の上昇率を設定します。<br>
+			また、敵を生成する際にランクを指定するパラメータがあります。<br>
+			生成時にランク指定を 0 にすると現在のランク値が適用されます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+// rank:40    rate:100%
+"RANK", 40
+"RANKRATE", 100
+
+// 現在のランク値で生成
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+
+// 任意のランク値(rank:80)で生成
+"CREATE", "starfish.fed", 2048, 0, 160, 80, 1
+"LIMIT", 0, 0
+
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="GAMESYSTEM_SCORE" id="GAMESYSTEM_SCORE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			スコアに関わる設定
+		</div>
+		<div class="trytextbody">
+			ランク関連と同様にスコア関連もフリープレイの設定が引き継がれますが設定を変える事もできます。<br>
+			"SCORESYSTEM" でパーツ破壊時のスコアや倍率の表示とどのように倍率を適用するかを設定します。<br>
+			"SCORERATE" で設定できる倍率は "SCORESYSTEM" で任意の倍率指定がされている際に適用されます。<br>
+			<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+// 倍率表示、任意の倍率指定
+"SCORESYSTEM", 1, 2
+"SCORERATE", 3
+
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+
+// 獲得スコア表示、任意の倍率指定
+"SCORESYSTEM", 2, 2
+"SCORERATE", 3
+
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+"LIMIT", 0, 0
+
+"END"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _PLAYER_ -->
+
+	<a name="PLAYER_CREATE" id="PLAYER_CREATE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			プレイヤーの生成と消去
+		</div>
+		<div class="trytextbody">
+			特に何も指定せずに開始するとすぐにプレイヤーが生成されます。<br>
+			これを任意のタイミングで生成する場合はまず "FRAXY_TRY" のオプションに &amp;1 を設定します。<br>
+			このオプションが指定されると初期化時にプレイヤーを生成しないようになります。<br>
+			次に生成したいタイミングで "SETPLAYER" でプレイヤーを生成します。<br>
+			<br>
+			既に生成されているプレイヤーを消去したい場合は "DESTROYPLAYER" を使用します。<br>
+			オプションで消去時のエフェクトを指定できます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 1
+
+// 80Frame待ってから生成
+"WAIT", 80
+"SETPLAYER"
+
+// 消去、エフェクト無し
+"WAIT", 80
+"DESTROYPLAYER", -1
+
+"WAIT", 80
+"SETPLAYER"
+
+// 消去、爆発エフェクト
+"WAIT", 80
+"DESTROYPLAYER", 0
+
+"WAIT", 80
+"SETPLAYER"
+
+// 消去、フェイズインエフェクト
+"DESTROYPLAYER", 1
+"WAIT", 80
+
+"END"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _ENEMY_ -->
+
+	<a name="ENEMY_CREATE" id="ENEMY_CREATE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			敵を生成する
+		</div>
+		<div class="trytextbody">
+			敵を生成する命令は "CREATE" と "CREATE2" があります。<br>
+			"CREATE" はプレイヤーの位置を基準に生成方向と距離を指定します。<br>
+			初期方向は生成される敵がどの方向を向いて生成されるかを指定します。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+// "create", "filename", 初期方向, 生成方向, 生成距離, ランク値, オプション
+"CREATE", "starfish.fed", 2048, 0, 160, 80, 1
+"LIMIT", 0, 0
+
+"END"
+</code></pre>
+		<div class="trytextbody">
+			"CREATE2" は絶対座標で生成します。<br>
+			基準となる座標は 0,0 で、これは "POS" で変更できます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+// "create2", "filename", 初期方向, X, Y, ランク値, オプション
+"CREATE2", "starfish.fed", 2048, 0, -160, 80, 1
+"LIMIT", 0, 0
+
+"END"
+</code></pre>
+		<div class="trytextbody">
+			敵の生成に失敗した場合、システム変数の _stat に負数を返します。<br>
+			敵の生成に成功した場合、システム変数の _stat にコアパーツのIDを返します。<br>
+			コアパーツのIDは "DESTROYENEMY" などで必要になります。<br>
+			<br>
+			また、生成直後であれば getinfo によっていくつかの情報が取得できます。<br>
+			<br>
+			getinfo(52,ID)<br>
+			直前に生成した敵の任意のパーツのIDを取得します。<br>
+			IDにはエディタで読み込んだ際のIDを指定してください。<br>
+			<br>
+			getinfo(53,0)<br>
+			直前に生成した敵のパーツ数を取得します。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="ENEMY_DELETE" id="ENEMY_DELETE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			敵を削除する
+		</div>
+		<div class="trytextbody">
+			敵を削除する命令は "CLEARENEMY" と "DESTROYENEMY" があります。<br>
+			"CLEARENEMY" は現存する全ての敵を削除します。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"CREATE", "starfish.fed", 2048, -512, 200, 80, 1
+"CREATE", "starfish.fed", 2048, 0, 200, 80, 1
+"CREATE", "starfish.fed", 2048, 512, 200, 80, 1
+"WAIT", 100
+// 敵全てを削除（破壊）
+"CLEARENEMY", 0
+
+"CREATE", "starfish.fed", 2048, -512, 200, 80, 1
+"CREATE", "starfish.fed", 2048, 0, 200, 80, 1
+"CREATE", "starfish.fed", 2048, 512, 200, 80, 1
+"WAIT", 100
+// 敵全てを削除（フェイズイン）
+"CLEARENEMY", 1
+
+"END"
+</code></pre>
+		<div class="trytextbody">
+			"DESTROYENEMY" は任意の敵を削除することができます。<br>
+			任意の敵を指定するには敵のIDが必要になるので<br>
+			"CREATE" などで生成した際にIDを変数に格納しておく必要があります。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"CREATE", "starfish.fed", 2048, -512, 200, 80, 1
+
+// 2機目のIDを target に格納して削除する
+"CREATE", "starfish.fed", 2048, 0, 200, 80, 1
+target = _stat
+
+"CREATE", "starfish.fed", 2048, 512, 200, 80, 1
+"WAIT", 100
+"DESTROYENEMY", target, 1
+
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="ENEMY_EXIST" id="ENEMY_EXIST"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			敵の存在を確認する
+		</div>
+		<div class="trytextbody">
+			敵の存在を確認するには getinfo(10,ID) で調べる事ができます。<br>
+			しかしこれは単純にIDが使用中かどうかの検知しかできません。<br>
+			敵が破壊された後に再び生成された敵が同じIDを使う事があるため、任意の敵の存在を確認できないのです。<br>
+			<br>
+			そこで任意の敵が存在しているかどうかを確認するにはUIDを使います。<br>
+			UIDは敵（パーツ）に対して割り振られるユニークなIDで基本的に重複しません。<br>
+			敵生成時にIDとUIDを変数に記録しておき、調べたい時にUIDを比較します。<br>
+			getinfo(11,ID) でUIDを取得できます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+// 敵を生成、IDとUIDを保持する
+"CREATE", "starfish.fed", 2048, 0, 200, 80, 1
+target = _stat
+target_UID = getinfo(11,target)
+
+"WAIT", 100
+
+// 敵のUIDが一致するか調べる
+"IF", (getinfo(11,target) = target_UID)
+	"MESSAGE", "存在する"
+"ENDIF"
+
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="ENEMY_PRELOAD" id="ENEMY_PRELOAD"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			敵ファイルのプリロード
+		</div>
+		<div class="trytextbody">
+			これまでのサンプルでは敵を生成する際にファイル名を指定していました。<br>
+			シンプルな構成のトライであればその方法でも良いのですが、<br>
+			同じ敵を複数体同時に生成する場合やパーツ数の多い敵を生成するのには向いていません。<br>
+			ファイル指定の場合、ファイルの読み込みとテキストの解析処理が毎回実行されるためです。<br>
+			<br>
+			そこで、敵ファイルを予めバッファと呼ばれる入れ物に読み込んでおくことで生成速度を向上することができます。<br>
+			バッファは敵ファイルをテキスト形式からバイナリ形式に変換したものを格納するため、<br>
+			読み込みと解析処理が無い分だけ生成速度が速くなります。<br>
+			<br>
+			手順は "BUFFER" でバッファを作成し "LOAD" で敵ファイルを読み込みます。<br>
+			そして生成はファイル名の代わりに "*0" という風にアスタリスクにバッファのIDを付けて指定します。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+// バッファサイズ 32678byte で 4 個作成（IDは0~3が使える）
+"BUFFER", 32768, 4
+
+// ID 0 に読み込む
+"LOAD", "starfish.fed", 0
+
+"CREATE", "*0", 2048, -512, 200, 80, 1
+"CREATE", "*0", 2048, 0, 200, 80, 1
+"CREATE", "*0", 2048, 512, 200, 80, 1
+"LIMIT", 0, 0
+
+"END"
+</code></pre>
+		<div class="trytextbody">
+			バッファが作成済みの状態で再び "BUFFER" を実行すると以前作成したバッファは削除され、内容もクリアされます。<br>
+			つまりバッファの数は動的に増やす事ができません。<br>
+			トライの初期化時に十分なバッファの確保を行ってください。<br>
+			<br>
+			バッファのサイズは読み込むファイルのサイズを考慮して決めてください。<br>
+			バイナリ形式に変換すると元のテキストよりも大きくなる場合があります。<br>
+			目安は読み込む敵ファイルの中で最も大きいファイルに少し余裕を持たせるくらいです。<br>
+		</div>
+	</div>
+	<br>
+
+<!-- _ITEM_ -->
+
+	<a name="ITEM_CREATE" id="ITEM_CREATE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			アイテムを作成する
+		</div>
+		<div class="trytextbody">
+			"ITEM" と "ITEM2" は敵のコアを破壊した際に生成されるようなアイテムを任意の位置に作成することができます。<br>
+			<br>
+			"ITEM" はプレイヤーを原点として方向と距離による相対位置に生成し、<br>
+			"ITEM2" は "POS" で指定されている点を原点としてX,Yのオフセット指定による相対位置に生成します。<br>
+			<br>
+			パラメータの一つ目はアイテムのタイプ指定です。<br>
+			0 を指定すると通常のアイテム、<br>
+			1 を指定すると任意の構成のアイテム、<br>
+			負数を指定するとシステム定義のアイテムが生成されます。<br>
+			詳しくは<a target="view" href="item.html#ITEM"> ITEM </a>を参照してください。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"ITEM", 0, 0, 100
+"ITEM2", 0, 100, 100
+
+"WAIT", 300
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="ITEM_CONSTRUCT" id="ITEM_CONSTRUCT"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			アイテムの構成を変更する
+		</div>
+		<div class="trytextbody">
+			"ITEMCONSTRUCT" は "ITEM" と "ITEM2" の一つ目のパラメータに 1 を指定した場合に生成される任意の構成のアイテムを設定します。<br>
+			<br>
+			一つ目のパラメータに構成要素数を指定し、以降のパラメータに構成要素数の数だけアイテムを指定します。<br>
+			詳しくは<a target="view" href="item.html#ITEMCONSTRUCT"> ITEMCONSTRUCT </a>を参照してください。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"ITEMCONSTRUCT", 7, 1, 2, 3, 4, 5, 6, 7
+"ITEM", 1, 0, 100
+
+"WAIT", 300
+"END"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _BACKGROUND_ -->
+
+	<a name="BACKGROUND_LOAD" id="BACKGROUND_LOAD"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			背景の読み込みと設定
+		</div>
+		<div class="trytextbody">
+			トライでは背景を予め読み込んでおき、命令一つで切り替えることができます。<br>
+			まず背景を "BGLOAD" で読み込み、"BGCHANGE" で背景を切り替えます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+BG_Set = 1
+"BGLOAD","401/401_01.BMP", BG_Set, 0, 1600, 3, 255
+"BGLOAD","401/401_02.BMP", BG_Set, 1, 1250, 4, 255
+"BGLOAD","401/401_03.BMP", BG_Set, 2, 1000, 4, 255
+"BGCHANGE", BG_Set
+
+"WAIT", 300
+"END"
+</code></pre>
+		<div class="trytextbody">
+			この例では背景セット(1)に3つの画像を読み込んでいます。<br>
+			<br>
+			パラメータは次の通りです。<br>
+			"BGLOAD", "ファイル名", 背景セット, ID, Z値, ブレンドモード, ブレンド率<br>
+			<br>
+			背景セットは1～4の4つが使用でき、一つのセットに3つまで画像を登録することができます。<br>
+			セット内での表示順位はID依存で0から順番に描画されます。<br>
+			Z値はスクロールの処理に影響するもので表示順位には影響しません。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="BACKGROUND_CHANGE" id="BACKGROUND_CHANGE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			複数の背景を切り替える
+		</div>
+		<div class="trytextbody">
+			背景を切り替える際のフェード速度は "BGFADE" で変更できます。<br>
+			フェード速度は1～255の範囲で値が大きいほど遅くなります。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+BG_Set_A = 1
+"BGLOAD","401/401_01.BMP", BG_Set_A, 0, 1600, 3, 255
+"BGLOAD","401/401_02.BMP", BG_Set_A, 1, 1250, 4, 255
+"BGLOAD","401/401_03.BMP", BG_Set_A, 2, 1000, 4, 255
+
+BG_Set_B = 2
+"BGLOAD","401/401_04.jpg", BG_Set_B, 0,   -1, 3, 255
+"BGLOAD","401/401_02.BMP", BG_Set_B, 1, 1250, 4, 255
+"BGLOAD","401/401_03.BMP", BG_Set_B, 2, 1000, 4, 255
+
+"BGCHANGE", BG_Set_A
+"WAIT", 300
+
+"BGFADE", 128, 128, 128
+"BGCHANGE", BG_Set_B
+"WAIT", 400
+
+"BGCHANGE", BG_Set_A
+
+"WAIT", 300
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="BACKGROUND_MOVE" id="BACKGROUND_MOVE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			背景を動かす
+		</div>
+		<div class="trytextbody">
+			背景セットに読み込まれた画像には基点が設定されています。<br>
+			基点は実際に描画する際に描画位置のオフセットとして使われます。<br>
+			<br>
+			"BGBASEPOS" は基点を設定する命令、"BGMOVE" は基点を自動的に移動させる命令です。<br>
+			これらの命令で基点を動かすことで背景を動いているように見せかけることができます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+BG_Set = 1
+"BGLOAD","401/401_04.jpg", BG_Set, 0,   -1, 3, 255
+"BGLOAD","401/401_02.BMP", BG_Set, 1, 1250, 4, 255
+"BGLOAD","401/401_03.BMP", BG_Set, 2, 1000, 4, 255
+"BGCHANGE", BG_Set
+
+"BGMOVE", BG_Set, 0, -2048, 0, 500, 1
+
+"WAIT", 500
+"END"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _OBJECT_ -->
+
+	<a name="OBJECT_ABOUT" id="OBJECT_ABOUT"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			オブジェクトとは
+		</div>
+		<div class="trytextbody">
+			オブジェクトはトライスクリプトで文字や画像を表示する際の実体です。<br>
+			文字ならば文字列を保有したオブジェクト、<br>
+			画像ならば画像IDと画像情報を保有したオブジェクトといった具合になります。<br>
+			<br>
+			オブジェクトを生成するには "CREATEOBJECT" を使用し、<br>
+			明示的に破棄するには "DESTROYOBJECT" を使用します。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"CREATEOBJECT", objID, 0, 4, 0, 0, -1, 0
+"DESTROYOBJECT", objID, 0, 0, 0
+
+"WAIT", 200
+"END"
+</code></pre>
+		<div class="trytextbody">
+			オブジェクトは生成しただけでは何も表示されません。<br>
+			"OBJECTIMAGE" や "OBJECTWORD" などでタイプと値を設定する必要があります。
+		</div>
+	</div>
+	<br>
+
+	<a name="OBJECT_WORD" id="OBJECT_WORD"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			オブジェクトで文字を表示する
+		</div>
+		<div class="trytextbody">
+			オブジェクトを生成し "OBJECTWORD" で文字列型に設定します。<br>
+			既に文字列型であれば "OBJECTSTRING" で文字を変える事ができます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"CREATEOBJECT", objID, 0, 4, 0, 0, -1, 0
+"OBJECTWORD","Hello!", objID, -1, 0
+"WAIT", 200
+
+"OBJECTSTRING","Bye bye.", objID, 0 
+"WAIT", 200
+
+"DESTROYOBJECT", objID, 0, 0, 0
+"WAIT", 40
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="OBJECT_IMAGE" id="OBJECT_IMAGE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			オブジェクトで画像を表示する
+		</div>
+		<div class="trytextbody">
+			オブジェクトを生成し "OBJECTIMAGE" で画像型に設定します。<br>
+			画像は "LOADIMAGE" で予め読み込んでおく必要があります。<br>
+			画像型は "OBJECTANGLE" や "OBJECTZOOM" が使用できます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+imageID = 1
+"LOADIMAGE", "common_01.bmp", imageID
+
+"CREATEOBJECT", objID, 5, 4, 0, 0, -1, 32
+"OBJECTIMAGE", objID, imageID, 384, 48, 80, 80, 5, 255
+"WAIT", 40
+
+"REPEAT", 256
+	"OBJECTANGLE", objID, _cnt*_cnt/4
+	"OBJECTZOOM", objID, 512+_cnt*16, 512+_cnt*16
+	"WAIT", 0
+"LOOP"
+
+"DESTROYOBJECT", objID, 0, 0, 0
+"WAIT", 40
+"END"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="OBJECT_FILL" id="OBJECT_FILL"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			オブジェクトで矩形を塗りつぶす
+		</div>
+		<div class="trytextbody">
+			オブジェクトを生成し "OBJECTFILL" で塗りつぶし型に設定します。<br>
+			で塗りつぶし型は "OBJECTANGLE" や "OBJECTZOOM" が使用できます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+"CREATEOBJECT", objID, 5, 4, 0, 0, -1, 32
+"OBJECTFILL", objID, 255,128,0, 100,100, 5,255
+"WAIT", 40
+
+"REPEAT", 256
+	"OBJECTANGLE", objID, _cnt*_cnt/4
+	"OBJECTZOOM", objID, 512+_cnt*16, 512+_cnt*16
+	"WAIT", 0
+"LOOP"
+
+"DESTROYOBJECT", objID, 0, 0, 0
+"WAIT", 40
+"END"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _SUBSCRIPT_ -->
+
+	<a name="SUBSCRIPT_ABOUT" id="SUBSCRIPT_ABOUT"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			サブスクリプトとは
+		</div>
+		<div class="trytextbody">
+			サブスクリプトは一つのトライで複数のスクリプトを並列して実行する機能です。<br>
+			トライとして読み込まれ最初に実行されるスクリプトをメインスクリプトと呼び、<br>
+			"ADDSUBSCRIPT" で追加されたスクリプトをサブスクリプトと呼びます。<br>
+			<br>
+			サブスクリプトは例えば<br>
+			『他のスクリプトが A という状態を待っている間、常に B の処理を実行したい場合』<br>
+			このような他のスクリプトの状態に依存せず独立した処理を実行したい場合に有効です。<br>
+			<br>
+			メインスクリプトのIDは 0 で、サブスクリプトは追加された順に 1～15 が割り振られます。<br>
+			削除されたサブスクリプトのIDは追加される際に再利用されます。<br>
+			<br>
+			上でサブスクリプトは並列実行と書きましたが内部実装としてはID順の直列実行になります。<br>
+			まずメインスクリプトが実行されBreak属性のある命令によってスクリプトの処理が中断されるとID1のサブスクリプトが実行されます。<br>
+			同じようにID1のサブスクリプトでBreak属性のある命令が実行されるとID2のサブスクリプトが実行…という順番になっています。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="SUBSCRIPT_CREATE" id="SUBSCRIPT_CREATE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			サブスクリプトの追加と破棄
+		</div>
+		<div class="trytextbody">
+			"ADDSUBSCRIPT" でサブスクリプトを追加し、"DELSUBSCRIPT" で破棄します。<br>
+			サブスクリプトの実行起点はラベルであるため、"GOTO" で無限ループを作れば常に何らかの処理を実行させることができます。<br>
+			無限ループを作る場合は必ずBreak属性のある命令を挟むようにしてください。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+//	メインスクリプト
+subID = 0
+"ADDSUBSCRIPT", "*SUB", subID
+"WAIT", 400
+"END"
+
+//	サブスクリプト
+*SUB
+	"WAIT", 0
+	"IF", (count%40) == 0
+		"MESSAGE", "count = "+count
+	"ENDIF"
+	count++
+	"GOTO", "*SUB"
+</code></pre>
+	</div>
+	<br>
+
+	<a name="SUBSCRIPT_SAMPLE" id="SUBSCRIPT_SAMPLE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			サブスクリプトの使用例
+		</div>
+		<div class="trytextbody">
+			トライフォルダの sample_subscript にいくつかサンプルがあるので参考にしてみてください。<br>
+			その他にも <a href="#SCRIPT_CHOICES_3">"CHOICES" 時限式の選択肢</a> などがあります。<br>
+		</div>
+	</div>
+	<br>
+
+<!-- _SOUND_ -->
+
+	<a name="SOUND_BGMSE" id="SOUND_BGMSE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"BGMPLAY"と"SEPLAY"
+		</div>
+		<div class="trytextbody">
+			"BGMPLAY" はBGMを再生するための命令です。<br>
+			MCIを使用しているため再生できるファイル形式はその実行環境に依存します。<br>
+			別のBGMを再生したい場合は "BGMSTOP" で再生を停止する必要があります。<br>
+			<br>
+			"SEPLAY" は効果音を再生するための命令です。<br>
+			MCIを使用しているため複数の効果音を同時多重再生することができません。<br>
+			別の効果音を再生したい場合は "SEPLAY" で再生を停止する必要があります。<br>
+			<br>
+			どちらの命令もMCIを使用する古い命令です。<br>
+			可能であればDSE系命令を使用する事を推奨します。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="SOUND_ABOUTDSE" id="SOUND_ABOUTDSE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			DSE系命令
+		</div>
+		<div class="trytextbody">
+			DSE系命令は DirectSound を使用して効果音などを再生する命令です。<br>
+			"SEPLAY" よりも再生負荷が低く複数の効果音を同時多重再生でき、<br>
+			音量調整や自動フェードなども使用できます。<br>
+			<br>
+			この命令はBGM再生にも利用できます。<br>
+			ただしストリーミング再生には対応していません。<br>
+			ファイルをメモリに丸ごと展開するため、大きいファイルを扱う場合は注意が必要です。<br>
+			トライフォルダの sample_dse にBGM再生のサンプルがあります。<br>
+			<br>
+			読み込み可能なファイル形式は wav と mp3 になります。<br>
+			mp3 は読み込むとファイルサイズの10倍くらいのメモリを必要とします。<br>
+			大きいファイルの読み込みは少し時間がかかるため、<br>
+			スクリプトの初期設定時やシーンの移り変わりなどの節目に読み込むようにすると良いでしょう。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="SOUND_DSEPLAY" id="SOUND_DSEPLAY"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"DSEPLAY"による再生
+		</div>
+		<div class="trytextbody">
+			まず "DSELOAD" でサウンドファイルをバッファに読み込みます。<br>
+			バッファは 0～63 の64個が使用できます。<br>
+			"DSEPLAY" にはバッファIDを指定します。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+snd = 0	//	バッファ 0
+"DSELOAD", "explosion_01.wav", snd
+"WAIT", 80
+"REPEAT", 10
+	"DSEPLAY", snd, 70-_cnt*7, 0, 0	//	ID, volume(%), loopflag, fadein
+	"WAIT", 30
+"LOOP"
+"WAIT", 100
+"END"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _SCREENEFFECT_ -->
+
+	<a name="SCREENEFFECT_ABOUT" id="SCREENEFFECT_ABOUT"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			スクリーンエフェクトについて
+		</div>
+		<div class="trytextbody">
+			スクリーンエフェクトは画面全体に様々な特殊効果を発生させます。<br>
+			敵パーツが発生させるスクリーンエフェクトと<br>
+			トライスクリプトで発生させるスクリーンエフェクトは内部では同じものになります。<br>
+			同じ種類のスクリーンエフェクトは多重で実行することができず、最後に実行されたものが有効になります。<br>
+		</div>
+	</div>
+	<br>
+
+<!-- _DEBUG_ -->
+
+	<a name="DEBUG_DEBUGMODE" id="DEBUG_DEBUGMODE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			"DEBUGMODE"と"DEBUG"の使い方
+		</div>
+		<div class="trytextbody">
+			"DEBUGMODE" でデバッグを有効にすると<br>
+			ポーズ時やトライ終了時にスクリプトの実行ログを見る事ができます。<br>
+			スクリプトが想定通りに動作しているかどうかの確認に使用してください。<br>
+			"DEBUG" で実行ログに任意の文字列を書き込むことができます。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+//	デバッグモード ログタイプは全て指定
+"DEBUGMODE", 65535
+
+"DEBUG", "*** starfish.fed を生成 ***"
+"CREATE", "starfish.fed", 2048, 0, 160, 0, 1
+
+"LIMIT", 0, 0
+"DEBUG", "*** 敵が全滅した ***"
+
+"END"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _PREPROCESS_ -->
+
+	<a name="PREPROCESS_INCLUDE" id="PREPROCESS_INCLUDE"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			#includeの使い方
+		</div>
+		<div class="trytextbody">
+			#include はスクリプトを結合します。<br>
+			例えば次のようにコードを部分ごとに分割したい時に使います。<br>
+			<br>
+			try_sample.ftd<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+subID = 0
+"ADDSUBSCRIPT", "*SUB", subID
+"WAIT", 400
+"END"
+
+#include "sub.txt"
+</code></pre>
+		<div class="trytextbody">
+			<br>
+			sub.txt<br>
+		</div>
+<pre class="trycode"><code>
+*SUB
+	"WAIT", 0
+	"IF", (count%40) == 0
+		"MESSAGE", "count = "+count
+	"ENDIF"
+	count++
+	"GOTO", "*SUB"
+</code></pre>
+		<div class="trytextbody">
+			<br>
+			try_sample.ftd の出力結果は以下のようになります。<br>
+		</div>
+<pre class="trycode"><code>
+"FRAXY_TRY", "Try Sample", 0
+
+subID = 0
+"ADDSUBSCRIPT", "*SUB", subID
+"WAIT", 400
+"END"
+
+*SUB
+	"WAIT", 0
+	"IF", (count%40) == 0
+		"MESSAGE", "count = "+count
+	"ENDIF"
+	count++
+	"GOTO", "*SUB"
+</code></pre>
+	</div>
+	<br>
+
+<!-- _ETC_ -->
+
+	<a name="ETC_FILEPATH" id="ETC_FILEPATH"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			ファイルの読み込みとパスについて
+		</div>
+		<div class="trytextbody">
+			敵や画像などのファイルを読み込む際は次の順番でファイルを検索します。<br>
+			<br>
+			1. 実行中のトライデータ(*.ftd)があるフォルダ<br>
+			2. fraxy.exeがあるフォルダ<br>
+			3. fraxyのtryフォルダ<br>
+			4. fraxyのファイルタイプ別フォルダ(enemy,img,bgm,se)<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="ETC_KILLCOUNTER" id="ETC_KILLCOUNTER"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			キルカウンターについて
+		</div>
+		<div class="trytextbody">
+			キルカウンターは敵が破壊されたり削除された際に値が増加します。<br>
+			値を参照するには getinfo(98,n) を使うかシステム変数を使用します。<br>
+			<br>
+			・キルカウンター(ALL) ... getinfo(98,0)<br>
+			状態や手法を問わずパーツが削除されると増加します。<br>
+			例えば10個のパーツで構成された敵が削除されるとこの値が10増加します。<br>
+			<br>
+			・キルカウンター(Enemy) ... getinfo(98,1)<br>
+			大元のコアパーツが削除されると増加します。<br>
+			これは分離などでコアパーツになったものはカウントされません。<br>
+			<br>
+			・キルカウンター(Core) ... getinfo(98,2) もしくは _killcore<br>
+			パーツのキルカウントフラグに &amp;1 や &amp;2 が指定されていて条件を満たす場合にカウントされます。<br>
+			<br>
+			・キルカウンター(Parts) ... getinfo(98,3) もしくは _killparts<br>
+			パーツのキルカウントフラグに &amp;4 や &amp;8 が指定されていて条件を満たす場合にカウントされます。<br>
+		</div>
+	</div>
+	<br>
+
+	<a name="ETC_SCROLL" id="ETC_SCROLL"></a><br>
+	<div class="trytextbox">
+		<div class="trytexthead">
+			スクロールについて
+		</div>
+		<div class="trytextbody">
+			スクロールは背景などを任意の方向に動かすことで実際に飛んでいるように錯覚させるものです。<br>
+			これはプレイヤーやプレイヤーの弾、敵、敵弾には影響を与えません。<br>
+			<br>
+			トライでスクロールを使用する場合は "BGSCROLL" で背景のスクロールを設定します。<br>
+			"EFFECTSCROLL" は爆発などのエフェクトオブジェクト、"ITEMSCROLL" はアイテムのスクロールを設定できます。<br>
+			これらは "BGSCROLL" と同じ値を指定すれば背景と合うようになります。<br>
+			当然それぞれ別の値を指定しても構いません。<br>
+			<br>
+			スクロール方向は『背景を動かす方向』を指定します。<br>
+			例えばよくある縦スクロールにしたい場合、プレイヤーが上向きに飛んでいるようにするために背景は下向きに動かします。<br>
+			よってスクロール方向は下方向である 2048 を指定します。<br>
+		</div>
+	</div>
+	<br>
+
+</td></tr></table>
+
+</div>
+<hr class="line_s">
+<div class="blank"></div>
+</body>
+</html>

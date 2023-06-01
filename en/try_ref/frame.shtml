@@ -1,0 +1,616 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<script type="text/javascript">
+<!--
+function PartsMenu(num){obj=document.getElementById(num).style;flag=obj.display;if(flag=="none"){obj.display="block"}else{obj.display="none"}}
+// -->
+</script>
+<title>Parts list</title>
+</head>
+
+<body>
+<hr class="line_s">
+<div class="style_center">- v.20150222beta -</div>
+<hr class="line_s">
+	<div class="style_center">- スクリプトの説明 -</div><br>
+		<span class="menuc1">&gt;&gt;<a target="view" href="basic.html"> スクリプトの記述方法 </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="basic2.html"> 各数値の範囲や単位 </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="getinfo.html"> getinfoの値 </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="fcs.html"> カスタムスプライト </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="ftb.html"> FTB形式について </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sample.html"> スクリプトの構成とサンプル </a><br></span>
+	<br>
+<noscript>
+<span id="js_tree" style="display:none">
+</noscript>
+	<br>
+	<hr class="line_s">
+	<div class="style_center">- 用途別 -</div><br>
+	<a href="#" onclick="PartsMenu('menu_prep');return false" onkeypress="PartsMenu('menu_prep');return false"> プリプロセッサ </a><br>
+	<span id="menu_prep" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="preprocessor.html#INCLUDE"> #include </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_system');return false" onkeypress="PartsMenu('menu_system');return false"> システム </a><br>
+	<span id="menu_system" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#DEBUG"> DEBUG </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#DEBUGMODE"> DEBUGMODE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#DISABLEREPLAY"> DISABLEREPLAY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#END"> END </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#FCSLOAD"> FCSLOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#FRAXY_TRY"> FRAXY_TRY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#GAMEOVER"> GAMEOVER </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#SETKILLCOUNT"> SETKILLCOUNT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#WINDOW"> WINDOW </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_script');return false" onkeypress="PartsMenu('menu_script');return false"> スクリプト制御 </a><br>
+	<span id="menu_script" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICEIMAGE"> CHOICEIMAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICEIMAGEFONT"> CHOICEIMAGEFONT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICEPOS"> CHOICEPOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICERESET"> CHOICERESET </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICES"> CHOICES </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICEWORD"> CHOICEWORD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CONTINUE"> CONTINUE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#DESTROYCHOICES"> DESTROYCHOICES </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#ELSE"> ELSE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#ENDIF"> ENDIF </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#EXITLOOP"> EXITLOOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#GOTO"> GOTO </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#GOSUB"> GOSUB </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#IF"> IF </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#LIMIT"> LIMIT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#LOOP"> LOOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#REPEAT"> REPEAT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#RETURN"> RETURN </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#SETSCRIPTADDRESS"> SETSCRIPTADDRESS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#WAIT"> WAIT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#WAITFOR"> WAITFOR </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_subscript');return false" onkeypress="PartsMenu('menu_subscript');return false"> サブスクリプト </a><br>
+	<span id="menu_subscript" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="subscript.html#ADDSUBSCRIPT"> ADDSUBSCRIPT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="subscript.html#DELSUBSCRIPT"> DELSUBSCRIPT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="subscript.html#SETCOOPERATIVE"> SETCOOPERATIVE </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_timer');return false" onkeypress="PartsMenu('menu_timer');return false"> タイマー </a><br>
+	<span id="menu_timer" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#START"> START </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#STOP"> STOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#TIMER"> TIMER </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#TIMERADD"> TIMERADD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#TIMEREND"> TIMEREND </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_info');return false" onkeypress="PartsMenu('menu_info');return false"> 情報取得・算術 </a><br>
+	<span id="menu_info" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#DDACCEPT"> DDACCEPT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#GETANGLE"> GETANGLE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#GETINFO"> GETINFO </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#GETRANDOMFED"> GETRANDOMFED </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#SCOS"> SCOS </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_draw');return false" onkeypress="PartsMenu('menu_draw');return false"> 描画・表示設定 </a><br>
+	<span id="menu_draw" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#COLOR"> COLOR </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#DELEXMESSAGE"> DELEXMESSAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#EXMESSAGE"> EXMESSAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#FONT"> FONT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#MESSAGE"> MESSAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#INTERFACE"> INTERFACE </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_dobj');return false" onkeypress="PartsMenu('menu_dobj');return false"> 描画オブジェクト </a><br>
+	<span id="menu_dobj" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#CREATEOBJECT"> CREATEOBJECT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#DESTROYOBJECT"> DESTROYOBJECT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#EXISTOBJECT"> EXISTOBJECT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#LOADIMAGE"> LOADIMAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTANGLE"> OBJECTANGLE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTFILL"> OBJECTFILL </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTIMAGE"> OBJECTIMAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTIMAGEFONT"> OBJECTIMAGEFONT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTPOS"> OBJECTPOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTSTRING"> OBJECTSTRING </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTWORD"> OBJECTWORD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTZOOM"> OBJECTZOOM </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_effect');return false" onkeypress="PartsMenu('menu_effect');return false"> 画面特殊効果 </a><br>
+	<span id="menu_effect" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#BLUR"> BLUR </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#FLASH"> FLASH </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#GRAYSCALE"> GRAYSCALE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#INVERT"> INVERT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#MOSAIC"> MOSAIC </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#QUAKE"> QUAKE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#SHAKE"> SHAKE </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_background');return false" onkeypress="PartsMenu('menu_background');return false"> 背景 </a><br>
+	<span id="menu_background" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGBASEPOS"> BGBASEPOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGCHANGE"> BGCHANGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGFADE"> BGFADE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGLOAD"> BGLOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGMOVE"> BGMOVE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGRESET"> BGRESET </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGSCROLL"> BGSCROLL </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#EFFECTSCROLL"> EFFECTSCROLL </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_sound');return false" onkeypress="PartsMenu('menu_sound');return false"> サウンド </a><br>
+	<span id="menu_sound" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSEFREQUENCY"> DSEFREQUENCY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSEGETFREQUENCY"> DSEGETFREQUENCY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSELOAD"> DSELOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSEPLAY"> DSEPLAY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSESTOP"> DSESTOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSEVOLUME"> DSEVOLUME </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#BGMPLAY"> BGMPLAY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#BGMSTOP"> BGMSTOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#SEPLAY"> SEPLAY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#SESTOP"> SESTOP </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_game');return false" onkeypress="PartsMenu('menu_game');return false"> ゲームシステム </a><br>
+	<span id="menu_game" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#AREAFIXED"> AREAFIXED </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#AREALIMIT"> AREALIMIT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#RANK"> RANK </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#RANKRATE"> RANKRATE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#SCORERATE"> SCORERATE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#SCORESYSTEM"> SCORESYSTEM </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_player');return false" onkeypress="PartsMenu('menu_player');return false"> プレイヤー </a><br>
+	<span id="menu_player" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#DESTROYPLAYER"> DESTROYPLAYER </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#FULLENERGY"> FULLENERGY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERANGLE"> PLAYERANGLE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERBIND"> PLAYERBIND </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERDESTROYED"> PLAYERDESTROYED </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYEREMP"> PLAYEREMP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERENERGY"> PLAYERENERGY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYEREXTEND"> PLAYEREXTEND </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERFLAG"> PLAYERFLAG </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERGRAPHICS"> PLAYERGRAPHICS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERLEFT"> PLAYERLEFT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERPOS"> PLAYERPOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERRESPAWN"> PLAYERRESPAWN </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERRESTRAINT"> PLAYERRESTRAINT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSCORE"> PLAYERSCORE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSHIP"> PLAYERSHIP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSLOT"> PLAYERSLOT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSLOTLV"> PLAYERSLOTLV </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSTATUS"> PLAYERSTATUS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSTOCK"> PLAYERSTOCK </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#POWERUP"> POWERUP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#SETPLAYER"> SETPLAYER </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_enemy');return false" onkeypress="PartsMenu('menu_enemy');return false"> 敵・敵弾 </a><br>
+	<span id="menu_enemy" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#BUFFER"> BUFFER </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#CLEARENEMY"> CLEARENEMY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#CREATE"> CREATE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#CREATE2"> CREATE2 </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#DESTROYENEMY"> DESTROYENEMY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#EBULLETCOLOR"> EBULLETCOLOR </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#LOAD"> LOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#PARTSGRAPHICS"> PARTSGRAPHICS </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_item');return false" onkeypress="PartsMenu('menu_item');return false"> アイテム </a><br>
+	<span id="menu_item" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="item.html#ITEM"> ITEM </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="item.html#ITEM2"> ITEM2 </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="item.html#ITEMCONSTRUCT"> ITEMCONSTRUCT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="item.html#ITEMSCROLL"> ITEMSCROLL </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_setting');return false" onkeypress="PartsMenu('menu_setting');return false"> 設定 </a><br>
+	<span id="menu_setting" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="setting.html#POS"> POS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="setting.html#RANDOMIZE"> RANDOMIZE </a><br></span>
+	<br></span>
+
+	<a href="#" onclick="PartsMenu('menu_table');return false" onkeypress="PartsMenu('menu_table');return false"> テーブル </a><br>
+	<span id="menu_table" style="display:none">
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLEADD"> TABLEADD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLEGET"> TABLEGET </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLEINIT"> TABLEINIT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLELOAD"> TABLELOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLEREMOVE"> TABLEREMOVE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLESAVE"> TABLESAVE </a><br></span>
+	<br></span>
+
+	<br>
+<noscript>
+</span>
+</noscript>
+
+<hr class="line_s">
+<div class="style_center">- アルファベット順 -</div><br>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="preprocessor.html#INCLUDE"> #include </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="subscript.html#ADDSUBSCRIPT"> ADDSUBSCRIPT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#AREAFIXED"> AREAFIXED </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#AREALIMIT"> AREALIMIT </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGBASEPOS"> BGBASEPOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGCHANGE"> BGCHANGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGLOAD"> BGLOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGFADE"> BGFADE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGMOVE"> BGMOVE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#BGMPLAY"> BGMPLAY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#BGMSTOP"> BGMSTOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGRESET"> BGRESET </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#BGSCROLL"> BGSCROLL </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#BLUR"> BLUR </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#BUFFER"> BUFFER </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICEIMAGE"> CHOICEIMAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICEIMAGEFONT"> CHOICEIMAGEFONT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICEPOS"> CHOICEPOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICERESET"> CHOICERESET </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICES"> CHOICES </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CHOICEWORD"> CHOICEWORD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#CONTINUE"> CONTINUE </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#CLEARENEMY"> CLEARENEMY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#COLOR"> COLOR </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#CREATE"> CREATE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#CREATE2"> CREATE2 </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#CREATEOBJECT"> CREATEOBJECT </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#DDACCEPT"> DDACCEPT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#DEBUG"> DEBUG </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#DEBUGMODE"> DEBUGMODE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#DELEXMESSAGE"> DELEXMESSAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="subscript.html#DELSUBSCRIPT"> DELSUBSCRIPT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#DESTROYCHOICES"> DESTROYCHOICES </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#DESTROYENEMY"> DESTROYENEMY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#DESTROYOBJECT"> DESTROYOBJECT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#DESTROYPLAYER"> DESTROYPLAYER </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#DISABLEREPLAY"> DISABLEREPLAY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSEFREQUENCY"> DSEFREQUENCY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSEGETFREQUENCY"> DSEGETFREQUENCY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSELOAD"> DSELOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSEPLAY"> DSEPLAY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSESTOP"> DSESTOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#DSEVOLUME"> DSEVOLUME </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#EBULLETCOLOR"> EBULLETCOLOR </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="background.html#EFFECTSCROLL"> EFFECTSCROLL </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#ELSE"> ELSE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#END"> END </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#ENDIF"> ENDIF </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#EXISTOBJECT"> EXISTOBJECT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#EXITLOOP"> EXITLOOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#EXMESSAGE"> EXMESSAGE </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#FCSLOAD"> FCSLOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#FLASH"> FLASH </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#FONT"> FONT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#FRAXY_TRY"> FRAXY_TRY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#FULLENERGY"> FULLENERGY </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#GAMEOVER"> GAMEOVER </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#GETANGLE"> GETANGLE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#GETINFO"> GETINFO </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#GETRANDOMFED"> GETRANDOMFED </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#GOTO"> GOTO </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#GOSUB"> GOSUB </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#GRAYSCALE"> GRAYSCALE </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#IF"> IF </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#INTERFACE"> INTERFACE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#INVERT"> INVERT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="item.html#ITEM"> ITEM </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="item.html#ITEM2"> ITEM2 </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="item.html#ITEMCONSTRUCT"> ITEMCONSTRUCT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="item.html#ITEMSCROLL"> ITEMSCROLL </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#LIMIT"> LIMIT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#LOAD"> LOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#LOADIMAGE"> LOADIMAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#LOOP"> LOOP </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="draw.html#MESSAGE"> MESSAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#MOSAIC"> MOSAIC </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTANGLE"> OBJECTANGLE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTFILL"> OBJECTFILL </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTIMAGE"> OBJECTIMAGE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTIMAGEFONT"> OBJECTIMAGEFONT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTPOS"> OBJECTPOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTSTRING"> OBJECTSTRING </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTWORD"> OBJECTWORD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="drawobject.html#OBJECTZOOM"> OBJECTZOOM </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="enemy.html#PARTSGRAPHICS"> PARTSGRAPHICS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERANGLE"> PLAYERANGLE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERBIND"> PLAYERBIND </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERDESTROYED"> PLAYERDESTROYED </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYEREMP"> PLAYEREMP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERENERGY"> PLAYERENERGY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYEREXTEND"> PLAYEREXTEND </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERFLAG"> PLAYERFLAG </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERGRAPHICS"> PLAYERGRAPHICS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERLEFT"> PLAYERLEFT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERPOS"> PLAYERPOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERRESPAWN"> PLAYERRESPAWN </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERRESTRAINT"> PLAYERRESTRAINT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSCORE"> PLAYERSCORE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSHIP"> PLAYERSHIP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSLOT"> PLAYERSLOT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSLOTLV"> PLAYERSLOTLV </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSTATUS"> PLAYERSTATUS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#PLAYERSTOCK"> PLAYERSTOCK </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="setting.html#POS"> POS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#POWERUP"> POWERUP </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#QUAKE"> QUAKE </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="setting.html#RANDOMIZE"> RANDOMIZE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#RANK"> RANK </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#RANKRATE"> RANKRATE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#REPEAT"> REPEAT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#RETURN"> RETURN </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="game.html#SCORESYSTEM"> SCORESYSTEM </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="infomation.html#SCOS"> SCOS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#SEPLAY"> SEPLAY </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="sound.html#SESTOP"> SESTOP </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="subscript.html#SETCOOPERATIVE"> SETCOOPERATIVE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#SETKILLCOUNT"> SETKILLCOUNT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="player.html#SETPLAYER"> SETPLAYER </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#SETSCRIPTADDRESS"> SETSCRIPTADDRESS </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="effect.html#SHAKE"> SHAKE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#START"> START </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#STOP"> STOP </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLEADD"> TABLEADD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLEGET"> TABLEGET </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLEINIT"> TABLEINIT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLELOAD"> TABLELOAD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLEREMOVE"> TABLEREMOVE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="table.html#TABLESAVE"> TABLESAVE </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#TIMER"> TIMER </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#TIMERADD"> TIMERADD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="timer.html#TIMEREND"> TIMEREND </a><br></span>
+
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#WAIT"> WAIT </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="script.html#WAITFOR"> WAITFOR </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="system.html#WINDOW"> WINDOW </a><br></span>
+<br>
+<div class="style_center">- 旧命令 -</div><br>
+		<span class="menuc1">&gt;&gt;<a target="view" href="old.html#MOV"> MOV </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="old.html#ADD"> ADD </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="old.html#SUB"> SUB </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="old.html#MUL"> MUL </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="old.html#DIV"> DIV </a><br></span>
+		<span class="menuc1">&gt;&gt;<a target="view" href="old.html#MOD"> MOD </a><br></span>
+<br>
+<br>
+<hr class="line_s">
+<div class="style_center">- 追加と変更 -</div>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20150222beta <br></span>
+		<span class="menuc2">add:<a target="view" href="table.html#TABLEADD"> TABLEADD </a><br></span>
+		<span class="menuc2">add:<a target="view" href="table.html#TABLEGET"> TABLEGET </a><br></span>
+		<span class="menuc2">add:<a target="view" href="table.html#TABLEINIT"> TABLEINIT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="table.html#TABLELOAD"> TABLELOAD </a><br></span>
+		<span class="menuc2">add:<a target="view" href="table.html#TABLEREMOVE"> TABLEREMOVE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="table.html#TABLESAVE"> TABLESAVE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="system.html#DISABLEREPLAY"> DISABLEREPLAY </a><br></span>
+		<span class="menuc2">add:<a target="view" href="system.html#FCSLOAD"> FCSLOAD </a><br></span>
+		<span class="menuc2">add:<a target="view" href="fcs.html"> カスタムスプライト </a><br></span>
+		<span class="menuc2">add:<a target="view" href="ftb.html"> FTB形式について </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20141128beta <br></span>
+		<span class="menuc2">add:<a target="view" href="sound.html#DSEFREQUENCY"> DSEFREQUENCY </a><br></span>
+		<span class="menuc2">add:<a target="view" href="sound.html#DSEGETFREQUENCY"> DSEGETFREQUENCY </a><br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#SETSCRIPTADDRESS"> SETSCRIPTADDRESS </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="infomation.html#GETINFO"> GETINFO </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="player.html#PLAYERDESTROYED"> PLAYERDESTROYED </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="timer.html#TIMEREND"> TIMEREND </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20140807beta <br></span>
+		<span class="menuc2">chg:<a target="view" href="getinfo.html"> getinfoの値 </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20140322beta <br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#CONTINUE"> CONTINUE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#DESTROYPLAYER"> DESTROYPLAYER </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="player.html#PLAYERRESPAWN"> PLAYERRESPAWN </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="drawobject.html#OBJECTANGLE"> OBJECTANGLE </a><br></span>
+		<span class="menuc2">fix:<a target="view" href="drawobject.html#OBJECTZOOM"> OBJECTZOOM </a><br></span>
+		<span class="menuc2">fix:<a target="view" href="effect.html#FLASH"> FLASH </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20130810beta <br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#DESTROYCHOICES"> DESTROYCHOICES </a><br></span>
+		<span class="menuc2">add:<a target="view" href="subscript.html#SETCOOPERATIVE"> SETCOOPERATIVE </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="script.html#GOTO"> GOTO </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20130701beta <br></span>
+		<span class="menuc2">add:<a target="view" href="system.html#DEBUG"> DEBUG </a><br></span>
+		<span class="menuc2">add:<a target="view" href="system.html#DEBUGMODE"> DEBUGMODE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#OBJECTANGLE"> OBJECTANGLE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#OBJECTZOOM"> OBJECTZOOM </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="infomation.html#GETINFO"> GETINFO </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20120623beta <br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#CHOICEIMAGE"> CHOICEIMAGE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#CHOICEIMAGEFONT"> CHOICEIMAGEFONT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#CHOICEPOS"> CHOICEPOS </a><br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#CHOICERESET"> CHOICERESET </a><br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#CHOICEWORD"> CHOICEWORD </a><br></span>
+		<span class="menuc2">add:<a target="view" href="effect.html#MOSAIC"> MOSAIC </a><br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#WAITFOR"> WAITFOR </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:chr </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:getinfo </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20120108beta <br></span>
+		<span class="menuc2">chg:<a target="view" href="infomation.html#GETINFO"> GETINFO </a><br></span>
+		<span class="menuc2">add:<a target="view" href="subscript.html#ADDSUBSCRIPT"> ADDSUBSCRIPT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="subscript.html#DELSUBSCRIPT"> DELSUBSCRIPT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="background.html#EFFECTSCROLL"> EFFECTSCROLL </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#EXISTOBJECT"> EXISTOBJECT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#OBJECTIMAGEFONT"> OBJECTIMAGEFONT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#OBJECTSTRING"> OBJECTSTRING </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERBIND"> PLAYERBIND </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYEREMP"> PLAYEREMP </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERENERGY"> PLAYERENERGY </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERPOS"> PLAYERPOS </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERRESTRAINT"> PLAYERRESTRAINT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERSLOT"> PLAYERSLOT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERSLOTLV"> PLAYERSLOTLV </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERSTOCK"> PLAYERSTOCK </a><br></span>
+		<span class="menuc2">add:<a target="view" href="system.html#SETKILLCOUNT"> SETKILLCOUNT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:peek </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:strlen </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20101223beta <br></span>
+		<span class="menuc2">add:<a target="view" href="effect.html#GRAYSCALE"> GRAYSCALE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="effect.html#INVERT"> INVERT </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20101104beta <br></span>
+		<span class="menuc2">chg:<a target="view" href="player.html#SETPLAYER"> SETPLAYER </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="script.html#CHOICES"> CHOICES </a><br></span>
+		<span class="menuc2">add:<a target="view" href="enemy.html#PARTSGRAPHICS"> PARTSGRAPHICS </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERGRAPHICS"> PLAYERGRAPHICS </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERDESTROYED"> PLAYERDESTROYED </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYEREXTEND"> PLAYEREXTEND </a><br></span>
+		<span class="menuc2">add:<a target="view" href="system.html#GAMEOVER"> GAMEOVER </a><br></span>
+		<span class="menuc2">add:<a target="view" href="background.html#BGRESET"> BGRESET </a><br></span>
+		<span class="menuc2">add:<a target="view" href="sound.html#DSELOAD"> DSELOAD </a><br></span>
+		<span class="menuc2">add:<a target="view" href="sound.html#DSEPLAY"> DSEPLAY </a><br></span>
+		<span class="menuc2">add:<a target="view" href="sound.html#DSESTOP"> DSESTOP </a><br></span>
+		<span class="menuc2">add:<a target="view" href="sound.html#DSEVOLUME"> DSEVOLUME </a><br></span>
+		<span class="menuc2">add:<a target="view" href="preprocessor.html#INCLUDE"> #include </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20100319beta <br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERRESPAWN"> PLAYERRESPAWN </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="game.html#AREALIMIT"> AREALIMIT </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20100103beta <br></span>
+		<span class="menuc2">add:<a target="view" href="infomation.html#GETRANDOMFED"> GETRANDOMFED </a><br></span>
+		<span class="menuc2">add:<a target="view" href="infomation.html#DDACCEPT"> DDACCEPT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#CHOICES"> CHOICES </a><br></span>
+		<span class="menuc2">add:<a target="view" href="setting.html#RANDOMIZE"> RANDOMIZE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="game.html#SCORERATE"> SCORERATE </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="game.html#RANK"> RANK </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:rand </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:int </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:double </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:str </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:strf </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:getpath </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20091218beta <br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERSTATUS"> PLAYERSTATUS </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:sin </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:cos </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:limit </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:abs </a><br></span>
+		<span class="menuc2">add:<a target="view" href="basic.html#MATHFUNC"> 関数:sqrt </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20091109beta <br></span>
+		<span class="menuc2">chg:<a target="view" href="basic.html"> スクリプトの記述方法 </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="basic2.html"> 各数値の範囲や単位 </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20090527beta <br></span>
+		<span class="menuc2">chg:<a target="view" href="drawobject.html#OBJECTPOS"> OBJECTPOS </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="player.html#PLAYERANGLE"> PLAYERANGLE </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20090524beta <br></span>
+		<span class="menuc2">add:<a target="view" href="item.html#ITEMCONSTRUCT"> ITEMCONSTRUCT </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="item.html#ITEM"> ITEM </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="item.html#ITEM2"> ITEM2 </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="player.html#PLAYERSHIP"> PLAYERSHIP </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20090408beta <br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#CREATEOBJECT"> CREATEOBJECT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#DESTROYOBJECT"> DESTROYOBJECT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#LOADIMAGE"> LOADIMAGE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#OBJECTFILL"> OBJECTFILL </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#OBJECTIMAGE"> OBJECTIMAGE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#OBJECTPOS"> OBJECTPOS </a><br></span>
+		<span class="menuc2">add:<a target="view" href="drawobject.html#OBJECTWORD"> OBJECTWORD </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERANGLE"> PLAYERANGLE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="game.html#AREAFIXED"> AREAFIXED </a><br></span>
+		<span class="menuc2">add:<a target="view" href="system.html#WINDOW"> WINDOW </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="game.html#AREALIMIT"> AREALIMIT </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="draw.html#EXMESSAGE"> EXMESSAGE </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20090330beta <br></span>
+		<span class="menuc2">add:<a target="view" href="effect.html#BLUR"> BLUR </a><br></span>
+		<span class="menuc2">add:<a target="view" href="background.html#BGBASEPOS"> BGBASEPOS </a><br></span>
+		<span class="menuc2">add:<a target="view" href="background.html#BGFADE"> BGFADE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="background.html#BGMOVE"> BGMOVE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="background.html#BGSCROLL"> BGSCROLL </a><br></span>
+		<span class="menuc2">add:<a target="view" href="enemy.html#BUFFER"> BUFFER </a><br></span>
+		<span class="menuc2">add:<a target="view" href="enemy.html#LOAD"> LOAD </a><br></span>
+		<span class="menuc2">add:<a target="view" href="script.html#EXITLOOP"> EXITLOOP </a><br></span>
+		<span class="menuc2">add:<a target="view" href="item.html#ITEMSCROLL"> ITEMSCROLL </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20081118 <br></span>
+		<span class="menuc2">chg:<a target="view" href="infomation.html#GETINFO"> GETINFO </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080825 <br></span>
+		<span class="menuc2">add:<a target="view" href="game.html#AREALIMIT"> AREALIMIT </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080814 <br></span>
+		<span class="menuc2">fix:<a target="view" href="player.html#PLAYERSCORE"> PLAYERSCORE </a><br></span>
+		<span class="menuc2">fix:<a target="view" href="player.html#PLAYERFLAG"> PLAYERFLAG </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080804 <br></span>
+		<span class="menuc2">add:<a target="view" href="draw.html#DELEXMESSAGE"> DELEXMESSAGE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERFLAG"> PLAYERFLAG </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="draw.html#EXMESSAGE"> EXMESSAGE </a><br></span>
+		<span class="menuc2">chg:<a target="view" href="game.html#SCORESYSTEM"> SCORESYSTEM </a><br></span>
+
+<div class="spacebox"></div>
+	<span class="menuc1"> v.20080723 <br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERLEFT"> PLAYERLEFT </a><br></span>
+		<span class="menuc2">add:<a target="view" href="player.html#PLAYERSCORE"> PLAYERSCORE </a><br></span>
+		<span class="menuc2">add:<a target="view" href="game.html#SCORESYSTEM"> SCORESYSTEM </a><br></span>
+
+<div class="spacebox"></div>
+<hr class="line_s">
+<div class="blank"></div>
+</body>
+</html>

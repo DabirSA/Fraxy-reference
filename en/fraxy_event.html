@@ -1,0 +1,931 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="default-style" content="fraxy.css">
+<link rel="stylesheet" type="text/css" href="fraxy.css">
+<title>- FRAXY event -</title>
+</head>
+
+<body class="contents_main">
+
+<hr class="line_s">
+
+<div class="block_table">
+	<div class="block_title">Event Memo</div>
+	<div class="block_contents">
+		<div class="block_text_b">Basics</div>
+		<div class="block_text_m">Condition Checks &amp; Settings</div>
+		<div class="block_text_s">
+			<a href="#CONDITION_JUDGE">Condition Check Types</a><br>
+			<a href="#EVENT_EXSETTING">Extra Settings</a><br>
+			<a href="#OPERATOR">Condition Operators</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">Condition Types</div>
+		<div class="block_text_s">
+			<a href="#PLAYERSTATUS">Player Status</a><br>
+			<a href="#DISTANCEANDANGLE">Distance and Angle</a><br>
+			<a href="#MOVEANDATTACK">Movement/Attack Actions</a><br>
+			<a href="#RANDOM">Rand()</a><br>
+			<a href="#PREVIOUSEVENT">Previous Event Status</a><br>
+			<a href="#PARTSEXIST">Part Exists</a><br>
+		</div>
+
+		<br>
+		<hr class="line_s">
+		<br>
+		<div class="block_text_b">Event Details</div>
+		<div class="block_text_m">Change Connect Type</div>
+		<div class="block_text_s">
+			<a href="#CONNECT">Connect Types</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">Part Status</div>
+		<div class="block_text_s">
+			<a href="#STATUS_DAMAGERATE">Change damage rate</a><br>
+			<a href="#STATUS_BULLETPOWER">Change bullet power</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">Drawing &amp; Display Flags</div>
+		<div class="block_text_s">
+			<a href="#HEALTHBAR_M">Main health bar</a><br>
+			<a href="#HEALTHBAR_S">Sub health bar</a><br>
+			<a href="#CUSTOMBAR">Custom bar</a><br>
+			<a href="#CUSTOMBAR_SETTING">Custom bar settings</a><br>
+			<a href="#LAYER_PARTS">Change parts draw order</a><br>
+			<a href="#LAYER_EFFECT">Change effect draw order</a><br>
+			<a href="#LAYER_PARTSSHIFT">Change parts draw order shift value</a><br>
+			<a href="#LAYER_EFFECTSHIFT">Change effect draw order shift value</a><br>
+			<a href="#LAYER_ALL">Complete Draw Order Reference</a><br>
+			<a href="#SHOT_EFFECT">Change shot effect type</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">Extra Flags &amp; Options</div>
+		<div class="block_text_s">
+			<a href="#FLAG_AUTODESTROY">Change auto destroy flag</a><br>
+			<a href="#FLAG_WHENDESTROY">Change create flag when destroyed</a><br>
+			<a href="#FLAG_HITCHECK">Change hit check flag</a><br>
+			<a href="#FLAG_HITTYPE">Change hit check type</a><br>
+			<a href="#FLAG_DRAWOPTION">Change draw option</a><br>
+			<a href="#FLAG_TARGETMARKER">Change Target marker flag</a><br>
+			<a href="#FLAG_EFFECTFLAG">Change destroy effect flag</a><br>
+			<a href="#FLAG_EFFECTSIZE">Change destroy effect size</a><br>
+			<a href="#FLAG_DESTROYDELAY">Change destroy delay</a><br>
+			<a href="#FLAG_KILLCOUNT">Change kill count flag</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">Player Status</div>
+		<div class="block_text_s">
+			<a href="#PLAYERSTATUS_STUN">Change the stun value of player</a><br>
+			<a href="#PLAYERSTATUS_BIND">Change the bind value of player</a><br>
+			<a href="#PLAYERSTATUS_RESTRAINT">Change the restraint value of player</a><br>
+			<a href="#PLAYERSTATUS_POSITION">Change the position of player</a><br>
+			<a href="#PLAYERSTATUS_ENERGY">Change the energy of player</a><br>
+			<a href="#PLAYERSTATUS_ENERGYSTOCK">Change the energy stock of player</a><br>
+		</div>
+		<br>
+		<div class="block_text_m">Parts search</div>
+		<div class="block_text_s">
+			<a href="#PARTSSEARCH_SETTING">Parts search setting</a><br>
+			<a href="#PARTSSEARCH_DISTANCE">Parts search (Distance)</a><br>
+			<a href="#PARTSSEARCH_DIRECTION">Parts search (Direction)</a><br>
+		</div>
+		<br>
+	</div>
+</div>
+
+<hr class="line_s">
+
+<div class="block_table">
+	<div class="block_title">Condition Checks &amp; Settings</div>
+	<div class="block_contents">
+
+		<a name="CONDITION_JUDGE" id="CONDITION_JUDGE"></a>
+		<div class="block_text_b">Condition Check Types</div>
+		<div class="block_text_m"> - [AND]</div>
+		<div class="block_text_s">
+			The event will execute if all of its conditions are TRUE.<br>
+		</div>
+		<br>
+		<div class="block_text_m"> - [OR]</div>
+		<div class="block_text_s">
+			The event will execute if at least one of its conditions is TRUE.<br>
+		</div>
+		<br>
+
+		<a name="EVENT_EXSETTING" id="EVENT_EXSETTING"></a>
+		<div class="block_text_b">Extra Settings</div>
+		<div class="block_text_m"> - Don't delete this event after execution</div>
+		<div class="block_text_s">
+			If this is checked, the event will execute once on every frame that its conditions are met.<br>
+		</div>
+		<br>
+		<div class="block_text_m"> - Deletes if condition is disagreement</div>
+		<div class="block_text_s">
+			If this is checked, the event will be deleted if its conditions are ever not met.<br>
+		</div>
+		<br>
+
+		<a name="OPERATOR" id="OPERATOR"></a>
+		<div class="block_text_b">Condition Operators</div>
+		<div class="block_text_m">= (equal)</div>
+		<div class="block_text_s">
+			A = B<br>
+			If A and B are equal, this condition is TRUE.<br>
+			If they are not equal, it is FALSE.<br>
+		</div>
+		<br>
+		<div class="block_text_m">! (not equal)</div>
+		<div class="block_text_s">
+			A ! B<br>
+			If A and B are not equal, this condition is TRUE.<br>
+			If they are equal, it is FALSE.<br>
+		</div>
+		<br>
+		<div class="block_text_m">&gt; (greater than)</div>
+		<div class="block_text_s">
+			A &gt; B<br>
+			If A is greater than B, this condition is TRUE.<br>
+			If A is less than or equal to B, this condition is FALSE.<br>
+		</div>
+		<br>
+		<div class="block_text_m">&lt; (less than)</div>
+		<div class="block_text_s">
+			A &lt; B<br>
+			If A is less than B, this condition is TRUE.<br>
+			If A is greater than or equal to than B, this condition is FALSE.<br>
+		</div>
+		<br>
+		<div class="block_text_m">&gt;= (greater equal)</div>
+		<div class="block_text_s">
+			A &gt;= B<br>
+			If A is greater than or equal to B, this condition is TRUE.<br>
+			If A is less than B, this condition is FALSE.<br>
+		</div>
+		<br>
+		<div class="block_text_m">&lt;= (less equal)</div>
+		<div class="block_text_s">
+			A &lt;= B<br>
+			If A is less than or equal to B, this condition is TRUE.<br>
+			If A is greater than B, this condition is FALSE.<br>
+		</div>
+		<br>
+		<div class="block_text_m">&amp; (and)</div>
+		<div class="block_text_s">
+			A &amp; B<br>
+			Compares the binary bit patterns of A and B.<br>
+			If at least one of them matches, this condition is TRUE.<br>
+			If none of them match, this condition is FALSE.<br>
+			Fraxy has a built-in bit calculator which will help you to use this operator.<br>
+			Examples: <br>
+			13(1,4,8) &amp; 4(4): TRUE<br>
+			13(1,4,8) &amp; 2(2): FALSE<br>
+			13(1,4,8) &amp; 10(2,8): TRUE<br>
+			13(1,4,8) &amp; 12(4,8): TRUE<br>
+			13(1,4,8) &amp; 18(2,16): FALSE<br>
+		</div>
+		<br>
+		<div class="block_text_m">&amp;! (and + not)</div>
+		<div class="block_text_s">
+			A &amp;! B<br>
+			Compares the binary bit patterns of A and B.<br>
+			If none of them match, this condition is TRUE.<br>
+			If even one of them matches, this condition is FALSE.<br>
+			Fraxy has a built-in bit calculator which will help you to use this operator.<br>
+			Examples: <br>
+			13(1,4,8) &amp;! 4(4): FALSE<br>
+			13(1,4,8) &amp;! 2(2): TRUE<br>
+			13(1,4,8) &amp;! 10(2,8): FALSE<br>
+			13(1,4,8) &amp;! 12(4,8): FALSE<br>
+			13(1,4,8) &amp;! 18(2,16): TRUE<br>
+		</div>
+		<br>
+		<div class="block_text_m">&amp;= (and + equal)</div>
+		<div class="block_text_s">
+			A &amp;= B<br>
+			Compares the binary bit patterns of A and B.<br>
+			If all of B's bits are found in A, this condition is TRUE.<br>
+			If even one of them is not, this condition is FALSE.<br>
+			Fraxy has a built-in bit calculator which will help you to use this operator.<br>
+			Examples: <br>
+			13(1,4,8) &amp;= 4(4): TRUE<br>
+			13(1,4,8) &amp;= 2(2): FALSE<br>
+			13(1,4,8) &amp;= 10(2,8): FALSE<br>
+			13(1,4,8) &amp;= 12(4,8): TRUE<br>
+			13(1,4,8) &amp;= 18(2,16): FALSE<br>
+		</div>
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">Condition Types</div>
+	<div class="block_contents">
+		<a name="PLAYERSTATUS" id="PLAYERSTATUS"></a>
+		<div class="block_text_b">Player Status</div>
+		<div class="block_text_m">- P_Control status: 0~1</div>
+		<div class="block_text_s">
+			If the player has control of their ship, this is 1. If they do not, this is 0.<br>
+			Returns 0 during player destruction and while they're returning to the field after selecting Continue.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Destroy value: 0~</div>
+		<div class="block_text_s">
+			Normally returns 0.<br>
+			Returns 1 at the moment the player is destroyed, then increaes by 1 during each frame of the player's destruction animation.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Stun value: 0~</div>
+		<div class="block_text_s">
+			Normally returns 0.<br>
+			Returns greater than 0 if the player is stunned.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Energy: 0~100%</div>
+		<div class="block_text_s">
+			Returns the player's current energy level as a value between 0 and 100.
+		</div>
+		<br>
+		<div class="block_text_m">- P_Stock: 0~100%</div>
+		<div class="block_text_s">
+			Returns the player's current energy stock as a value between 0 and 100.
+		</div>
+		<br>
+		<div class="block_text_m">- P_Using equip: 0~2</div>
+		<div class="block_text_s">
+			Normally returns 0.<br>
+			Returns 1 when the player has just pressed the button to use a weapon or support item.<br>
+			Returns 2 if a weapon or support item is currently in use.<br>
+		</div>
+		<br>
+		<div class="block_text_m">-P_Using weapon: 0~2</div>
+		<div class="block_text_s">
+			Normally returns 0.<br>
+			Returns 1 when the player has just pressed the button to use a weapon.<br>
+			Returns 2 if a weapon is currently in use.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Using support: 0~2</div>
+		<div class="block_text_s">
+			Normally returns 0.<br>
+			Returns 1 when the player has just pressed the button to use a support item.<br>
+			Returns 2 if a support item is currently in use.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Boost button: 0~</div>
+		<div class="block_text_s">
+			Returns 0 if the boost button is not being held.<br>
+			Returns 1 on the frame that the boost button is pressed, then increases by 1 for each frame that it is held.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Boost: 0~</div>
+		<div class="block_text_s">
+			Returns 0 if the player is not moving while boosting.<br>
+			Returns 1 on the frame that the player starts moving while boosting, then increases by 1 for each frame that they continue moving while boosting.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Move: 0~15</div>
+		<div class="block_text_s">
+			Returns 0 if the player is not inputting movement.<br>
+			If the player is inputting movement, acts as a bitfield with the following bits for each direction: <br>
+			Left: &amp;1<br>
+			Up: &amp;2<br>
+			Right: &amp;4<br>
+			Down: &amp;8<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Extra button: 0~</div>
+		<div class="block_text_s">
+			Returns 0 if the player is not pressing the Extra button.<br>
+			Returns 1 on the frame that the Extra button is pressed, then increases by 1 for each frame that it is held.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Slot current: 1~5</div>
+		<div class="block_text_s">
+			Returns which of the player's five equipment slots they currently have selected.
+		</div>
+		<br>
+		<div class="block_text_m">- P_Slot1~5 use: 0~2</div>
+		<div class="block_text_s">
+			Normally returns 0.<br>
+			Returns 1 when the player has just pressed the button to use this slot.<br>
+			Returns 2 if the weapon or item in this slot is currently in use.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Slot1~5 type: 0~</div>
+		<div class="block_text_s">
+			Returns 0 if this slot is empty.<br>
+			If this slot is not empty, returns the ID of the weapon or item it contains.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Slot1~5 level: 1~5</div>
+		<div class="block_text_s">
+			Returns the current base level of the weapon or item in this slot.<br>
+			Does not include any modifiers from Soll Activator or Over Soll Power.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Slot1~5 ExLevel: 1~5</div>
+		<div class="block_text_s">
+			Returns the current level of the weapon or item in this slot.<br>
+			Does include any modifiers from Soll Activator and Over Soll Power.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- P_Slot1~5 status: 0~100</div>
+		<div class="block_text_s">
+			Returns the status value reported by the weapon or item in this slot.<br>
+			For example, Charge Blasters report their current charge level as a value between 0 and 100.<br>
+		</div>
+		<br>
+
+		<a name="DISTANCEANDANGLE" id="DISTANCEANDANGLE"></a>
+		<div class="block_text_b">Distance and Angle</div>
+		<div class="block_text_m">- Distance (Player): 0~</div>
+		<div class="block_text_s">
+			Returns to the straight-line distance between this part and the player.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- Distance (Pointer): -1 or 0~</div>
+		<div class="block_text_s">
+			Returns the straight-line distance between this part and its pointer part.<br>
+			Returns -1 if a pointer part could not be found.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- Distance (Pair): -1 or 0~</div>
+		<div class="block_text_s">
+			Returns the straight-line distance between this part and its paired part.<br>
+			Returns -1 if a paired part could not be found.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- Angle to Pair/Pointer: -2048~2047, 0~2048 (Abs)</div>
+		<div class="block_text_s">
+			Returns the angle between the target part's position and the forward direction of this part.<br>
+			Returns 0 if the target part is directly in front of this part.<br>
+			Returns 1~2047 if the target is on the right, -2048~-1 if the target is on the left.<br>
+			<br>
+			The (Abs) version of this condition returns the absolute value of the angle, in a range of 0~2048.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- angle to P_Pos: -2048~2047, 0~2048 (Abs)</div>
+		<div class="block_text_s">
+			Returns the angle between the player's position and the forward direction of this part.<br>
+			Returns 0 if the player is directly in front of this part.<br>
+			Returns 1~2047 if the player is on the right, -2048~-1 if the player is on the left.<br>
+			<br>
+			The (Abs) version of this condition returns the absolute value of the angle, in a range of 0~2048.<br>
+		</div>
+		<br>
+		
+		<a name="MOVEANDATTACK" id="MOVEANDATTACK"></a>
+		<div class="block_text_b">Movement/Attack Actions</div>
+		<div class="block_text_m">- MovAct/AtkAct(StopLoop)</div>
+		<div class="block_text_s">
+			Returns TRUE in cases where the part's movement or attack action loops into itself infinitely.<br>
+			<br>
+			For example, Power Laser's attack action [8] jumps back into attack action [8]. AtkAct(StopLoop) returns true in this case.
+		</div>
+		<br>
+
+		<div class="block_text_b">Miscellaneous</div>
+		<a name="RANDOM" id="RANDOM"></a>
+		<div class="block_text_m">- Rand()</div>
+		<div class="block_text_s">
+			Returns a value between 0 and n-1, where n is the number you input.<br>
+			If you enter a negative number, returns a value between n+1 and 0.<br>
+			<br>
+			For example, Rand(40) returns a number between 0 and 39, and Rand(-40) returns a number between -39 and 0.<br>
+		</div>
+		<br>
+		<a name="PREVIOUSEVENT" id="PREVIOUSEVENT"></a>
+		<div class="block_text_m">- Previous Event Status: -1~1</div>
+		<div class="block_text_s">
+			This is a special condition which returns the execution status of the event immediately above this event in the part's event list.<br>
+			Returns 0 if the event above has not executed.<br>
+			Returns 1 if the event above has executed.<br>
+			Returns -1 if this event is at the top of the event list.<br>
+			If there were other events above this event, but they have been deleted, returns -1.<br>
+		</div>
+		<br>
+		<a name="PARTSEXIST" id="PARTSEXIST"></a>
+		<div class="block_text_m">- Part Exists</div>
+		<div class="block_text_s">
+			Checks whether the specified part exists.<br>
+			Returns 1 if it exists, 0 otherwise.<br>
+		</div>
+
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">Change Connect Type</div>
+	<div class="block_contents">
+		<a name="CONNECT" id="CONNECT"></a>
+		<div class="block_text_b">Connect Types</div>
+		<div class="block_text_m">- (0) Fix (Available values: 0~0)</div>
+		<div class="block_text_s">
+			Part is rigidly attached to its parent, if it has one.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (1) Tail (Available values: 1~100)</div>
+		<div class="block_text_s">
+			Part moves as if being loosely pulled by its parent.<br>
+			The part's center distance is used in its calculation, so if center distance is set to 0, there will be no noticeable sway.<br>
+			The value you enter detemines how softly the part sways. The lower the value, the softer the motion.
+			(Soft) 1 ----- 100 (Hard)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (2) Player (Available values: 1~100)</div>
+		<div class="block_text_s">
+			Part's position and angle are based on those of the player.<br>
+			The value you enter detemines how strongly the part follows the player. The larger the value, the more weakly it follows.<br>
+			(Strongly) 1 ----- 100 (Weakly)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (3) Player (Pos only) (Available values: 1~100)</div>
+		<div class="block_text_s">
+			Part's position is based on that of the player.<br>
+			The value you enter detemines how strongly the part follows the player. The larger the value, the more weakly it follows.<br>
+			(Strongly) 1 ----- 100 (Weakly)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (4) Alone (Available values: 1~100)</div>
+		<div class="block_text_s">
+			Part detaches from its parent and remains at its current position and angle.<br>
+			Value has no significance, but set it to 1 in case it gains some later.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (5) Re-fixing (Available values: 1~100)</div>
+		<div class="block_text_s">
+			The part returns to its position relative to its parent over the course of 1~100 frames.<br>
+			After returning to its fixed position, it acts as if it has connect type (0).
+			The value you enter detemines how many frames the part takes to return to its fixed position.<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (6) Half-fixing (Available values: 1~100)</div>
+		<div class="block_text_s">
+			The part returns to its position relative to its parent, but loosely.<br>
+			The value you enter detemines how strongly the part returns to its position. The larger the value, the more weakly it follows.<br>
+			(Strongly) 1 ----- 100 (Weakly)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (7) Tail Re-fixing (Available values: 1~100)</div>
+		<div class="block_text_s">
+			The part starts out connected like connection type (1), then switches to type (0).
+			The value you enter determines how long the part takes to switch connection types.
+		</div>
+		<br>
+		<div class="block_text_m">- (8) Player (Axis) (Available values: 1~100)</div>
+		<div class="block_text_s">
+			The part tracks the player's position, but only moves along an axis based on its parent's position and facing.<br>
+			The value you enter detemines how strongly the part follows the player and its axis. The larger the value, the more weakly it follows.<br>
+			(Strongly) 1 ----- 100 (Weakly)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (9) Midpoint (Available values: 1~100)</div>
+		<div class="block_text_s">
+			The part takes a position halfway between its parent and its pointer part.<br>
+			Its angle is based on the angle between its parent's position and its pointer part's position.<br>
+			The value you enter detemines how strongly the part tracks its pointer. The larger the value, the more weakly it tracks.<br>
+			(Strongly) 1 ----- 100 (Weakly)<br>
+		</div>
+		<br>
+		<div class="block_text_m">- (10) Pointer (Available values: 1~100)</div>
+		<div class="block_text_s">
+			The part's position and angle are determined by its pointer part.<br>
+			The value you enter detemines how strongly the part tracks its pointer. The larger the value, the more weakly it tracks.<br>
+			(Strongly) 1 ----- 100 (Weakly)<br>
+		</div>
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">Part Status</div>
+	<div class="block_contents">
+		<div class="block_text_b">Part Status</div>
+		<a name="STATUS_DAMAGERATE" id="STATUS_DAMAGERATE"></a>
+		<div class="block_text_m">- Change damage rate</div>
+		<div class="block_text_s">
+			Damage taken  rate: ~0~ (default: 100%)<br>
+			<br>
+			At 100, the part takes 100% damage from all sources.<br>
+			At 50, the part takes half damage. At 0, it takes no damage.<br>
+			If negative, the part gains health instead of taking damage.<br>
+		</div>
+		<br>
+		<a name="STATUS_BULLETPOWER" id="STATUS_BULLETPOWER"></a>
+		<div class="block_text_m">- Change bullet power</div>
+		<div class="block_text_s">
+			Bullet Power: 0~n (default: 10000)<br>
+			<br>
+			Changes the power of enemy bullets generated by this part.<br>
+			At the default of 10000, bullets have 100% of their normal power.<br>
+		</div>
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">Drawing &amp; Display Flags</div>
+	<div class="block_contents">
+		<div class="block_text_b">Health Bar</div>
+		<a name="HEALTHBAR_M" id="HEALTHBAR_M"></a>
+		<div class="block_text_m">- Main health bar</div>
+		<div class="block_text_s">
+			OFF: Target part does not use the main health bar.<br>
+			Use (if not used): Target part uses the main health bar if no other parts are already using it.<br>
+			Use (by force): Forces target part's use of the main health bar even if other parts are already using it.<br>
+		</div>
+		<br>
+		<a name="HEALTHBAR_S" id="HEALTHBAR_S"></a>
+		<div class="block_text_m">- Sub health bar</div>
+		<div class="block_text_s">
+			OFF: Target part does not use a sub health bar.<br>
+			ON: Target part uses a sub health bar.<br>
+		</div>
+		<br>
+		<div class="block_text_b">Custom bar</div>
+		<a name="CUSTOMBAR" id="CUSTOMBAR"></a>
+		<div class="block_text_m">- Custom bar</div>
+		<div class="block_text_s">
+			Lets you display part-specific parameters, variables and global variables in the form of a bar.<br>
+			The custom bar is a sub health bar under the hood, so you can only have one of them attached to each part.<br>
+			<br>
+			Value A is the value you want the custom bar to track.<br>
+			Set it to OFF to remove the custom bar.<br>
+			<br>
+			Value B is the maximum value of the bar.<br>
+			If Value B is 1 or less, the custom bar will be removed.<br>
+		</div>
+		<br>
+		<a name="CUSTOMBAR_SETTING" id="CUSTOMBAR_SETTING"></a>
+		<div class="block_text_m">- Custom bar settings</div>
+		<div class="block_text_s">
+			These are various options which control the appearance of the custom bar.<br>
+			For Mode, combine the flags below to control its behaviour in detail.<br>
+			<br>
+			&amp;1: Deletes bar when the value is 0 or below<br>
+			&amp;2: Displays an afterimage which decays slowly when the bar decreases<br>
+			&amp;4: Afterimage doesn't decay until part is not being hit<br>
+			&amp;8: Perform score-related processing (Unclear what this means)<br>
+			&amp;16: Draws a glow effect when the bar's value is maximum<br>
+			&amp;32: Always draws a glow effect<br>
+			&amp;64: Draws a flash effect when the bar's value reaches maximum<br>
+			&amp;128: Bar is vertical<br>
+			&amp;256: Refer to pair part 1<br>
+			&amp;512: Refer to pair part 2<br>
+			&amp;1024: Refer to pair part 3<br>
+			&amp;2048: Refer to pair part 4<br>
+			<br>
+			For example, if you want to create a custom bar that's identical to a sub health bar, set Value A to Durability, Value B to Durability (Max), and Mode to 15 (1+2+4+8).<br>
+			<br>
+			Pair part flags change the source of values A and B.<br>
+		</div>
+		<br>
+		<div class="block_text_b">Draw Order</div>
+		<a name="LAYER_PARTS" id="LAYER_PARTS"></a>
+		<div class="block_text_m">- Change parts draw order</div>
+		<div class="block_text_s">
+			Changes the draw order of the target part to any value between 1 (Top) and 9 (Bottom).<br>
+			For a list of draw orders for all system elements, please see the <a href="#LAYER_ALL">Complete Draw Order Reference</a>.<br>
+		</div>
+		<br>
+		<a name="LAYER_EFFECT" id="LAYER_EFFECT"></a>
+		<div class="block_text_m">- Change effect draw order</div>
+		<div class="block_text_s">
+			Changes the draw order of effects generated when parts are destroyed and by Effector parts.<br>
+			For a list of draw orders for all system elements, please see the <a href="#LAYER_ALL">Complete Draw Order Reference</a>.<br>
+			Effect draw order: -1~10 (Default: 0)<br>
+			-1: Top-most<br>
+			0: Default<br>
+			1: Top<br>
+			2: <br>
+			3: <br>
+			4: <br>
+			5: Middle<br>
+			6: <br>
+			7: <br>
+			8: <br>
+			9: Bottom<br>
+			10: Bottom-most<br>
+		</div>
+		<br>
+		<a name="LAYER_PARTSSHIFT" id="LAYER_PARTSSHIFT"></a>
+		<div class="block_text_m">- Change parts draw order shift value</div>
+		<div class="block_text_s">
+			Parts draw order shift value: ~0~<br>
+			<br>
+			Shifts the part's draw order by the given amount.<br>
+			For example, if the part's draw order is (5) and you specify 1 for the shift value, the part will be drawn on layer (6).<br>
+			The shifted draw order will not go beyond the normal range of draw order values.<br>
+			The original draw order will be kept, allowing you to easily handle multiple draw orders.<br>
+		</div>
+		<br>
+		<a name="LAYER_EFFECTSHIFT" id="LAYER_EFFECTSHIFT"></a>
+		<div class="block_text_m">- Change effect draw order shift value</div>
+		<div class="block_text_s">
+			Effect draw order shift value: ~0~<br>
+			<br>
+			Shifts the effect's draw order by the given amount.<br>
+			For example, if the effect's draw order is (5) and you specify 1 for the shift value, the effect will be drawn on layer (6).<br>
+			The shifted draw order will not go beyond the normal range of draw order values.<br>
+			The original draw order will be kept, allowing you to easily handle multiple draw orders.<br>
+		</div>
+		<br>
+		<a name="LAYER_ALL" id="LAYER_ALL"></a>
+		<div class="block_text_m">- Complete Draw Order Reference</div>
+		<div class="block_text_s">
+			Only <span class="block_text_color_a">parts</span> and <span class="block_text_color_b">effects</span> can have their order manipulated by events.<br>
+			The order of the <span class="block_text_color_c">player</span> and <span class="block_text_color_c">player bullets</span> can be changed in player settings.<br>
+			<br>
+			(Top)<br>
+			(*) Screen fade in/out<br>
+			(*) Menu elements<br>
+			(*) Game UI<br>
+			(*) Screen effects<br>
+			(*) System effects<br>
+			<span class="block_text_color_c">(3) Player</span><br>
+			<span class="block_text_color_c">(3) Player bullets</span><br>
+			<span class="block_text_color_b">(-1) Effects</span><br>
+			<span class="block_text_color_c">(2) Player bullets</span><br>
+			<span class="block_text_color_c">(2) Player</span><br>
+			(*) Enemy bullets<br>
+			<span class="block_text_color_c">(1) Player bullets</span><br>
+			<span class="block_text_color_c">(1) Player</span><br>
+			<span class="block_text_color_b">(0) Effects</span><br>
+			<span class="block_text_color_c">(0) Player bullets</span><br>
+			<span class="block_text_color_c">(0) Player</span><br>
+			<span class="block_text_color_b">(1) Effects</span><br>
+			<span class="block_text_color_a">(1) Topmost parts</span><br>
+			<span class="block_text_color_b">(2) Effects</span><br>
+			<span class="block_text_color_a">(2) Parts</span><br>
+			<span class="block_text_color_b">(3) Effects</span><br>
+			<span class="block_text_color_a">(3) Parts</span><br>
+			<span class="block_text_color_b">(4) Effects</span><br>
+			<span class="block_text_color_a">(4) Parts</span><br>
+			<span class="block_text_color_b">(5) Effects</span><br>
+			<span class="block_text_color_a">(5) Middle Parts</span><br>
+			<span class="block_text_color_b">(6) Effects</span><br>
+			<span class="block_text_color_a">(6) Parts</span><br>
+			<span class="block_text_color_b">(7) Effects</span><br>
+			<span class="block_text_color_a">(7) Parts</span><br>
+			<span class="block_text_color_b">(8) Effects</span><br>
+			<span class="block_text_color_a">(8) Parts</span><br>
+			<span class="block_text_color_b">(9) Effects</span><br>
+			<span class="block_text_color_a">(9) Bottommost parts</span><br>
+			<span class="block_text_color_b">(10) Effects</span><br>
+			(*) Background<br>
+			(Bottom)<br>
+		</div>
+		<br>
+		<a name="SHOT_EFFECT" id="SHOT_EFFECT"></a>
+		<div class="block_text_m">- Change shot effect type</div>
+		<div class="block_text_s">
+			Shot Effect Type: -1~n<br>
+			<br>
+			Changes the muzzle flash and sound effect when firing weapons such as Vulcans and Bullets.<br>
+			This setting can also be used for the Player Bullet Effector, but player bullets have their own effects and do not use enemy bullet effects.<br>
+			Not all values will have bullet effects defined.<br>
+			-1: None<br>
+			0: Default<br>
+			1~n: Any Type<br>
+		</div>
+
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">Extra Flags &amp; Options</div>
+	<div class="block_contents">
+		<div class="block_text_b">Extra Flags &amp; Options</div>
+		<a name="FLAG_AUTODESTROY" id="FLAG_AUTODESTROY"></a>
+		<div class="block_text_m">- Change auto destroy flag</div>
+		<div class="block_text_s">
+			Auto destroy flag: 0~1 (Default: 1)<br>
+			&amp;1: If core part, part will self-destruct when it has no attached destructible parts<br>
+		</div>
+		<br>
+		<a name="FLAG_WHENDESTROY" id="FLAG_WHENDESTROY"></a>
+		<div class="block_text_m">- Change create flag when destroyed</div>
+		<div class="block_text_s">
+			Create flag when destroyed: 0~ (Default: 0)<br>
+			0: Use default setting<br>
+			1: Produces nothing<br>
+			&amp;2: Creates item<br>
+			&amp;4: Small counterattack<br>
+			&amp;8: Medium counterattack<br>
+			&amp;16: Large counterattack<br>
+			&amp;32: Extra-large counterattack<br>
+		</div>
+		<br>
+		<a name="FLAG_HITCHECK" id="FLAG_HITCHECK"></a>
+		<div class="block_text_m">- Change hit check flag</div>
+		<div class="block_text_s">
+			Hit check flag: 0~3 (Default: 1)<br>
+			&amp;1: Enable collision detection<br>
+			&amp;2: Don't remove collision when part is destroyed<br>
+		</div>
+		<br>
+		<a name="FLAG_HITTYPE" id="FLAG_HITTYPE"></a>
+		<div class="block_text_m">- Change hit check type</div>
+		<div class="block_text_s">
+			Hit check type: 0~3 (Default: 3)<br>
+			&amp;1: Part collides with player<br>
+			&amp;2: Part collides with player bullets<br>
+		</div>
+		<br>
+		<a name="FLAG_DRAWOPTION" id="FLAG_DRAWOPTION"></a>
+		<div class="block_text_m">- Change draw option</div>
+		<div class="block_text_s">
+			Draw option: 0~3 (Default: 3)<br>
+			&amp;1: Draw phasing effect when appearing and hiding<br>
+			&amp;2: Draw phasing effect when switching between normal and shadow<br>
+		</div>
+		<br>
+		<a name="FLAG_TARGETMARKER" id="FLAG_TARGETMARKER"></a>
+		<div class="block_text_m">- Change Target marker flag</div>
+		<div class="block_text_s">
+			Target marker flag: 0~2 (Default: 0)<br>
+			1: Red marker<br>
+			2: Yellow marker<br>
+		</div>
+		<br>
+		<a name="FLAG_EFFECTFLAG" id="FLAG_EFFECTFLAG"></a>
+		<div class="block_text_m">- Change destroy effect flag</div>
+		<div class="block_text_s">
+			Destroy effect flag: 0~31 (Default: 31)<br>
+			&amp;1: Sound effect<br>
+			&amp;2: Explosion effect<br>
+			&amp;4: Spark effect<br>
+			&amp;8: Flash effect<br>
+			&amp;16: Shock wave effect<br>
+			<br>
+			Sets the flags for effects produced when parts are destroyed.<br>
+			This also applies to explosions produced by the Explosion Effector.<br>
+		</div>
+		<br>
+		<a name="FLAG_EFFECTSIZE" id="FLAG_EFFECTSIZE"></a>
+		<div class="block_text_m">- Change destroy effect size</div>
+		<div class="block_text_s">
+			Destroy effect size: 0~500% (Default: 100)<br>
+			<br>
+			This does not apply to explosions produced by the Explosion Effector.<br>
+			Use extra parameters to control the effector's effect size.<br>
+		</div>
+		<br>
+		<a name="FLAG_DESTROYDELAY" id="FLAG_DESTROYDELAY"></a>
+		<div class="block_text_m">- Change destroy delay</div>
+		<div class="block_text_s">
+			Destroy delay: 0 or 1~65535 (Default: 0)<br>
+			0: Default value for part<br>
+			<br>
+			Sets the delay for causing chain explosions on child parts.<br>
+			This delay also applies to invisible parts, which are normally deleted immediately without any delay.<br>
+		</div>
+		<br>
+		<a name="FLAG_KILLCOUNT" id="FLAG_KILLCOUNT"></a>
+		<div class="block_text_m">- Change kill count flag</div>
+		<div class="block_text_s">
+			Kill count flag: 0~15 (Default for core: 5) (Default for parts: 4)<br>
+			&amp;1: When destroyed, increase kill count (Core)<br>
+			&amp;2: When suicided or deleted, increase kill count (Core)<br>
+			&amp;4: When destroyed, increase kill count (Parts)<br>
+			&amp;8: When suicided or deleted, increase kill count (Parts)<br>
+			<br>
+			Kill count updates automatically when parts are destroyed.<br>
+		</div>
+
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">Player Status</div>
+	<div class="block_contents">
+		<div class="block_text_b">Player Status</div>
+		<a name="PLAYERSTATUS_STUN" id="PLAYERSTATUS_STUN"></a>
+		<div class="block_text_m">- Change the stun value of player</div>
+		<div class="block_text_s">
+			Value A - Stun value: 0~65535<br>
+			<br>
+			Stun reduces player energy regeneration and disables boosting.<br>
+			The stun value affects the duration of the stun, with higher values lasting longer.<br>
+			Setting this to 0 will cancel the stun.<br>
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_BIND" id="PLAYERSTATUS_BIND"></a>
+		<div class="block_text_m">- Change the bind value of player</div>
+		<div class="block_text_s">
+			Value A - Bind counter: 0~65535 frames<br>
+			Value B - Bind power (Move): 0~100%<br>
+			Value C - Bind power (Turn): 0~100%<br>
+			<br>
+			Bind reduces the player's movement and rotation speed.<br>
+			<br>
+			The bind counter specifies the duration of the bind in frames.<br>
+			Bind power (Move) sets the move speed reduction. If set to 100, the player will be unable to move.<br>
+			Bind power (Move) sets the rotation speed reduction. If set to 100, the player will be unable to aim.<br>
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_RESTRAINT" id="PLAYERSTATUS_RESTRAINT"></a>
+		<div class="block_text_m">- Change the restraint value of player</div>
+		<div class="block_text_s">
+			Value A - Restraint counter: 0~65535 frames<br>
+			Value B - Restraint power: 0~1<br>
+			<br>
+			Restraint negates the effects of the player's equipment.<br>
+			It does not negate their ability to press the attack button, only the effects of it.<br>
+			<br>
+			The restraint counter sets the duration of the restraint in frames.<br>
+			If restraint power is set to 1, it will apply to all equipment.<br>
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_POSITION" id="PLAYERSTATUS_POSITION"></a>
+		<div class="block_text_m">- Change the position of player</div>
+		<div class="block_text_s">
+			Option: 0~1<br>
+			<br>
+			Sets the player's position to the position of the target part.<br>
+			Option has the following flags: <br>
+			&amp;1: Apply a visual effect
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_ENERGY" id="PLAYERSTATUS_ENERGY"></a>
+		<div class="block_text_m">- Change the energy of player</div>
+		<div class="block_text_s">
+			Modifies the player's energy.<br>
+			<br>
+			Option specifies how to treat the value.<br>
+			None: Set energy to that value.<br>
+			Percent: Set energy to that percentage of maximum.<br>
+			Permil: Set energy to that many thousandths of maximum.<br>
+		</div>
+		<br>
+		<a name="PLAYERSTATUS_ENERGYSTOCK" id="PLAYERSTATUS_ENERGYSTOCK"></a>
+		<div class="block_text_m">- Change the energy stock of player</div>
+		<div class="block_text_s">
+			Modifies the player's energy stock.<br>
+			<br>
+			Option specifies how to treat the value.<br>
+			None: Set energy stock to that value.<br>
+			Percent: Set energy stock to that percentage of maximum.<br>
+			Permil: Set energy stock to that many thousandths of maximum.<br>
+		</div>
+	</div>
+</div>
+
+<div class="block_table">
+	<div class="block_title">Parts search</div>
+	<div class="block_contents">
+		<div class="block_text_b">Parts search</div>
+		<a name="PARTSSEARCH_SETTING" id="PARTSSEARCH_SETTING"></a>
+		<div class="block_text_m">- Parts search setting</div>
+		<div class="block_text_s">
+			(BP:0,0) Starts searching from coordinates (0, 0).<br>
+			(BP:Player) Starts searching from the player's coordinates.<br>
+			(BP:Parts) Starts searching from the coordinates of any part.<br>
+			<br>
+			Search Options<br>
+				0: Search parts from this core, use own SearchIndex, sort results by index order, include partial matches<br>
+				&amp;1: Search all parts<br>
+				&amp;2: Use core's SearchIndex<br>
+				&amp;4: Return zero when search index is out of range<br>
+				&amp;16: Sort results in ascending order<br>
+				&amp;32: Sort results in descending order<br>
+				&amp;128: Only include perfect matches<br>
+			<br>
+			Search target<br>
+				0: No specific target<br>
+				&amp;1: Cores<br>
+				&amp;2: Non-Cores<br>
+				&amp;4: Health bars<br>
+				&amp;8: Target marker A<br>
+				&amp;16: Target marker B<br>
+				&amp;32: Parts with durability (not invincible, max durability is positive)<br>
+				&amp;64: Parts without durability (invincible or max durability is negative)<br>
+				&amp;128: Parts with collision detection<br>
+		</div>
+		<br>
+		<a name="PARTSSEARCH_DISTANCE" id="PARTSSEARCH_DISTANCE"></a>
+		<div class="block_text_m">- Parts search (Distance)</div>
+		<div class="block_text_s">
+			This event searches for parts to set as a pair part.<br>
+			Before using it, you must set parts search settings on this part.<br>
+			<br>
+			Searches based on distance from the part's BP position.<br>
+			Range is measured in pixels. Input -1 to have no maximum range.<br>
+		</div>
+		<br>
+		<a name="PARTSSEARCH_DIRECTION" id="PARTSSEARCH_DIRECTION"></a>
+		<div class="block_text_m">- Parts search (Direction)</div>
+		<div class="block_text_s">
+			This event searches for parts to set as a pair part.<br>
+			Before using it, you must set parts search settings on this part.<br>
+			<br>
+			The search sweeps in an angle, starting from the part's BP angle.<br>
+			The range is measured in an angle from 0~2047 on both sides of the BP angle.<br>
+			Set to -1 to search all the way around the part.<br>
+		</div>
+	</div>
+</div>
+
+<hr class="line_s">
+
+</body>
+</html>

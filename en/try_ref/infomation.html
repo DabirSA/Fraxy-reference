@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="../fraxy.css">
+<title>FRAXY Try function (Infomation)</title>
+</head>
+
+<body>
+<div class="style_center">
+<hr class="line_s">
+<div class="categorytitle">- FRAXY Try function (Infomation) -</div>
+<hr class="line_s">
+
+<a name="DDACCEPT" id="DDACCEPT">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">DDACCEPT
+	</td><td class="trycnp">"DDACCEPT",var_file,var_name
+	</td></tr></table><div class="trydetail">
+		ドラッグアンドドロップを有効にする命令です。<br>
+		変数指定var1とvar2は省略できません。<br>
+		この命令が実行されると指定された変数は文字列型に変更され、内容が初期化されます。<br>
+		ファイルがドラッグアンドドロップされ読み込みに成功するとvar1にファイル名、var2に敵の名前が格納されます。<br>
+		一度成功するとドラッグアンドドロップが無効化されます。<br>
+		もう一度有効にしたい場合は再度命令を実行する必要があります。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"DDACCEPT",var1,var2
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>ファイル名を格納する変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var2</td><td>ファイル名を格納する変数
+	</td></tr></table></div><br>
+
+<a name="GETANGLE" id="GETANGLE">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">GETANGLE
+	</td><td class="trycnp">"GETANGLE",ax,ay,bx,by
+	</td></tr></table><div class="trydetail">
+		点Aから点Bの角度を求め変数(_stat)に代入する命令です。<br>
+		角度は 0~4095 の整数値で返されます。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"GETANGLE",int1,int2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>点A X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>点A Y
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>点B X
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>点B Y
+	</td></tr></table></div><br>
+
+<a name="GETINFO" id="GETINFO">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">GETINFO
+	</td><td class="trycnp">"GETINFO",type,param,variable
+	</td></tr></table><div class="trydetail">
+		各種情報を取得し指定した変数に代入する命令です。<br>
+		変数を省略した場合は変数(_stat)に代入されます。<br>
+		数式では関数として getinfo(type,param) が利用できます。<br>
+		情報のタイプとパラメータに指定する値は<a target="view" href="getinfo.html"> getinfoの値 </a>を参照してください。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"GETINFO",int1,int2,(var3)
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int1</td><td>取得する情報のタイプ
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int2</td><td>情報取得用パラメータ
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var3</td><td>代入先変数 (_stat)
+	</td></tr></table>
+	</div><br>
+
+<a name="GETRANDOMFED" id="GETRANDOMFED">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">GETRANDOMFED
+	</td><td class="trycnp">"GETRANDOMFED",var_file,var_name,index
+	</td></tr></table><div class="trydetail">
+		ランダムリストから敵ファイルを取得する命令です。<br>
+		変数指定var1とvar2は省略できません。<br>
+		ファイルの取得に失敗した場合は_statに-1を返します。<br>
+		ファイルの取得に成功した場合はvar1にファイル名、var2に敵の名前が格納され、_statに0を返します。<br>
+		<br>
+		int3の取得インデックスを省略もしくは-1を指定するとランダムに取得します。<br>
+		0以上を指定すると指定されたインデックスで取得します。<br>
+		取得インデックスがリストの最大数を超えている場合は自動的に値を巻き戻して取得します。<br>
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"GETRANDOMFED",var1,var2,int3
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>ファイル名を格納する変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var2</td><td>ファイル名を格納する変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>取得インデックス [-1]
+	</td></tr></table></div><br>
+
+<a name="SCOS" id="SCOS">
+	</a><div class="trytable"><table class="trytitle">
+	<tr><td class="tryname">SCOS
+	</td><td class="trycnp">"SCOS",var_sin,var_cos,angle,correctionvalue
+	</td></tr></table><div class="trydetail">
+		指定された角度のsinとcosの値を求めて指定された変数に代入する命令です。<br>
+		sinとcosの値は-1.0~1.0の範囲を取りますが、この命令では補正値を掛けて整数値で代入します。<br>
+		補正値が1000ならば-1000~1000の値になります。
+	</div>
+	<table class="tryinfo"><tr><td class="tryinfocategory">書式</td><td>"SCOS",var1,var2,int3,int4
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var1</td><td>sinを代入する変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">var2</td><td>cosを代入する変数
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int3</td><td>角度
+	</td></tr></table>
+	<table class="tryinfo"><tr><td class="tryinfocategory">int4</td><td>補正値
+	</td></tr></table></div><br>
+
+</div>
+<div class="blank"></div>
+</body>
+</html>
